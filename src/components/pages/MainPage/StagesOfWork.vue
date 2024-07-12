@@ -1,0 +1,156 @@
+<template>
+    <div class="stages_of_work">
+        <h4>Этапы работы</h4>
+        <div class="work_list">
+            <ul>
+                <li class="item" :class="{ show: item.show }" v-for="item in items" :key="item.id" @mouseenter="showContent(item)">
+                    <p class="item_title">{{ item.title }}</p>
+                    <p class="item_content" v-if="item.show">{{ item.content }}</p>
+                    <img class="item_img" v-if="item.show" :src="item.img" alt="">
+                    <a class="item_link" v-if="item.show" href="">{{ item.link }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</template>
+
+<script>
+import costCalculation from '../../../assets/img/pages/MainPage/StagesOfWork/costCalculation.svg'
+import sendingLayout from '../../../assets/img/pages/MainPage/StagesOfWork/sendingLayout.svg'
+
+export default {
+    name: 'StagesOfWork',
+    data() {
+        return {
+            items: [
+                {
+                    id: 1,
+                    title: '1/ Отправка макета',
+                    content: 'Таким повседневная задания отношении направлений и что занимаемых активизации. По новая направлений выполнять образом участниками идейные нашей постоянный и интересный условий дальнейших играет важную выполнят. ',
+                    img: costCalculation,
+                    link: 'Подробнее',
+                    show: true
+                },
+                {
+                    id: 2,
+                    title: '2/ Расчет стоимости',
+                    content: 'Таким повседневная задания отношении направлений и что занимаемых активизации. По новая направлений выполнять образом участниками идейные нашей постоянный и интересный условий дальнейших играет важную выполнят.',
+                    img: sendingLayout,
+                    link: 'Подробнее',
+                },
+                {
+                    id: 3,
+                    title: '3/ Внесение предоплаты',
+                    content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque non rem a iure, amet aut voluptatem magni molestiae, corporis vel laboriosam perferendis ipsam possimus qui, voluptatum nam! Quidem, debitis sit!',
+                    img: 'https://sun9-73.userapi.com/s/v1/if1/14elKBUrx5jA5rXYwwLgtHYZNuskD2xIMBpkyPUS_mnY4oArSA5x4ief1mHQCbSGMCoiJuto.jpg?size=200x200&quality=96&crop=0,0,960,960&ava=1',
+                    link: 'Подробнее',
+                },
+                {
+                    id: 4,
+                    title: '4/ Печать заказа',
+                    content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque non rem a iure, amet aut voluptatem magni molestiae, corporis vel laboriosam perferendis ipsam possimus qui, voluptatum nam! Quidem, debitis sit!',
+                    img: 'https://cs13.pikabu.ru/post_img/2022/12/14/6/1671008037224421279.jpg',
+                    link: 'Подробнее',
+                },
+                {
+                    id: 5,
+                    title: '5/ Получение заказа',
+                    content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque non rem a iure, amet aut voluptatem magni molestiae, corporis vel laboriosam perferendis ipsam possimus qui, voluptatum nam! Quidem, debitis sit!',
+                    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh9DSCoZDMiKnS-S3lnciizd_MAyMMY-jTxw&usqp=CAU',
+                    link: 'Подробнее',
+                },
+            ],
+            lastOpenedItem: 1,
+            costCalculation,
+            sendingLayout,
+        };
+    },
+    methods: {
+        showContent(item) {
+            this.items.forEach((i) => {
+                if (i.id !== item.id) {
+                    i.show = false;
+                }
+            });
+            item.show = true;
+            this.lastOpenedItem = item.id;
+        },
+    },
+};
+</script>
+
+<style lang="scss" scoped>
+.stages_of_work {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: auto 970px;
+    color: #27625F;
+
+    h4 {
+        font-size: 30px;
+        font-style: bold;
+    }
+
+    .work_list {
+        .item {
+            display: grid;
+            grid-template-columns: 1fr 353px;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+                "title img"
+                "content img"
+                "link img";
+            margin-bottom: 20px;
+            background-color: #F5F5F5;
+            border-radius: 5px;
+            height: 78px;
+            position: relative;
+
+            &_title {
+                margin-top: 35px;
+                margin-left: 20px;
+                font-size: 24px;
+                font-weight: bold;
+                grid-area: title;
+            }
+
+            &_content {
+                margin-left: 58px;
+                font-size: 16px;
+                grid-area: content;
+            }
+
+            &_img {
+                width: 353px;
+                height: 353px;
+                grid-area: img;
+            }
+
+            &_link {
+                margin-left: 58px;
+                margin-top: 67px;
+                font-size: 16px;
+                grid-area: link;
+            }
+            &::after{
+                content: "";
+                display: block;
+                width: 25px;
+                height: 25px;
+                background-image: url("../../../../src/assets/img/pages/MainPage/StagesOfWork/link.svg");
+                top: 50%;
+                right: 37px;
+                position: absolute;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .show{
+            height: 100%;
+            background-color: #CEFFFD;
+            &::after{
+                content: none;
+            }
+        }
+    }
+}
+</style>
