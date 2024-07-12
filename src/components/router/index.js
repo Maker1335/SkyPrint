@@ -9,33 +9,33 @@ const base = '/SkyPrint1/dist';
 
 const routes = [
     {
-        path: `${base}/`,
+        path: '/',
         name: 'mainPage',
         component: MainPage,
     },
     {
-        path: `${base}/Catalog`,
+        path: '/Catalog',
         name: 'catalog',
         component: Catalog,
     },
     {
-        path: `${base}/Product`,
+        path: '/Product',
         name: 'product',
         component: Product,
     },
     {
-        path: `${base}/Contacts`,
+        path: '/Contacts',
         name: 'contacts',
         component: Contacts,
     },
     {
-        path: `${base}/Portfolio`,
+        path: '/Portfolio',
         name: 'portfolio',
         component: Portfolio,
     },
     {
         path: '/:pathMatch(.*)*',  // Обрабатывает все несуществующие пути
-        redirect: `${base}/`  // Перенаправляет на главную страницу
+        redirect: '/'  // Перенаправляет на главную страницу
     }
 ];
 
