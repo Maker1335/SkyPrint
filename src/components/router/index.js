@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import MainPage from '../views/MaimPage.vue';
 import Catalog from '../views/Catalog.vue';
 import Product from '../views/Product.vue';
@@ -9,38 +9,38 @@ const base = '/SkyPrint1/dist';
 
 const routes = [
     {
-        path: '/',
+        path: `${base}/`,
         name: 'mainPage',
         component: MainPage,
     },
     {
-        path: '/Catalog',
+        path: `${base}/Catalog`,
         name: 'catalog',
         component: Catalog,
     },
     {
-        path: '/Product',
+        path: `${base}/Product`,
         name: 'product',
         component: Product,
     },
     {
-        path: '/Contacts',
+        path: `${base}/Contacts`,
         name: 'contacts',
         component: Contacts,
     },
     {
-        path: '/Portfolio',
+        path: `${base}/Portfolio`,
         name: 'portfolio',
         component: Portfolio,
     },
     {
-        path: '/:pathMatch(.*)*',  // Обрабатывает все несуществующие пути
-        redirect: '/'  // Перенаправляет на главную страницу
+        path: '/:pathMatch(.*)*',  
+        redirect: `${base}/`  
     }
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes,
 });
 
