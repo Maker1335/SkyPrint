@@ -23,9 +23,6 @@ import Product from './components/views/Product.vue';
 import Contacts from './components/views/Contacts.vue';
 import Header from './components/header.vue';
 
-
-
-
 export default {
   name: 'App',
   components: {

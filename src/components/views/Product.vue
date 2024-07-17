@@ -1,6 +1,6 @@
 <template>
     <div class="product-page">
-        <Header/>
+        <Header />
         <div class="path">
             <p><a href="#">Каталог</a> <a href="#">Печать визиток</a> <a href="#">Цифровая печать</a></p>
         </div>
@@ -383,8 +383,6 @@ $goodsBG: "../../assets/img/background.png";
                         }
                     }
 
-
-
                     ol {
                         display: flex;
                         flex-direction: column;
@@ -473,7 +471,8 @@ $goodsBG: "../../assets/img/background.png";
 
                 &_submit-application {
                     background-color: #CEFFFD;
-                    &:hover{
+
+                    &:hover {
                         background-color: #EAEAEA;
                         transition: background-color 0.5s;
                     }
@@ -481,9 +480,10 @@ $goodsBG: "../../assets/img/background.png";
 
                 &_designer-services {
                     background-color: #EAEAEA;
-                    &:hover{
+
+                    &:hover {
                         background-color: #CEFFFD;
-                        transition: background-color 0.5s ;
+                        transition: background-color 0.5s;
                     }
                 }
             }

@@ -58,8 +58,6 @@ import businessCardsImage from '../../../assets/img/goods/businessСards.svg';
 import laminationImage from '../../../assets/img/goods/lamination.svg';
 import pensImage from '../../../assets/img/goods/pens.svg';
 
-
-
 export default {
   name: 'MainPage',
   components: {
