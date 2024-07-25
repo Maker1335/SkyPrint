@@ -1,35 +1,40 @@
 <template>
     <div class="reviews">
-        <h3>Отзывы</h3>
-        <div class="reviews_cards">
-            <div class="card">
-                <div class="card_info">
-                    <img src="../../../assets/img/pages/MainPage/Reviews/БэнСтиллер.svg" alt="" class="card_info_img">
-                    <p class="card_info_name">Бен Стиллер</p>
-                    <p class="card_info_date">30.03.2024</p>
+        <div class="wrapper">
+            <h3>Отзывы</h3>
+            <div class="reviews_cards">
+                <div class="card">
+                    <div class="card_info">
+                        <img src="../../../assets/img/pages/MainPage/Reviews/БэнСтиллер.svg" alt=""
+                            class="card_info_img">
+                        <p class="card_info_name">Бен Стиллер</p>
+                        <p class="card_info_date">30.03.2024</p>
+                    </div>
+                    <p class="card_text">Очень крутая типография. Круче меня</p>
                 </div>
-                <p class="card_text">Очень крутая типография. Круче меня</p>
-            </div>
-            <div class="card">
-                <div class="card_info">
-                    <img src="../../../assets/img/pages/MainPage/Reviews/УинстонЧерчилль.svg" alt=""
-                        class="card_info_img">
-                    <p class="card_info_name">Уинстон Черчилль</p>
-                    <p class="card_info_date">30.03.2024</p>
+                <div class="card">
+                    <div class="card_info">
+                        <img src="../../../assets/img/pages/MainPage/Reviews/УинстонЧерчилль.svg" alt=""
+                            class="card_info_img">
+                        <p class="card_info_name">Уинстон Черчилль</p>
+                        <p class="card_info_date">30.03.2024</p>
+                    </div>
+                    <p class="card_text">Fjewufhnvehfwehnfu weufwuebucn ncecen ycyeyc cbcweyweioqiojdvmjc jweujujew
+                        ehweh
+                        cjuecc
+                        ncsdcijcji
+                        cishf ijcij sn nlsnsle nnenll enncsl js. Rfsmss fksd.</p>
                 </div>
-                <p class="card_text">Fjewufhnvehfwehnfu weufwuebucn ncecen ycyeyc cbcweyweioqiojdvmjc jweujujew ehweh
-                    cjuecc
-                    ncsdcijcji
-                    cishf ijcij sn nlsnsle nnenll enncsl js. Rfsmss fksd.</p>
-            </div>
-            <div class="card">
-                <div class="card_info">
-                    <img src="../../../assets/img/pages/MainPage/Reviews/ИлонМаск.svg" alt="" class="card_info_img">
-                    <p class="card_info_name">Илон Маск</p>
-                    <p class="card_info_date">30.05.2024</p>
+                <div class="card">
+                    <div class="card_info">
+                        <img src="../../../assets/img/pages/MainPage/Reviews/ИлонМаск.svg" alt="" class="card_info_img">
+                        <p class="card_info_name">Илон Маск</p>
+                        <p class="card_info_date">30.05.2024</p>
+                    </div>
+                    <p class="card_text">Мне нужен был такой дизайнер, когда создавался дизайн для теслы из двух
+                        полигонов
+                    </p>
                 </div>
-                <p class="card_text">Мне нужен был такой дизайнер, когда создавался дизайн для теслы из двух полигонов
-                </p>
             </div>
         </div>
     </div>
@@ -43,9 +48,12 @@ export default {
 
 <style lang="scss" scoped>
 .reviews {
-    display: flex;
-    flex-direction: column;
     margin-top: 71px;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
 
     h3 {
         font-size: 30px;

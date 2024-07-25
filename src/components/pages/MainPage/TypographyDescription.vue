@@ -1,66 +1,71 @@
 <template>
     <div class="typography_description">
-        <div class="description">
-            <h3>Одна из лучших типографий Челябинска</h3>
-            <p>Типография SkyPrint основанная в 2005 году, является одним из лидеров по потдержке типографичных
-                продукций для компаний и рекламы. За это время, типография успела основатся как помошник для брендов и
-                людей.</p>
+        <div class="wrapper">
+
+            <div class="description">
+                <h3>Одна из лучших типографий Челябинска</h3>
+                <p>Типография SkyPrint основанная в 2005 году, является одним из лидеров по потдержке типографичных
+                    продукций для компаний и рекламы. За это время, типография успела основатся как помошник для брендов
+                    и
+                    людей.</p>
+            </div>
+            <div class="card">
+                <p class="card_title">50</p>
+                <p class="card_description">Услуг</p>
+            </div>
+            <div class="card">
+                <p class="card_title">20 лет</p>
+                <p class="card_description">Мы помогаем бизнесам</p>
+            </div>
+            <div class="card">
+                <p class="card_title">10000+</p>
+                <p class="card_description">Заказов в год</p>
+            </div>
+            <div class="card">
+                <a href="https://www.youtube.com/watch?v=73mmIqSreAU&t=23s">
+                    <p class="card_title"></p>
+                    <p class="card_description"></p>
+                    <img src="../../../../src/assets/img/pages/MainPage/TypographyDescription/video.svg"
+                        alt="сслыка на видео">
+                    <button class="card_button">
+                        <p>Смотреть видео</p>
+                    </button>
+                </a>
+            </div>
+            <swiper :slides-per-view="5" :space-between="9" :autoplay="{ delay: 5000, disableOnInteraction: false }"
+                :loop="true" :modules="modules" class="partners">
+                <swiper-slide class="partner">
+                    <img src="../../../assets/img/partners/carmel.svg" alt="Партнёр Кармер">
+                </swiper-slide>
+                <swiper-slide class="partner">
+                    <img src="../../../assets/img/partners/аджигардак.svg" alt="Партнёр Аджигардак">
+                </swiper-slide>
+                <swiper-slide class="partner">
+                    <img src="../../../assets/img/partners/баден.svg" alt="Партнёр Баден">
+                </swiper-slide>
+                <swiper-slide class="partner">
+                    <img src="../../../assets/img/partners/геомтерия.svg" alt="Партнёр Геомтерия">
+                </swiper-slide>
+                <swiper-slide class="partner">
+                    <img src="../../../assets/img/partners/крашер.svg" alt="Партнёр Крашер">
+                </swiper-slide>
+                <swiper-slide class="partner">
+                    <img src="../../../assets/img/partners/полет.svg" alt="Партнёр Полет">
+                </swiper-slide>
+                <swiper-slide class="partner">
+                    <img src="../../../assets/img/partners/сммщики.svg" alt="Партнёр СММщики">
+                </swiper-slide>
+                <swiper-slide class="partner">
+                    <img src="../../../assets/img/partners/стомпрактика.svg" alt="Партнёр Стомпрактика">
+                </swiper-slide>
+                <swiper-slide class="partner">
+                    <img src="../../../assets/img/partners/чилинз.svg" alt="Партнёр Чилинз">
+                </swiper-slide>
+                <swiper-slide class="partner">
+                    <img src="../../../assets/img/partners/юургу.svg" alt="Партнёр юургу">
+                </swiper-slide>
+            </swiper>
         </div>
-        <div class="card">
-            <p class="card_title">50</p>
-            <p class="card_description">Услуг</p>
-        </div>
-        <div class="card">
-            <p class="card_title">20 лет</p>
-            <p class="card_description">Мы помогаем бизнесам</p>
-        </div>
-        <div class="card">
-            <p class="card_title">10000+</p>
-            <p class="card_description">Заказов в год</p>
-        </div>
-        <div class="card">
-            <a href="https://youtube.com/clip/UgkxC5FnvkRnD0SY5gNDqrWB5fKAMNjlIpmu?si=4J-jeAd46gz14DGP">
-                <p class="card_title"></p>
-                <p class="card_description"></p>
-                <img src="../../../../src/assets/img/pages/MainPage/TypographyDescription/video.svg" alt="сслыка на видео">
-                <button class="card_button">
-                    <p>Смотреть видео</p>
-                </button>
-            </a>
-        </div>
-        <swiper :slides-per-view="5" :space-between="9" :autoplay="{ delay: 5000, disableOnInteraction: false }"
-            :loop="true" :modules="modules" class="partners">
-            <swiper-slide class="partner">
-                <img src="../../../assets/img/partners/carmel.svg" alt="Партнёр Кармер">
-            </swiper-slide>
-            <swiper-slide class="partner">
-                <img src="../../../assets/img/partners/аджигардак.svg" alt="Партнёр Аджигардак">
-            </swiper-slide>
-            <swiper-slide class="partner">
-                <img src="../../../assets/img/partners/баден.svg" alt="Партнёр Баден">
-            </swiper-slide>
-            <swiper-slide class="partner">
-                <img src="../../../assets/img/partners/геомтерия.svg" alt="Партнёр Геомтерия">
-            </swiper-slide>
-            <swiper-slide class="partner">
-                <img src="../../../assets/img/partners/крашер.svg" alt="Партнёр Крашер">
-            </swiper-slide>
-            <swiper-slide class="partner">
-                <img src="../../../assets/img/partners/полет.svg" alt="Партнёр Полет">
-            </swiper-slide>
-            <swiper-slide class="partner">
-                <img src="../../../assets/img/partners/сммщики.svg" alt="Партнёр СММщики">
-            </swiper-slide>
-            <swiper-slide class="partner">
-                <img src="../../../assets/img/partners/стомпрактика.svg" alt="Партнёр Стомпрактика">
-            </swiper-slide>
-            <swiper-slide class="partner">
-                <img src="../../../assets/img/partners/чилинз.svg" alt="Партнёр Чилинз">
-            </swiper-slide>
-            <swiper-slide class="partner">
-                <img src="../../../assets/img/partners/юургу.svg" alt="Партнёр юургу">
-            </swiper-slide>
-        </swiper>
     </div>
 </template>
 
@@ -84,10 +89,13 @@ export default {
 <style lang="scss" scoped>
 .typography_description {
     margin-top: 80px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 10px;
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
 
     .description {
         grid-row: span 3;
@@ -162,7 +170,7 @@ export default {
             &::after {
                 content: '';
                 display: inline-block;
-                border-left: 10px solid #27625F; // цвет треугольника (значка play)
+                border-left: 10px solid #27625F;
                 border-top: 7px solid transparent;
                 border-bottom: 7px solid transparent;
                 margin-left: 10px;
@@ -182,13 +190,13 @@ export default {
                 transition: opacity 0.5s ease;
             }
 
-            &:hover {
-                background-image: url("../../../assets/img/background.png");
-
-                &::before {
-                    opacity: 1;
-                }
-            }
+            //&:hover {
+            //    background-image: url("../../../assets/img/background.png");
+            //
+            //    &::before {
+            //        opacity: 1;
+            //    }
+            //}
         }
 
         &::before {
@@ -210,6 +218,14 @@ export default {
             &::before {
                 opacity: 1;
             }
+
+            .card_button {
+                background-image: url("../../../assets/img/background.png");
+
+                &::before {
+                    opacity: 1;
+                }
+            }
         }
 
     }
@@ -218,7 +234,7 @@ export default {
         width: 900px;
         grid-column: span 2;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         margin-top: 49px;
 
         img {

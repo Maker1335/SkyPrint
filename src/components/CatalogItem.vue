@@ -32,7 +32,6 @@ export default {
     background-color: #ECECEC;
     width: 265px;
     height: 250px;
-    padding: 10px;
 
     &_save {
         grid-area: save;

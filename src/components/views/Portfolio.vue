@@ -1,10 +1,12 @@
 <template>
     <Header />
     <div class="portfolio">
-        <h2>Портфолио</h2>
-        <div class="portfolio_list">
-            <div class="portfolio_list_item" v-for="item in work" :key="item.id">
-                <img :src="item.img" alt="">
+        <div class="wrapper">
+            <h2>Портфолио</h2>
+            <div class="portfolio_list">
+                <div class="portfolio_list_item" v-for="item in work" :key="item.id">
+                    <img :src="item.img" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -28,7 +30,7 @@ export default {
 
     data() {
         return {
-            work:[
+            work: [
                 {
                     id: 1,
                     img: Work1,
@@ -86,16 +88,18 @@ export default {
 <style lang="scss" scoped>
 .portfolio {
     color: #27625F;
+    margin-top: 50px;
 
     h2 {
         font-size: 50px;
         font-weight: bold;
+        margin-bottom: 50px;
     }
 
     &_list {
         display: flex;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 10px;
 
         &_item {
             img {

@@ -1,13 +1,13 @@
 <template>
     <div class="footer">
         <ul class="footer_links">
-            <li>Контакты</li>
-            <li>Каталог</li>
-            <li>Портфолио</li>
-            <li>О нас</li>
-            <li>Требования к макету</li>
-            <li>Доставка</li>
-            <li>Оплата</li>
+            <li><router-link to="/contacts">Контакты</router-link></li>
+            <li><router-link to="/catalog">Каталог</router-link></li>
+            <li><router-link to="/portfolio">Портфолио</router-link></li>
+            <li><router-link to="/aboutUs">О нас</router-link></li>
+            <li><router-link to="/requirements">Требования к макет</router-link></li>
+            <li><router-link to="/delivery">Доставка</router-link></li>
+            <li><router-link to="/payment">Оплата</router-link></li>
         </ul>
         <ul class="footer_catalog">
             <li>Широкоформатная печать</li>
@@ -64,7 +64,8 @@ export default {
     z-index: 1;
     color: white;
     padding: 75px 35px 35px 35px;
-
+    width: 1920px;
+    box-sizing: border-box;
     &_links {
         display: flex;
         flex-direction: column;
@@ -73,6 +74,10 @@ export default {
         li {
             font-size: 30px;
             font-weight: bold;
+            a{
+                text-decoration: none;
+                color: white;
+            }
         }
     }
 

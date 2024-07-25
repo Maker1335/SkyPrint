@@ -38,20 +38,5 @@ export default {
 
 <style lang="scss" scoped>
 .contente {
-    .wrapper {
-        height: 0px;
-
-        .header {
-            height: 0px;
-        }
-    }
-}
-
-.main_page {
-    .wrapper {
-        .header {
-            height: 0px;
-        }
-    }
 }
 </style>

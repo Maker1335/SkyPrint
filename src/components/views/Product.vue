@@ -1,189 +1,141 @@
 <template>
     <div class="product-page">
         <Header />
-        <div class="path">
+        <!-- <div class="path">
             <p><a href="#">Каталог</a> <a href="#">Печать визиток</a> <a href="#">Цифровая печать</a></p>
-        </div>
-        <div class="product">
-            <p class="product_title">Ручки</p>
-            <div class="product_front">
-                <div class="product_front_img-wrapper">
-                    <img src="../../assets/img/goods/pens.svg" alt="фото товара" class="product_front_img" />
-                </div>
-
-                <p class="product_front_description">
-                    Интересный развития. Соображения идейные направлений высшего финансовых нашей и по позволяет задача
-                    постоянный постоянный позволяет прогрессивного прогрессивного плановых идейные роль структура нашей
-                    равным рамки рост административных нашей же и в развития. Рост и значение равным существенных форм
-                    количественный нашей активности и модель интересный играет идейные отношении реализации же
-                    постоянный.
-                </p>
-            </div>
-            <div class="product_info">
-                <div class="product_info_estimated-cost">
-                    <p class="product_info_estimated-cost_price">10 400 &#8381;</p>
-                    <p class="product_info_estimated-cost_title">Ориентировочная стоимость</p>
-                </div>
-                <table class="product_info_table">
-                    <tr class="product_info_dimensions">
-                        <td>Размеры</td>
-                        <td> 50 х 90 мм, 90 х 100 мм, 40 х 80 мм, 200 х 150 мм, 200 х 150 мм, 50 х 150 мм</td>
-                    </tr>
-                    <tr class="product_info_paper-type">
-                        <td>Тип бумаги</td>
-                        <td>Мелованная 100-300/м2, Фактурная 100-300/м2, Цветная 100-300/м2</td>
-                    </tr>
-                    <tr class="product_info_print-type">
-                        <td>Тип печати</td>
-                        <td>Полноцветная с одной стороны</td>
-                    </tr>
-                    <tr class="product_info_lamination">
-                        <td>Ламинация</td>
-                        <td>Матовая, глянцевая</td>
-                    </tr>
-                    <tr class="product_info_angles">
-                        <td>Углы</td>
-                        <td>Скругленные, без скругления</td>
-                    </tr>
-                </table>
-                <div class="product_info_additional">
-                    <div class="product_info_additional_paragraphs">
-                        <p @click="togglePrices" class="product_info_additional_prices">Цены</p>
-                        <p @click="toggleRequirements" class="product_info_additional_requirements-for-layouts">
-                            Требования к
-                            макетам</p>
-                    </div>
-                    <transition name="fade">
-                        <div v-if="showPrices" class="product_info_additional_content">
-                            <table>
-                                <tr>
-                                    <th>Наименование</th>
-                                    <th>Цена</th>
-                                </tr>
-                                <tr>
-                                    <td>Позиция 1</td>
-                                    <td>1000 &#8381;</td>
-                                </tr>
-                                <tr>
-                                    <td>Позиция 2</td>
-                                    <td>2000 &#8381;</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </transition>
-                    <transition name="fade">
-                        <div v-if="showRequirements" class="product_info_additional_content">
-                            <p @click="toggleSection(1)">1. К печати принимаются макеты в следующих программах</p>
-                            <ol v-show="activeSection === 1">
-                                <li>COREL DRAW (до 17 версии) – cdr, eps.</li>
-                                <li>Adobe Photoshop (CC) – psd, tiff, jpg, bmp.</li>
-                                <li>Adobe Acrobat – pdf</li>
-                                <li><button
-                                        @click="copyText('COREL DRAW (до 17 версии) – cdr, eps.\nAdobe Photoshop (CC) – psd, tiff, jpg, bmp.\nAdobe Acrobat – pdf')">Копировать</button>
-                                </li>
-                            </ol>
-
-                            <p @click="toggleSection(2)">2. Общие требования</p>
-                            <ol v-show="activeSection === 2">
-                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                <li>Porro ab mollitia ad veniam libero possimus dolores harum.</li>
-                                <li><button
-                                        @click="copyText('Lorem ipsum dolor sit amet consectetur adipisicing elit.\nPorro ab mollitia ad veniam libero possimus dolores harum.')">Копировать</button>
-                                </li>
-                            </ol>
-
-                            <p @click="toggleSection(3)">3. Требования к растру и вектору</p>
-                            <ol v-show="activeSection === 3">
-                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                                <li>Porro ab mollitia ad veniam libero possimus dolores harum.</li>
-                                <li><button
-                                        @click="copyText('Lorem ipsum dolor sit amet consectetur adipisicing elit.\nPorro ab mollitia ad veniam libero possimus dolores harum.')">Копировать</button>
-                                </li>
-                            </ol>
-                        </div>
-                    </transition>
-                </div>
-                <div class="product_info_buttons">
-                    <button class="product_info_buttons_submit-application">Оставить заявку</button>
-                    <button class="product_info_buttons_designer-services">Услуги дизайнера</button>
-                </div>
-            </div>
-        </div>
+        </div> -->
         <div class="wrapper">
-            <h2>Другие категории</h2>
+            <div class="product">
+                <p class="product_title">Ручки</p>
+                <div class="product_front">
+                    <div class="product_front_img-wrapper">
+                        <img src="../../assets/img/goods/pens.svg" alt="фото товара" class="product_front_img" />
+                    </div>
 
-            <div class="slider-container">
-                <swiper :slides-per-view="5" :space-between="9" :autoplay="{ delay: 5000, disableOnInteraction: false }"
-                    :loop="true" :modules="modules" class="mySwiper">
-                    <swiper-slide class="product">
-                        <img :src="rollUpImage" alt="фото товара" />
-                        <p>Roll-up</p>
-                    </swiper-slide>
-                    <swiper-slide class="product">
-                        <img :src="notepadsImage" alt="фото товара" />
-                        <p>Блокноты</p>
-                    </swiper-slide>
-                    <swiper-slide class="product">
-                        <img :src="canvasesImage" alt="фото товара" />
-                        <p>Холсты</p>
-                    </swiper-slide>
-                    <swiper-slide class="product">
-                        <img :src="businessCardsImage" alt="фото товара" />
-                        <p>Визитки</p>
-                    </swiper-slide>
-                    <swiper-slide class="product">
-                        <img :src="laminationImage" alt="фото товара" />
-                        <p>Ламинирование</p>
-                    </swiper-slide>
-                    <swiper-slide class="product">
-                        <img :src="pensImage" alt="фото товара" />
-                        <p>Ручки</p>
-                    </swiper-slide>
-                </swiper>
-                <div class="all-categories">
-                    <p class="all-categories_text">Все категории </p>
-                    <p class="all-categories_arrow">&gt;</p>
+                    <p class="product_front_description">
+                        Интересный развития. Соображения идейные направлений высшего финансовых нашей и по позволяет
+                        задача
+                        постоянный постоянный позволяет прогрессивного прогрессивного плановых идейные роль структура
+                        нашей
+                        равным рамки рост административных нашей же и в развития. Рост и значение равным существенных
+                        форм
+                        количественный нашей активности и модель интересный играет идейные отношении реализации же
+                        постоянный.
+                    </p>
+                </div>
+                <div class="product_info">
+                    <div class="product_info_estimated-cost">
+                        <p class="product_info_estimated-cost_price">10 400 &#8381;</p>
+                        <p class="product_info_estimated-cost_title">Ориентировочная стоимость</p>
+                    </div>
+                    <table class="product_info_table">
+                        <tr class="product_info_dimensions">
+                            <td>Размеры</td>
+                            <td> 50 х 90 мм, 90 х 100 мм, 40 х 80 мм, 200 х 150 мм, 200 х 150 мм, 50 х 150 мм</td>
+                        </tr>
+                        <tr class="product_info_paper-type">
+                            <td>Тип бумаги</td>
+                            <td>Мелованная 100-300/м2, Фактурная 100-300/м2, Цветная 100-300/м2</td>
+                        </tr>
+                        <tr class="product_info_print-type">
+                            <td>Тип печати</td>
+                            <td>Полноцветная с одной стороны</td>
+                        </tr>
+                        <tr class="product_info_lamination">
+                            <td>Ламинация</td>
+                            <td>Матовая, глянцевая</td>
+                        </tr>
+                        <tr class="product_info_angles">
+                            <td>Углы</td>
+                            <td>Скругленные, без скругления</td>
+                        </tr>
+                    </table>
+                    <div class="product_info_additional">
+                        <div class="product_info_additional_paragraphs">
+                            <p @click="togglePrices" class="product_info_additional_prices">Цены</p>
+                            <p @click="toggleRequirements" class="product_info_additional_requirements-for-layouts">
+                                Требования к
+                                макетам</p>
+                        </div>
+                        <transition name="fade">
+                            <div v-if="showPrices" class="product_info_additional_content">
+                                <table>
+                                    <tr>
+                                        <th>Наименование</th>
+                                        <th>Цена</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Позиция 1</td>
+                                        <td>1000 &#8381;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Позиция 2</td>
+                                        <td>2000 &#8381;</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </transition>
+                        <transition name="fade">
+                            <div v-if="showRequirements" class="product_info_additional_content">
+                                <p @click="toggleSection(1)">1. К печати принимаются макеты в следующих программах</p>
+                                <ol v-show="activeSection === 1">
+                                    <li>COREL DRAW (до 17 версии) – cdr, eps.</li>
+                                    <li>Adobe Photoshop (CC) – psd, tiff, jpg, bmp.</li>
+                                    <li>Adobe Acrobat – pdf</li>
+                                    <li><button
+                                            @click="copyText('COREL DRAW (до 17 версии) – cdr, eps.\nAdobe Photoshop (CC) – psd, tiff, jpg, bmp.\nAdobe Acrobat – pdf')">Копировать</button>
+                                    </li>
+                                </ol>
+
+                                <p @click="toggleSection(2)">2. Общие требования</p>
+                                <ol v-show="activeSection === 2">
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                                    <li>Porro ab mollitia ad veniam libero possimus dolores harum.</li>
+                                    <li><button
+                                            @click="copyText('Lorem ipsum dolor sit amet consectetur adipisicing elit.\nPorro ab mollitia ad veniam libero possimus dolores harum.')">Копировать</button>
+                                    </li>
+                                </ol>
+
+                                <p @click="toggleSection(3)">3. Требования к растру и вектору</p>
+                                <ol v-show="activeSection === 3">
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                                    <li>Porro ab mollitia ad veniam libero possimus dolores harum.</li>
+                                    <li><button
+                                            @click="copyText('Lorem ipsum dolor sit amet consectetur adipisicing elit.\nPorro ab mollitia ad veniam libero possimus dolores harum.')">Копировать</button>
+                                    </li>
+                                </ol>
+                            </div>
+                        </transition>
+                    </div>
+                    <div class="product_info_buttons">
+                        <button class="product_info_buttons_submit-application">Оставить заявку</button>
+                        <button class="product_info_buttons_designer-services">Услуги дизайнера</button>
+                    </div>
                 </div>
             </div>
+            <Slider :titleText="sliderText" />
         </div>
     </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Autoplay } from 'swiper/modules';
-import 'swiper/swiper-bundle.css';
-
 import Header from '../header.vue';
 import { useToast } from 'vue-toastification';
 
-import rollUpImage from '../../assets/img/goods/RollUp.svg';
-import notepadsImage from '../../assets/img/goods/notepads.svg';
-import canvasesImage from '../../assets/img/goods/canvases.svg';
-import businessCardsImage from '../../assets/img/goods/businessСards.svg';
-import laminationImage from '../../assets/img/goods/lamination.svg';
-import pensImage from '../../assets/img/goods/pens.svg';
+import Slider from '../Slider.vue';
 
 export default {
     name: 'Product',
     components: {
         Header,
-        Swiper,
-        SwiperSlide,
+        Slider
     },
     data() {
         return {
             showPrices: false,
             showRequirements: false,
             activeSection: null,
-
-            modules: [Autoplay],
-            rollUpImage,
-            notepadsImage,
-            canvasesImage,
-            businessCardsImage,
-            laminationImage,
-            pensImage
+            sliderText: "Другие категории",
         };
     },
     methods: {
@@ -246,7 +198,6 @@ $goodsBG: "../../assets/img/background.png";
         grid-template-columns: 477px 17px 1fr;
         grid-template-areas: "title title title" "front . info";
         margin-top: 49px;
-        margin-right: 52px;
 
         &_title {
             font-size: 36px;
@@ -262,33 +213,16 @@ $goodsBG: "../../assets/img/background.png";
                 position: relative;
                 width: 477px;
                 height: 477px;
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-image: url('../../assets/img/background.png');
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    opacity: 0;
-                    transition: opacity 0.5s ease;
-                    z-index: 1;
-                    border-radius: 30px;
-                }
-
-                &:hover::before {
-                    opacity: 1;
-                }
+                background-image: url('../../assets/img/background.png');
+                background-size: cover;
+                border-radius: 8px;
             }
 
             &_img {
                 width: 100%;
                 height: 100%;
                 position: relative;
-                z-index: 2;
+                z-index: auto;
             }
 
 
@@ -505,101 +439,7 @@ $goodsBG: "../../assets/img/background.png";
     }
 }
 
-.wrapper {
+.slider {
     margin-top: 100px;
-
-    h2 {
-        font-size: 30px;
-        font-weight: bold;
-    }
-
-    .slider-container {
-        width: 100%;
-        display: grid;
-        grid-template-columns: auto 232px;
-        justify-content: center;
-        margin-top: 9px;
-
-        .swiper {
-            width: 100%;
-        }
-
-        .swiper-slide {
-            text-align: start;
-            font-size: 18px;
-            background-color: #fff;
-            width: 232px;
-            height: 256px;
-            position: relative;
-            overflow: hidden;
-            transition: background-color 0.5s ease;
-
-            p {
-                font-size: 17px;
-                font-weight: bold;
-                color: #27625f;
-                padding: 10px 20px;
-                z-index: 1;
-            }
-
-            img {
-                width: 233px;
-                height: 183px;
-                z-index: 1;
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-image: url($goodsBG);
-                background-size: cover;
-                opacity: 0;
-                transition: opacity 0.5s ease;
-            }
-
-            &:hover {
-                background-color: transparent;
-
-                &::before {
-                    opacity: 1;
-                }
-            }
-        }
-
-        .product {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .all-categories {
-            width: 100%;
-            font-size: 17px;
-            font-weight: bold;
-            color: #27625f;
-            background: #fff;
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-around;
-
-            &_text {
-                width: 85px;
-            }
-
-            &_arrow {
-                width: 8px;
-                height: 16px;
-                padding: 3px;
-            }
-
-            p {
-                margin-bottom: 25px;
-            }
-        }
-    }
 }
 </style>

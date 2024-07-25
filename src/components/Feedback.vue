@@ -1,7 +1,7 @@
 <template>
     <div class="feedback">
         <div class="wrapper">
-            <h4>Заинтересовали? Тогда скорее звони нам!</h4>
+            <h4>{{ titleText }}</h4>
             <div class="feedback_form">
                 <div class="form">
                     <input type="text" placeholder="Имя" class="form_input">
@@ -9,14 +9,16 @@
                     <input type="email" placeholder="Почта" class="form_input">
                     <label class="form_checkbox"><input type="checkbox"> Нажимая кнопку "Отправить", я соглашаюсь с
                         условиями <a href="#">пользовательского соглашения</a> </label>
-                    <button class="form_button">Отправить</button>
+                    <button class="form_button">
+                        <p class="form_button_text">Отправить</p>
+                    </button>
                 </div>
                 <div class="contact-manager" :class="{ selected: selectedContact === 'manager' }"
                     @click="selectContact('manager')">
                     <p>
                         Связаться с менеджером
                         <img v-if="selectedContact === 'manager'"
-                            src="../../../assets/img/pages/MainPage/Feedback/checkmark.svg" alt="галочка" />
+                            src="../assets/img/pages/MainPage/Feedback/checkmark.svg" alt="галочка" />
                     </p>
                 </div>
                 <div class="contact-designer" :class="{ selected: selectedContact === 'designer' }"
@@ -24,7 +26,7 @@
                     <p>
                         Связаться с дизайнером
                         <img v-if="selectedContact === 'designer'"
-                            src="../../../assets/img/pages/MainPage/Feedback/checkmark.svg" alt="галочка" />
+                            src="../assets/img/pages/MainPage/Feedback/checkmark.svg" alt="галочка" />
                     </p>
                 </div>
             </div>
@@ -45,19 +47,21 @@ export default {
             this.selectedContact = contact;
         },
     },
+    props: {
+        titleText: Object
+    }
 }
 </script>
 
 <style lang="scss" scoped>
+$goodsBG: "../assets/img/background.png";
+
 .feedback {
+    display: flex;
+    flex-direction: column;
     background: #CEFFFD;
     margin-top: 80px;
     padding: 30px;
-
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-    }
 
     h4 {
         font-size: 50px;
@@ -101,14 +105,37 @@ export default {
                 height: 62px;
                 border-radius: 5px;
                 background: none;
-                font-size: 20px;
                 color: #27625F;
                 transition: all 0.5s;
+                position: relative;
+
+                &_text {
+                    font-size: 20px;
+                    z-index: 2;
+                    position: relative;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url($goodsBG);
+                    background-size: cover;
+                    opacity: 0;
+                    transition: opacity 0.5s ease;
+                }
 
                 &:hover {
-                    background-image: url("../../../assets/img/background.png");
-                    background-size: cover;
+                    background-color: transparent;
+
                     color: #FFFFFF;
+
+                    &::before {
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -127,7 +154,6 @@ export default {
                 color: #27625F;
                 font-weight: bold;
             }
-
         }
 
         .selected {

@@ -1,66 +1,68 @@
 <template>
     <div class="contacts">
-        <h4>Контакты</h4>
-        <div class="contacts_cards">
-            <div class="card">
-                <p class="card_title">Менеджер</p>
-                <div class="card_phone">
-                    <img src="../../../assets/img/pages/MainPage/Contacts/phone.svg" alt="">
-                    <p>+7 (351) 248-72-87, 245-45-75</p>
+        <div class="wrapper">
+            <h4>Контакты</h4>
+            <div class="contacts_cards">
+                <div class="card">
+                    <p class="card_title">Менеджер</p>
+                    <div class="card_phone">
+                        <img src="../../../assets/img/pages/MainPage/Contacts/phone.svg" alt="">
+                        <p>+7 (351) 248-72-87, 245-45-75</p>
+                    </div>
+                    <div class="card_email">
+                        <img src="../../../assets/img/header/email.svg" alt="">
+                        <p>zakaz@skyprint74.ru</p>
+                    </div>
+                    <p class="card_hours">Пн-Пт: 09:00 — 18:00</p>
                 </div>
-                <div class="card_email">
-                    <img src="../../../assets/img/header/email.svg" alt="">
-                    <p>zakaz@skyprint74.ru</p>
+                <div class="card">
+                    <p class="card_title">Дизайнер</p>
+                    <div class="card_email">
+                        <img src="../../../assets/img/header/email.svg" alt="">
+                        <p>zakaz@skyprint74.ru</p>
+                    </div>
+                    <p class="card_hours">Пн-Пт: 09:00 — 18:00</p>
                 </div>
-                <p class="card_hours">Пн-Пт: 09:00 — 18:00</p>
-            </div>
-            <div class="card">
-                <p class="card_title">Дизайнер</p>
-                <div class="card_email">
-                    <img src="../../../assets/img/header/email.svg" alt="">
-                    <p>zakaz@skyprint74.ru</p>
-                </div>
-                <p class="card_hours">Пн-Пт: 09:00 — 18:00</p>
-            </div>
-            <div class="card">
-                <p class="card_title">Копировальный центр</p>
-                <div class="card_phone">
-                    <img src="../../../assets/img/pages/MainPage/Contacts/phone.svg" alt="">
-                    <p>+7 (351) 248-72-87</p>
-                </div>
-                <div class="card_email">
-                    <img src="../../../assets/img/header/email.svg" alt="">
-                    <p>operator@skyprint74.ru</p>
-                </div>
-                <ul class="card_hours">
-                    <li>Пн-Пт: 9:00 — 19:00</li>
-                    <li>Сб: 9:00 — 18:00</li>
-                    <li>Вс: 9:00 — 16:00</li>
-                </ul>
-            </div>
-        </div>
-        <div class="map">
-            <div class="map_info">
-                <div class="address">
-                    <p class="address_addre">Наш адрес</p>
-                    <p class="address_title">Ул. Витебская 3а. 46530</p>
-                </div>
-                <div class="email">
-                    <img src="../../../assets/img/pages/MainPage/contacts/email.svg" alt="Email">
-                </div>
-                <div class="whatsapp">
-                    <img src="../../../assets/img/pages/MainPage/contacts/whatsapp.jpg" alt="WhatsApp">
-                </div>
-                <div class="telegram">
-                    <img src="../../../assets/img/pages/MainPage/contacts/telegram.svg" alt="Telegram">
-                </div>
-                <div class="vk">
-                    <img src="../../../assets/img/pages/MainPage/contacts/vk.svg" alt="VK">
+                <div class="card">
+                    <p class="card_title">Копировальный центр</p>
+                    <div class="card_phone">
+                        <img src="../../../assets/img/pages/MainPage/Contacts/phone.svg" alt="">
+                        <p>+7 (351) 248-72-87</p>
+                    </div>
+                    <div class="card_email">
+                        <img src="../../../assets/img/header/email.svg" alt="">
+                        <p>operator@skyprint74.ru</p>
+                    </div>
+                    <ul class="card_hours">
+                        <li>Пн-Пт: 9:00 — 19:00</li>
+                        <li>Сб: 9:00 — 18:00</li>
+                        <li>Вс: 9:00 — 16:00</li>
+                    </ul>
                 </div>
             </div>
-            <iframe
-                src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=false&amp;source=constructor-api&amp;um=constructor%3A7fb6797bf8d1af4216e7adc1994b150695b59c304837bd4848ad55dd64365ed6"
-                frameborder="0" allowfullscreen="true" width="100%" height="100%" style="display: block;"></iframe>
+            <div class="map">
+                <div class="map_info">
+                    <div class="address">
+                        <p class="address_addre">Наш адрес</p>
+                        <p class="address_title">Ул. Витебская 3а. 46530</p>
+                    </div>
+                    <div class="email">
+                        <img src="../../../assets/img/pages/MainPage/contacts/email.svg" alt="Email">
+                    </div>
+                    <div class="whatsapp">
+                        <img src="../../../assets/img/pages/MainPage/contacts/whatsapp.jpg" alt="WhatsApp">
+                    </div>
+                    <div class="telegram">
+                        <img src="../../../assets/img/pages/MainPage/contacts/telegram.svg" alt="Telegram">
+                    </div>
+                    <div class="vk">
+                        <img src="../../../assets/img/pages/MainPage/contacts/vk.svg" alt="VK">
+                    </div>
+                </div>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=false&amp;source=constructor-api&amp;um=constructor%3A7fb6797bf8d1af4216e7adc1994b150695b59c304837bd4848ad55dd64365ed6"
+                    frameborder="0" allowfullscreen="true" width="100%" height="100%" style="display: block;"></iframe>
+            </div>
         </div>
     </div>
 </template>
@@ -73,14 +75,17 @@ export default {
 
 <style lang="scss" scoped>
 .contacts {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 50px 1fr;
-    grid-template-areas:
-        "h4 h4 h4"
-        "cards map map";
-    flex-direction: column;
     margin-top: 71px;
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 50px 1fr;
+        grid-template-areas:
+            "h4 h4 h4"
+            "cards map map";
+        flex-direction: column;
+    }
 
     h4 {
         font-size: 30px;

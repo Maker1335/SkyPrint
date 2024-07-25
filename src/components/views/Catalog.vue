@@ -1,9 +1,11 @@
 <template>
     <div class="catalog">
         <Header />
-        <div class="content">
-            <h2>Найдите, что вам нужно</h2>
-            <CatalogList />
+        <div class="wrapper">
+            <div class="content">
+                <h2>Найдите, что вам нужно</h2>
+                <CatalogList />
+            </div>
         </div>
     </div>
 </template>
@@ -16,7 +18,7 @@ export default {
     name: 'Catalog',
     components: {
         Header,
-        CatalogList
+        CatalogList,
     },
 
 }

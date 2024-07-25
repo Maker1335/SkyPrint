@@ -1,63 +1,101 @@
 <template>
     <div class="header">
-        <ul>
-            <div class="search-container"><a href="#"><img src="../../src/assets/img/header/search.svg" alt="search"
-                        class="search-icon">
-                    <input type="text" class="search-input" placeholder="поиск"></a>
-            </div>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Оплата</a></li>
-            <li><a href="#">Требования к макету</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li class="save">
-                <a href="#">
-                    <p><img class="save_img" src="../../src/assets/img/header/save.svg" alt="save"> 3</p>
-                </a>
-                <ul class="save_list">
-                    <li class="save_item"><img class="save_item_img" src="../../src/assets/img/goods/RollUp.svg" alt="">
-                        <p class="save_item_title">Шелкография <img src="../../src/assets/img/header/save.svg" alt="">
-                        </p>
-                        <p class="save_item_count">От 3 шт</p>
-                    </li>
-                    <li class="save_item"><img class="save_item_img" src="../../src/assets/img/goods/RollUp.svg" alt="">
-                        <p class="save_item_title">Постпечатная обработка <img
-                                src="../../src//assets/img/header/save.svg" alt=""></p>
-                        <p class="save_item_count">От 3 шт</p>
-                    </li>
-                    <li class="save_item"><img class="save_item_img" src="../../src/assets/img/goods/RollUp.svg" alt="">
-                        <p class="save_item_title">Пластиковые карты <img src="../../src/assets/img/header/save.svg"
-                                alt=""></p>
-                        <p class="save_item_count">От 3 шт</p>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="#"><img src="../../src/assets/img/header/email.svg" alt="email"></a> </li>
-            <li class="phone"><a href="#"><img src="../../src/assets/img/header/phone.svg" alt="phone"></a>
-                <ul class="phone_list">
-                    <li><a href="#"><img src="../../src/assets/img/header/phone.svg" alt="phone"></a></li>
-                    <li><a href="#"><img src="../../src/assets/img/footer/whatsapp.svg" alt="whatsapp"></a></li>
-                    <li><a href="#"><img src="../../src/assets/img/footer/telegram.svg" alt="telegram"></a></li>
-                    <li><a href="#"><img src="../../src/assets/img/footer/vk.svg" alt="vk"></a></li>
-                </ul>
-            </li>
-        </ul>
+        <div class="wrapper">
+            <ul>
+                <div class="search-container"><a href="#"><img src="../../src/assets/img/header/search.svg" alt="search"
+                            class="search-icon">
+                        <input type="text" class="search-input" placeholder="поиск"></a>
+                </div>
+                <li><router-link to="/">Главная</router-link></li>
+                <li><router-link to="/catalog">Каталог</router-link></li>
+                <li><router-link to="/aboutUs">О нас</router-link></li>
+                <li><router-link to="/payment">Оплата</router-link></li>
+                <li><router-link to="/requirements">Требования к макету</router-link></li>
+                <li><router-link to="/delivery">Доставка</router-link></li>
+                <li><router-link to="/contacts">Контакты</router-link></li>
+                <li class="save">
+                    <a href="#">
+                        <p><img class="save_img" src="../../src/assets/img/header/save.svg" alt="save"> 3</p>
+                    </a>
+                    <ul class="save_list">
+                        <li class="save_item"><img class="save_item_img" src="../../src/assets/img/goods/RollUp.svg"
+                                alt="">
+                            <p class="save_item_title">Шелкография <img src="../../src/assets/img/header/save.svg"
+                                    alt="">
+                            </p>
+                            <p class="save_item_count">От 3 шт</p>
+                        </li>
+                        <li class="save_item"><img class="save_item_img" src="../../src/assets/img/goods/RollUp.svg"
+                                alt="">
+                            <p class="save_item_title">Постпечатная обработка <img
+                                    src="../../src//assets/img/header/save.svg" alt=""></p>
+                            <p class="save_item_count">От 3 шт</p>
+                        </li>
+                        <li class="save_item"><img class="save_item_img" src="../../src/assets/img/goods/RollUp.svg"
+                                alt="">
+                            <p class="save_item_title">Пластиковые карты <img src="../../src/assets/img/header/save.svg"
+                                    alt=""></p>
+                            <p class="save_item_count">От 3 шт</p>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="../../src/assets/img/header/email.svg" alt="email"></a> </li>
+                <li class="phone"><a href="#"><img src="../../src/assets/img/header/phone.svg" alt="phone"></a>
+                    <ul class="phone_list">
+                        <li><button @click="copyText('7(351)248-72-87')"> <img
+                                    src="../../src/assets/img/header/phone.svg" alt="phone"> </button></li>
+                        <li><a href="https://t.me/skyprint174_bot"><img src="../../src/assets/img/header/telegram.svg"
+                                    alt="telegram"></a></li>
+                        <li><a href="https://vk.com/skyprint74"><img src="../../src/assets/img/header/vk.svg"
+                                    alt="vk"></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
 <script>
+import { useToast } from "vue-toastification";
 export default {
     name: 'Header',
+    methods: {
+        copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                this.showToast('Текст скопирован!');
+            }).catch(() => {
+                this.showToast('Ошибка копирования');
+            });
+        },
+        showToast(message) {
+            const toast = useToast();
+            toast.success(message, {
+                position: "top-right",
+                timeout: 5000,
+                closeOnClick: true,
+                pauseOnFocusLoss: false,
+                pauseOnHover: false,
+                draggable: true,
+                draggablePercent: 0.6,
+                showCloseButtonOnHover: false,
+                hideProgressBar: true,
+                closeButton: "button",
+                icon: true,
+                rtl: false
+            });
+        },
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 .header {
     width: 100%;
-    height: 85px;
     background: #EFEFEF;
+
+    .wrapper {
+        height: 85px;
+    }
 
     ul {
         display: flex;
@@ -100,7 +138,8 @@ export default {
 
             &:hover .save_list {
                 opacity: 1;
-                pointer-events: auto
+                pointer-events: auto;
+                z-index: 2;
             }
 
             &_list {
@@ -170,7 +209,7 @@ export default {
                 list-style-type: none;
                 border-radius: 30px;
                 width: 34px;
-                background: #ddd;
+                background: #fff;
                 opacity: 0;
                 height: 0;
                 overflow: hidden;
@@ -182,12 +221,19 @@ export default {
                         height: 20px;
                     }
                 }
+
+                button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                }
             }
 
             &:hover .phone_list {
                 opacity: 1;
-                height: 170px;
+                height: 120px;
                 padding: 5px;
+
             }
         }
 
@@ -224,4 +270,18 @@ export default {
     }
 
 }
+
+//@media (max-width: 1367px) {
+//    .header {
+//        .wrapper {
+//            height: 65px;
+//        }
+//
+//        ul {
+//            .search-container {
+//                max-width: 227px;
+//            }
+//        }
+//    }
+//}
 </style>

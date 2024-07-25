@@ -1,15 +1,18 @@
 <template>
     <div class="stages_of_work">
-        <h4>Этапы работы</h4>
-        <div class="work_list">
-            <ul>
-                <li class="item" :class="{ show: item.show }" v-for="item in items" :key="item.id" @mouseenter="showContent(item)">
-                    <p class="item_title">{{ item.title }}</p>
-                    <p class="item_content" v-if="item.show">{{ item.content }}</p>
-                    <img class="item_img" v-if="item.show" :src="item.img" alt="">
-                    <a class="item_link" v-if="item.show" href="">{{ item.link }}</a>
-                </li>
-            </ul>
+        <div class="wrapper">
+            <h4>Этапы работы</h4>
+            <div class="work_list">
+                <ul>
+                    <li class="item" :class="{ show: item.show }" v-for="item in items" :key="item.id"
+                        @mouseenter="showContent(item)">
+                        <p class="item_title">{{ item.title }}</p>
+                        <p class="item_content" v-if="item.show">{{ item.content }}</p>
+                        <img class="item_img" v-if="item.show" :src="item.img" alt="">
+                        <a class="item_link" v-if="item.show" href="">{{ item.link }}</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
@@ -82,9 +85,12 @@ export default {
 <style lang="scss" scoped>
 .stages_of_work {
     margin-top: 90px;
-    display: grid;
-    grid-template-columns: auto 970px;
     color: #27625F;
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: auto 970px;
+    }
 
     h4 {
         font-size: 30px;
@@ -132,7 +138,8 @@ export default {
                 font-size: 16px;
                 grid-area: link;
             }
-            &::after{
+
+            &::after {
                 content: "";
                 display: block;
                 width: 25px;
@@ -144,10 +151,12 @@ export default {
                 transform: translate(-50%, -50%);
             }
         }
-        .show{
+
+        .show {
             height: 100%;
             background-color: #CEFFFD;
-            &::after{
+
+            &::after {
                 content: none;
             }
         }

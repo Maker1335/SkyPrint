@@ -1,0 +1,70 @@
+<template>
+    <div class="delivery_options">
+        <div class="wrapper">
+            <h3>Доставим заказ куда угодно</h3>
+            <div class="cards">
+                <DeliveryCard v-for="(card, index) in cards" :key="index" :title="card.title" :items="card.items"
+                    :backgroundColor="card.backgroundColor" />
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import DeliveryCard from './DeliveryCard.vue';
+
+export default {
+    name: 'DeliveryOptions',
+    components: {
+        DeliveryCard
+    },
+    data() {
+        return {
+            cards: [
+                {
+                    title: "Доставка по Челябинску",
+                    items: [
+                        "Стоимость доставки по городу 250₽",
+                        "В отдаленные районы стоимость рассчитывается индивидуально",
+                        "Доставка осуществляется в течение дня",
+                        "Информацию о своем заказе уточнять у менеджера",
+                        "При заказе на сумму более 5000 рублей, доставим заказ бесплатно Относительно к Челябинску"
+                    ],
+                },
+                {
+                    title: "Доставка по России",
+                    items: [
+                        "Вам нужно лишь выбрать удобную для себя транспортную компанию. Как только заказ придет в ваш город, сотрудники транспортной компании с вами свяжутся.",
+                        "Стоимость доставки зависит от тарифов транспортной компании.",
+                        "Как правило, цена зависит от веса посылки и расстояния от Челябинска до вашего города."
+                    ],
+                }
+            ]
+        }
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+.delivery_options {
+    margin-top: 20px;
+    margin-bottom: 90px;
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    h3 {
+        font-size: 30px;
+        font-weight: bold;
+        width: 250px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 460px);
+        gap: 20px;
+    }
+}
+</style>

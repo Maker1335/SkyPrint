@@ -1,6 +1,8 @@
 <template>
     <div class="sidebar">
-        <img src="../assets/img/Sidebar/logo.svg" alt="Логотип компании" class="logo">
+        <router-link to="/">
+            <img src="../assets/img/Sidebar/logo.svg" alt="Логотип компании" class="logo">
+        </router-link>
         <ul class="service-list">
             <li><a href="#"><img src="../assets/img/goods/businessСards.svg" alt="">
                     <p>Визитки</p>
@@ -24,14 +26,16 @@
                     <p>Прочее</p>
                 </a></li>
             <ul class="goods-list">
-                <li class="goods-list_item"><img class="goods-list_item_img"
-                        src="../../src/assets/img/goods/printing.svg" alt="фото товара">
-                    <p class="goods-list_item_title">Название товара
-                        <img class="goods-list_item_save" src="../../src/assets/img/header/saveOff.svg"
-                            alt="фото закладки">
-                    </p>
-                    <p class="goods-list_item_count">От 3 шт</p>
-                </li>
+                <router-link to="/product">
+                    <li class="goods-list_item"><img class="goods-list_item_img"
+                            src="../../src/assets/img/goods/printing.svg" alt="фото товара">
+                        <p class="goods-list_item_title">Название товара
+                            <img class="goods-list_item_save" src="../../src/assets/img/header/saveOff.svg"
+                                alt="фото закладки">
+                        </p>
+                        <p class="goods-list_item_count">От 3 шт</p>
+                    </li>
+                </router-link>
                 <li class="goods-list_item"><img class="goods-list_item_img"
                         src="../../src/assets/img/goods/printing.svg" alt="фото товара">
                     <p class="goods-list_item_title">Название товара
@@ -101,9 +105,9 @@
         <a href="#contact" class="contact-link">
             <p>Связаться с менеджером</p>
         </a>
-        <a href="#design-services" class="designer-link">
+        <router-link to="/designServices" class="designer-link">
             <p>Услуги дизайнера</p>
-        </a>
+        </router-link>
     </div>
 </template>
 
@@ -126,6 +130,8 @@ export default {
     margin-top: 38px;
     margin-right: 36px;
     margin-left: 34px;
+    z-index: 1;
+
 
     .logo {
         width: 178px;
@@ -183,13 +189,20 @@ export default {
         .goods-list {
             position: absolute;
             top: 8%;
-            left: -1000%;
+            //left: -1000%;
+            max-width: 0px;
             background-color: white;
             transition: left 0.5s ease;
             display: grid;
             grid-template-columns: repeat(2, 272px);
             gap: 8px;
             padding: 10px;
+            visibility: hidden;
+            opacity: 0;
+
+            a {
+                text-decoration: none;
+            }
 
             &_item {
                 display: grid;
@@ -232,6 +245,10 @@ export default {
 
         &:hover .goods-list {
             left: 100%;
+            transition: all 0.5s ease;
+            max-width: 1000px;
+            opacity: 1;
+            visibility: visible;
         }
 
     }
@@ -282,4 +299,40 @@ export default {
         }
     }
 }
+
+//@media (max-width: 1367px) {
+//    .sidebar {
+//        position: sticky;
+//        top: 38px;
+//        width: 294px;
+//        height: 850px;
+//        background-color: #FFFFFF;
+//        color: white;
+//        display: flex;
+//        flex-direction: column;
+//        margin-top: 38px;
+//        margin-right: 36px;
+//        margin-left: 34px;
+//        z-index: 1;
+//        .logo {
+//            width: 117px;
+//            height: 49px;
+//        }
+//        .service-list {
+//            li {
+//                a {
+//                    img {
+//                        width: 81px;
+//                        height: 75px;
+//                    }
+//                }
+//            }
+//        }
+//        .contact-link,
+//        .designer-link {
+//            width: 294px;
+//            height: 64px;
+//        }
+//    }
+//}
 </style>

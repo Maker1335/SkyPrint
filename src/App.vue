@@ -1,14 +1,10 @@
 <template>
   <div id="app">
     <div class="content">
-      <Sidebar class="sidebar" />
       <div class="page">
-        <router-view/>
-        <!-- <MainPage class="main_page" /> -->
-        <!-- <Catalog class="catalog"/> -->
-        <!-- <Product class="product"/> -->
-        <!-- <Contacts /> -->
+        <router-view />
       </div>
+      <Sidebar class="sidebar" />
     </div>
     <Footer class="footer" />
   </div>
@@ -35,40 +31,28 @@ export default {
     Header
   }
 };
-
 </script>
 
 <style lang="scss">
-* {
-  padding: 0px;
-  margin: 0px;
-  font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-ul,
-li {
-  list-style: none;
-}
+@import './assets/style/index.scss'
 </style>
 
 <style lang="scss" scoped>
 #app {
+  min-height: 100vh;
+  width: 1920px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 356px 36px 1fr;
   grid-template-rows: 1fr auto;
   grid-template-areas:
-    "content content content"
-    "footer footer footer";
-  min-height: 100vh;
+    "content"
+    "footer";
 }
 
 .content {
   grid-area: content;
-
   display: grid;
-  grid-template-columns: 356px 36px 1fr;
+  grid-template-columns: 356px 36px 1528px;
   grid-template-areas:
     "sidebar . content";
 
@@ -85,14 +69,19 @@ li {
   grid-area: footer;
 }
 
-.page{
+.page {
   .amain_page {
-    .wrapper{
-      .header{
+    .wrapper {
+      .header {
         visibility: hidden;
       }
     }
   }
 }
 
+//@media (max-width: 1367px) {
+//  .content {
+//    grid-template-columns: 327px 16px 1023px;
+//  }
+//}
 </style>
