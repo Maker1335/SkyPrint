@@ -45,9 +45,7 @@ export default {
 <style lang="scss" scoped>
 .partners {
     background-color: #F5F5F5;
-
     margin-bottom: 80px;
-
     .wrapper {
         padding: 100px;
         box-sizing: border-box;
@@ -55,25 +53,59 @@ export default {
         flex-direction: column;
         align-items: center;
     }
-
     h3 {
         font-size: 38px;
         font-weight: bold;
         margin-bottom: 100px;
     }
-
     &_list {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 80px;
-
         img {
             filter: grayscale(1);
             transition: filter 0.5s;
-
             &:hover {
                 filter: grayscale(0);
+            }
+        }
+    }
+}
+@media (max-width: 1367px) {
+    .partners {
+        background-color: #F5F5F5;
+        margin-bottom: 40px;
+        h3 {
+            font-size: 24px;
+            margin-bottom: 80px;
+        }
+        &_list {
+            gap: 50px;
+            img {
+                height: 50px;
+            }
+        }
+    }
+}
+@media (max-width: 361px) {
+    .partners {
+        margin-bottom: 30px;
+        .wrapper {
+            padding: 20px 10px;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        &_list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            justify-items: center;
+            gap: 20px;
+            img {
+                height: 30px;
             }
         }
     }

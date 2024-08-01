@@ -95,4 +95,42 @@ export default {
         }
     }
 }
+@media (max-width: 1367px) {
+    .our-offers {
+        margin-bottom: 70px;
+    
+        h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    
+        &_cards {
+            gap: 15px;
+            justify-content: flex-start;
+    
+            .card {
+                width: 315px;
+            }
+        }
+    }
+}
+@media (max-width: 361px) {
+    .our-offers {
+        margin-bottom: 30px;
+    
+        h3 {
+            font-size: 20px;
+        }
+    
+        &_cards {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+    
+            .card {
+                width: 100%;
+            }
+        }
+    }
+}
 </style>

@@ -10,7 +10,6 @@
                         впечатление на партнеров и клиентов? Мечтаете о визитках с эксклюзивным дизайном? Мы поможем
                         осуществить ваши планы!</p>
                 </div>
-
                 <div class="info_buttons">
                     <button class="order-button">Заказать</button>
                     <button class="question-button">Задать вопрос</button>
@@ -33,7 +32,6 @@ export default {
 .order-design {
     margin-bottom: 70px;
     background-image: url("../../../assets/img/background.png");
-    
 
     .wrapper {
         display: flex;
@@ -104,6 +102,92 @@ export default {
         img {
             width: 400px;
             height: 400px;
+        }
+    }
+}
+
+@media (max-width: 1367px) {
+    .order-design {
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 60px 30px;
+            box-sizing: border-box;
+            gap: 30px;
+        }
+
+        .info {
+
+            &_title {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                &_text {
+                    font-size: 35px;
+                }
+            }
+
+            &_buttons {
+                gap: 15px;
+
+                .order-button,
+                .question-button {
+                    width: 300px;
+                    height: 60px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &_img {
+            img {
+                width: auto;
+                height: 330px;
+            }
+        }
+    }
+}
+
+@media (max-width: 361px) {
+    .order-design {
+        margin-bottom: 30px;
+
+        .wrapper {
+            justify-content: flex-start;
+            flex-direction: column;
+            padding: 20px 10px;
+            gap: 0px;
+        }
+
+        .info {
+
+            &_title {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                &_text {
+                    font-size: 30px;
+                }
+            }
+
+            &_buttons {
+                flex-direction: column;
+                gap: 10px;
+
+                .order-button,
+                .question-button {
+                    width: 100%;
+                    height: 60px;
+                    font-size: 14px;
+                    padding: 20px;
+                }
+            }
+        }
+
+        &_img {
+            display: none;
         }
     }
 }

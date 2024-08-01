@@ -29,18 +29,27 @@ export default {
     Product,
     Contacts,
     Header
+  },
+  created() {
+    window.onload = function () {
+      var screenWidth = window.innerWidth;
+      var screenHeight = window.innerHeight;
+      console.log('Ширина рабочей области: ' + screenWidth + 'px');
+      console.log('Высота рабочей области: ' + screenHeight + 'px');
+    }
   }
 };
 </script>
 
 <style lang="scss">
-@import './assets/style/index.scss'
+@import './assets/style/index.scss';
 </style>
 
 <style lang="scss" scoped>
 #app {
   min-height: 100vh;
   width: 1920px;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-rows: 1fr auto;
@@ -52,7 +61,7 @@ export default {
 .content {
   grid-area: content;
   display: grid;
-  grid-template-columns: 356px 36px 1528px;
+  grid-template-columns: 356px 36px 1508px;
   grid-template-areas:
     "sidebar . content";
 
@@ -69,19 +78,37 @@ export default {
   grid-area: footer;
 }
 
-.page {
-  .amain_page {
-    .wrapper {
-      .header {
-        visibility: hidden;
-      }
+@media (max-width: 1367px) {
+  #app {
+    width: 1349px;
+    width: 100%;
+  }
+
+  .content {
+    grid-template-columns: 311px 16px 1039px;
+    grid-template-columns: 311px 16px 1019px;
+  }
+}
+@media (max-width: 361px) {
+  #app {
+    width: 340px;
+    width: 100%;
+  }
+
+  .content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 360px;
+    grid-template-areas:
+      "content";
+  
+    .page {
+      grid-area: content;
+    }
+  
+    .sidebar {
+      display: none;
     }
   }
 }
-
-//@media (max-width: 1367px) {
-//  .content {
-//    grid-template-columns: 327px 16px 1023px;
-//  }
-//}
 </style>

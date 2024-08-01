@@ -300,39 +300,33 @@ export default {
     }
 }
 
-//@media (max-width: 1367px) {
-//    .sidebar {
-//        position: sticky;
-//        top: 38px;
-//        width: 294px;
-//        height: 850px;
-//        background-color: #FFFFFF;
-//        color: white;
-//        display: flex;
-//        flex-direction: column;
-//        margin-top: 38px;
-//        margin-right: 36px;
-//        margin-left: 34px;
-//        z-index: 1;
-//        .logo {
-//            width: 117px;
-//            height: 49px;
-//        }
-//        .service-list {
-//            li {
-//                a {
-//                    img {
-//                        width: 81px;
-//                        height: 75px;
-//                    }
-//                }
-//            }
-//        }
-//        .contact-link,
-//        .designer-link {
-//            width: 294px;
-//            height: 64px;
-//        }
-//    }
-//}
+@media (max-width: 1367px) {
+    .sidebar {
+        width: 294px;
+        height: 800px;
+        margin-right: 17px;
+        margin-left: 16px;
+        
+        .logo {
+            width: 117px;
+            height: 49px;
+        }
+        .service-list {
+            li {
+                a {
+                    height: 64px;
+                    img {
+                        width: 81px;
+                        height: 64px;
+                    }
+                }
+            }
+        }
+        .contact-link,
+        .designer-link {
+            width: 294px;
+            height: 64px;
+        }
+    }
+}
 </style>

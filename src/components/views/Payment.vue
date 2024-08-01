@@ -1,9 +1,11 @@
 <template>
     <Header />
     <div class="payment">
-        <h2>Оптала заказа</h2>
-        <PaymentOptions />
-        <Slider :titleText="sliderText" />
+        <div class="wrapper">
+            <h2>Оптала заказа</h2>
+            <PaymentOptions />
+            <Slider :titleText="sliderText" />
+        </div>
     </div>
 </template>
 
@@ -38,9 +40,24 @@ export default {
     h2 {
         font-size: 50px;
         font-weight: bold;
-        width: 1440px;
-        margin: 0 auto;
         margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 1367px) {
+    .payment {
+        h2 {
+            font-size: 35px;
+            margin-bottom: 80px;
+        }
+    }
+}
+@media (max-width: 361px) {
+    .payment {
+        h2 {
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
     }
 }
 </style>

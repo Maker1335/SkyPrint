@@ -11,21 +11,21 @@
 
 <script>
 import Header from '../header.vue'
-import Portfolio from '../Portfolio.vue';
 import OrderDesign from '../pages/DesignServices/OrderDesign.vue';
 import OurOffers from '../pages/DesignServices/OurOffers.vue';
 import OurPrice from '../pages/DesignServices/OurPrice.vue';
 import WorkingWithDesigner from '../pages/DesignServices/WorkingWithDesigner.vue';
+import Portfolio from '../Portfolio.vue';
 
 export default {
     name: 'DesignServices',
     components: {
         Header,
-        Portfolio,
         OrderDesign,
         OurOffers,
         OurPrice,
-        WorkingWithDesigner
+        WorkingWithDesigner,
+        Portfolio,
     }
 }
 </script>
@@ -34,11 +34,12 @@ export default {
 .header {
     margin-bottom: 40px;
 }
-
 .design-services {
     color: #27625F;
-
 }
-
-
+@media (max-width: 361px) {
+    .header {
+        margin-bottom: 30px;
+    }
+}
 </style>

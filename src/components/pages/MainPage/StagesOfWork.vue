@@ -133,6 +133,7 @@ export default {
             }
 
             &_link {
+                color: #27625F;
                 margin-left: 58px;
                 margin-top: 67px;
                 font-size: 16px;
@@ -158,6 +159,124 @@ export default {
 
             &::after {
                 content: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1367px) {
+    .stages_of_work {
+        margin-top: 30px;
+
+        .wrapper {
+            grid-template-columns: auto 664px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+
+        .work_list {
+            .item {
+                display: grid;
+                grid-template-columns: 1fr 200px;
+                grid-template-rows: auto auto auto;
+                grid-template-areas:
+                    "title img"
+                    "content img"
+                    "link img";
+                margin-bottom: 10px;
+                height: 50px;
+                position: relative;
+
+                &_title {
+                    margin-top: 20px;
+                    margin-left: 20px;
+                    font-size: 20px;
+                }
+
+                &_content {
+                    margin-left: 48px;
+                }
+
+                &_img {
+                    width: 200px;
+                    height: 240px;
+                    object-fit: cover;
+                }
+
+                &_link {
+                    margin-left: 58px;
+                    margin-top: 16px;
+                    font-size: 16px;
+                }
+            }
+
+            .show {
+                height: 240px;
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .stages_of_work {
+        margin-top: 50px;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column
+        }
+
+        h4 {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .work_list {
+            .item {
+                display: grid;
+                grid-template-columns: 1fr 50px;
+                grid-template-rows: repeat(4, auto);
+                grid-template-areas:
+                    "title"
+                    "content"
+                    "link"
+                    "img";
+                margin-bottom: 10px;
+                height: 50px;
+                gap: 10px;
+
+                &_title {
+                    margin-left: 20px;
+                    font-size: 16px;
+                    grid-area: title;
+                }
+
+                &_content {
+                    margin-left: 32px;
+                    font-size: 14px;
+                    grid-area: content;
+                }
+
+                &_img {
+                    width: 336px;
+                    height: 187px;
+                    grid-area: img;
+                    object-fit: cover;
+                }
+
+                &_link {
+                    margin-left: 32px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    grid-area: link;
+                }
+            }
+
+            .show {
+                height: 100%;
+
             }
         }
     }

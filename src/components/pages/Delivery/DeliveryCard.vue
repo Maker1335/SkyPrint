@@ -31,7 +31,7 @@ export default {
     padding: 35px 25px;
     box-sizing: border-box;
     background-color: #F5F5F5;
-    p {
+    &_title {
         font-size: 26px;
         font-weight: bold;
         margin-bottom: 30px;
@@ -45,7 +45,6 @@ export default {
         li {
             position: relative;
             padding-left: 25px;
-            margin-bottom: 10px;
 
             &::before {
                 content: '✔';
@@ -58,6 +57,39 @@ export default {
     }
     &:first-child{
         background-color: #CEFFFD;
+    }
+}
+@media (max-width: 1367px) {
+    .card {
+        gap: 20px;
+        padding: 25px;
+        &_title {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    
+        ul {
+            gap: 20px;
+    
+            li {
+                position: relative;
+                padding-left: 25px;
+            }
+        }
+    }
+}
+@media (max-width: 361px) {
+    .card {
+        gap: 20px;
+        padding: 20px;
+        &_title {
+            font-size: 20px;
+            margin-bottom: 0px;
+        }
+    
+        ul {
+            gap: 20px;
+        }
     }
 }
 </style>

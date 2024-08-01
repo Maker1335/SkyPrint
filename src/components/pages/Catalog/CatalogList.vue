@@ -96,10 +96,7 @@ export default {
 .catalog_list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
     margin-top: 40px;
 }
-
-
-
 </style>

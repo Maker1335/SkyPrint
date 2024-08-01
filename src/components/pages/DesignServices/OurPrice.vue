@@ -55,4 +55,52 @@ export default {
         }
     }
 }
+@media (max-width: 1367px) {
+    .our-price {
+        margin-bottom: 70px;
+    
+        h3 {
+            font-size: 20px;
+        }
+    
+        &_table {
+            img{
+                width: 660px;
+                height: 100%;
+            }
+    
+            &_button {
+                width: 300px;
+                height: 58px;
+            }
+        }
+    }
+}
+@media (max-width: 361px) {
+    .our-price {
+        margin-bottom: 30px;
+    
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        h3 {
+            font-size: 20px;
+        }
+    
+        &_table {
+            gap: 20px;
+            img{
+                width: 100%;
+            }
+    
+            &_button {
+                width: 150px;
+                height: 24px;
+                font-size: 10px;
+            }
+        }
+    }
+}
 </style>

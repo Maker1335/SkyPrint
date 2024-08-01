@@ -56,27 +56,27 @@ export default {
                     img: Work6,
                 },
                 {
-                    id: 6,
+                    id: 7,
                     img: Work6,
                 },
                 {
-                    id: 5,
+                    id: 8,
                     img: Work5,
                 },
                 {
-                    id: 4,
+                    id: 9,
                     img: Work4,
                 },
                 {
-                    id: 3,
+                    id: 10,
                     img: Work3,
                 },
                 {
-                    id: 2,
+                    id: 11,
                     img: Work2,
                 },
                 {
-                    id: 1,
+                    id: 12,
                     img: Work1,
                 },
             ]
@@ -102,12 +102,60 @@ export default {
         gap: 10px;
 
         &_item {
+            cursor: pointer;
+
             img {
                 width: 351px;
                 height: 244px;
             }
         }
     }
+}
 
+@media (max-width: 1367px) {
+    .portfolio {
+        margin-top: 50px;
+
+        h2 {
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+
+        &_list {
+            gap: 5px;
+
+            &_item {
+                img {
+                    width: 240px;
+                    height: 169px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 361px) {
+    .portfolio {
+        margin-top: 30px;
+
+        h2 {
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+
+        &_list {
+            gap: 10px;
+
+            &_item {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
 }
 </style>

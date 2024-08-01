@@ -70,4 +70,75 @@ export default {
         justify-content: end;
     }
 }
+@media (max-width: 1367px) {
+    .catalog_item {
+        display: grid;
+        grid-template-columns: auto auto auto 105px;
+        grid-template-rows: 30px 190px 30px;
+        grid-template-areas:
+            ". . . save"
+            "img img img img"
+            "name . .  count";
+        position: relative;
+        background-color: #ECECEC;
+        width: 240px;
+        height: 250px;
+
+        &_save {
+            height: 15px;
+            right: 20px;
+            top: 20px;
+        }
+
+        &_img {
+            width: 240px;
+        }
+
+        &_name {
+            margin-left: 9px;
+        }
+
+        &_count {
+            margin-right: 10px;
+        }
+    }
+}
+@media (max-width: 361px) {
+    .catalog_item {
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 30px 104px 30px;
+        grid-template-areas:
+            "name . . save"
+            "img img img img"
+            "count . .  .";
+        width: 164px;
+        height: 164px;
+    
+        &_save {
+            position: absolute;
+            right: 12px;
+            top: 11px;
+        }
+    
+        &_img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    
+        &_name {
+            font-size: 14px;
+            margin-left: 9px;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    
+        &_count {
+            font-size: 14px;
+            margin-right: 14px;
+            margin-bottom: 12px;
+        }
+    }
+}
 </style>

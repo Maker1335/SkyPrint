@@ -11,7 +11,6 @@
 
 <script>
 import Header from '../header.vue';
-
 import RequirementsIntro from '../pages/Requirements/RequirementsIntro.vue';
 import LayoutRequirements from '../pages/Requirements/LayoutRequirements.vue';
 import Feedback from '../Feedback.vue';
@@ -43,9 +42,16 @@ $goodsBG: "../../assets/img/background.png";
 .requirements {
     color: #27625F;
     margin-top: 50px;
-
     .feedback {
         margin-bottom: 100px;
+    }
+}
+@media (max-width: 361px) {
+    .requirements {
+        margin-top: 30px;
+        .feedback {
+            margin-bottom: 30px;
+        }
     }
 }
 </style>

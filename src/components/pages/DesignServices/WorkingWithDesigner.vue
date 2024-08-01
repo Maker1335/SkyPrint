@@ -94,4 +94,90 @@ export default {
         }
     }
 }
+
+@media (max-width: 1367px) {
+    .working-with-designer {
+        margin-bottom: 70px;
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+        }
+
+        h3 {
+            font-size: 20px;
+            width: 250px;
+        }
+
+        &_cards {
+            gap: 10px;
+
+            .card {
+                gap: 25px;
+                padding: 40px;
+                width: 100%;
+
+                &_time {
+                    display: flex;
+                    gap: 10px;
+                }
+
+                &_arrow {
+                    width: 230px;
+
+                    img {
+                        width: 230px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 361px) {
+    .working-with-designer {
+        margin-bottom: 30px;
+    
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    
+        h3 {
+            font-size: 20px;
+            width: 100%;
+        }
+    
+        &_cards {
+            gap: 10px;
+    
+            .card {
+                gap: 10px;
+                padding: 20px;
+                width: 100%;
+    
+                &_time {
+                    display: flex;
+                    gap: 10px;
+    
+                    &_number {
+                        font-size: 20px;
+                    }
+                }
+    
+                &_arrow {
+                    width: auto;
+                    img {
+                        width: auto;
+                    }
+                }
+    
+                &_price {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
 </style>

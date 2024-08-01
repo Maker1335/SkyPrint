@@ -3,31 +3,12 @@
     <div class="wrapper">
       <h2>{{ titleText }}</h2>
       <div class="slider-container">
-        <swiper :slides-per-view="5" :space-between="9" :autoplay="{ delay: 5000, disableOnInteraction: false }"
-          :loop="true" :modules="modules" class="mySwiper">
-          <swiper-slide class="product">
-            <img :src="rollUpImage" alt="фото товара" />
-            <p>Roll-up</p>
-          </swiper-slide>
-          <swiper-slide class="product">
-            <img :src="notepadsImage" alt="фото товара" />
-            <p>Блокноты</p>
-          </swiper-slide>
-          <swiper-slide class="product">
-            <img :src="canvasesImage" alt="фото товара" />
-            <p>Холсты</p>
-          </swiper-slide>
-          <swiper-slide class="product">
-            <img :src="businessCardsImage" alt="фото товара" />
-            <p>Визитки</p>
-          </swiper-slide>
-          <swiper-slide class="product">
-            <img :src="laminationImage" alt="фото товара" />
-            <p>Ламинирование</p>
-          </swiper-slide>
-          <swiper-slide class="product">
-            <img :src="pensImage" alt="фото товара" />
-            <p>Ручки</p>
+        <swiper :slides-per-view="slidesPerView" :space-between="9"
+          :autoplay="{ delay: 5000, disableOnInteraction: false }" :loop="true" :modules="modules" class="mySwiper"
+          :breakpoints="breakpoints" update-on-window-resize>
+          <swiper-slide class="product" v-for="(slide, index) in slides" :key="index">
+            <img :src="slide.image" :alt="slide.alt" />
+            <p>{{ slide.text }}</p>
           </swiper-slide>
         </swiper>
         <div class="all-categories">
@@ -38,6 +19,7 @@
     </div>
   </div>
 </template>
+
 
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -60,17 +42,34 @@ export default {
   data() {
     return {
       modules: [Autoplay],
-      rollUpImage,
-      notepadsImage,
-      canvasesImage,
-      businessCardsImage,
-      laminationImage,
-      pensImage
+      slidesPerView: 5,
+      slides: [
+        { image: rollUpImage, alt: 'фото товара', text: 'Roll-up' },
+        { image: notepadsImage, alt: 'фото товара', text: 'Блокноты' },
+        { image: canvasesImage, alt: 'фото товара', text: 'Холсты' },
+        { image: businessCardsImage, alt: 'фото товара', text: 'Визитки' },
+        { image: laminationImage, alt: 'фото товара', text: 'Ламинирование' },
+        { image: pensImage, alt: 'фото товара', text: 'Ручки' },
+      ],
+      breakpoints: {
+        0: {
+          slidesPerView: 3,
+        },
+        360: {
+          slidesPerView: 3,
+        },
+        1366: {
+          slidesPerView: 4,
+        },
+        1367: {
+          slidesPerView: 5,
+        },
+      }
     };
   },
   props: {
-    titleText: Object
-  }
+    titleText: String,
+  },
 };
 </script>
 
@@ -182,36 +181,111 @@ $goodsBG: "../assets/img/background.png";
   }
 }
 
-//@media (max-width: 1367px) {
-//  .slider {
-//    h2 {
-//      font-size: 20px;
-//    }
-//
-//    .slider-container {
-//      grid-template-columns: auto 194px;
-//      gap: 9px;
-//
-//      .swiper-slide {
-//        font-size: 16px;
-//        width: 196px;
-//        height: 198px;
-//
-//        p {
-//          font-size: 16px;
-//        }
-//
-//        img {
-//          width: 196px;
-//          height: 153px;
-//        }
-//
-//      }
-//
-//      .all-categories {
-//        font-size: 16px;
-//      }
-//    }
-//  }
-//}
+@media (max-width: 1367px) {
+  .slider {
+    h2 {
+      font-size: 20px;
+    }
+
+    .slider-container {
+      grid-template-columns: auto 194px;
+      gap: 9px;
+
+      .swiper-slide {
+        font-size: 16px;
+        width: 196px;
+        height: 198px;
+
+        p {
+          font-size: 16px;
+        }
+
+        img {
+          width: 196px;
+          height: 153px;
+        }
+
+      }
+
+      .all-categories {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 361px) {
+  .slider {
+    h2 {
+      font-size: 14px;
+    }
+
+    .slider-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      gap: 4px;
+
+      .swiper {
+        width: 100%;
+        gap: 4px;
+
+        .swiper-wrapper {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          gap: 4px;
+        }
+      }
+
+
+      .swiper-slide {
+        font-size: 10px;
+        width: 100%;
+        height: 140px;
+
+        p {
+          font-size: 10px;
+          padding: 10px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .all-categories {
+        width: 100%;
+        font-size: 10px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        box-sizing: border-box;
+
+        &_text {
+          width: 50px;
+        }
+
+        p {
+          margin-bottom: 25px;
+          margin: 0;
+        }
+      }
+
+    }
+  }
+}
+
+.swiper-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 4px;
+}
 </style>

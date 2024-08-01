@@ -35,4 +35,22 @@ export default {
         }
     }
 }
+@media (max-width: 1367px) {
+    .catalog {
+        .content {
+            h2 {
+                font-size: 35px;
+            }
+        }
+    }
+}
+@media (max-width: 361px) {
+    catalog {
+        .content {
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
+}
 </style>

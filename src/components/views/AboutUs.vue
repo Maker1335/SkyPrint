@@ -34,9 +34,12 @@ export default {
 .header {
     margin-bottom: 40px;
 }
-
 .about-us {
     color: #27625F;
-
+}
+@media (max-width: 361px) {
+    .header {
+        margin-bottom: 40px;
+    }
 }
 </style>

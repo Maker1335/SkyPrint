@@ -9,24 +9,20 @@
                     <input type="email" placeholder="Почта" class="form_input">
                     <label class="form_checkbox"><input type="checkbox"> Нажимая кнопку "Отправить", я соглашаюсь с
                         условиями <a href="#">пользовательского соглашения</a> </label>
-                    <button class="form_button">
-                        <p class="form_button_text">Отправить</p>
-                    </button>
+                    <button class="form_button">Отправить</button>
                 </div>
                 <div class="contact-manager" :class="{ selected: selectedContact === 'manager' }"
                     @click="selectContact('manager')">
                     <p>
                         Связаться с менеджером
-                        <img v-if="selectedContact === 'manager'"
-                            src="../assets/img/pages/MainPage/Feedback/checkmark.svg" alt="галочка" />
+                        <img v-if="selectedContact === 'manager'" :src="checkmark" alt="галочка" />
                     </p>
                 </div>
                 <div class="contact-designer" :class="{ selected: selectedContact === 'designer' }"
                     @click="selectContact('designer')">
                     <p>
                         Связаться с дизайнером
-                        <img v-if="selectedContact === 'designer'"
-                            src="../assets/img/pages/MainPage/Feedback/checkmark.svg" alt="галочка" />
+                        <img v-if="selectedContact === 'designer'" :src="checkmark" alt="галочка" />
                     </p>
                 </div>
             </div>
@@ -35,11 +31,14 @@
 </template>
 
 <script>
+import checkmark from "../assets/img/pages/MainPage/Feedback/checkmark.svg"
+
 export default {
     name: 'Feedback',
     data() {
         return {
             selectedContact: 'manager', // Начальное состояние
+            checkmark
         };
     },
     methods: {
@@ -57,11 +56,14 @@ export default {
 $goodsBG: "../assets/img/background.png";
 
 .feedback {
-    display: flex;
-    flex-direction: column;
     background: #CEFFFD;
     margin-top: 80px;
     padding: 30px;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
 
     h4 {
         font-size: 50px;
@@ -92,12 +94,18 @@ $goodsBG: "../assets/img/background.png";
                 padding-left: 10px;
                 background: #FFFFFF;
                 border: 0px;
+                box-sizing: border-box;
             }
 
             &_checkbox {
                 font-size: 16px;
                 color: #27625F;
                 width: 402px;
+
+                a {
+                    color: #27625F;
+                    text-decoration: underline;
+                }
             }
 
             &_button {
@@ -105,37 +113,14 @@ $goodsBG: "../assets/img/background.png";
                 height: 62px;
                 border-radius: 5px;
                 background: none;
+                font-size: 20px;
                 color: #27625F;
                 transition: all 0.5s;
-                position: relative;
-
-                &_text {
-                    font-size: 20px;
-                    z-index: 2;
-                    position: relative;
-                }
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-image: url($goodsBG);
-                    background-size: cover;
-                    opacity: 0;
-                    transition: opacity 0.5s ease;
-                }
 
                 &:hover {
-                    background-color: transparent;
-
+                    background-image: url($goodsBG);
+                    background-size: cover;
                     color: #FFFFFF;
-
-                    &::before {
-                        opacity: 1;
-                    }
                 }
             }
         }
@@ -158,6 +143,143 @@ $goodsBG: "../assets/img/background.png";
 
         .selected {
             background-color: #FFFFFF;
+        }
+    }
+}
+
+@media (max-width: 1367px) {
+    .feedback {
+        margin-top: 80px;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h4 {
+            font-size: 30px;
+            width: 400px;
+            margin-bottom: 20px;
+        }
+
+        &_form {
+            .form {
+                grid-gap: 8px;
+
+                &_input {
+                    width: 100%;
+                    height: 40px;
+                    padding-left: 18px;
+                }
+
+                &_checkbox {
+                    font-size: 12px;
+                    width: 100%;
+                }
+
+                &_button {
+                    width: 100%;
+                    height: 40px;
+                    font-size: 16px;
+                }
+            }
+
+            .contact-manager,
+            .contact-designer {
+                width: 100%;
+                height: 238px;
+                border-radius: 5px;
+                background-color: none;
+                transition: background-color 0.5s;
+
+                p {
+                    padding: 20px;
+                    font-size: 16px;
+                    color: #27625F;
+                    font-weight: bold;
+                }
+            }
+
+            .selected {
+                background-color: #FFFFFF;
+            }
+        }
+    }
+}
+
+@media (max-width: 361px) {
+    .feedback {
+        margin-top: 40px;
+        padding: 10px;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        h4 {
+            font-size: 24px;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+        &_form {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .form {
+                display: grid;
+                grid-template-rows: 44px 44px 44px 60px 60px 35px 44px;
+                grid-template-areas: 
+                "input"
+                "input"
+                "input"
+                "."
+                "."
+                "checkbox"
+                "button"
+                ;
+                gap: 8px;
+
+                &_input {
+                    width: 100%;
+                    height: 44px;
+                    font-size: 14px;
+                }
+
+                &_checkbox {
+                    font-size: 14px;
+                    width: 100%;
+                    grid-area: checkbox;
+                }
+
+                &_button {
+                    width: 100%;
+                    height: 44px;
+                    font-size: 14px;
+                    grid-area: button;
+                }
+            }
+
+            .contact-manager,
+            .contact-designer {
+                width: 100%;
+                height: 60px;
+                border: 1px solid #000000;
+                box-sizing: border-box;
+                position: absolute;
+                p {
+                    font-size: 14px;
+                }
+            }
+            .contact-manager{
+                bottom: 163px;
+            }
+            .contact-designer{
+                bottom: 95px;
+            }
         }
     }
 }

@@ -46,24 +46,21 @@ export default {
         width: 800px;
         margin-bottom: 90px;
     }
-
     &_files-for-printing {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 100px;
-
         h3 {
+            display: flex;
             font-size: 30px;
             font-weight: bold;
             width: 373px;
         }
-
         .cards {
             display: flex;
             flex-wrap: wrap;
             gap: 22px;
-
             .card {
                 display: flex;
                 flex-direction: column;
@@ -73,18 +70,15 @@ export default {
                 justify-content: space-between;
                 padding: 20px;
                 background-color: #F5F5F5;
-
                 &_img {
                     width: 35px;
                     height: 35px;
                 }
-
                 .description {
                     &_app-name {
                         font-size: 16px;
                         font-weight: bold;
                     }
-
                     &_description {
                         font-size: 16px;
                         font-weight: bold;
@@ -92,7 +86,63 @@ export default {
                     }
                 }
             }
-
+        }
+    }
+}
+@media (max-width: 1367px) {
+    .requirements-intro {
+        &_title {
+            font-size: 35px;
+            width: 600px;
+        }
+        &_files-for-printing {
+            margin-bottom: 90px;
+            h3 {
+                font-size: 20px;
+                width: 250px;
+            }
+            .cards {
+                gap: 10px;
+                .card {
+                    width: 130px;
+                    height: 130px;
+                    &_img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 361px) {
+    .requirements-intro {
+        &_title {
+            font-size: 25px;
+            width: 250px;
+            margin-bottom: 30px;
+        }
+        &_files-for-printing {
+            margin-bottom: 30px;
+            gap: 15px;
+            h3 {
+                font-size: 16px;
+                width: 200px;
+            }
+            .cards {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                .card {
+                    width: 160px;
+                    height: 160px;
+                    box-sizing: border-box;
+                    &_img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
         }
     }
 }

@@ -56,7 +56,7 @@ export default {
 
         li {
             list-style: decimal;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             color: #27625F;
         }
@@ -69,6 +69,7 @@ export default {
         cursor: pointer;
         color: #27625F;
         font-size: 16px;
+        font-weight: bold;
         background: none;
         border: none;
         border-bottom: 1px solid #27625F;
@@ -76,6 +77,56 @@ export default {
 
     &:first-child {
         background-color: #CEFFFD;
+    }
+}
+
+@media (max-width: 1367px) {
+    .card {
+        padding: 20px;
+        padding-bottom: 75px;
+
+        &_title {
+            font-size: 24px;
+        }
+
+        &_file-type {
+            font-size: 16px;
+        }
+
+        ol {
+            gap: 10px;
+
+            li {
+                font-weight: 600;
+            }
+        }
+
+        button {
+            right: 30px;
+            font-size: 16px;
+        }
+    }
+}
+@media (max-width: 361px) {
+    .card {
+        gap: 10px;
+        padding-bottom: 70px;
+    
+        &_title {
+            font-size: 24px;
+        }
+    
+        &_file-type {
+            font-size: 14px;
+        }
+    
+        ol {
+            gap: 10px;
+    
+            li {
+                font-size: 14px;
+            }
+        }
     }
 }
 </style>

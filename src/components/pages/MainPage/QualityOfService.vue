@@ -2,55 +2,41 @@
     <div class="quality_of_service">
         <div class="wrapper">
             <h4>Качество сервиса и оборудования</h4>
-            <div class="card">
-                <img src="../../../assets/img/pages/MainPage/QualityOfService/typewriter.svg" alt="Печатная машинка"
-                    class="card_img">
-            </div>
-            <div class="card">
-                <img src="../../../assets/img/pages/MainPage/QualityOfService/handshake.svg" alt="Рукопожатие"
-                    class="card_img">
-                <p class="card_description">Качество на 100%, либо вернем ваши деньги</p>
-            </div>
-            <div class="card">
-                <img src="../../../assets/img/pages/MainPage/QualityOfService/printer.svg" alt="Принтер"
-                    class="card_img">
-            </div>
-            <div class="card">
-                <img src="../../../assets/img/pages/MainPage/QualityOfService/mountain.svg" alt="Гора" class="card_img">
-                <p class="card_description">Оформление заказа, не выходя из дома</p>
-            </div>
-            <div class="card">
-                <img src="../../../assets/img/pages/MainPage/QualityOfService/documents.svg" alt="Документы"
-                    class="card_img">
-                <p class="card_description">Доставка заказов по всей России</p>
-            </div>
-            <div class="card">
-                <img src="../../../assets/img/pages/MainPage/QualityOfService/calendar.svg" alt="Календарь"
-                    class="card_img">
-                <p class="card_description">Оперативная печать заказов</p>
-            </div>
-            <div class="card">
-                <img src="../../../assets/img/pages/MainPage/QualityOfService/technicalSupport.svg" alt="Техподдержка"
-                    class="card_img">
-                <p class="card_description">Более 3000 клиентов по всей России</p>
-            </div>
-            <div class="card">
-                <img src="../../../assets/img/pages/MainPage/QualityOfService/handshake.svg" alt="Рукопожатие"
-                    class="card_img">
-                <p class="card_description">Качество на 100%, либо вернем ваши деньги</p>
-            </div>
-            <div class="card">
-                <img src="../../../assets/img/pages/MainPage/QualityOfService/printShop.svg" alt="Типография"
-                    class="card_img">
+            <div class="card" v-for="(card, index) in cards" :key="index" :class="card.class">
+                <img :src="card.image" :alt="card.alt" class="card_img">
+                <p v-if="card.description" class="card_description">{{ card.description }}</p>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import typewriter from '../../../assets/img/pages/MainPage/QualityOfService/typewriter.svg';
+import handshake from '../../../assets/img/pages/MainPage/QualityOfService/handshake.svg';
+import printer from '../../../assets/img/pages/MainPage/QualityOfService/printer.svg';
+import mountain from '../../../assets/img/pages/MainPage/QualityOfService/mountain.svg';
+import documents from '../../../assets/img/pages/MainPage/QualityOfService/documents.svg';
+import calendar from '../../../assets/img/pages/MainPage/QualityOfService/calendar.svg';
+import technicalSupport from '../../../assets/img/pages/MainPage/QualityOfService/technicalSupport.svg';
+import printShop from '../../../assets/img/pages/MainPage/QualityOfService/printShop.svg';
+
 export default {
     name: 'QualityOfService',
-}
+    data() {
+        return {
+            cards: [
+                { image: typewriter, alt: 'Печатная машинка' },
+                { image: handshake, alt: 'Рукопожатие', description: 'Качество на 100%, либо вернем ваши деньги' },
+                { image: printer, alt: 'Принтер' },
+                { image: mountain, alt: 'Гора', description: 'Оформление заказа, не выходя из дома' },
+                { image: documents, alt: 'Документы', description: 'Доставка заказов по всей России' },
+                { image: calendar, alt: 'Календарь', description: 'Оперативная печать заказов' },
+                { image: technicalSupport, alt: 'Техподдержка', description: 'Более 3000 клиентов по всей России' },
+                { image: handshake, alt: 'Рукопожатие', description: 'Качество на 100%, либо вернем ваши деньги' },
+                { image: printShop, alt: 'Типография' },],
+        };
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -61,7 +47,7 @@ export default {
 
     .wrapper {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: auto, repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
             "h4 card2 card3 card4 card5"
@@ -91,10 +77,12 @@ export default {
         font-size: 16px;
         color: #27625F;
         padding: 10px;
+        box-sizing: border-box;
 
         &_img {
             width: 100%;
             height: 100%;
+            object-fit: contain;
         }
 
         &:nth-child(2) {
@@ -132,14 +120,15 @@ export default {
         &:nth-child(10) {
             grid-area: card10;
             grid-column: span 2;
-            width: 474px;
-            height: 229px;
         }
 
         &:nth-child(2),
         &:nth-child(4),
         &:nth-child(10) {
+            width: 100%;
+            height: 100%;
             border: 0px;
+            padding: 0;
 
             img {
                 width: 100%;
@@ -150,7 +139,6 @@ export default {
                     transform: scale(1.1);
                 }
             }
-
         }
 
         &:nth-child(3),
@@ -163,7 +151,119 @@ export default {
                 width: 70px;
                 height: 70px;
             }
+        }
+    }
+}
 
+@media (max-width: 1367px) {
+    .quality_of_service {
+        padding: 25px;
+
+        .wrapper {
+            grid-gap: 10px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+
+        .card {
+            width: 155px;
+            height: 155px;
+
+            &:nth-child(2),
+            &:nth-child(4) {
+                width: 155px;
+                height: 155px;
+            }
+
+            &:nth-child(10) {
+                width: 320px;
+                height: 155px;
+            }
+
+            &:nth-child(2),
+            &:nth-child(4),
+            &:nth-child(10) {
+                border: 0px;
+                padding: 0;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            &:nth-child(3),
+            &:nth-child(5),
+            &:nth-child(6),
+            &:nth-child(7),
+            &:nth-child(8),
+            &:nth-child(9) {
+                img {
+                    width: 55px;
+                    height: 55px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 361px) {
+    .quality_of_service {
+        background: #CEFFFD;
+        padding: 10px;
+        position: relative;
+        margin-top: 60px;
+    
+        .wrapper {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "h4 h4"
+                "card2 card3"
+                ". card5"
+                "card6 card4 "
+                "card7 card8"
+                "card9 ."
+                "card10 card10";
+            grid-gap: 12px;
+            justify-items: start;
+        }
+    
+        h4 {
+            grid-column: span 2;
+            grid-area: h4;
+            font-size: 16px;
+        }
+    
+        .card {
+            width: 160px;
+            height: 160px;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 10px;
+
+            &:nth-child(10) {
+                width: 336px;
+                height: 162px;
+            }
+    
+            &:nth-child(3),
+            &:nth-child(5),
+            &:nth-child(6),
+            &:nth-child(7),
+            &:nth-child(8),
+            &:nth-child(9) {
+                img {
+                    width: 47px;
+                    height: 47px;
+                }
+            }
         }
     }
 }

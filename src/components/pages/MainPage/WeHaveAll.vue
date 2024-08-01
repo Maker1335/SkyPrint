@@ -4,36 +4,9 @@
             <div class="item">
                 <h2>У нас есть всё!</h2>
             </div>
-            <div class="card">
-                <p class="card_title">Полиграфические услуги</p>
-                <p class="card_description">Полиграфия, широкоформатная печать и наружная реклама, сувенирная печать,
-                    дизайнерские услуги -
-                    заказывайте всё, что так необходимо, в одном месте. У нас Вы найдете индивидуальный</p>
-            </div>
-            <div class="card">
-                <p class="card_title">Сувенирная продукция</p>
-                <p class="card_description"> Используйте проверенные инструменты для привлечения внимания к вашему
-                    продукту
-                    или бренду. Получите
-                    максимальную эффект без стресса и нервов - мы даём</p>
-            </div>
-            <div class="card">
-                <p class="card_title">Широкоформатная печать</p>
-                <p class="card_description">Порадуйте себя и близких подарками - календари, футболки, кружки и другие
-                    фотосувениры с фото и
-                    надписями. Сделайте интерьер более ярким с помощью особенных </p>
-            </div>
-            <div class="card">
-                <p class="card_title">Интерьерная печать</p>
-                <p class="card_description">Порадуйте себя и близких подарками - календари, футболки, кружки и другие
-                    фотосувениры с фото и
-                    надписями.</p>
-            </div>
-            <div class="card">
-                <p class="card_title">Дизайнерские услуги</p>
-                <p class="card_description">Используйте проверенные инструменты для привлечения внимания к вашему
-                    продукту
-                </p>
+            <div class="card" v-for="(card, index) in cards" :key="index">
+                <p class="card_title">{{card.title}}</p>
+                <p class="card_description">{{card.description}}</p>
             </div>
         </div>
     </div>
@@ -43,6 +16,32 @@
 
 export default {
     name: 'WeHaveAll',
+    data() {
+        return {
+            cards: [
+                {
+                    title: 'Полиграфические услуги',
+                    description: 'Полиграфия, широкоформатная печать и наружная реклама, сувенирная печать, дизайнерские услуги - заказывайте всё, что так необходимо, в одном месте.У нас Вы найдете индивидуальный'
+                },
+                {
+                    title: 'Сувенирная продукция',
+                    description: 'Используйте проверенные инструменты для привлечения внимания к вашему продукту или бренду. Получите максимальную эффект без стресса и нервов - мы даём'
+                },
+                {
+                    title: 'Широкоформатная печать',
+                    description: 'Порадуйте себя и близких подарками - календари, футболки, кружки и другие фотосувениры с фото и надписями. Сделайте интерьер более ярким с помощью особенных'
+                },
+                {
+                    title: 'Интерьерная печать',
+                    description: 'Порадуйте себя и близких подарками - календари, футболки, кружки и другие фотосувениры с фото и надписями.'
+                },
+                {
+                    title: 'Дизайнерские услуги',
+                    description: 'Используйте проверенные инструменты для привлечения внимания к вашему продукту'
+                }
+            ]
+        }
+    }
 }
 
 </script>
@@ -50,8 +49,6 @@ export default {
 <style lang="scss" scoped>
 .we_have_all {
     margin-top: 71px;
-
-
     .wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -82,22 +79,21 @@ export default {
             position: relative;
             overflow: hidden;
             transition: background-color 0.5s ease;
+            box-sizing: border-box;
 
             .card_title {
                 font-size: 30px;
                 font-weight: bold;
                 color: #27625f;
-                width: 312px;
+                margin: 0 40px;
                 margin-top: 40px;
-                margin-left: 40px;
                 z-index: 1;
             }
 
             .card_description {
                 font-size: 16px;
                 color: #27625f;
-                width: 377px;
-                margin-left: 40px;
+                margin: 0 40px;
                 z-index: 1;
             }
 
@@ -129,6 +125,69 @@ export default {
 
                 &::before {
                     opacity: 1;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1367px) {
+    .we_have_all {
+        .wrapper {
+            h2 {
+                font-size: 20px;
+            }
+    
+            .item,
+            .card {
+                width: 100%;
+                height: 327px;
+            }
+    
+            .card {
+                gap: 25px;
+                .card_title {
+                    font-size: 24px;
+                    margin: 0 30px;
+                    margin-top: 20px;
+                }
+    
+                .card_description {
+                    margin: 0 30px;
+                }
+    
+            }
+        }
+    }
+}
+@media (max-width: 361px) {
+    .we_have_all {
+        margin-top: 40px;
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+    
+            h2 {
+                font-size: 16px;
+            }
+            .item{
+                width: 100%;
+                height: 100%;
+            }
+            .card {
+                width: 100%;
+                height: 250px
+            }
+    
+            .card {
+                gap: 25px;
+    
+                .card_title {
+                    font-size: 20px;
+                }
+    
+                .card_description {
+                    font-size: 16px;
+                    font-weight: 400;
                 }
             }
         }

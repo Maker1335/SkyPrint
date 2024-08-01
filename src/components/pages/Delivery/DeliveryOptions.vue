@@ -1,11 +1,9 @@
 <template>
     <div class="delivery_options">
-        <div class="wrapper">
-            <h3>Доставим заказ куда угодно</h3>
-            <div class="cards">
-                <DeliveryCard v-for="(card, index) in cards" :key="index" :title="card.title" :items="card.items"
-                    :backgroundColor="card.backgroundColor" />
-            </div>
+        <h3>Доставим заказ куда угодно</h3>
+        <div class="cards">
+            <DeliveryCard v-for="(card, index) in cards" :key="index" :title="card.title" :items="card.items"
+                :backgroundColor="card.backgroundColor" />
         </div>
     </div>
 </template>
@@ -47,13 +45,9 @@ export default {
 
 <style lang="scss" scoped>
 .delivery_options {
-    margin-top: 20px;
     margin-bottom: 90px;
-    .wrapper{
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-    }
+    display: flex;
+    justify-content: space-between;
 
     h3 {
         font-size: 30px;
@@ -65,6 +59,37 @@ export default {
         display: grid;
         grid-template-columns: repeat(2, 460px);
         gap: 20px;
+    }
+}
+
+@media (max-width: 1367px) {
+    .delivery_options {
+        h3 {
+            font-size: 20px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 323px);
+            gap: 10px;
+        }
+    }
+}
+@media (max-width: 361px) {
+    .delivery_options {
+        margin-bottom: 50px;
+        flex-direction: column;
+        gap: 20px;
+    
+        h3 {
+            font-size: 16px;
+            width: 150px;
+        }
+    
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 }
 </style>

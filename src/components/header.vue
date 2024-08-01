@@ -1,10 +1,10 @@
 <template>
-    <div class="header">
+    <div :class="['header', { 'menu-open': isMenuOpen }]">
         <div class="wrapper">
             <ul>
-                <div class="search-container"><a href="#"><img src="../../src/assets/img/header/search.svg" alt="search"
-                            class="search-icon">
-                        <input type="text" class="search-input" placeholder="поиск"></a>
+                <div class="search-container"><img src="../../src/assets/img/header/search.svg" alt="search"
+                        class="search-icon">
+                    <input type="text" class="search-input" placeholder="поиск">
                 </div>
                 <li><router-link to="/">Главная</router-link></li>
                 <li><router-link to="/catalog">Каталог</router-link></li>
@@ -39,7 +39,9 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="#"><img src="../../src/assets/img/header/email.svg" alt="email"></a> </li>
+                <li class="email"><a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=example@example.com&su=Hello&body=Message%20body"><img
+                            src="../../src/assets/img/header/email.svg" alt="email"></a> </li>
                 <li class="phone"><a href="#"><img src="../../src/assets/img/header/phone.svg" alt="phone"></a>
                     <ul class="phone_list">
                         <li><button @click="copyText('7(351)248-72-87')"> <img
@@ -51,14 +53,25 @@
                     </ul>
                 </li>
             </ul>
+            <BurgerMenu @toggle-menu="handleMenuToggle" />
+
         </div>
     </div>
 </template>
 
 <script>
 import { useToast } from "vue-toastification";
+import BurgerMenu from './BurgerMenu.vue';
 export default {
     name: 'Header',
+    components: {
+        BurgerMenu
+    },
+    data() {
+        return {
+            isMenuOpen: false
+        }
+    },
     methods: {
         copyText(text) {
             navigator.clipboard.writeText(text).then(() => {
@@ -84,6 +97,9 @@ export default {
                 rtl: false
             });
         },
+        handleMenuToggle(isOpen) {
+            this.isMenuOpen = isOpen;
+        }
     }
 }
 </script>
@@ -99,7 +115,7 @@ export default {
 
     ul {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         height: 100%;
 
@@ -271,17 +287,44 @@ export default {
 
 }
 
-//@media (max-width: 1367px) {
-//    .header {
-//        .wrapper {
-//            height: 65px;
-//        }
-//
-//        ul {
-//            .search-container {
-//                max-width: 227px;
-//            }
-//        }
-//    }
-//}
+@media (max-width: 1367px) {
+    .header {
+        .wrapper {
+            height: 65px;
+        }
+
+        ul {
+            li {
+                font-size: 14px;
+            }
+
+            .search-container {
+                max-width: 227px;
+            }
+
+            .email,
+            .phone {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 361px) {
+    .header {
+        width: 100%;
+
+        &.menu-open {
+            background-color: #EFEFEF;
+        }
+
+        ul {
+            display: none;
+        }
+
+        :deep .burger-menu-container {
+            visibility: visible;
+        }
+    }
+}
 </style>

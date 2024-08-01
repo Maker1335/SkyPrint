@@ -1,13 +1,11 @@
 <template>
     <div class="typography_description">
         <div class="wrapper">
-
             <div class="description">
                 <h3>Одна из лучших типографий Челябинска</h3>
                 <p>Типография SkyPrint основанная в 2005 году, является одним из лидеров по потдержке типографичных
                     продукций для компаний и рекламы. За это время, типография успела основатся как помошник для брендов
-                    и
-                    людей.</p>
+                    и людей.</p>
             </div>
             <div class="card">
                 <p class="card_title">50</p>
@@ -34,35 +32,8 @@
             </div>
             <swiper :slides-per-view="5" :space-between="9" :autoplay="{ delay: 5000, disableOnInteraction: false }"
                 :loop="true" :modules="modules" class="partners">
-                <swiper-slide class="partner">
-                    <img src="../../../assets/img/partners/carmel.svg" alt="Партнёр Кармер">
-                </swiper-slide>
-                <swiper-slide class="partner">
-                    <img src="../../../assets/img/partners/аджигардак.svg" alt="Партнёр Аджигардак">
-                </swiper-slide>
-                <swiper-slide class="partner">
-                    <img src="../../../assets/img/partners/баден.svg" alt="Партнёр Баден">
-                </swiper-slide>
-                <swiper-slide class="partner">
-                    <img src="../../../assets/img/partners/геомтерия.svg" alt="Партнёр Геомтерия">
-                </swiper-slide>
-                <swiper-slide class="partner">
-                    <img src="../../../assets/img/partners/крашер.svg" alt="Партнёр Крашер">
-                </swiper-slide>
-                <swiper-slide class="partner">
-                    <img src="../../../assets/img/partners/полет.svg" alt="Партнёр Полет">
-                </swiper-slide>
-                <swiper-slide class="partner">
-                    <img src="../../../assets/img/partners/сммщики.svg" alt="Партнёр СММщики">
-                </swiper-slide>
-                <swiper-slide class="partner">
-                    <img src="../../../assets/img/partners/стомпрактика.svg" alt="Партнёр Стомпрактика">
-                </swiper-slide>
-                <swiper-slide class="partner">
-                    <img src="../../../assets/img/partners/чилинз.svg" alt="Партнёр Чилинз">
-                </swiper-slide>
-                <swiper-slide class="partner">
-                    <img src="../../../assets/img/partners/юургу.svg" alt="Партнёр юургу">
+                <swiper-slide v-for="(partner, index) in partners" :key="index" class="partner">
+                    <img :src="partner.image" :alt="partner.alt">
                 </swiper-slide>
             </swiper>
         </div>
@@ -72,6 +43,18 @@
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay } from 'swiper/modules';
+
+import carmel from '../../../assets/img/partners/carmel.svg';
+import аджигардак from '../../../assets/img/partners/аджигардак.svg';
+import баден from '../../../assets/img/partners/баден.svg';
+import геомтерия from '../../../assets/img/partners/геомтерия.svg';
+import крашер from '../../../assets/img/partners/крашер.svg';
+import полет from '../../../assets/img/partners/полет.svg';
+import сммщики from '../../../assets/img/partners/сммщики.svg';
+import стомпрактика from '../../../assets/img/partners/стомпрактика.svg';
+import чилинз from '../../../assets/img/partners/чилинз.svg';
+import юургу from '../../../assets/img/partners/юургу.svg';
+
 export default {
     name: 'TypographyDescription',
     components: {
@@ -81,12 +64,26 @@ export default {
     data() {
         return {
             modules: [Autoplay],
+            partners: [
+                { image: carmel, alt: 'Партнёр Кармер' },
+                { image: аджигардак, alt: 'Партнёр Аджигардак' },
+                { image: баден, alt: 'Партнёр Баден' },
+                { image: геомтерия, alt: 'Партнёр Геомтерия' },
+                { image: крашер, alt: 'Партнёр Крашер' },
+                { image: полет, alt: 'Партнёр Полет' },
+                { image: сммщики, alt: 'Партнёр СММщики' },
+                { image: стомпрактика, alt: 'Партнёр Стомпрактика' },
+                { image: чилинз, alt: 'Партнёр Чилинз' },
+                { image: юургу, alt: 'Партнёр юургу' },
+            ],
         };
     }
 }
 </script>
 
 <style lang="scss" scoped>
+$backgroundImage: "../../../assets/img/background.png";
+
 .typography_description {
     margin-top: 80px;
 
@@ -104,7 +101,7 @@ export default {
             font-size: 30px;
             font-weight: bold;
             color: #27625F;
-            width: 368px;
+            width: 400px;
         }
 
         p {
@@ -113,7 +110,6 @@ export default {
             margin-top: 19px;
         }
     }
-
 
     .card {
         display: flex;
@@ -162,6 +158,7 @@ export default {
             justify-content: center;
             padding: 0;
             z-index: 1;
+            border-radius: 8px;
 
             p {
                 z-index: 1;
@@ -184,19 +181,11 @@ export default {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-image: url("../../../assets/img/background.png");
+                background-image: url($backgroundImage);
                 background-size: cover;
                 opacity: 0;
                 transition: opacity 0.5s ease;
             }
-
-            //&:hover {
-            //    background-image: url("../../../assets/img/background.png");
-            //
-            //    &::before {
-            //        opacity: 1;
-            //    }
-            //}
         }
 
         &::before {
@@ -206,28 +195,27 @@ export default {
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url("../../../assets/img/background.png");
+            background-image: url($backgroundImage);
             background-size: cover;
             opacity: 0;
             transition: opacity 0.5s ease;
         }
 
         &:hover {
-            background-image: url("../../../assets/img/background.png");
+            background-image: url($backgroundImage);
 
             &::before {
                 opacity: 1;
             }
 
             .card_button {
-                background-image: url("../../../assets/img/background.png");
+                background-image: url($backgroundImage);
 
                 &::before {
                     opacity: 1;
                 }
             }
         }
-
     }
 
     .partners {
@@ -247,6 +235,114 @@ export default {
             }
         }
     }
+}
 
+@media (max-width: 1367px) {
+    .typography_description {
+        .wrapper {
+            grid-gap: 5px;
+        }
+
+        .description {
+            width: 300px;
+            margin-right: 20px;
+
+            h3 {
+                font-size: 20px;
+                width: 100%;
+            }
+
+            p {
+                width: 100%;
+                margin-top: 7px;
+            }
+        }
+
+        .card {
+            width: 334px;
+            height: 159px;
+
+            &_title {
+                font-size: 46px;
+                margin-left: 21px;
+            }
+
+            &_description {
+                font-size: 16px;
+                margin-left: 21px;
+            }
+
+            &_button {
+                height: 34px;
+                width: 181px;
+                bottom: 14px;
+                left: 14px;
+            }
+        }
+
+        .partners {
+            width: 630px;
+            margin-top: 34px;
+
+            img {
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 361px) {
+    .typography_description {
+        margin-top: 60px;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            grid-gap: 10px;
+        }
+
+        .description {
+            h3 {
+                font-size: 16px;
+                font-weight: bold;
+                width: 300px;
+            }
+
+            p {
+                font-size: 14px;
+                width: 331px;
+                font-weight: 500;
+                margin-top: 5px;
+            }
+        }
+
+        .card {
+            width: 336px;
+            height: 159px;
+
+            &_title {
+                font-size: 46px;
+                margin-left: 21px;
+            }
+
+            &_description {
+                font-size: 16px;
+                margin-left: 21px;
+            }
+
+            &_button {
+                font-size: 16px;
+                height: 31px;
+                width: 180px;
+            }
+        }
+
+        .partners {
+            width: 336px;
+            img {
+                height: 26px;
+            }
+        }
+    }
 }
 </style>

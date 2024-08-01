@@ -113,6 +113,7 @@ export default {
     }
 
     &_download {
+        color: #27625F;
         font-size: 20px;
         font-weight: bold;
         height: 80px;
@@ -121,6 +122,40 @@ export default {
         border-radius: 8px;
         cursor: pointer;
         width: 100%;
+    }
+}
+
+@media (max-width: 1367px) {
+    .layout-requirements {
+        margin-bottom: 30px;
+
+        .wrapper {
+            gap: 10px;
+        }
+
+        &_download {
+            height: 60px;
+        }
+    }
+}
+@media (max-width: 361px) {
+    .layout-requirements {
+        margin-bottom: 0px;
+    
+        .wrapper {
+            gap: 20px;
+        }
+    
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        &_download {
+            font-size: 16px;
+            height: 60px;
+        }
     }
 }
 </style>

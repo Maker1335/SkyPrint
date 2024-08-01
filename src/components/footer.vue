@@ -31,7 +31,8 @@
             <p class="text">Приём заказов</p>
             <div class="manager">
                 <p class="title">Менеджер</p>
-                <p class="text"><img src="../assets/img/footer/phone.svg" alt="phone">+7 (351) 248-72-87, 245-45-75</p>
+                <p class="text"><img src="../assets/img/footer/phone.svg" alt="phone">+7 (351) 248-72-87, 245-45-75
+                </p>
                 <p class="text"><img src="../assets/img/footer/email.svg" alt="email">zakaz@skyprint74.ru</p>
             </div>
             <div class="designer">
@@ -57,15 +58,16 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
+    width: 100%;
     margin-top: 111px;
+    background: #27625F;
+    padding: 75px 35px 35px 35px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background: #27625F;
     z-index: 1;
     color: white;
-    padding: 75px 35px 35px 35px;
-    width: 1920px;
     box-sizing: border-box;
+
     &_links {
         display: flex;
         flex-direction: column;
@@ -74,7 +76,8 @@ export default {
         li {
             font-size: 30px;
             font-weight: bold;
-            a{
+
+            a {
                 text-decoration: none;
                 color: white;
             }
@@ -132,6 +135,56 @@ export default {
                 height: 30px;
             }
         }
+    }
+}
+@media (max-width: 1367px) {
+    .footer {
+        margin-top: 60px;
+    
+        &_links {
+            gap: 15px;
+    
+            li {
+                font-size: 20px;
+            }
+        }
+    
+        &_catalog {
+            li {
+                font-size: 16px;
+            }
+        }
+    
+        .orders {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+    
+            .manager,
+            .designer {
+                .text {
+                    font-size: 16px;
+                }
+            }
+    
+            .social_links {
+                gap: 20px;
+    
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 361px) {
+    .footer {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px;
+        gap: 50px;
     }
 }
 </style>

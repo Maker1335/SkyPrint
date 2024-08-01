@@ -54,10 +54,12 @@ $goodsBG: "../../../assets/img/background.png";
   background-position: center;
   background-size: cover;
   height: 941px;
+  position: relative;
 
   .wrapper {
     .content {
-      padding-top: 440px;
+      position: absolute;
+      bottom: 70px;
 
       h1 {
         font-size: 51px;
@@ -72,14 +74,60 @@ $goodsBG: "../../../assets/img/background.png";
         width: 647px;
       }
 
-      ::v-deep .slider {
+      :deep .slider  {
         .slider-container {
-          .product{
+          .product {
             background-color: #fff;
           }
+
           .all-categories {
             border: 0px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1367px) {
+  .MainContent {
+    height: 740px;
+
+    .wrapper {
+      .content {
+        h1 {
+          font-size: 51px;
+          font-weight: bold;
+          color: #289793;
+          width: 647px;
+        }
+
+        .description {
+          font-size: 16px;
+          color: #3baeaa;
+          width: 647px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1367px) {
+  .MainContent {
+    height: 660px;
+
+    .wrapper {
+      .content {
+        h1 {
+          font-size: 30px;
+          color: #0E7571;
+          width: 336px;
+        }
+
+        .description {
+          font-size: 12px;
+          width: 336px;
+          color: #0E7571;
         }
       }
     }

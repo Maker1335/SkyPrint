@@ -1,11 +1,9 @@
 <template>
     <div class="payment-options">
-        <div class="wrapper">
-            <h3>Оплатить заказ можно несколькими способами</h3>
-            <div class="cards">
-                <PaymentCard v-for="(card, index) in cards" :key="index" :title="card.title" :imgSrc="card.imgSrc"
-                    :alt="card.alt" :description="card.description" />
-            </div>
+        <h3>Оплатить заказ можно несколькими способами</h3>
+        <div class="cards">
+            <PaymentCard v-for="(card, index) in cards" :key="index" :title="card.title" :imgSrc="card.imgSrc"
+                :alt="card.alt" :description="card.description" />
         </div>
     </div>
 </template>
@@ -57,10 +55,7 @@ export default {
 <style lang="scss" scoped>
 .payment-options {
     margin-bottom: 100px;
-
-    .wrapper {
-        display: flex;
-    }
+    display: flex;
 
     h3 {
         font-size: 30px;
@@ -72,6 +67,31 @@ export default {
         flex-wrap: wrap;
         gap: 15px;
         justify-content: flex-end;
+    }
+}
+
+@media (max-width: 1367px) {
+    .payment-options {
+        h3 {
+            font-size: 20px;
+        }
+        .cards {
+            gap: 10px;
+        }
+    }
+}
+@media (max-width: 361px) {
+    .payment-options {
+        margin-bottom: 50px;
+        flex-direction: column;
+        gap: 16px;
+        h3 {
+            font-size: 16px;
+        }
+    
+        .cards {
+            gap: 10px;
+        }
     }
 }
 </style>

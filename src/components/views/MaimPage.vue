@@ -6,7 +6,7 @@
         <QualityOfService />
         <StagesOfWork />
         <Reviews />
-        <Feedback />
+        <Feedback :titleText="feedbackText"/>
         <Contacts />
     </div>
 </template>
@@ -18,8 +18,9 @@ import TypographyDescription from '../pages/MainPage/TypographyDescription.vue';
 import QualityOfService from '../pages/MainPage/QualityOfService.vue';
 import StagesOfWork from '../pages/MainPage/StagesOfWork.vue';
 import Reviews from '../pages/MainPage/Reviews.vue';
-import Feedback from '../pages/MainPage/Feedback.vue';
-import Contacts from '../pages/MainPage/Contacts.vue';
+// import Feedback from '../pages/MainPage/Feedback.vue';
+import Feedback from '../Feedback.vue';
+import Contacts from '../Contacts.vue';
 
 export default {
     name: 'MaimPage',
@@ -32,7 +33,12 @@ export default {
         Reviews,
         Feedback,
         Contacts,
-    }
+    },
+    data() {
+        return {
+            feedbackText: 'Заинтересовали? Тогда скорее звони нам!',
+        }
+    },
 }
 </script>
 

@@ -16,9 +16,15 @@ li {
     margin: 0 auto;
 }
 
-//@media (max-width: 1367px) {
-//    .wrapper{
-//        width: 1023px;
-//        margin: 0 auto;
-//    }
-//}
+@media (max-width: 1367px) {
+    .wrapper{
+        max-width: 988px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 361px) {
+    .wrapper{
+        max-width: 336px;
+        margin: 0 auto;
+    }
+}

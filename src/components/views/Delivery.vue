@@ -30,14 +30,30 @@ export default {
 .header {
     margin-bottom: 60px;
 }
-
 .delivery {
     color: #27625f;
-
     h2 {
         font-size: 50px;
         font-weight: bold;
         margin-bottom: 70px;
+    }
+}
+@media (max-width: 1367px) {
+    .delivery {
+        h2 {
+            font-size: 35px;
+        }
+    }
+}
+@media (max-width: 361px) {
+    .header {
+        margin-bottom: 30px;
+    }
+    .delivery {
+        h2 {
+            font-size: 25px;
+            margin-bottom: 40px;
+        }
     }
 }
 </style>

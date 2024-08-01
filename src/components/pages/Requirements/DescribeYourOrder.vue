@@ -37,56 +37,46 @@ export default {
 
 <style lang="scss" scoped>
 .describe-your-order {
-
     margin-bottom: 50px;
-
     .wrapper {
         display: grid;
         grid-template-columns: auto 1fr;
     }
-
     h3 {
         font-size: 30px;
         font-weight: bold;
         width: 100%;
     }
-
     .cards {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
         gap: 12px;
-
         .card {
             display: flex;
             flex-direction: column;
-            gap: 8px;
             width: 462px;
             height: 272px;
             background-color: #F5F5F5;
             position: relative;
             padding: 28px;
             box-sizing: border-box;
-
             &_title {
                 font-size: 16px;
                 font-weight: bold;
                 z-index: 1;
             }
-
             &_img {
                 position: absolute;
                 bottom: 30px;
                 right: 45px;
                 width: 40px;
                 height: 67px;
-
                 &:last-child {
                     width: 56px;
                     height: 49px;
                 }
             }
-
             &::before {
                 content: "";
                 position: absolute;
@@ -99,10 +89,58 @@ export default {
                 opacity: 0;
                 transition: opacity 0.5s ease;
             }
-
             &:hover {
                 &::before {
                     opacity: 1;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1367px) {
+    .describe-your-order {
+        h3 {
+            font-size: 20px;
+        }
+        .cards {
+            gap: 10px;
+            .card {
+                width: 330px;
+                height: 330px;
+                &_title {
+                    font-weight: 600;
+                }
+                &_img {
+                    bottom: 20px;
+                    right: 30px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 361px) {
+    .describe-your-order {
+        margin-bottom: 30px;
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        h3 {
+            font-size: 16px;
+        }
+        .cards {
+            gap: 5px;
+            .card {
+                width: 100%;
+                height: 235px;
+                &_title {
+                    font-size: 14px;
+                }
+                &_img {
+                    bottom: 20px;
+                    width: 40px;
+                    height: 67px;
                 }
             }
         }

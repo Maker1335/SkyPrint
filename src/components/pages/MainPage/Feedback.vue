@@ -1,7 +1,7 @@
 <template>
     <div class="feedback">
         <div class="wrapper">
-            <h4>Заинтересовали? Тогда скорее звони нам!</h4>
+            <h4>Заинтересовали? <br> Тогда скорее звони нам!</h4>
             <div class="feedback_form">
                 <div class="form">
                     <input type="text" placeholder="Имя" class="form_input">
@@ -15,16 +15,14 @@
                     @click="selectContact('manager')">
                     <p>
                         Связаться с менеджером
-                        <img v-if="selectedContact === 'manager'"
-                            src="../../../assets/img/pages/MainPage/Feedback/checkmark.svg" alt="галочка" />
+                        <img v-if="selectedContact === 'manager'" :src="checkmark" alt="галочка" />
                     </p>
                 </div>
                 <div class="contact-designer" :class="{ selected: selectedContact === 'designer' }"
                     @click="selectContact('designer')">
                     <p>
                         Связаться с дизайнером
-                        <img v-if="selectedContact === 'designer'"
-                            src="../../../assets/img/pages/MainPage/Feedback/checkmark.svg" alt="галочка" />
+                        <img v-if="selectedContact === 'designer'" :src="checkmark" alt="галочка" />
                     </p>
                 </div>
             </div>
@@ -33,11 +31,13 @@
 </template>
 
 <script>
+import checkmark from "../../../assets/img/pages/MainPage/Feedback/checkmark.svg"
 export default {
     name: 'Feedback',
     data() {
         return {
             selectedContact: 'manager', // Начальное состояние
+            checkmark
         };
     },
     methods: {
@@ -88,12 +88,18 @@ export default {
                 padding-left: 10px;
                 background: #FFFFFF;
                 border: 0px;
+                box-sizing: border-box;
             }
 
             &_checkbox {
                 font-size: 16px;
                 color: #27625F;
                 width: 402px;
+
+                a {
+                    color: #27625F;
+                    text-decoration: underline;
+                }
             }
 
             &_button {
@@ -127,11 +133,70 @@ export default {
                 color: #27625F;
                 font-weight: bold;
             }
-
         }
 
         .selected {
             background-color: #FFFFFF;
+        }
+    }
+}
+
+@media (max-width: 1367px) {
+    .feedback {
+        margin-top: 80px;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h4 {
+            font-size: 30px;
+            width: 400px;
+            margin-bottom: 20px;
+        }
+
+        &_form {
+            .form {
+                grid-gap: 8px;
+
+                &_input {
+                    width: 100%;
+                    height: 40px;
+                    padding-left: 18px;
+                }
+
+                &_checkbox {
+                    font-size: 12px;
+                    width: 100%;
+                }
+
+                &_button {
+                    width: 100%;
+                    height: 40px;
+                    font-size: 16px;
+                }
+            }
+
+            .contact-manager,
+            .contact-designer {
+                width: 100%;
+                height: 238px;
+                border-radius: 5px;
+                background-color: none;
+                transition: background-color 0.5s;
+
+                p {
+                    padding: 20px;
+                    font-size: 16px;
+                    color: #27625F;
+                    font-weight: bold;
+                }
+            }
+
+            .selected {
+                background-color: #FFFFFF;
+            }
         }
     }
 }
