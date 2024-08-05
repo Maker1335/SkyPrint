@@ -23,10 +23,16 @@ const routes = [
         name: 'catalog',
         component: Catalog,
     },
+    // {
+    //     path: `/Product`,
+    //     name: 'product',
+    //     component: Product,
+    // },
     {
-        path: `/Product`,
-        name: 'product',
+        path: '/product/:id',
+        name: 'Product',
         component: Product,
+        props: true
     },
     {
         path: `/Contacts`,

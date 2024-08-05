@@ -1,16 +1,17 @@
 <template>
-    <div class="catalog_item">
+    <router-link :to="{ name: 'Product', params: { id } }" class="catalog_item">
         <img :src="save" alt="закладка" class="catalog_item_save" />
         <img :src="img" alt="фото товара" class="catalog_item_img" />
         <p class="catalog_item_name">{{ name }}</p>
         <p class="catalog_item_count">{{ count }}</p>
-    </div>
+    </router-link>
 </template>
 
 <script>
 export default {
     name: 'CatalogItem',
     props: {
+        id: Number,
         save: String,
         img: String,
         name: String,
@@ -20,6 +21,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+    text-decoration: none;
+    color: #27625F;
+}
 .catalog_item {
     display: grid;
     grid-template-columns: auto auto auto 120px;

@@ -2,20 +2,28 @@
     <Header />
     <div class="product">
         <div class="wrapper">
-            <p class="product_title">Ручки</p>
-            <FrontInfo />
-            <Details />
+            <template v-if="product">
+            <p class="product_title">{{ product.name }}</p>
+            <FrontInfo :imgSrc="product.image" :description="product.description" />
+            <Details :productDetails="product.details" />
+        </template>
+        <template v-else>
+            <p class="product_not-found">Товар не найден</p>
+        </template>
         </div>
     </div>
     <Slider :titleText="sliderText" />
 </template>
 
-
 <script>
+import { useProductStore } from '../stores/products'
+
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+
 import Header from '../header.vue';
 import FrontInfo from '../pages/Product/FrontInfo.vue';
 import Details from '../pages/Product/Details.vue';
-
 import Slider from '../Slider.vue';
 
 export default {
@@ -28,12 +36,19 @@ export default {
     },
     data() {
         return {
-            showPrices: false,
-            showRequirements: false,
-            activeSection: null,
-            sliderText: "Другие категории",
-        };
+            sliderText: 'Другие категории'
+        }
     },
+    setup() {
+        const route = useRoute();
+        const store = useProductStore();
+        const productId = Number(route.params.id);
+        const product = computed(() => store.products.find(p => p.id === productId));
+
+        return {
+            product
+        };
+    }
 }
 </script>
 
@@ -57,6 +72,12 @@ export default {
         font-weight: bold;
         margin-bottom: 26px;
         grid-area: title;
+    }
+    &_not-found {
+        font-size: 18px;
+        color: red;
+        text-align: center;
+        margin-top: 20px;
     }
 }
 

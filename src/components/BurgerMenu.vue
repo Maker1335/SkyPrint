@@ -25,11 +25,12 @@
 <script>
 export default {
     name: 'BurgerMenu',
+    emits: ['toggle-menu'],  // Declare the emitted event
     data() {
         return {
             isOpen: false
         };
-    },
+    },  
     methods: {
         toggleMenu() {
             this.isOpen = !this.isOpen;

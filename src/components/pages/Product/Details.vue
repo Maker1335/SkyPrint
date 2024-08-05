@@ -1,7 +1,7 @@
 <template>
     <div class="details">
         <div class="details_estimated-cost">
-            <p class="details_estimated-cost_price">10 400 &#8381;</p>
+            <p class="details_estimated-cost_price">{{ productDetails.estimatedCost }}</p>
             <p class="details_estimated-cost_title">Ориентировочная стоимость</p>
         </div>
         <table class="details_table">
@@ -9,12 +9,7 @@
                 <td>Размеры</td>
                 <td>
                     <ul class="details_list">
-                        <li>50 х 90 мм</li>
-                        <li>90 х 100 мм</li>
-                        <li>40 х 80 мм</li>
-                        <li>200 х 150 мм</li>
-                        <li>200 х 150 мм</li>
-                        <li>50 х 150 мм</li>
+                        <li v-for="dimension in productDetails.dimensions" :key="dimension">{{ dimension }}</li>
                     </ul>
                 </td>
             </tr>
@@ -22,9 +17,7 @@
                 <td>Тип бумаги</td>
                 <td>
                     <ul class="details_list">
-                        <li>Мелованная 100-300/м²</li>
-                        <li>Фактурная 100-300/м²</li>
-                        <li>Цветная 100-300/м²</li>
+                        <li v-for="paper in productDetails.paperType" :key="paper">{{ paper }}</li>
                     </ul>
                 </td>
             </tr>
@@ -32,7 +25,7 @@
                 <td>Тип печати</td>
                 <td>
                     <ul class="details_list">
-                        <li>Полноцветная с одной стороны</li>
+                        <li v-for="print in productDetails.printType" :key="print">{{ print }}</li>
                     </ul>
                 </td>
             </tr>
@@ -40,8 +33,7 @@
                 <td>Ламинация</td>
                 <td>
                     <ul class="details_list">
-                        <li>Матовая</li>
-                        <li>глянцевая</li>
+                        <li v-for="laminate in productDetails.lamination" :key="laminate">{{ laminate }}</li>
                     </ul>
                 </td>
             </tr>
@@ -49,8 +41,7 @@
                 <td>Углы</td>
                 <td>
                     <ul class="details_list">
-                        <li>Скругленные</li>
-                        <li>без скругления</li>
+                        <li v-for="angle in productDetails.angles" :key="angle">{{ angle }}</li>
                     </ul>
                 </td>
             </tr>
@@ -63,14 +54,23 @@
 <script>
 import AdditionalInfo from './AdditionalInfo.vue';
 import ActionButtons from './ActionButtons .vue';
+
 export default {
     name: 'Details',
     components: {
         AdditionalInfo,
         ActionButtons
+    },
+    props: {
+        productDetails: {
+            type: Object,
+            required: true
+        }
     }
 }
 </script>
+
+
 
 <style lang="scss" scoped>
 .details {
