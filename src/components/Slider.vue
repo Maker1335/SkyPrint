@@ -55,9 +55,6 @@ export default {
         0: {
           slidesPerView: 3,
         },
-        360: {
-          slidesPerView: 3,
-        },
         1366: {
           slidesPerView: 4,
         },
@@ -214,7 +211,8 @@ $goodsBG: "../assets/img/background.png";
   }
 }
 
-@media (max-width: 361px) {
+//@media (max-width: 361px) {
+  @media (max-width: 700px) {
   .slider {
     h2 {
       font-size: 14px;
@@ -222,6 +220,7 @@ $goodsBG: "../assets/img/background.png";
 
     .slider-container {
       width: 100%;
+      //width: calc(100vh - 30px);
       display: flex;
       flex-direction: column;
       margin-top: 20px;
@@ -253,7 +252,7 @@ $goodsBG: "../assets/img/background.png";
 
         img {
           width: 100%;
-          height: 100%;
+          height: 100px;
         }
       }
 

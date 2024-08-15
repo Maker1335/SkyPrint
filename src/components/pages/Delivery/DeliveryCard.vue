@@ -1,5 +1,5 @@
 <template>
-    <div class="card" :style="{ backgroundColor: backgroundColor }">
+    <div class="card">
         <p class="card_title">{{ title }}</p>
         <ul>
             <li v-for="(item, index) in items" :key="index">{{ item }}</li>

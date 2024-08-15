@@ -213,7 +213,8 @@ export default {
         }
     }
 }
-@media (max-width: 361px) {
+//@media (max-width: 361px) {
+    @media (max-width: 700px) {
     .quality_of_service {
         background: #CEFFFD;
         padding: 10px;
@@ -228,8 +229,8 @@ export default {
                 "card2 card3"
                 ". card5"
                 "card6 card4 "
-                "card7 card8"
-                "card9 ."
+                "card7 ."
+                "card9 card8"
                 "card10 card10";
             grid-gap: 12px;
             justify-items: start;
@@ -242,17 +243,34 @@ export default {
         }
     
         .card {
-            width: 160px;
+            //width: 160px;
+            width: 100%;
+            height: 160px;
             height: 160px;
             font-size: 14px;
             font-weight: 500;
             padding: 10px;
 
             &:nth-child(10) {
-                width: 336px;
-                height: 162px;
+                //width: 336px;
+                width: 100%;
+                //height: 162px;
+                height: auto;
             }
     
+            //для теста
+            &:nth-child(2),
+            &:nth-child(4){
+                grid-row: span 2;
+                height: 100%;
+                width: 100%;
+                align-items: start;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
             &:nth-child(3),
             &:nth-child(5),
             &:nth-child(6),

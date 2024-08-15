@@ -291,7 +291,7 @@ $backgroundImage: "../../../assets/img/background.png";
     }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .typography_description {
         margin-top: 60px;
 
@@ -317,8 +317,8 @@ $backgroundImage: "../../../assets/img/background.png";
         }
 
         .card {
-            width: 336px;
-            height: 159px;
+            width: 100%;
+            height: 160px;
 
             &_title {
                 font-size: 46px;
@@ -338,9 +338,9 @@ $backgroundImage: "../../../assets/img/background.png";
         }
 
         .partners {
-            width: 336px;
+            width: 100%;
             img {
-                height: 26px;
+                height: 25px;
             }
         }
     }

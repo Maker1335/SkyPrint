@@ -159,7 +159,7 @@ export default {
         }
     }
 }
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .we_have_all {
         margin-top: 40px;
         .wrapper {
@@ -175,7 +175,7 @@ export default {
             }
             .card {
                 width: 100%;
-                height: 250px
+                height: 250px;
             }
     
             .card {

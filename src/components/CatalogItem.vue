@@ -1,22 +1,41 @@
 <template>
-    <router-link :to="{ name: 'Product', params: { id } }" class="catalog_item">
-        <img :src="save" alt="закладка" class="catalog_item_save" />
-        <img :src="img" alt="фото товара" class="catalog_item_img" />
-        <p class="catalog_item_name">{{ name }}</p>
-        <p class="catalog_item_count">{{ count }}</p>
-    </router-link>
+    <div class="catalog_item">
+        <img :src="save ? saveIconOn : saveIconOff" alt="закладка" class="catalog_item_save" @click="handleClick" />
+        <router-link :to="{ name: 'Product', params: { id } }">
+            <img :src="img" alt="фото товара" class="catalog_item_img" />
+            <p class="catalog_item_name">{{ name }}</p>
+            <p class="catalog_item_count">{{ count }}</p>
+        </router-link>
+    </div>
 </template>
 
 <script>
+import save from '../assets/img/header/save.svg';
+import saveOff from '../assets/img/header/saveOff.svg';
+
 export default {
     name: 'CatalogItem',
     props: {
         id: Number,
-        save: String,
+        save: Boolean,
         img: String,
         name: String,
         count: String,
     },
+    methods: {
+        handleClick(event) {
+            event.stopPropagation(); // Останавливаем распространение события
+            this.$emit('toggle-save', this.id);
+        },
+    },
+    computed: {
+        saveIconOn() {
+            return save;
+        },
+        saveIconOff() {
+            return saveOff;
+        }
+    }
 }
 </script>
 
@@ -25,32 +44,36 @@ a {
     text-decoration: none;
     color: #27625F;
 }
+
 .catalog_item {
-    display: grid;
-    grid-template-columns: auto auto auto 120px;
-    grid-template-rows: 30px 190px 30px;
-    grid-template-areas:
-        ". . . save"
-        "img img img img"
-        "name . .  count";
     position: relative;
     background-color: #ECECEC;
     width: 265px;
     height: 250px;
 
+    a {
+        display: grid;
+        grid-template-columns: auto auto auto 1fr;
+        grid-template-rows: 30px 190px 30px;
+        grid-template-areas:
+            ". . . ."
+            "img img img img"
+            "name . .  count";
+
+    }
+
     &_save {
-        grid-area: save;
         width: 13px;
         height: 17px;
         position: absolute;
         right: 12px;
-        top: 11px;
+        top: 12px;
     }
 
     &_img {
         grid-area: img;
-        width: 265px;
-        height: 190px;
+        width: 241px;
+        height: 181px;
         display: flex;
         justify-content: center;
     }
@@ -75,24 +98,26 @@ a {
         justify-content: end;
     }
 }
+
 @media (max-width: 1367px) {
     .catalog_item {
-        display: grid;
-        grid-template-columns: auto auto auto 105px;
-        grid-template-rows: 30px 190px 30px;
-        grid-template-areas:
-            ". . . save"
-            "img img img img"
-            "name . .  count";
         position: relative;
         background-color: #ECECEC;
         width: 240px;
         height: 250px;
 
+        a {
+            display: grid;
+            grid-template-columns: auto auto auto 1fr;
+            grid-template-rows: 30px 190px 30px;
+            grid-template-areas:
+                ". . . ."
+                "img img img img"
+                "name . .  count";
+        }
+
         &_save {
             height: 15px;
-            right: 20px;
-            top: 20px;
         }
 
         &_img {
@@ -100,7 +125,7 @@ a {
         }
 
         &_name {
-            margin-left: 9px;
+            margin-left: 10px;
         }
 
         &_count {
@@ -108,41 +133,47 @@ a {
         }
     }
 }
+
 @media (max-width: 361px) {
     .catalog_item {
-        grid-template-columns: auto auto auto auto;
-        grid-template-rows: 30px 104px 30px;
-        grid-template-areas:
-            "name . . save"
-            "img img img img"
-            "count . .  .";
         width: 164px;
         height: 164px;
-    
+
+        a {
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: 30px 104px 30px;
+            grid-template-areas:
+                "name . . ."
+                "img img img img"
+                "count . .  .";
+        }
+
         &_save {
             position: absolute;
             right: 12px;
             top: 11px;
         }
-    
+
         &_img {
             width: 100%;
             height: 100%;
             display: flex;
             justify-content: center;
         }
-    
+
         &_name {
             font-size: 14px;
             margin-left: 9px;
             margin-top: 10px;
             margin-bottom: 0;
         }
-    
+
         &_count {
             font-size: 14px;
             margin-right: 14px;
             margin-bottom: 12px;
+            margin-left: 9px;
+            justify-content: start;
         }
     }
 }

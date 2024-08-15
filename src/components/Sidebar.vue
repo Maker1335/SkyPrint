@@ -4,107 +4,32 @@
             <img src="../assets/img/Sidebar/logo.svg" alt="Логотип компании" class="logo">
         </router-link>
         <ul class="service-list">
-            <li><a href="#"><img src="../assets/img/goods/businessСards.svg" alt="">
-                    <p>Визитки</p>
-                </a></li>
-            <li><a href="#"><img src="../assets/img/goods/printing.svg" alt="">
-                    <p>Полиграфия</p>
-                </a></li>
-            <li><a href="#"><img src="../assets/img/goods/notepads.svg" alt="">
-                    <p>Широкоформатная печать</p>
-                </a></li>
-            <li><a href="#"><img src="../assets/img/goods/lamination.svg" alt="">
-                    <p>Копировальные услуги</p>
-                </a></li>
-            <li><a href="#"><img src="../assets/img/goods/pens.svg" alt="">
-                    <p>Сувениры</p>
-                </a></li>
-            <li><a href="#"><img src="../assets/img/goods/canvases.svg" alt="">
-                    <p>Тиражирование</p>
-                </a></li>
-            <li><a href="#"><img src="../assets/img/goods/printing.svg" alt="">
-                    <p>Прочее</p>
-                </a></li>
-            <ul class="goods-list">
-                <router-link to="/product">
-                    <li class="goods-list_item"><img class="goods-list_item_img"
-                            src="../../src/assets/img/goods/printing.svg" alt="фото товара">
-                        <p class="goods-list_item_title">Название товара
-                            <img class="goods-list_item_save" src="../../src/assets/img/header/saveOff.svg"
-                                alt="фото закладки">
-                        </p>
-                        <p class="goods-list_item_count">От 3 шт</p>
-                    </li>
-                </router-link>
-                <li class="goods-list_item"><img class="goods-list_item_img"
-                        src="../../src/assets/img/goods/printing.svg" alt="фото товара">
-                    <p class="goods-list_item_title">Название товара
-                        <img class="goods-list_item_save" src="../../src/assets/img/header/saveOff.svg"
-                            alt="фото закладки">
-                    </p>
-                    <p class="goods-list_item_count">От 3 шт</p>
-                </li>
-                <li class="goods-list_item"><img class="goods-list_item_img"
-                        src="../../src/assets/img/goods/printing.svg" alt="фото товара">
-                    <p class="goods-list_item_title">Название товара
-                        <img class="goods-list_item_save" src="../../src/assets/img/header/saveOff.svg"
-                            alt="фото закладки">
-                    </p>
-                    <p class="goods-list_item_count">От 3 шт</p>
-                </li>
-                <li class="goods-list_item"><img class="goods-list_item_img"
-                        src="../../src/assets/img/goods/printing.svg" alt="фото товара">
-                    <p class="goods-list_item_title">Название товара
-                        <img class="goods-list_item_save" src="../../src/assets/img/header/saveOff.svg"
-                            alt="фото закладки">
-                    </p>
-                    <p class="goods-list_item_count">От 3 шт</p>
-                </li>
-                <li class="goods-list_item"><img class="goods-list_item_img"
-                        src="../../src/assets/img/goods/printing.svg" alt="фото товара">
-                    <p class="goods-list_item_title">Название товара
-                        <img class="goods-list_item_save" src="../../src/assets/img/header/saveOff.svg"
-                            alt="фото закладки">
-                    </p>
-                    <p class="goods-list_item_count">От 3 шт</p>
-                </li>
-                <li class="goods-list_item"><img class="goods-list_item_img"
-                        src="../../src/assets/img/goods/printing.svg" alt="фото товара">
-                    <p class="goods-list_item_title">Название товара
-                        <img class="goods-list_item_save" src="../../src/assets/img/header/saveOff.svg"
-                            alt="фото закладки">
-                    </p>
-                    <p class="goods-list_item_count">От 3 шт</p>
-                </li>
-                <li class="goods-list_item"><img class="goods-list_item_img"
-                        src="../../src/assets/img/goods/printing.svg" alt="фото товара">
-                    <p class="goods-list_item_title">Название товара
-                        <img class="goods-list_item_save" src="../../src/assets/img/header/saveOff.svg"
-                            alt="фото закладки">
-                    </p>
-                    <p class="goods-list_item_count">От 3 шт</p>
-                </li>
-                <li class="goods-list_item"><img class="goods-list_item_img"
-                        src="../../src/assets/img/goods/printing.svg" alt="фото товара">
-                    <p class="goods-list_item_title">Название товара
-                        <img class="goods-list_item_save" src="../../src/assets/img/header/saveOff.svg"
-                            alt="фото закладки">
-                    </p>
-                    <p class="goods-list_item_count">От 3 шт</p>
-                </li>
-                <li class="goods-list_item"><img class="goods-list_item_img"
-                        src="../../src/assets/img/goods/printing.svg" alt="фото товара">
-                    <p class="goods-list_item_title">Название товара
-                        <img class="goods-list_item_save" src="../../src/assets/img/header/saveOff.svg"
-                            alt="фото закладки">
-                    </p>
-                    <p class="goods-list_item_count">От 3 шт</p>
-                </li>
-            </ul>
+            <li v-for="category in categories" :key="category.name" @mouseover="setHoveredCategory(category.name)"
+                @mouseleave="clearHoveredCategory">
+                <a href="#">
+                    <img :src="category.img" :alt="category.name">
+                    <p>{{ category.name }}</p>
+                </a>
+                <ul v-if="hoveredCategory === category.name" class="goods-list">
+                    <router-link :to="{ name: 'Product', params: { id: product.id } }"
+                        v-for="product in filteredProducts" :key="product.id">
+                        <li class="goods-list_item">
+                            <img class="goods-list_item_img" :src="product.img" alt="фото товара">
+                            <p class="goods-list_item_title">
+                                {{ product.name }}
+                                <img class="goods-list_item_save" :src="product.save ? saveIconOn : saveIconOff"
+                                    alt="фото закладки">
+                            </p>
+                            <p class="goods-list_item_count">{{ product.count }}</p>
+                        </li>
+                    </router-link>
+                </ul>
+            </li>
         </ul>
-        <a href="#contact" class="contact-link">
+        <a class="contact-link" @click="toggleMenu">
             <p>Связаться с менеджером</p>
         </a>
+        <Questionnaire :isOpen="isQuestionnaireOpen" :toggleMenu="toggleMenu" />
         <router-link to="/designServices" class="designer-link">
             <p>Услуги дизайнера</p>
         </router-link>
@@ -112,9 +37,66 @@
 </template>
 
 <script>
+import { useProductStore } from './stores/products.js';
+import saveIconOn from '../assets/img/header/save.svg';
+import saveIconOff from '../assets/img/header/saveOff.svg';
+
+import businessСards from '../assets/img/goods/businessСards.svg';
+import printing from '../assets/img/goods/printing.svg';
+import notepads from '../assets/img/goods/notepads.svg';
+import lamination from '../assets/img/goods/lamination.svg';
+import pens from '../assets/img/goods/pens.svg';
+import canvases from '../assets/img/goods/canvases.svg';
+
+import Questionnaire from './Questionnaire.vue';
+
 export default {
     name: 'Sidebar',
-};
+    components: {
+        Questionnaire
+    },
+    data() {
+        return {
+            hoveredCategory: null,
+            isQuestionnaireOpen: false,
+            categories: [
+                { name: 'Визитки', img: businessСards },
+                { name: 'Полиграфия', img: printing },
+                { name: 'Широкоформатная печать', img: notepads },
+                { name: 'Копировальные услуги', img: lamination },
+                { name: 'Сувениры', img: pens },
+                { name: 'Тиражирование', img: canvases },
+                { name: 'Прочее', img: notepads },
+            ]
+        }
+    },
+    computed: {
+        products() {
+            const productStore = useProductStore();
+            return productStore.products;
+        },
+        filteredProducts() {
+            return this.products.filter(product => product.category === this.hoveredCategory);
+        },
+        saveIconOn() {
+            return saveIconOn;
+        },
+        saveIconOff() {
+            return saveIconOff;
+        }
+    },
+    methods: {
+        setHoveredCategory(category) {
+            this.hoveredCategory = category;
+        },
+        clearHoveredCategory() {
+            this.hoveredCategory = null;
+        },
+        toggleMenu() {
+            this.isQuestionnaireOpen = !this.isQuestionnaireOpen;
+        }
+    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -131,7 +113,6 @@ export default {
     margin-right: 36px;
     margin-left: 34px;
     z-index: 1;
-
 
     .logo {
         width: 178px;
@@ -188,20 +169,25 @@ export default {
 
         .goods-list {
             position: absolute;
-            top: 8%;
-            //left: -1000%;
+            top: 0;
             max-width: 0px;
             background-color: white;
             transition: left 0.5s ease;
             display: grid;
-            grid-template-columns: repeat(2, 272px);
+            grid-template-columns: repeat(2, auto);
             gap: 8px;
             padding: 10px;
             visibility: hidden;
             opacity: 0;
+            min-height: 580px;
 
             a {
                 text-decoration: none;
+                height: 103px;
+
+                &::after {
+                    content: none;
+                }
             }
 
             &_item {
@@ -212,6 +198,7 @@ export default {
                 width: 272px;
                 margin: 0px;
                 align-items: center;
+                height: 100%;
 
                 &_img {
                     grid-area: img;
@@ -306,15 +293,17 @@ export default {
         height: 800px;
         margin-right: 17px;
         margin-left: 16px;
-        
+
         .logo {
             width: 117px;
             height: 49px;
         }
+
         .service-list {
             li {
                 a {
                     height: 64px;
+
                     img {
                         width: 81px;
                         height: 64px;
@@ -322,6 +311,7 @@ export default {
                 }
             }
         }
+
         .contact-link,
         .designer-link {
             width: 294px;

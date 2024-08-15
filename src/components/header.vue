@@ -15,27 +15,13 @@
                 <li><router-link to="/contacts">Контакты</router-link></li>
                 <li class="save">
                     <a href="#">
-                        <p><img class="save_img" src="../../src/assets/img/header/save.svg" alt="save"> 3</p>
+                        <p><img class="save_img" src="../../src/assets/img/header/save.svg" alt="save"> {{savedProducts.length}}</p>
                     </a>
                     <ul class="save_list">
-                        <li class="save_item"><img class="save_item_img" src="../../src/assets/img/goods/RollUp.svg"
-                                alt="">
-                            <p class="save_item_title">Шелкография <img src="../../src/assets/img/header/save.svg"
-                                    alt="">
-                            </p>
-                            <p class="save_item_count">От 3 шт</p>
-                        </li>
-                        <li class="save_item"><img class="save_item_img" src="../../src/assets/img/goods/RollUp.svg"
-                                alt="">
-                            <p class="save_item_title">Постпечатная обработка <img
-                                    src="../../src//assets/img/header/save.svg" alt=""></p>
-                            <p class="save_item_count">От 3 шт</p>
-                        </li>
-                        <li class="save_item"><img class="save_item_img" src="../../src/assets/img/goods/RollUp.svg"
-                                alt="">
-                            <p class="save_item_title">Пластиковые карты <img src="../../src/assets/img/header/save.svg"
-                                    alt=""></p>
-                            <p class="save_item_count">От 3 шт</p>
+                        <li v-for="product in savedProducts" :key="product.id" class="save_item">
+                            <img class="save_item_img" :src="product.img" alt="">
+                            <p class="save_item_title">{{ product.name }} <img :src="product.save" alt=""></p>
+                            <p class="save_item_count">{{ product.count }}</p>
                         </li>
                     </ul>
                 </li>
@@ -54,13 +40,14 @@
                 </li>
             </ul>
             <BurgerMenu @toggle-menu="handleMenuToggle" />
-
         </div>
     </div>
 </template>
 
 <script>
 import { useToast } from "vue-toastification";
+import { computed } from 'vue';
+import { useProductStore } from './stores/products.js';
 import BurgerMenu from './BurgerMenu.vue';
 export default {
     name: 'Header',
@@ -70,6 +57,13 @@ export default {
     data() {
         return {
             isMenuOpen: false
+        }
+    },
+    setup() {
+        const store = useProductStore();
+        const savedProducts = computed(() => store.products.filter(product => product.save));
+        return {
+            savedProducts
         }
     },
     methods: {
@@ -202,7 +196,7 @@ export default {
                 &_count {
                     grid-area: count;
                     font-size: 16px;
-                    color: #27625F;
+                    color: #489B93;
                     font-weight: 600;
                 }
             }
@@ -310,7 +304,8 @@ export default {
     }
 }
 
-@media (max-width: 361px) {
+//@media (max-width: 361px) {
+    @media (max-width: 700px) {
     .header {
         width: 100%;
 

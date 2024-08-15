@@ -2,9 +2,7 @@
     <div class="additional-info">
         <div class="additional-info_paragraphs">
             <p @click="togglePrices" class="additional-info_prices">Цены</p>
-            <p @click="toggleRequirements" class="additional-info_requirements-for-layouts">
-                Требования к макетам
-            </p>
+            <p @click="toggleRequirements" class="additional-info_requirements-for-layouts">Требования к макетам</p>
         </div>
         <transition name="fade">
             <div v-if="showPrices" class="additional-info_content">
@@ -13,13 +11,9 @@
                         <th>Наименование</th>
                         <th>Цена</th>
                     </tr>
-                    <tr>
-                        <td>Позиция 1</td>
-                        <td>1000 &#8381;</td>
-                    </tr>
-                    <tr>
-                        <td>Позиция 2</td>
-                        <td>2000 &#8381;</td>
+                    <tr v-for="price in prices" :key="price.name">
+                        <td>{{ price.name }}</td>
+                        <td>{{ price.price }}</td>
                     </tr>
                 </table>
             </div>
@@ -30,25 +24,34 @@
                 <ol v-show="activeSection === 1">
                     <li>COREL DRAW (до 17 версии) – cdr, eps.</li>
                     <li>Adobe Photoshop (CC) – psd, tiff, jpg, bmp.</li>
-                    <li>Adobe Acrobat – pdf</li>
+                    <li>Adobe Acrobat – pdf.</li>
+                    <li>Illustrator – ai, pdf.</li>
                     <li><button
-                            @click="copyText('COREL DRAW (до 17 версии) – cdr, eps.\nAdobe Photoshop (CC) – psd, tiff, jpg, bmp.\nAdobe Acrobat – pdf')">Копировать</button>
+                            @click="copyText('COREL DRAW (до 17 версии) – cdr, eps.\nAdobe Photoshop (CC) – psd, tiff, jpg, bmp.\nAdobe Acrobat – pdf.\nIllustrator – ai, pdf.')">Копировать</button>
                     </li>
                 </ol>
                 <p @click="toggleSection(2)">2. Общие требования</p>
                 <ol v-show="activeSection === 2">
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Porro ab mollitia ad veniam libero possimus dolores harum.</li>
+                    <li>Масштаб изображения 1:1.</li>
+                    <li>Вылеты за обрезной формат (припуски) – 2,5 мм с каждой стороны.</li>
+                    <li>Влеты (расстояние до значимых элементов: текст, логотип и т.д.) – 4 мм с каждой стороны.</li>
+                    <li>При печати на фактурной (дизайнерской) бумаге, краска может ложиться неравномерно! Поэтому стоит
+                        избегать полной заливки.</li>
+                    <li>Черный цвет должен быть составнойС:75 M:75 Y:75 K:75.</li>
                     <li><button
-                            @click="copyText('Lorem ipsum dolor sit amet consectetur adipisicing elit.\nPorro ab mollitia ad veniam libero possimus dolores harum.')">Копировать</button>
+                            @click="copyText('Масштаб изображения 1:1.\nВылеты за обрезной формат (припуски) – 2,5 мм с каждой стороны.\nВлеты (расстояние до значимых элементов: текст, логотип и т.д.) – 4 мм с каждой стороны.\nПри печати на фактурной (дизайнерской) бумаге, краска может ложиться неравномерно! Поэтому стоит избегать полной заливки.\nЧерный цвет должен быть составнойС:75 M:75 Y:75 K:75.')">Копировать</button>
                     </li>
                 </ol>
                 <p @click="toggleSection(3)">3. Требования к растру и вектору</p>
                 <ol v-show="activeSection === 3">
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                    <li>Porro ab mollitia ad veniam libero possimus dolores harum.</li>
+                    <li>Все изображения представлены в цветовой модели CMYK с разрешением не менее 300 dpi.</li>
+                    <li>Эффекты (прозрачности, тени, градиент) должны быть растрированы 300 dpi.</li>
+                    <li>Текст должен быть переведен в кривые.</li>
+                    <li>Файл должен быть с разрешением не менее 300 dpi.</li>
+                    <li>Файл должен быть представлен в цветовоймодели CMYK.</li>
+                    <li>Файл не должен содержать слоев,альфа-каналов.</li>
                     <li><button
-                            @click="copyText('Lorem ipsum dolor sit amet consectetur adipisicing elit.\nPorro ab mollitia ad veniam libero possimus dolores harum.')">Копировать</button>
+                            @click="copyText('Все изображения представлены в цветовой модели CMYK с разрешением не менее 300 dpi.\nЭффекты (прозрачности, тени, градиент) должны быть растрированы 300 dpi.\nТекст должен быть переведен в кривые.\nФайл должен быть с разрешением не менее 300 dpi.\nФайл должен быть представлен в цветовоймодели CMYK.\nФайл не должен содержать слоев,альфа-каналов.')">Копировать</button>
                     </li>
                 </ol>
             </div>
@@ -67,6 +70,12 @@ export default {
             showRequirements: false,
             activeSection: null
         };
+    },
+    props: {
+        prices: {
+            type: Object,
+            required: true
+        }
     },
     methods: {
         togglePrices() {

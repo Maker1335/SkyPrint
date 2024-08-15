@@ -219,7 +219,8 @@ export default {
     }
 }
 
-@media (max-width: 360px) {
+//@media (max-width: 360px) {
+    @media (max-width: 700px) {
     .stages_of_work {
         margin-top: 50px;
 
@@ -236,7 +237,7 @@ export default {
         .work_list {
             .item {
                 display: grid;
-                grid-template-columns: 1fr 50px;
+                grid-template-columns: 1fr;
                 grid-template-rows: repeat(4, auto);
                 grid-template-areas:
                     "title"
@@ -260,7 +261,8 @@ export default {
                 }
 
                 &_img {
-                    width: 336px;
+                    //width: 336px;
+                    width: 100%;
                     height: 187px;
                     grid-area: img;
                     object-fit: cover;

@@ -3,13 +3,13 @@
     <div class="product">
         <div class="wrapper">
             <template v-if="product">
-            <p class="product_title">{{ product.name }}</p>
-            <FrontInfo :imgSrc="product.image" :description="product.description" />
-            <Details :productDetails="product.details" />
-        </template>
-        <template v-else>
-            <p class="product_not-found">Товар не найден</p>
-        </template>
+                <p class="product_title">{{ product.name }}</p>
+                <FrontInfo :imgSrc="product.img" :description="product.description" />
+                <Details :productDetails="product.details" :prices="product.prices" />
+            </template>
+            <template v-else>
+                <p class="product_not-found">Товар не найден</p>
+            </template>
         </div>
     </div>
     <Slider :titleText="sliderText" />
@@ -17,6 +17,7 @@
 
 <script>
 import { useProductStore } from '../stores/products'
+import { ref, watch, onMounted } from 'vue';
 
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
@@ -42,11 +43,27 @@ export default {
     setup() {
         const route = useRoute();
         const store = useProductStore();
-        const productId = Number(route.params.id);
-        const product = computed(() => store.products.find(p => p.id === productId));
+        const productId = ref(Number(route.params.id));  
+        const product = ref(null);
+
+        const fetchProduct = (id) => {
+            product.value = store.products.find(p => p.id === id);
+        };
+
+        onMounted(() => {
+            fetchProduct(productId.value);
+        });
+
+        watch(
+            () => route.params.id,
+            (newId) => {
+                productId.value = Number(newId);
+                fetchProduct(productId.value);
+            }
+        );
 
         return {
-            product
+            product,
         };
     }
 }
@@ -73,6 +90,7 @@ export default {
         margin-bottom: 26px;
         grid-area: title;
     }
+
     &_not-found {
         font-size: 18px;
         color: red;

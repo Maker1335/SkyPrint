@@ -2,8 +2,7 @@
     <div class="delivery_options">
         <h3>Доставим заказ куда угодно</h3>
         <div class="cards">
-            <DeliveryCard v-for="(card, index) in cards" :key="index" :title="card.title" :items="card.items"
-                :backgroundColor="card.backgroundColor" />
+            <DeliveryCard v-for="(card, index) in cards" :key="index" :title="card.title" :items="card.items" />
         </div>
     </div>
 </template>

@@ -6,7 +6,7 @@
       </div>
       <Sidebar class="sidebar" />
     </div>
-    <Footer class="footer" />
+    <!-- <Footer class="footer" /> -->
   </div>
 </template>
 
@@ -85,25 +85,27 @@ export default {
   }
 
   .content {
-    grid-template-columns: 311px 16px 1039px;
     grid-template-columns: 311px 16px 1019px;
   }
 }
-@media (max-width: 361px) {
+@media (max-width: 700px) {
   #app {
-    width: 340px;
     width: 100%;
+    display: block;
   }
 
   .content {
     grid-area: content;
-    display: grid;
-    grid-template-columns: 360px;
-    grid-template-areas:
-      "content";
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    //display: grid;
+    //grid-template-columns: 1fr;
+    //grid-template-areas:
+    //  "content";
   
     .page {
-      grid-area: content;
+      //grid-area: content;
     }
   
     .sidebar {

@@ -23,11 +23,6 @@ const routes = [
         name: 'catalog',
         component: Catalog,
     },
-    // {
-    //     path: `/Product`,
-    //     name: 'product',
-    //     component: Product,
-    // },
     {
         path: '/product/:id',
         name: 'Product',

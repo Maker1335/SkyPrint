@@ -163,7 +163,8 @@ export default {
     }
 }
 
-@media (max-width: 361px) {
+//@media (max-width: 361px) {
+    @media (max-width: 700px) {
     .reviews {
         margin-top: 50px;
 
@@ -178,8 +179,10 @@ export default {
             gap: 10px;
 
             .card {
-                width: 336px;
+                //width: 336px;
+                width: 100%;
                 height: 200px;
+                height: 180px;
 
                 &_info {
                     display: grid;

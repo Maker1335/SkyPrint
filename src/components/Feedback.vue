@@ -207,7 +207,8 @@ $goodsBG: "../assets/img/background.png";
     }
 }
 
-@media (max-width: 361px) {
+//@media (max-width: 361px) {
+    @media (max-width: 700px) {
     .feedback {
         margin-top: 40px;
         padding: 10px;

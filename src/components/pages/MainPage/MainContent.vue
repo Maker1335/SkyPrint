@@ -112,12 +112,15 @@ $goodsBG: "../../../assets/img/background.png";
   }
 }
 
-@media (max-width: 1367px) {
+@media (max-width: 700px) {
   .MainContent {
-    height: 660px;
 
     .wrapper {
+      position: relative;
+       height: 660px;
+
       .content {
+        width: 100%;
         h1 {
           font-size: 30px;
           color: #0E7571;
@@ -127,7 +130,7 @@ $goodsBG: "../../../assets/img/background.png";
         .description {
           font-size: 12px;
           width: 336px;
-          color: #0E7571;
+          color: #061111;
         }
       }
     }

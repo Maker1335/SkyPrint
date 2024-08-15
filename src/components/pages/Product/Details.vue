@@ -46,7 +46,7 @@
                 </td>
             </tr>
         </table>
-        <AdditionalInfo />
+        <AdditionalInfo :prices="prices"/>
         <ActionButtons />
     </div>
 </template>
@@ -65,12 +65,14 @@ export default {
         productDetails: {
             type: Object,
             required: true
+        }, 
+        prices: {
+            type: Object,
+            required: true
         }
     }
 }
 </script>
-
-
 
 <style lang="scss" scoped>
 .details {
