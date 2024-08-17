@@ -52,7 +52,7 @@ export default {
         }
     }
 }
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .payment {
         h2 {
             font-size: 25px;

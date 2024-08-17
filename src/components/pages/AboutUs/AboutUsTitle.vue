@@ -60,7 +60,7 @@ export default {
     }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .about-us {
         &_title {
             .wrapper {

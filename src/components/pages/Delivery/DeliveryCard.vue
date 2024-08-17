@@ -78,7 +78,7 @@ export default {
         }
     }
 }
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .card {
         gap: 20px;
         padding: 20px;

@@ -54,7 +54,7 @@ export default {
     }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .front-info {
         gap: 10px;
 

@@ -47,6 +47,7 @@ export default {
     &_title {
         font-size: 20px;
         z-index: 1;
+        font-weight: bold;
     }
     &_description {
         display: flex;
@@ -136,7 +137,7 @@ export default {
         }
     }
 }
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .card {
         width: 100%;
         height: 200px;

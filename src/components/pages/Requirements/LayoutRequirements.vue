@@ -6,22 +6,24 @@
                     :fileType="card.fileType" :requirements="card.requirements" :buttonText="card.buttonText"
                     :copyText="card.copyText" />
             </div>
-            <button class="layout-requirements_download">Скачать требования к макетам</button>
+            <button class="layout-requirements_download"><a :href="rere" download>Скачать требования к макетам</a></button>
         </div>
     </div>
-</template>
+</template> 
 
 <script>
 import RequirementsCard from './RequirementsCard.vue';
 import { useToast } from 'vue-toastification';
+import rere from "../../../assets/Требования к макетам.pdf"
 
 export default {
     name: 'LayoutRequirements',
     components: {
-        RequirementsCard
+        RequirementsCard,
     },
     data() {
         return {
+            rere,
             cards: [
                 {
                     title: "Общие требования",
@@ -138,23 +140,30 @@ export default {
         }
     }
 }
-@media (max-width: 361px) {
+
+@media (max-width: 700px) {
     .layout-requirements {
         margin-bottom: 0px;
-    
+
         .wrapper {
             gap: 20px;
         }
-    
+
         .cards {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-    
+
         &_download {
             font-size: 16px;
             height: 60px;
+
+            a {
+                font-size: 16px;
+                text-decoration: none;
+                color: #27625F;
+            }
         }
     }
 }

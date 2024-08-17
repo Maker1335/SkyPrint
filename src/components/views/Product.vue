@@ -18,8 +18,6 @@
 <script>
 import { useProductStore } from '../stores/products'
 import { ref, watch, onMounted } from 'vue';
-
-import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 import Header from '../header.vue';
@@ -113,7 +111,7 @@ export default {
     }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .product {
         margin-bottom: 30px;
 

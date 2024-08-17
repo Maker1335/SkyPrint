@@ -120,16 +120,11 @@ export default {
             &_item {
                 width: 240px;
                 height: 169px;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
             }
         }
     }
 }
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .portfolio {
         h3 {
             font-size: 16px;
@@ -149,10 +144,8 @@ export default {
             &_item {
                 width: 100%;
                 height: 233px;
-    
-                img {
-                    width: 100%;
-                    height: 100%;
+                img{
+                    object-fit: cover;
                 }
             }
         }

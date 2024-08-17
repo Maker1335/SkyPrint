@@ -46,7 +46,7 @@ $goodsBG: "../../assets/img/background.png";
         margin-bottom: 100px;
     }
 }
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .requirements {
         margin-top: 30px;
         .feedback {

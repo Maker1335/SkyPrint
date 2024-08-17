@@ -134,7 +134,7 @@ a {
     }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .catalog_item {
         width: 164px;
         height: 164px;

@@ -115,7 +115,7 @@ export default {
         }
     }
 }
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .requirements-intro {
         &_title {
             font-size: 25px;
@@ -134,7 +134,8 @@ export default {
                 flex-wrap: wrap;
                 gap: 10px;
                 .card {
-                    width: 160px;
+                    //width: 160px;
+                    width: 48%;
                     height: 160px;
                     box-sizing: border-box;
                     &_img {

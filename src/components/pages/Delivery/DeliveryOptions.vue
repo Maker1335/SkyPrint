@@ -73,7 +73,7 @@ export default {
         }
     }
 }
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .delivery_options {
         margin-bottom: 50px;
         flex-direction: column;
@@ -81,7 +81,6 @@ export default {
     
         h3 {
             font-size: 16px;
-            width: 150px;
         }
     
         .cards {

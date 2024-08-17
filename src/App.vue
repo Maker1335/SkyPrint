@@ -6,7 +6,7 @@
       </div>
       <Sidebar class="sidebar" />
     </div>
-    <!-- <Footer class="footer" /> -->
+    <Footer class="footer" />
   </div>
 </template>
 

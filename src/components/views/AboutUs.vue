@@ -37,7 +37,7 @@ export default {
 .about-us {
     color: #27625F;
 }
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .header {
         margin-bottom: 40px;
     }

@@ -272,7 +272,7 @@ export default {
     }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 700px) {
     .additional-info {
         font-size: 14px;
         margin-left: 0px;
