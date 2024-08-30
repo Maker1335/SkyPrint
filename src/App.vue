@@ -56,6 +56,7 @@ export default {
   grid-template-areas:
     "content"
     "footer";
+    justify-content: center;
 }
 
 .content {

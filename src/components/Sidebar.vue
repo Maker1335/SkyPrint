@@ -41,12 +41,12 @@ import { useProductStore } from './stores/products.js';
 import saveIconOn from '../assets/img/header/save.svg';
 import saveIconOff from '../assets/img/header/saveOff.svg';
 
-import businessСards from '../assets/img/goods/businessСards.svg';
-import printing from '../assets/img/goods/printing.svg';
-import notepads from '../assets/img/goods/notepads.svg';
-import lamination from '../assets/img/goods/lamination.svg';
-import pens from '../assets/img/goods/pens.svg';
-import canvases from '../assets/img/goods/canvases.svg';
+import businessСards from '../assets/img/goods/img/businessСards.svg';
+import printing from '../assets/img/goods/img/printing.svg';
+import notepads from '../assets/img/goods/img/notepads.svg';
+import lamination from '../assets/img/goods/img/lamination.svg';
+import pens from '../assets/img/goods/img/pens.svg';
+import canvases from '../assets/img/goods/img/canvases.svg';
 
 import Questionnaire from './Questionnaire.vue';
 
@@ -152,11 +152,15 @@ export default {
                 }
 
                 &::after {
-                    content: '>';
+                    content: '';
                     position: absolute;
                     right: 10px;
-                    color: #010101;
-                    font-weight: bold;
+                    border: solid #8E8E8E;
+                    border-width: 0 2px 2px 0;
+                    display: inline-block;
+                    padding: 3px;
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
                 }
             }
 
@@ -279,10 +283,15 @@ export default {
         }
 
         &::after {
-            content: '>';
+            content: '';
             position: absolute;
             right: 10px;
-            color: #010101;
+            border: solid #8E8E8E;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
         }
     }
 }

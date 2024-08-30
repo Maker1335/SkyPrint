@@ -4,7 +4,7 @@
             <p class="details_estimated-cost_price">{{ productDetails.estimatedCost }}</p>
             <p class="details_estimated-cost_title">Ориентировочная стоимость</p>
         </div>
-        <table class="details_table">
+        <!-- <table class="details_table">
             <tr class="details_dimensions">
                 <td>Размеры</td>
                 <td>
@@ -45,8 +45,18 @@
                     </ul>
                 </td>
             </tr>
+        </table> -->
+        <table class="details_table">
+            <tr v-for="(values, key) in productDetails.customFields" :key="key">
+                <td>{{ key }}</td>
+                <td>
+                    <ul class="details_list">
+                        <li v-for="(value, index) in values" :key="index">{{ value }}</li>
+                    </ul>
+                </td>
+            </tr>
         </table>
-        <AdditionalInfo :prices="prices"/>
+        <AdditionalInfo :prices="prices" :rowspan="productDetails.rowspan" :colspan="productDetails.colspan" />
         <ActionButtons />
     </div>
 </template>

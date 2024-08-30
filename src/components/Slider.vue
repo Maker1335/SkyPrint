@@ -26,12 +26,12 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 
-import rollUpImage from '../assets/img/goods/RollUp.svg';
-import notepadsImage from '../assets/img/goods/notepads.svg';
-import canvasesImage from '../assets/img/goods/canvases.svg';
-import businessCardsImage from '../assets/img/goods/businessСards.svg';
-import laminationImage from '../assets/img/goods/lamination.svg';
-import pensImage from '../assets/img/goods/pens.svg';
+import rollUpImage from '../assets/img/goods/img/RollUp.svg';
+import notepadsImage from '../assets/img/goods/img/notepads.svg';
+import canvasesImage from '../assets/img/goods/img/canvases.svg';
+import businessCardsImage from '../assets/img/goods/img/businessСards.svg';
+import laminationImage from '../assets/img/goods/img/lamination.svg';
+import pensImage from '../assets/img/goods/img/pens.svg';
 
 export default {
   name: 'Slider',

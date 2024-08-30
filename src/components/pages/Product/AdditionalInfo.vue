@@ -6,16 +6,31 @@
         </div>
         <transition name="fade">
             <div v-if="showPrices" class="additional-info_content">
-                <table>
-                    <tr>
-                        <th>Наименование</th>
-                        <th>Цена</th>
-                    </tr>
-                    <tr v-for="price in prices" :key="price.name">
-                        <td>{{ price.name }}</td>
-                        <td>{{ price.price }}</td>
-                    </tr>
-                </table>
+                <img :src="prices[0]" class="additional-info_content_img">
+                <!-- <table>
+                    <thead>
+                        <tr>
+                            <th :rowspan="rowspan">Наименование</th>
+                             <th :colspan="colspan">Цена</th>
+                            <th :colspan="colspan">Размеры</th>
+                        </tr>
+                        <tr>
+                             <th>до 250 шт.</th>
+                            <th>500 шт.</th>
+                             <th>Параметр 3</th>
+                            <th>Параметр 4</th> 
+                            <td>10</td>
+                            <td>30</td>
+                            <td>3000</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="price in prices" :key="price.name">
+                            <td>{{ price.name }}</td>
+                            <td v-for="(priceItem, index) in price.price" :key="index">{{ priceItem }}</td>
+                        </tr>
+                    </tbody>
+                </table> -->
             </div>
         </transition>
         <transition name="fade">
@@ -37,9 +52,9 @@
                     <li>Влеты (расстояние до значимых элементов: текст, логотип и т.д.) – 4 мм с каждой стороны.</li>
                     <li>При печати на фактурной (дизайнерской) бумаге, краска может ложиться неравномерно! Поэтому стоит
                         избегать полной заливки.</li>
-                    <li>Черный цвет должен быть составнойС:75 M:75 Y:75 K:75.</li>
+                    <li>Черный цвет должен быть составной: C:75 M:75 Y:75 K:75.</li>
                     <li><button
-                            @click="copyText('Масштаб изображения 1:1.\nВылеты за обрезной формат (припуски) – 2,5 мм с каждой стороны.\nВлеты (расстояние до значимых элементов: текст, логотип и т.д.) – 4 мм с каждой стороны.\nПри печати на фактурной (дизайнерской) бумаге, краска может ложиться неравномерно! Поэтому стоит избегать полной заливки.\nЧерный цвет должен быть составнойС:75 M:75 Y:75 K:75.')">Копировать</button>
+                            @click="copyText('Масштаб изображения 1:1.\nВылеты за обрезной формат (припуски) – 2,5 мм с каждой стороны.\nВлеты (расстояние до значимых элементов: текст, логотип и т.д.) – 4 мм с каждой стороны.\nПри печати на фактурной (дизайнерской) бумаге, краска может ложиться неравномерно! Поэтому стоит избегать полной заливки.\nЧерный цвет должен быть составной C:75 M:75 Y:75 K:75.')">Копировать</button>
                     </li>
                 </ol>
                 <p @click="toggleSection(3)">3. Требования к растру и вектору</p>
@@ -48,10 +63,10 @@
                     <li>Эффекты (прозрачности, тени, градиент) должны быть растрированы 300 dpi.</li>
                     <li>Текст должен быть переведен в кривые.</li>
                     <li>Файл должен быть с разрешением не менее 300 dpi.</li>
-                    <li>Файл должен быть представлен в цветовоймодели CMYK.</li>
-                    <li>Файл не должен содержать слоев,альфа-каналов.</li>
+                    <li>Файл должен быть представлен в цветовой модели CMYK.</li>
+                    <li>Файл не должен содержать слоев, альфа-каналов.</li>
                     <li><button
-                            @click="copyText('Все изображения представлены в цветовой модели CMYK с разрешением не менее 300 dpi.\nЭффекты (прозрачности, тени, градиент) должны быть растрированы 300 dpi.\nТекст должен быть переведен в кривые.\nФайл должен быть с разрешением не менее 300 dpi.\nФайл должен быть представлен в цветовоймодели CMYK.\nФайл не должен содержать слоев,альфа-каналов.')">Копировать</button>
+                            @click="copyText('Все изображения представлены в цветовой модели CMYK с разрешением не менее 300 dpi.\nЭффекты (прозрачности, тени, градиент) должны быть растрированы 300 dpi.\nТекст должен быть переведен в кривые.\nФайл должен быть с разрешением не менее 300 dpi.\nФайл должен быть представлен в цветовой модели CMYK.\nФайл не должен содержать слоев, альфа-каналов.')">Копировать</button>
                     </li>
                 </ol>
             </div>
@@ -73,7 +88,15 @@ export default {
     },
     props: {
         prices: {
-            type: Object,
+            type: Array, 
+            required: true
+        },
+        rowspan:{
+            type: Number,
+            required: true
+        },
+        colspan:{
+            type: Number,
             required: true
         }
     },
@@ -168,7 +191,7 @@ export default {
                 border-width: 0 3px 3px 0;
                 display: inline-block;
                 padding: 3px;
-                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
                 position: absolute;
                 top: 5px;
                 margin-left: 16px;
@@ -206,28 +229,27 @@ export default {
             border-collapse: collapse;
             font-size: 16px;
 
-            tr {
-                border-bottom: 1px solid #a0b6b5;
-                display: flex;
-
-                td {
-                    width: 50%;
-                    font-size: 16px;
-                    padding: 20px 30px;
-                    box-sizing: border-box;
-
-                    &:last-child {
-                        font-weight: bold;
-                    }
-                }
-
-                th {
-                    width: 50%;
-                    font-size: 16px;
-                    padding: 20px 30px;
-                    box-sizing: border-box;
-                }
+            th,
+            td {
+                padding: 15px;
+                border: 1px solid #a0b6b5;
+                text-align: left;
             }
+
+            th[rowspan="2"] {
+                vertical-align: middle;
+            }
+
+            th[colspan="4"] {
+                text-align: center;
+            }
+
+            tbody td {
+                font-weight: bold;
+            }
+        }
+        &_img {
+            width: 100%;
         }
     }
 }
