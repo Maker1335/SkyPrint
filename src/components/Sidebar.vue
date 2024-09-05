@@ -42,7 +42,7 @@ import saveIconOn from '../assets/img/header/save.svg';
 import saveIconOff from '../assets/img/header/saveOff.svg';
 
 import businessСards from '../assets/img/goods/img/businessСards.svg';
-import printing from '../assets/img/goods/img/printing.svg';
+import laserPrinting from '../assets/img/goods/img/laserPrinting.svg';
 import notepads from '../assets/img/goods/img/notepads.svg';
 import lamination from '../assets/img/goods/img/lamination.svg';
 import pens from '../assets/img/goods/img/pens.svg';
@@ -61,7 +61,7 @@ export default {
             isQuestionnaireOpen: false,
             categories: [
                 { name: 'Визитки', img: businessСards },
-                { name: 'Полиграфия', img: printing },
+                { name: 'Полиграфия', img: laserPrinting },
                 { name: 'Широкоформатная печать', img: notepads },
                 { name: 'Копировальные услуги', img: lamination },
                 { name: 'Сувениры', img: pens },

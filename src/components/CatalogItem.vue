@@ -86,7 +86,7 @@ a {
         margin-left: 9px;
         margin-bottom: 12px;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
     }
 
     &_count {
