@@ -29,7 +29,7 @@ import 'swiper/swiper-bundle.css';
 import rollUpImage from '../assets/img/goods/img/RollUp.svg';
 import notepadsImage from '../assets/img/goods/img/notepads.svg';
 import canvasesImage from '../assets/img/goods/img/canvases.svg';
-import businessCardsImage from '../assets/img/goods/img/businessСards.svg';
+import busrinessCards from '../assets/img/goods/img/busrinessCards.svg';
 import laminationImage from '../assets/img/goods/img/lamination.svg';
 import pensImage from '../assets/img/goods/img/pens.svg';
 
@@ -47,7 +47,7 @@ export default {
         { image: rollUpImage, alt: 'фото товара', text: 'Roll-up' },
         { image: notepadsImage, alt: 'фото товара', text: 'Блокноты' },
         { image: canvasesImage, alt: 'фото товара', text: 'Холсты' },
-        { image: businessCardsImage, alt: 'фото товара', text: 'Визитки' },
+        { image: busrinessCards, alt: 'фото товара', text: 'Визитки' },
         { image: laminationImage, alt: 'фото товара', text: 'Ламинирование' },
         { image: pensImage, alt: 'фото товара', text: 'Ручки' },
       ],

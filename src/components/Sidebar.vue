@@ -41,7 +41,7 @@ import { useProductStore } from './stores/products.js';
 import saveIconOn from '../assets/img/header/save.svg';
 import saveIconOff from '../assets/img/header/saveOff.svg';
 
-import businessСards from '../assets/img/goods/img/businessСards.svg';
+import busrinessCards from '../assets/img/goods/img/busrinessCards.svg';
 import laserPrinting from '../assets/img/goods/img/laserPrinting.svg';
 import notepads from '../assets/img/goods/img/notepads.svg';
 import lamination from '../assets/img/goods/img/lamination.svg';
@@ -60,7 +60,7 @@ export default {
             hoveredCategory: null,
             isQuestionnaireOpen: false,
             categories: [
-                { name: 'Визитки', img: businessСards },
+                { name: 'Визитки', img: busrinessCards },
                 { name: 'Полиграфия', img: laserPrinting },
                 { name: 'Широкоформатная печать', img: notepads },
                 { name: 'Копировальные услуги', img: lamination },

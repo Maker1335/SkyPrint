@@ -5,7 +5,7 @@ import canvases from '../../assets/img/goods/img/canvases.svg'
 import canvasesPrices from '../../assets/img/goods/prices/canvasesPrices.svg'
 import lamination from '../../assets/img/goods/img/lamination.svg'
 import laminationPrices from '../../assets/img/goods/prices/laminationPrices.svg'
-// import magneticVinyl from '../../assets/img/goods/img/magneticVinyl.svg'
+import magneticVinyl from '../../assets/img/goods/img/magneticVinyl.svg'
 import magneticVinylPrice from '../../assets/img/goods/prices/magneticVinylPrices.svg'
 import shopper from '../../assets/img/goods/img/shopper.svg'
 import shopperPrices from '../../assets/img/goods/prices/shopperPrices.svg'
@@ -14,7 +14,7 @@ import pillowPrices from '../../assets/img/goods/prices/pillowPrices.svg'
 import t_shirt from '../../assets/img/goods/img/t-shirt.svg'
 import t_shirtPrices from '../../assets/img/goods/prices/t-shirtPrices.svg'
 
-import busrinessCards from '../../assets/img/goods/img/businessCards.svg'
+import busrinessCards from '../../assets/img/goods/img/busrinessCards.svg'
 import busrinessCardsPrices from '../../assets/img/goods/prices/busrinessCardsPrices.svg'
 
 import booklets from '../../assets/img/goods/img/booklets.svg'
@@ -50,14 +50,21 @@ import badgesPrices from '../../assets/img/goods/prices/badgesPrices.svg'
 import disks from '../../assets/img/goods/img/disks.svg'
 import disksPrices from '../../assets/img/goods/prices/disksPrices.svg'
 
+import siliconeBracelets from '../../assets/img/goods/img/siliconeBracelets.svg'
+import siliconeBraceletsPrices from '../../assets/img/goods/prices/siliconeBraceletsPrices.svg'
+
 import leafletsPrices from '../../assets/img/goods/prices/leafletsPrices.svg'
 import scanningPrices from '../../assets/img/goods/prices/scanningPrices.svg'
 import postersPrices from '../../assets/img/goods/prices/postersPrices.svg'
 import bannersPrices from '../../assets/img/goods/prices/bannersPrices.svg'
 import Roll_upPrices from '../../assets/img/goods/prices/Roll_upPrices.svg'
+import studioPhotoPrinting from '../../assets/img/goods/img/studioPhotoPrinting.svg'
 import studioPhotoPrintingPrices from '../../assets/img/goods/prices/studioPhotoPrintingPrices.svg'
 import standerPrices from '../../assets/img/goods/prices/standerPrices.svg'
+
+import replication from '../../assets/img/goods/img/replication.svg'
 import replicationPrices from '../../assets/img/goods/prices/replicationPrices.svg'
+
 import makingPrices from '../../assets/img/goods/prices/makingPrices.svg'
 
 // import busrinessCardsPrices from '../../assets/img/goods/prices/busrinessCardsPrices.svg'
@@ -136,7 +143,7 @@ export const useProductStore = defineStore('product', {
             {
                 id: 4,
                 name: 'Магнитный винил',
-                img: t_shirt,
+                img: magneticVinyl,
                 category: 'Копировальные услуги',
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 1 шт',
@@ -210,6 +217,7 @@ export const useProductStore = defineStore('product', {
                 id: 8,
                 name: 'Визитки',
                 img: busrinessCards,
+                img: busrinessCards,
                 category: 'Футболки, текстиль',
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 48 шт',
@@ -224,6 +232,7 @@ export const useProductStore = defineStore('product', {
                     },
                 },
                 prices: [
+                    busrinessCardsPrices,
                     busrinessCardsPrices,
                 ],
                 save: false
@@ -380,7 +389,7 @@ export const useProductStore = defineStore('product', {
             {
                 id: 16,
                 name: 'Тиражирование',
-                img: t_shirt,
+                img: replication,
                 category: 'Футболки, текстиль',
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 100 шт',
@@ -592,7 +601,7 @@ export const useProductStore = defineStore('product', {
             {
                 id: 26,
                 name: 'Силиконовые браслеты',
-                img: t_shirt,
+                img: siliconeBracelets,
                 category: 'Футболки, текстиль',
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 100 шт',
@@ -605,7 +614,7 @@ export const useProductStore = defineStore('product', {
                     },
                 },
                 prices: [
-                    t_shirtPrices,
+                    siliconeBraceletsPrices,
                 ],
                 save: false
             },
@@ -631,7 +640,7 @@ export const useProductStore = defineStore('product', {
             {
                 id: 28,
                 name: 'Студийная печать фотографий',
-                img: t_shirt,
+                img: studioPhotoPrinting,
                 category: 'Футболки, текстиль',
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 1 шт',
