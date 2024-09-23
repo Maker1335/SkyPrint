@@ -124,6 +124,11 @@ export default {
         border-radius: 8px;
         cursor: pointer;
         width: 100%;
+        a {
+            font-size: 20px;
+            text-decoration: none;
+            color: #27625F;
+        }
     }
 }
 
@@ -158,12 +163,9 @@ export default {
         &_download {
             font-size: 16px;
             height: 60px;
-
             a {
                 font-size: 16px;
-                text-decoration: none;
-                color: #27625F;
-            }
+            }   
         }
     }
 }

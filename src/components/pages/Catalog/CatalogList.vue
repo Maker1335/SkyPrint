@@ -42,7 +42,7 @@ export default {
 .catalog_list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     gap: 8px;
     margin-top: 40px;
 }

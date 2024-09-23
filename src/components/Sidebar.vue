@@ -154,9 +154,9 @@ export default {
                 &::after {
                     content: '';
                     position: absolute;
-                    right: 10px;
+                    right: 27px;
                     border: solid #8E8E8E;
-                    border-width: 0 2px 2px 0;
+                    border-width: 0 3px 3px 0;
                     display: inline-block;
                     padding: 3px;
                     transform: rotate(-45deg);
@@ -285,9 +285,9 @@ export default {
         &::after {
             content: '';
             position: absolute;
-            right: 10px;
-            border: solid #8E8E8E;
-            border-width: 0 2px 2px 0;
+            right: 27px;
+            border: solid #27625F;
+            border-width: 0 3px 3px 0;
             display: inline-block;
             padding: 3px;
             transform: rotate(-45deg);

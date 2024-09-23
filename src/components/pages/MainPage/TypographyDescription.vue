@@ -228,10 +228,12 @@ $backgroundImage: "../../../assets/img/background.png";
         img {
             filter: grayscale(1);
             height: 53px;
-            transition: filter 0.5s;
+            opacity: 0.5;
+            transition: filter 0.5s ease, opacity 0.5s ease;
 
             &:hover {
                 filter: grayscale(0);
+                opacity: 1;
             }
         }
     }

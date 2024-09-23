@@ -53,11 +53,18 @@ import disksPrices from '../../assets/img/goods/prices/disksPrices.svg'
 import siliconeBracelets from '../../assets/img/goods/img/siliconeBracelets.svg'
 import siliconeBraceletsPrices from '../../assets/img/goods/prices/siliconeBraceletsPrices.svg'
 
+import leaflets from '../../assets/img/goods/img/leaflets.svg'
 import leafletsPrices from '../../assets/img/goods/prices/leafletsPrices.svg'
+
+import scanning from '../../assets/img/goods/img/scanning.svg'
 import scanningPrices from '../../assets/img/goods/prices/scanningPrices.svg'
+
 import postersPrices from '../../assets/img/goods/prices/postersPrices.svg'
 import bannersPrices from '../../assets/img/goods/prices/bannersPrices.svg'
+
+import RollUp from '../../assets/img/goods/img/RollUp.svg'
 import Roll_upPrices from '../../assets/img/goods/prices/Roll_upPrices.svg'
+
 import studioPhotoPrinting from '../../assets/img/goods/img/studioPhotoPrinting.svg'
 import studioPhotoPrintingPrices from '../../assets/img/goods/prices/studioPhotoPrintingPrices.svg'
 import standerPrices from '../../assets/img/goods/prices/standerPrices.svg'
@@ -240,7 +247,7 @@ export const useProductStore = defineStore('product', {
             {
                 id: 9,
                 name: 'Листовки',
-                img: t_shirt,
+                img: leaflets,
                 category: 'Футболки, текстиль',
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 1000 шт',
@@ -333,7 +340,7 @@ export const useProductStore = defineStore('product', {
             {
                 id: 13,
                 name: 'Сканирование',
-                img: t_shirt,
+                img: scanning,
                 category: 'Футболки, текстиль',
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 1 шт',
@@ -498,7 +505,7 @@ export const useProductStore = defineStore('product', {
             {
                 id: 21,
                 name: 'Roll-up',
-                img: t_shirt,
+                img: RollUp,
                 category: 'Футболки, текстиль',
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 10 шт',

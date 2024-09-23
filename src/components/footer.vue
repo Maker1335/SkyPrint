@@ -190,6 +190,10 @@ export default {
         margin-top: 30px;
         padding: 20px 10px;
 
+        &_catalog {
+            display: none;
+        }
+
         .wrapper {
             display: flex;
             flex-direction: column;

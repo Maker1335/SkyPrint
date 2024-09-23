@@ -25,15 +25,19 @@ export default {
     data() {
         return {
             cards: [
-                { image: typewriter, alt: 'Печатная машинка' },
+                // { image: typewriter, alt: 'Печатная машинка' },
+                { image: 'https://i.ibb.co/1dcPRJq/Component-80.jpg', alt: 'Печатная машинка' },
                 { image: handshake, alt: 'Рукопожатие', description: 'Качество на 100%, либо вернем ваши деньги' },
-                { image: printer, alt: 'Принтер' },
+                // { image: printer, alt: 'Принтер' },
+                { image: 'https://i.ibb.co/ZKRYcPs/Rectangle-151.jpg', alt: 'Принтер' },
                 { image: mountain, alt: 'Гора', description: 'Оформление заказа, не выходя из дома' },
                 { image: documents, alt: 'Документы', description: 'Доставка заказов по всей России' },
                 { image: calendar, alt: 'Календарь', description: 'Оперативная печать заказов' },
                 { image: technicalSupport, alt: 'Техподдержка', description: 'Более 3000 клиентов по всей России' },
                 { image: handshake, alt: 'Рукопожатие', description: 'Качество на 100%, либо вернем ваши деньги' },
-                { image: printShop, alt: 'Типография' },],
+                // { image: printShop, alt: 'Типография' },
+                { image: 'https://i.ibb.co/cQBTzwL/Rectangle-152.jpg', alt: 'Типография' },
+            ],
         };
     },
 };
@@ -129,6 +133,7 @@ export default {
             height: 100%;
             border: 0px;
             padding: 0;
+            overflow: hidden;
 
             img {
                 width: 100%;
