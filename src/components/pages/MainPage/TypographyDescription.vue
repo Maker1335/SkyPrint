@@ -19,12 +19,12 @@
                 <p class="card_title">10000+</p>
                 <p class="card_description">Заказов в год</p>
             </div>
-            <div class="card">
+            <div class="card" style="height: auto;">
                 <a href="https://www.youtube.com/watch?v=73mmIqSreAU&t=23s">
                     <p class="card_title"></p>
                     <p class="card_description"></p>
                     <img src="../../../../src/assets/img/pages/MainPage/TypographyDescription/video.svg"
-                        alt="сслыка на видео">
+                        alt="сслыка на видео" style="width: 100%;">
                     <button class="card_button">
                         <p>Смотреть видео</p>
                     </button>
@@ -320,7 +320,12 @@ $backgroundImage: "../../../assets/img/background.png";
 
         .card {
             width: 100%;
-            height: 160px;
+            height: 100px;
+            //display: flex;
+            //flex-direction: row;
+            //justify-content: flex-start;
+            //gap: 20px; 
+            //position: relative;
 
             &_title {
                 font-size: 46px;
@@ -330,6 +335,8 @@ $backgroundImage: "../../../assets/img/background.png";
             &_description {
                 font-size: 16px;
                 margin-left: 21px;
+                //position: absolute;
+                //right: 100px;
             }
 
             &_button {
@@ -337,6 +344,7 @@ $backgroundImage: "../../../assets/img/background.png";
                 height: 31px;
                 width: 180px;
             }
+            
         }
 
         .partners {

@@ -175,7 +175,21 @@ export default {
             }
             .card {
                 width: 100%;
-                height: 250px;
+                height: 60px;
+                flex-wrap: nowrap;
+                &::after{
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &:hover {
+                    height: 200px;
+                    &::after{
+                        bottom: 30px;
+                        right: 30px;
+                        top: auto;
+                        transform: none
+                    }
+                }
             }
     
             .card {

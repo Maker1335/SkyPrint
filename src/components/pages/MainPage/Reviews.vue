@@ -140,8 +140,6 @@ export default {
             .card {
                 width: 328px;
                 height: 222px;
-                padding: 20px;
-                box-sizing: border-box;
 
                 &_info {
 
@@ -181,8 +179,10 @@ export default {
             .card {
                 //width: 336px;
                 width: 100%;
-                height: 200px;
                 height: 180px;
+                height: 85px;
+                overflow: hidden;
+                position: relative;
 
                 &_info {
                     display: grid;
@@ -193,19 +193,28 @@ export default {
                         width: 50px;
                         height: 50px;
                     }
-
-                    &_name {
-                        
-                    }
-
-                    &_date {
-                        
-                    }
                 }
 
                 &_text {
                     margin-top: 15px;
                     font-size: 14px;
+                }
+
+                &::after{
+                    content: '>';
+                    position: absolute;
+                    width: 10px;
+                    height: 20px;
+                    color: #27625f;
+                    right: 30px;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &:hover {
+                    height: 180px;
+                    &::after{
+                        content: "";
+                    }
                 }
             }
         }
