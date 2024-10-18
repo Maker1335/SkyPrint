@@ -3,7 +3,7 @@
     <Header />
     <div class="wrapper">
       <div class="content">
-        <h1>С SKYPRINT всё просто</h1>
+        <h1>С SKYPRINT ВСЁ ПРОСТО</h1>
         <p class="description">
           К любым, даже небольшим заказам, мы стараемся найти творческий подход: разработать оригинальный дизайн,
           выбрать оптимальный метод печати и отделки, помочь заказчику сэкономить.
@@ -65,7 +65,7 @@ $goodsBG: "../../../assets/img/background.png";
         font-size: 51px;
         font-weight: bold;
         color: #289793;
-        width: 647px;
+        width: 700px;
       }
 
       .description {
@@ -75,6 +75,7 @@ $goodsBG: "../../../assets/img/background.png";
       }
 
       :deep .slider  {
+        margin-top: 30px;
         .slider-container {
           .product {
             background-color: #fff;

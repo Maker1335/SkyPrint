@@ -60,6 +60,7 @@ export default {
     h3 {
         font-size: 30px;
         font-weight: bold;
+        line-height: 30px;
     }
 
     .cards {

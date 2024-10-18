@@ -11,6 +11,20 @@ li {
     list-style: none;
 }
 
+p,
+li{
+    font-weight: 500;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+
 .wrapper{
     width: 1440px;
     margin: 0 auto;

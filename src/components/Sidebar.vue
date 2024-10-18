@@ -6,11 +6,11 @@
         <ul class="service-list">
             <li v-for="category in categories" :key="category.name" @mouseover="setHoveredCategory(category.name)"
                 @mouseleave="clearHoveredCategory">
-                <a href="#">
+                <a>
                     <img :src="category.img" :alt="category.name">
                     <p>{{ category.name }}</p>
                 </a>
-                <ul v-if="hoveredCategory === category.name" class="goods-list">
+                <ul v-if="hoveredCategory === category.name" class="goods-list" :style="{ top: topPosition + 'px'}">
                     <router-link :to="{ name: 'Product', params: { id: product.id } }"
                         v-for="product in filteredProducts" :key="product.id">
                         <li class="goods-list_item">
@@ -40,14 +40,7 @@
 import { useProductStore } from './stores/products.js';
 import saveIconOn from '../assets/img/header/save.svg';
 import saveIconOff from '../assets/img/header/saveOff.svg';
-
-import busrinessCards from '../assets/img/goods/img/busrinessCards.svg';
-import laserPrinting from '../assets/img/goods/img/laserPrinting.svg';
-import notepads from '../assets/img/goods/img/notepads.svg';
-import lamination from '../assets/img/goods/img/lamination.svg';
-import pens from '../assets/img/goods/img/pens.svg';
-import canvases from '../assets/img/goods/img/canvases.svg';
-
+import { useImagesStore } from './stores/imagesStore.js';
 import Questionnaire from './Questionnaire.vue';
 
 export default {
@@ -56,17 +49,18 @@ export default {
         Questionnaire
     },
     data() {
+        let ImagesStore = useImagesStore();
         return {
             hoveredCategory: null,
             isQuestionnaireOpen: false,
             categories: [
-                { name: 'Визитки', img: busrinessCards },
-                { name: 'Полиграфия', img: laserPrinting },
-                { name: 'Широкоформатная печать', img: notepads },
-                { name: 'Копировальные услуги', img: lamination },
-                { name: 'Сувениры', img: pens },
-                { name: 'Тиражирование', img: canvases },
-                { name: 'Прочее', img: notepads },
+                { name: 'Визитки', img: ImagesStore.images.plasticCards },
+                { name: 'Полиграфия', img: ImagesStore.images.leaflets },
+                { name: 'Широкоформатная печать', img: ImagesStore.images.laserPrinting },
+                { name: 'Копировальные услуги', img: ImagesStore.images.lamination },
+                { name: 'Сувениры', img: ImagesStore.images.t_shirt },
+                { name: 'Тиражирование', img: ImagesStore.images.replication },
+                { name: 'Прочее', img: ImagesStore.images.car },
             ]
         }
     },
@@ -88,6 +82,8 @@ export default {
     methods: {
         setHoveredCategory(category) {
             this.hoveredCategory = category;
+            this.topPosition = event.target.getBoundingClientRect().top/1.7;
+            this.leftPosition = event.target.getBoundingClientRect().left;
         },
         clearHoveredCategory() {
             this.hoveredCategory = null;
@@ -127,6 +123,7 @@ export default {
 
         li {
             margin-bottom: 10px;
+            border-radius: 8px;
 
             a {
                 color: #010101;
@@ -174,16 +171,23 @@ export default {
         .goods-list {
             position: absolute;
             top: 0;
-            max-width: 0px;
             background-color: white;
-            transition: left 0.5s ease;
-            display: grid;
-            grid-template-columns: repeat(2, auto);
             gap: 8px;
             padding: 10px;
+            max-height: 400px;
+            height: 345px;
+            //display: grid;
+            //grid-template-columns: repeat(4, 1fr); 
+            //grid-auto-rows: 103px; 
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            opacity: 0; 
             visibility: hidden;
-            opacity: 0;
-            min-height: 580px;
+            width: max-content;
+            border-radius: 8px;
+
+            box-shadow: 16px 3px 19px rgba(0, 0, 0, 0.08), 3px 2px 8px rgba(0, 0, 0, 0.2);
 
             a {
                 text-decoration: none;
@@ -233,15 +237,15 @@ export default {
                 }
             }
         }
-
+        
         &:hover .goods-list {
             left: 100%;
-            transition: all 0.5s ease;
-            max-width: 1000px;
+            transition: all 1s ease-out;
+            max-width: 1500px;
             opacity: 1;
             visibility: visible;
+            overflow: hidden;
         }
-
     }
 
     .contact-link,

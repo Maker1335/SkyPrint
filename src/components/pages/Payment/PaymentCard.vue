@@ -51,6 +51,7 @@ export default {
     }
     &_description {
         display: flex;
+        align-items: flex-end;
         z-index: 1;
         justify-content: space-between;
         gap: 60px;

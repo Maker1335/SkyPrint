@@ -7,30 +7,6 @@
         <transition name="fade">
             <div v-if="showPrices" class="additional-info_content">
                 <img :src="prices[0]" class="additional-info_content_img">
-                <!-- <table>
-                    <thead>
-                        <tr>
-                            <th :rowspan="rowspan">Наименование</th>
-                             <th :colspan="colspan">Цена</th>
-                            <th :colspan="colspan">Размеры</th>
-                        </tr>
-                        <tr>
-                             <th>до 250 шт.</th>
-                            <th>500 шт.</th>
-                             <th>Параметр 3</th>
-                            <th>Параметр 4</th> 
-                            <td>10</td>
-                            <td>30</td>
-                            <td>3000</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="price in prices" :key="price.name">
-                            <td>{{ price.name }}</td>
-                            <td v-for="(priceItem, index) in price.price" :key="index">{{ priceItem }}</td>
-                        </tr>
-                    </tbody>
-                </table> -->
             </div>
         </transition>
         <transition name="fade">
@@ -81,7 +57,7 @@ export default {
     name: 'AdditionalInfo',
     data() {
         return {
-            showPrices: false,
+            showPrices: true,
             showRequirements: false,
             activeSection: null
         };

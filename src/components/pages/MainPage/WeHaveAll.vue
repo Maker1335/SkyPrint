@@ -97,15 +97,15 @@ export default {
                 z-index: 1;
             }
 
-            &::after {
-                content: '>';
-                position: absolute;
-                width: 10px;
-                height: 20px;
-                color: #27625f;
-                bottom: 30px;
-                right: 30px;
-            }
+            //&::after {
+            //    content: '>';
+            //    position: absolute;
+            //    width: 10px;
+            //    height: 20px;
+            //    color: #27625f;
+            //    bottom: 30px;
+            //    right: 30px;
+            //}
 
             &::before {
                 content: "";

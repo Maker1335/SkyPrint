@@ -19,7 +19,7 @@
                 <p class="card_title">10000+</p>
                 <p class="card_description">Заказов в год</p>
             </div>
-            <div class="card" style="height: auto;">
+            <div class="card">
                 <a href="https://www.youtube.com/watch?v=73mmIqSreAU&t=23s">
                     <p class="card_title"></p>
                     <p class="card_description"></p>
@@ -227,7 +227,8 @@ $backgroundImage: "../../../assets/img/background.png";
 
         img {
             filter: grayscale(1);
-            height: 53px;
+            height: 43px;
+            max-width: 120px;
             opacity: 0.5;
             transition: filter 0.5s ease, opacity 0.5s ease;
 

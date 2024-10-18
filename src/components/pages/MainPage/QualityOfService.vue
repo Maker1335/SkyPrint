@@ -11,31 +11,25 @@
 </template>
 
 <script>
-import typewriter from '../../../assets/img/pages/MainPage/QualityOfService/typewriter.svg';
 import handshake from '../../../assets/img/pages/MainPage/QualityOfService/handshake.svg';
-import printer from '../../../assets/img/pages/MainPage/QualityOfService/printer.svg';
-import mountain from '../../../assets/img/pages/MainPage/QualityOfService/mountain.svg';
+import fiveStars from '../../../assets/img/pages/MainPage/QualityOfService/fiveStars.svg';
 import documents from '../../../assets/img/pages/MainPage/QualityOfService/documents.svg';
-import calendar from '../../../assets/img/pages/MainPage/QualityOfService/calendar.svg';
-import technicalSupport from '../../../assets/img/pages/MainPage/QualityOfService/technicalSupport.svg';
-import printShop from '../../../assets/img/pages/MainPage/QualityOfService/printShop.svg';
+import location from '../../../assets/img/pages/MainPage/QualityOfService/location.svg';
+import coffee from '../../../assets/img/pages/MainPage/QualityOfService/coffee.svg';
 
 export default {
     name: 'QualityOfService',
     data() {
         return {
             cards: [
-                // { image: typewriter, alt: 'Печатная машинка' },
                 { image: 'https://i.ibb.co/1dcPRJq/Component-80.jpg', alt: 'Печатная машинка' },
                 { image: handshake, alt: 'Рукопожатие', description: 'Качество на 100%, либо вернем ваши деньги' },
-                // { image: printer, alt: 'Принтер' },
                 { image: 'https://i.ibb.co/ZKRYcPs/Rectangle-151.jpg', alt: 'Принтер' },
-                { image: mountain, alt: 'Гора', description: 'Оформление заказа, не выходя из дома' },
+                { image: fiveStars, alt: 'Гора', description: 'Оформление заказа, не выходя из дома' },
                 { image: documents, alt: 'Документы', description: 'Доставка заказов по всей России' },
-                { image: calendar, alt: 'Календарь', description: 'Оперативная печать заказов' },
-                { image: technicalSupport, alt: 'Техподдержка', description: 'Более 3000 клиентов по всей России' },
-                { image: handshake, alt: 'Рукопожатие', description: 'Качество на 100%, либо вернем ваши деньги' },
-                // { image: printShop, alt: 'Типография' },
+                { image: location, alt: 'Календарь', description: 'Оперативная печать заказов' },
+                { image: coffee, alt: 'Техподдержка', description: 'Более 3000 клиентов по всей России' },
+                { image: handshake, alt: 'Рукопожатие', description: 'Гибкие условия сотрудничества' },
                 { image: 'https://i.ibb.co/cQBTzwL/Rectangle-152.jpg', alt: 'Типография' },
             ],
         };

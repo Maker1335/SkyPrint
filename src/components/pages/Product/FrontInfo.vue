@@ -3,10 +3,10 @@
         <div class="front-info_img-wrapper">
             <img :src="imgSrc" alt="фото товара" class="front-info_img" />
         </div>
-        <p class="front-info_description">
+        <div class="front-info_description">
             {{ description }}
-        </p>
-    </div>
+        </div>
+</div>
 </template>
 
 <script>
@@ -24,9 +24,6 @@ export default {
     },
 };
 </script>
-
-
-
 
 <style lang="scss" scoped>
 .front-info {
@@ -51,6 +48,7 @@ export default {
 
     &_description {
         font-size: 16px;
+        white-space: pre-wrap; 
     }
 }
 

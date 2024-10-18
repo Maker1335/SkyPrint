@@ -47,7 +47,7 @@ export default {
         },
     },
     props: {
-        titleText: Object
+        titleText: String
     }
 }
 </script>
@@ -91,7 +91,7 @@ $goodsBG: "../assets/img/background.png";
                 border-radius: 5px;
                 font-size: 16px;
                 color: #80AAA8;
-                padding-left: 10px;
+                padding-left: 25px;
                 background: #FFFFFF;
                 border: 0px;
                 box-sizing: border-box;
@@ -116,6 +116,7 @@ $goodsBG: "../assets/img/background.png";
                 font-size: 20px;
                 color: #27625F;
                 transition: all 0.5s;
+                border: 1px solid #27625F;
 
                 &:hover {
                     background-image: url($goodsBG);
@@ -132,6 +133,7 @@ $goodsBG: "../assets/img/background.png";
             border-radius: 5px;
             background-color: none;
             transition: background-color 0.5s;
+            border: 1px solid #27625F;
 
             p {
                 padding: 20px;
@@ -143,6 +145,8 @@ $goodsBG: "../assets/img/background.png";
 
         .selected {
             background-color: #FFFFFF;
+            border: none;
+
         }
     }
 }

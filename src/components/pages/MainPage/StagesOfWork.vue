@@ -156,6 +156,7 @@ export default {
         .show {
             height: 100%;
             background-color: #CEFFFD;
+            
 
             &::after {
                 content: none;

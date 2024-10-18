@@ -99,7 +99,7 @@ export default {
     .wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 50px 1fr;
+        grid-template-rows: 80px 1fr;
         grid-template-areas:
             "h4 h4 h4"
             "cards map map";
@@ -107,7 +107,7 @@ export default {
     }
 
     h4 {
-        font-size: 30px;
+        font-size: 50px;
         font-weight: bold;
         color: #27625F;
         grid-area: h4;
@@ -130,11 +130,12 @@ export default {
             padding: 20px;
             box-sizing: border-box;
             justify-content: space-between;
+            border-radius: 8px;
+            color: #27625F;
 
             &_title {
                 font-size: 24px;
                 font-weight: bold;
-                color: #27625F;
                 margin-left: 20px;
             }
 
@@ -171,7 +172,8 @@ export default {
 
             &:last-child {
                 background: #F6F6F6;
-            }
+                color: #494949;
+                }
 
         }
     }
@@ -197,6 +199,7 @@ export default {
                     font-size: 20px;
                     font-weight: bold;
                     color: #AFAFAF;
+                    font-weight: 700;
                     margin-left: 25px;
                 }
 
@@ -204,6 +207,7 @@ export default {
                     font-size: 24px;
                     margin-top: 5px;
                     color: #6A6A6A;
+                    font-weight: 700;
                     margin-left: 25px;
                 }
             }
@@ -279,6 +283,7 @@ export default {
                 .address {
                     height: 62px;
                     width: 280px;
+                    border-radius: 8px;
 
                     &_addre {
                         font-size: 16px;
@@ -295,6 +300,7 @@ export default {
                 .whatsapp,
                 .telegram,
                 .vk {
+                    border-radius: 8px;
                     width: 80px;
                     height: 62px;
 
@@ -307,13 +313,14 @@ export default {
 
             iframe {
                 height: 502px;
+                border-radius: 8px;
             }
         }
     }
 }
 
 //@media (max-width: 361px) {
-    @media (max-width: 700px) {
+@media (max-width: 700px) {
     .contacts {
         margin-top: 30px;
 
@@ -392,6 +399,7 @@ export default {
                 .vk {
                     width: 100%;
                     height: 58px;
+
                     img {
                         width: 33px;
                         height: 33px;

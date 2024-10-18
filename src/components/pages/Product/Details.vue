@@ -4,48 +4,6 @@
             <p class="details_estimated-cost_price">{{ productDetails.estimatedCost }}</p>
             <p class="details_estimated-cost_title">Ориентировочная стоимость</p>
         </div>
-        <!-- <table class="details_table">
-            <tr class="details_dimensions">
-                <td>Размеры</td>
-                <td>
-                    <ul class="details_list">
-                        <li v-for="dimension in productDetails.dimensions" :key="dimension">{{ dimension }}</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr class="details_paper-type">
-                <td>Тип бумаги</td>
-                <td>
-                    <ul class="details_list">
-                        <li v-for="paper in productDetails.paperType" :key="paper">{{ paper }}</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr class="details_print-type">
-                <td>Тип печати</td>
-                <td>
-                    <ul class="details_list">
-                        <li v-for="print in productDetails.printType" :key="print">{{ print }}</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr class="details_lamination">
-                <td>Ламинация</td>
-                <td>
-                    <ul class="details_list">
-                        <li v-for="laminate in productDetails.lamination" :key="laminate">{{ laminate }}</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr class="details_angles">
-                <td>Углы</td>
-                <td>
-                    <ul class="details_list">
-                        <li v-for="angle in productDetails.angles" :key="angle">{{ angle }}</li>
-                    </ul>
-                </td>
-            </tr>
-        </table> -->
         <table class="details_table">
             <tr v-for="(values, key) in productDetails.customFields" :key="key">
                 <td>{{ key }}</td>
@@ -118,9 +76,12 @@ export default {
                 box-sizing: border-box;
 
                 .details_list {
+                    display: flex;
+                    flex-wrap: wrap;
                     list-style: none;
                     padding: 0;
                     margin: 0;
+                    gap: 10px;
 
                     li {
                         display: inline-block;

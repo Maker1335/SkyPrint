@@ -18,7 +18,6 @@ import TypographyDescription from '../pages/MainPage/TypographyDescription.vue';
 import QualityOfService from '../pages/MainPage/QualityOfService.vue';
 import StagesOfWork from '../pages/MainPage/StagesOfWork.vue';
 import Reviews from '../pages/MainPage/Reviews.vue';
-// import Feedback from '../pages/MainPage/Feedback.vue';
 import Feedback from '../Feedback.vue';
 import Contacts from '../Contacts.vue';
 

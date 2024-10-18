@@ -47,11 +47,14 @@ export default {
             padding-left: 25px;
 
             &::before {
-                content: '✔';
+                content: '';
+                background-image: url('../../../assets/img/pages/Delivery/checkMark.svg');
+                background-size: cover;
                 position: absolute;
+                top: 6px;
                 left: 0;
                 width: 10px;
-                height: 5px;
+                height: 6px;
             }
         }
     }

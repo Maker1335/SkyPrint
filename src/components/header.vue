@@ -218,7 +218,7 @@ export default {
                 margin: 0;
                 list-style-type: none;
                 border-radius: 30px;
-                width: 34px;
+                width: 24px;
                 background: #fff;
                 opacity: 0;
                 height: 0;
