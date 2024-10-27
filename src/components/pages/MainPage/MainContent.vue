@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$mainBG: "../../../assets/img/pages/MainPage/MainContent/homePageBackground.svg";
+$mainBG: "../../../assets/img/pages/MainPage/MainContent/homePageBackground.webp";
 $goodsBG: "../../../assets/img/background.png";
 
 .header {

@@ -25,13 +25,7 @@
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
-
-import rollUpImage from '../assets/img/goods/img/RollUp.svg';
-import notepadsImage from '../assets/img/goods/img/notepads.svg';
-import canvasesImage from '../assets/img/goods/img/canvases.svg';
-import busrinessCards from '../assets/img/goods/img/busrinessCards.svg';
-import laminationImage from '../assets/img/goods/img/lamination.svg';
-import pensImage from '../assets/img/goods/img/pens.svg';
+import { useImagesStore } from './stores/imagesStore.js';
 
 export default {
   name: 'Slider',
@@ -40,16 +34,17 @@ export default {
     SwiperSlide,
   },
   data() {
+    let ImagesStore = useImagesStore();
     return {
       modules: [Autoplay],
       slidesPerView: 5,
       slides: [
-        { image: rollUpImage, alt: 'фото товара', text: 'Roll-up' },
-        { image: notepadsImage, alt: 'фото товара', text: 'Блокноты' },
-        { image: canvasesImage, alt: 'фото товара', text: 'Холсты' },
-        { image: busrinessCards, alt: 'фото товара', text: 'Визитки' },
-        { image: laminationImage, alt: 'фото товара', text: 'Ламинирование' },
-        { image: pensImage, alt: 'фото товара', text: 'Ручки' },
+        { image: ImagesStore.images.RollUp, alt: 'фото товара', text: 'Roll-up' },
+        { image: ImagesStore.images.notebooks, alt: 'фото товара', text: 'Блокноты' },
+        { image: ImagesStore.images.canvases, alt: 'фото товара', text: 'Холсты' },
+        { image: ImagesStore.images.busrinessCards, alt: 'фото товара', text: 'Визитки' },
+        { image: ImagesStore.images.lamination, alt: 'фото товара', text: 'Ламинирование' },
+        { image: ImagesStore.images.pens, alt: 'фото товара', text: 'Ручки' },
       ],
       breakpoints: {
         0: {
