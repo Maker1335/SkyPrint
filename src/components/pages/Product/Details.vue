@@ -33,7 +33,7 @@ export default {
         productDetails: {
             type: Object,
             required: true
-        }, 
+        },
         prices: {
             type: Object,
             required: true
@@ -49,14 +49,15 @@ export default {
     &_estimated-cost {
         display: flex;
         flex-direction: column;
-        font-weight: bold;
 
         &_price {
             font-size: 75px;
+            font-weight: bold;
         }
 
         &_title {
             font-size: 24px;
+            font-weight: bold;
         }
     }
 

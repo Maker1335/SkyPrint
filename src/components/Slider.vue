@@ -159,19 +159,54 @@ $goodsBG: "../assets/img/background.png";
       border: 1px solid #000000;
       border-radius: 8px;
       box-sizing: border-box;
+      position: relative;
+      transition: background-color 0.5s ease;
+
 
       &_text {
         width: 85px;
+        position: absolute;
+        left: 25px;
       }
 
       &_arrow {
         width: 8px;
         height: 16px;
         padding: 3px;
+        position: absolute;
+        right: 40px;
       }
 
       p {
         margin-bottom: 25px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url($goodsBG);
+        background-size: cover;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      &:hover {
+        background-color: transparent;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      &:hover {
+        .all-categories_arrow {
+          transition: all 0.5s ease;
+          right: 15px;
+        }
       }
     }
 

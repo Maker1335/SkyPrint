@@ -55,11 +55,15 @@ export default {
                 font-size: 50px;
                 font-weight: bold;
                 color: #289793;
+                width:  750px;
+                line-height: 55px;
             }
 
             &_subtitle {
                 font-size: 16px;
                 color: #3BAEAA;
+                line-height: 24px;
+                width: 700px;
             }
         }
 
@@ -80,10 +84,11 @@ export default {
                 box-sizing: border-box;
                 background: none;
                 border-radius: 8px;
+                border: 1px solid #27625F;
 
                 &::after {
                     content: "";
-                    border: solid #27625F;
+                    border: 1px solid #27625F;
                     border-width: 0 4px 4px 0;
                     display: inline-block;
                     padding: 4px;
@@ -91,6 +96,7 @@ export default {
                 }
 
                 &:hover {
+                    border: 0px solid #27625F;
                     background: #FFFFFF;
                     transition: all 0.5s;
                 }

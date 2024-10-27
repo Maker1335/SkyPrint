@@ -9,7 +9,7 @@
                         <p class="item_title">{{ item.title }}</p>
                         <p class="item_content" v-if="item.show">{{ item.content }}</p>
                         <img class="item_img" v-if="item.show" :src="item.img" alt="">
-                        <a class="item_link" v-if="item.show" href="">{{ item.link }}</a>
+                        <a class="item_link" v-if="item.show">{{ item.link }}</a>
                     </li>
                 </ul>
             </div>
@@ -18,8 +18,11 @@
 </template>
 
 <script>
-import costCalculation from '../../../assets/img/pages/MainPage/StagesOfWork/costCalculation.svg'
-import sendingLayout from '../../../assets/img/pages/MainPage/StagesOfWork/sendingLayout.svg'
+import sendingTheLayout from '../../../assets/img/pages/MainPage/StagesOfWork/sendingTheLayout.webp'
+import calculatingTheCost from '../../../assets/img/pages/MainPage/StagesOfWork/calculatingTheCost.webp'
+import printingTheOrder from '../../../assets/img/pages/MainPage/StagesOfWork/printingTheOrder.webp'
+import receivingTheOrder from '../../../assets/img/pages/MainPage/StagesOfWork/receivingTheOrder.webp'
+import makingAnAdvancePayment from '../../../assets/img/pages/MainPage/StagesOfWork/makingAnAdvancePayment.webp'
 
 export default {
     name: 'StagesOfWork',
@@ -30,7 +33,7 @@ export default {
                     id: 1,
                     title: '1/ Отправка макета',
                     content: 'Таким повседневная задания отношении направлений и что занимаемых активизации. По новая направлений выполнять образом участниками идейные нашей постоянный и интересный условий дальнейших играет важную выполнят. ',
-                    img: costCalculation,
+                    img: sendingTheLayout,
                     link: 'Подробнее',
                     show: true
                 },
@@ -38,34 +41,32 @@ export default {
                     id: 2,
                     title: '2/ Расчет стоимости',
                     content: 'Таким повседневная задания отношении направлений и что занимаемых активизации. По новая направлений выполнять образом участниками идейные нашей постоянный и интересный условий дальнейших играет важную выполнят.',
-                    img: sendingLayout,
+                    img: calculatingTheCost,
                     link: 'Подробнее',
                 },
                 {
                     id: 3,
                     title: '3/ Внесение предоплаты',
                     content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque non rem a iure, amet aut voluptatem magni molestiae, corporis vel laboriosam perferendis ipsam possimus qui, voluptatum nam! Quidem, debitis sit!',
-                    img: 'https://sun9-73.userapi.com/s/v1/if1/14elKBUrx5jA5rXYwwLgtHYZNuskD2xIMBpkyPUS_mnY4oArSA5x4ief1mHQCbSGMCoiJuto.jpg?size=200x200&quality=96&crop=0,0,960,960&ava=1',
+                    img: makingAnAdvancePayment,
                     link: 'Подробнее',
                 },
                 {
                     id: 4,
                     title: '4/ Печать заказа',
                     content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque non rem a iure, amet aut voluptatem magni molestiae, corporis vel laboriosam perferendis ipsam possimus qui, voluptatum nam! Quidem, debitis sit!',
-                    img: 'https://cs13.pikabu.ru/post_img/2022/12/14/6/1671008037224421279.jpg',
+                    img: printingTheOrder,
                     link: 'Подробнее',
                 },
                 {
                     id: 5,
                     title: '5/ Получение заказа',
                     content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque non rem a iure, amet aut voluptatem magni molestiae, corporis vel laboriosam perferendis ipsam possimus qui, voluptatum nam! Quidem, debitis sit!',
-                    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh9DSCoZDMiKnS-S3lnciizd_MAyMMY-jTxw&usqp=CAU',
+                    img: receivingTheOrder,
                     link: 'Подробнее',
                 },
             ],
             lastOpenedItem: 1,
-            costCalculation,
-            sendingLayout,
         };
     },
     methods: {
@@ -106,14 +107,14 @@ export default {
                 "title img"
                 "content img"
                 "link img";
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             background-color: #F5F5F5;
             border-radius: 5px;
             height: 78px;
             position: relative;
 
             &_title {
-                margin-top: 35px;
+                margin-top: 25px;
                 margin-left: 20px;
                 font-size: 24px;
                 font-weight: bold;
@@ -121,6 +122,7 @@ export default {
             }
 
             &_content {
+                width: 460px;
                 margin-left: 58px;
                 font-size: 16px;
                 grid-area: content;
@@ -156,7 +158,12 @@ export default {
         .show {
             height: 100%;
             background-color: #CEFFFD;
-            
+            transition: all 1s ease;
+                animation: fadeIn 0.5s ease forwards;
+
+            .item_title {
+                margin-top: 35px;
+            }
 
             &::after {
                 content: none;
@@ -191,7 +198,7 @@ export default {
                 position: relative;
 
                 &_title {
-                    margin-top: 20px;
+                    margin-top: 10px;
                     margin-left: 20px;
                     font-size: 20px;
                 }
@@ -221,7 +228,7 @@ export default {
 }
 
 //@media (max-width: 360px) {
-    @media (max-width: 700px) {
+@media (max-width: 700px) {
     .stages_of_work {
         margin-top: 50px;
 
@@ -282,6 +289,16 @@ export default {
 
             }
         }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
 </style>

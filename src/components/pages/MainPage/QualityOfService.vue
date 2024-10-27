@@ -12,6 +12,7 @@
 
 <script>
 import handshake from '../../../assets/img/pages/MainPage/QualityOfService/handshake.svg';
+import medal from '../../../assets/img/pages/MainPage/QualityOfService/medal.svg';
 import fiveStars from '../../../assets/img/pages/MainPage/QualityOfService/fiveStars.svg';
 import documents from '../../../assets/img/pages/MainPage/QualityOfService/documents.svg';
 import location from '../../../assets/img/pages/MainPage/QualityOfService/location.svg';
@@ -23,7 +24,7 @@ export default {
         return {
             cards: [
                 { image: 'https://i.ibb.co/1dcPRJq/Component-80.jpg', alt: 'Печатная машинка' },
-                { image: handshake, alt: 'Рукопожатие', description: 'Качество на 100%, либо вернем ваши деньги' },
+                { image: medal, alt: 'Рукопожатие', description: 'Высокое качестов печати' },
                 { image: 'https://i.ibb.co/ZKRYcPs/Rectangle-151.jpg', alt: 'Принтер' },
                 { image: fiveStars, alt: 'Гора', description: 'Оформление заказа, не выходя из дома' },
                 { image: documents, alt: 'Документы', description: 'Доставка заказов по всей России' },
@@ -67,14 +68,14 @@ export default {
     .card {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 229px;
         height: 229px;
         border: 1px solid #27625F;
         border-radius: 5px;
         font-size: 16px;
         color: #27625F;
-        padding: 10px;
+        padding: 20px;
         box-sizing: border-box;
 
         &_img {

@@ -10,7 +10,7 @@
                     <img :src="category.img" :alt="category.name">
                     <p>{{ category.name }}</p>
                 </a>
-                <ul v-if="hoveredCategory === category.name" class="goods-list" :style="{ top: topPosition + 'px'}">
+                <ul v-if="hoveredCategory === category.name" class="goods-list" :style="{ top: topPosition + 'px' }">
                     <router-link :to="{ name: 'Product', params: { id: product.id } }"
                         v-for="product in filteredProducts" :key="product.id">
                         <li class="goods-list_item">
@@ -82,7 +82,7 @@ export default {
     methods: {
         setHoveredCategory(category) {
             this.hoveredCategory = category;
-            this.topPosition = event.target.getBoundingClientRect().top/1.7;
+            this.topPosition = event.target.getBoundingClientRect().top / 1.7;
             this.leftPosition = event.target.getBoundingClientRect().left;
         },
         clearHoveredCategory() {
@@ -158,12 +158,21 @@ export default {
                     padding: 3px;
                     transform: rotate(-45deg);
                     -webkit-transform: rotate(-45deg);
+                    transition: border 0.5s ease;
                 }
             }
 
             &:hover {
-                background-image: url("../assets/img/background.png");
+                background-image: url("../assets/img/background2.svg");
                 background-size: cover;
+
+                a {
+                    &::after {
+                        transition: border 0.5s ease;
+                        border: solid #27625F;
+                        border-width: 0 3px 3px 0;
+                    }
+                }
             }
 
         }
@@ -182,7 +191,7 @@ export default {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            opacity: 0; 
+            opacity: 0;
             visibility: hidden;
             width: max-content;
             border-radius: 8px;
@@ -237,7 +246,7 @@ export default {
                 }
             }
         }
-        
+
         &:hover .goods-list {
             left: 100%;
             transition: all 1s ease-out;
@@ -271,7 +280,7 @@ export default {
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('../../src/assets/img/background.png');
+            background-image: url("../assets/img/background2.svg");
             opacity: 0;
             background-size: cover;
             transition: opacity 0.5s;

@@ -69,7 +69,7 @@ export default {
     box-sizing: border-box;
 
     .wrapper {
-        width: 1920px;
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }

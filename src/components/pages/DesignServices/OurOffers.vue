@@ -66,8 +66,8 @@ export default {
 
             &_nember {
                 position: absolute;
-                bottom: 20px;
-                right: 20px;
+                bottom: 30px;
+                right: 45px;
                 font-size: 66px;
                 font-weight: bold;
             }

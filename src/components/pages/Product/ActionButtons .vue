@@ -1,7 +1,8 @@
 <template>
     <div class="action-buttons">
         <router-link to=""><button class="action-buttons_submit-application">Оставить заявку</button></router-link>
-        <router-link to="/designServices"><button class="action-buttons_designer-services">Услуги дизайнера</button></router-link>
+        <router-link to="/designServices"><button class="action-buttons_designer-services">Услуги
+                дизайнера</button></router-link>
     </div>
 </template>
 
@@ -66,15 +67,33 @@ export default {
         }
     }
 }
+
+@media (max-width: 1367px) {
+    .action-buttons {
+        gap: 10px;
+
+        a {
+            button {
+                height: 80px;
+                font-size: 16px;
+                &::after {
+                    border-width: 0 3px 3px 0;
+                    padding: 4px;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 700px) {
     .action-buttons {
         flex-direction: column;
         margin-top: 30px;
         gap: 10px;
-    
+
         a {
             width: 100%;
-    
+
             button {
                 width: 100%;
                 height: 80px;
