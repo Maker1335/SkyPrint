@@ -72,10 +72,11 @@ a {
 
     &_img {
         grid-area: img;
-        width: 241px;
-        height: 181px;
+        width: 100%;
+        height: 190px;
         display: flex;
         justify-content: center;
+        object-fit: contain
     }
 
     &_name {
@@ -120,10 +121,6 @@ a {
 
         &_save {
             height: 15px;
-        }
-
-        &_img {
-            width: 240px;
         }
 
         &_name {

@@ -109,8 +109,8 @@ $goodsBG: "../assets/img/background.png";
       }
 
       img {
-        width: 233px;
-        height: 183px;
+        width: 180px;
+        height: 180px;
         z-index: 1;
       }
 

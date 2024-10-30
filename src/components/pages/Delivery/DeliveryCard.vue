@@ -41,10 +41,11 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 10px;
-
+        font-weight: 700;
         li {
             position: relative;
             padding-left: 25px;
+            font-weight: 700;
 
             &::before {
                 content: '';

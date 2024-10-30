@@ -15,13 +15,18 @@
                 <li><router-link to="/contacts">Контакты</router-link></li>
                 <li class="save">
                     <a href="#">
-                        <p><img class="save_img" src="../../src/assets/img/header/save.svg" alt="save"> {{savedProducts.length}}</p>
+                        <p><img class="save_img" src="../../src/assets/img/header/save.svg" alt="save">
+                            {{ savedProducts.length }}</p>
                     </a>
                     <ul class="save_list">
-                        <li v-for="product in savedProducts" :key="product.id" class="save_item">
+                        <li v-if="savedProducts.length >= 1" v-for="product in savedProducts" :key="product.id"
+                            class="save_item">
                             <img class="save_item_img" :src="product.img" alt="">
                             <p class="save_item_title">{{ product.name }} <img :src="product.save" alt=""></p>
                             <p class="save_item_count">{{ product.count }}</p>
+                        </li>
+                        <li v-if="savedProducts.length == 0" class="save_item">
+                            <p style="color: red;  width: auto; position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%); font-weight: bold; font-size: 24px;">Нет товаров</p>
                         </li>
                     </ul>
                 </li>
@@ -31,7 +36,7 @@
                 <li class="phone"><a href="#"><img src="../../src/assets/img/header/phone.svg" alt="phone"></a>
                     <ul class="phone_list">
                         <li><button @click="copyText('7(351)248-72-87')"> <img
-                                    src="../../src/assets/img/header/phone.svg" alt="phone"> </button></li>
+                                    src="../../src/assets/img/header/phone1.svg" alt="phone"> </button></li>
                         <li><a href="https://t.me/skyprint174_bot"><img src="../../src/assets/img/header/telegram.svg"
                                     alt="telegram"></a></li>
                         <li><a href="https://vk.com/skyprint74"><img src="../../src/assets/img/header/vk.svg"
@@ -62,6 +67,9 @@ export default {
     setup() {
         const store = useProductStore();
         const savedProducts = computed(() => store.products.filter(product => product.save));
+        if (savedProducts.value.length > 0) {
+            savedProducts.value = "нет товаров"
+        }
         return {
             savedProducts
         }
@@ -166,7 +174,7 @@ export default {
                 height: auto;
                 opacity: 0;
                 transition: opacity 0.5s;
-                pointer-events: none
+                pointer-events: none;
             }
 
             &_item {
@@ -212,7 +220,7 @@ export default {
                 gap: 8px;
                 position: absolute;
                 top: 0;
-                right: -10px;
+                right: -5px;
                 background-color: black;
                 padding: 0;
                 margin: 0;
@@ -223,7 +231,7 @@ export default {
                 opacity: 0;
                 height: 0;
                 overflow: hidden;
-                transition: opacity 0.5s ease, height 0.5s ease;
+                transition: opacity 1s ease, height 0.5s ease;
 
                 li {
                     img {
@@ -305,7 +313,7 @@ export default {
 }
 
 //@media (max-width: 361px) {
-    @media (max-width: 700px) {
+@media (max-width: 700px) {
     .header {
         width: 100%;
 

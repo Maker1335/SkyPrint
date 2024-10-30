@@ -4,9 +4,12 @@
             <p @click="togglePrices" class="additional-info_prices">Цены</p>
             <p @click="toggleRequirements" class="additional-info_requirements-for-layouts">Требования к макетам</p>
         </div>
+        <div v-if="isModalOpen" class="modal" @click="closeModal">
+            <img :src="prices[0]" class="modal_img" @click="closeModal">
+        </div>
         <transition name="fade">
             <div v-if="showPrices" class="additional-info_content">
-                <img :src="prices[0]" class="additional-info_content_img">
+                <img :src="prices[0]" class="additional-info_content_img" @click="openModal">
             </div>
         </transition>
         <transition name="fade">
@@ -59,7 +62,9 @@ export default {
         return {
             showPrices: true,
             showRequirements: false,
-            activeSection: null
+            activeSection: null,
+            showPrices: true,
+            isModalOpen: false,
         };
     },
     props: {
@@ -111,16 +116,38 @@ export default {
                 icon: true,
                 rtl: false
             });
+        },
+        openModal() {
+            this.isModalOpen = true;
+        },
+        closeModal() {
+            this.isModalOpen = false;
         }
     }
 };
 </script>
 
 <style lang="scss" scoped>
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Убедитесь, что модал выше всего */
+}
+
+.modal_img {
+    max-width: 90%;
+    max-height: 90%;
+}
 .additional-info {
     display: flex;
     flex-direction: column;
-    font-weight: bold;
     font-size: 16px;
     margin-top: 30px;
     margin-left: 35px;
@@ -134,6 +161,7 @@ export default {
     &_requirements-for-layouts {
         position: relative;
         cursor: pointer;
+        font-weight: bold;
 
         &::after {
             content: '';
@@ -200,30 +228,6 @@ export default {
             }
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 16px;
-
-            th,
-            td {
-                padding: 15px;
-                border: 1px solid #a0b6b5;
-                text-align: left;
-            }
-
-            th[rowspan="2"] {
-                vertical-align: middle;
-            }
-
-            th[colspan="4"] {
-                text-align: center;
-            }
-
-            tbody td {
-                font-weight: bold;
-            }
-        }
         &_img {
             width: 100%;
         }
@@ -289,26 +293,6 @@ export default {
                 li {
                     button {
                         font-size: 14px;
-                    }
-                }
-            }
-
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                font-size: 16px;
-
-                tr {
-                    border-bottom: 1px solid #a0b6b5;
-                    display: flex;
-
-                    td {
-                        font-size: 14px;
-                        padding: 10px;
-                    }
-
-                    th {
-                        padding: 10px;
                     }
                 }
             }

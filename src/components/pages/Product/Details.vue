@@ -1,8 +1,8 @@
 <template>
     <div class="details">
         <div class="details_estimated-cost">
-            <p class="details_estimated-cost_price">{{ productDetails.estimatedCost }}</p>
-            <p class="details_estimated-cost_title">Ориентировочная стоимость</p>
+            <p class="details_estimated-cost_price">{{ productDetails.estimatedCostPrice }}</p>
+            <p class="details_estimated-cost_title">{{productDetails.estimatedCostTitle}}</p>
         </div>
         <table class="details_table">
             <tr v-for="(values, key) in productDetails.customFields" :key="key">
@@ -95,7 +95,11 @@ export default {
                 }
 
                 &:last-child {
-                    font-weight: bold;
+                    ul{
+                        li{
+                            font-weight: bold;
+                        }
+                    }
                 }
             }
         }

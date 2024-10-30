@@ -36,6 +36,7 @@ export default {
             justify-content: space-around;
             align-items: center;
             border: none;
+            z-index: 1;
 
             &::after {
                 content: "";
@@ -46,25 +47,43 @@ export default {
                 box-sizing: border-box;
                 -webkit-transform: rotate(-45deg);
             }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url("../../../assets/img/background.png");
+                opacity: 0;
+                background-size: cover;
+                transition: opacity 0.5s;
+                z-index: -1; /* Устанавливаем z-index ниже, чем у кнопки */
+            }
+    
+            &:hover::before {
+                opacity: 1;
+            }
         }
     }
 
     &_submit-application {
         background-color: #CEFFFD;
 
-        &:hover {
-            background-color: #EAEAEA;
-            transition: background-color 0.5s;
-        }
+        //&:hover {
+        //    background-color: #EAEAEA;
+        //    transition: background-color 0.5s;
+        //}
     }
 
     &_designer-services {
         background-color: #EAEAEA;
 
-        &:hover {
-            background-color: #CEFFFD;
-            transition: background-color 0.5s;
-        }
+        //&:hover {
+        //    background-color: #CEFFFD;
+        //    transition: background-color 0.5s;
+        //}
     }
 }
 

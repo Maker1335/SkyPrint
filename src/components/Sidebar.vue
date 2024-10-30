@@ -134,6 +134,7 @@ export default {
                 border-radius: 5px;
                 position: relative;
                 transition: background-color 0.5s;
+                padding-left: 15px;
 
                 &:hover {
                     background: none;
@@ -144,8 +145,8 @@ export default {
                 }
 
                 img {
-                    height: 75px;
-                    width: 112px;
+                    height: 80px;
+                    width: auto;
                 }
 
                 &::after {
@@ -163,7 +164,7 @@ export default {
             }
 
             &:hover {
-                background-image: url("../assets/img/background2.svg");
+                background-image: url("../assets/img/background.png");
                 background-size: cover;
 
                 a {
@@ -280,7 +281,7 @@ export default {
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url("../assets/img/background2.svg");
+            background-image: url("../assets/img/background.png");
             opacity: 0;
             background-size: cover;
             transition: opacity 0.5s;
@@ -327,7 +328,6 @@ export default {
                     height: 64px;
 
                     img {
-                        width: 81px;
                         height: 64px;
                     }
                 }
