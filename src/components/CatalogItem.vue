@@ -88,6 +88,7 @@ a {
         margin-bottom: 12px;
         display: flex;
         align-items: flex-end;
+        width: min-content;
     }
 
     &_count {

@@ -15,7 +15,7 @@ export const useProductStore = defineStore('product', {
                 count: 'От 50 шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                    estimatedCostPrice: '8 ₽',
+                    estimatedCostPrice: 'от 8 ₽',
                     customFields: {
                         'Тираж': ['От 50 шт'],
                     },
@@ -41,8 +41,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 1 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '910 ₽',
+                    estimatedCostTitle: 'ориентировочная стоимость за штуку',
+                    estimatedCostPrice: 'от 910 ₽',
                     customFields: {
                         'Размеры': ['20x30', '30x40', '40x50', '50x70', '80x100', '80x80', '80x60', '30x30', '40x60', '60x90', '90x90', '150x120'],
                         'Тип печати': ['Печать на холсте'],
@@ -64,8 +64,8 @@ export const useProductStore = defineStore('product', {
                 \nРаботаем даже с очень большими размерами! Легко ламинируем как обычный лист А4, так и до А0 формата.`,
                 count: 'От 10 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '100 ₽',
+                    estimatedCostTitle: 'ориентировочная стоимость за штуку',
+                    estimatedCostPrice: 'от 30 ₽',
                     customFields: {
                         'тираж': ['10 шт'],
                         'Формат': ['A4', 'A3', 'A2', 'A1', 'A0'],
@@ -84,8 +84,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 1 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '70 ₽',
+                    estimatedCostTitle: 'ориентировочная стоимость за штуку',
+                    estimatedCostPrice: 'от 43 ₽',
                     customFields: {
                         'Тираж': ['1-49 шт, 50-99 шт', '100-199 шт', '200-499 шт', '500-999 шт', '1000-2499 шт', '<2500 шт'],
                         'Размеры': ['55x55 мм', '50x80 мм', '70x100 мм', '100x150 мм', '150x200 мм', '200x300 мм'],
@@ -104,8 +104,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 10 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '600 ₽',
+                    estimatedCostTitle: 'ориентировочная стоимость за штуку',
+                    estimatedCostPrice: 'от 800 ₽',
                     customFields: {
                         'Тираж': ['от 10 шт'],
                     },
@@ -123,8 +123,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 10 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '600 ₽',
+                    estimatedCostTitle: 'ориентировочная стоимость за штуку',
+                    estimatedCostPrice: 'от 600 ₽',
                     customFields: {
                         'Тираж': ['от 10 шт'],
                     },
@@ -142,8 +142,8 @@ export const useProductStore = defineStore('product', {
                 description: "При тираже от 10 штук цена меняется. (рассчитывается с менеджером индивидуально)",
                 count: 'От 10 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '600 ₽',
+                    estimatedCostTitle: 'ориентировочная стоимость за штуку (с нанесением)',
+                    estimatedCostPrice: 'от 1300 ₽',
                     customFields: {
                         'Тираж': ['от 10 шт'],
                     },
@@ -161,8 +161,8 @@ export const useProductStore = defineStore('product', {
                 description: "Срочно понадобились визитки? Хотите, чтобы визитная карточка работала на ваш статус и продвигала бизнес? Тогда доверьте эффективную презентацию профессионалам!",
                 count: 'От 48 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '600 ₽',
+                    estimatedCostTitle: 'ориентировочная стоимость за 1 штуку',
+                    estimatedCostPrice: 'от 11 ₽',
                     customFields: {
                         'Тип печети': ['Цифровая (Бумага)'],
                         'Тираж': ['48-192 шт', '192-384 шт', '408-480 шт', '<504 шт'],
@@ -185,7 +185,7 @@ export const useProductStore = defineStore('product', {
                 count: 'От 1000 шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '3000 ₽',
+                    estimatedCostPrice: 'от 2999 ₽',
                     customFields: {
                         'Тираж': ['1000 шт', '2000 шт', '3000 шт', '5000 шт'],
                         'Формат бумаги': ['А3', 'А4', 'А5', 'А6', 'А7', 'Эвро'],
@@ -204,8 +204,8 @@ export const useProductStore = defineStore('product', {
                 description: "Где в Челябинске можно оперативно, качественно и недорого напечатать листовки и буклеты? Как эффективно донести до потребителя информацию о ваших товарах и услугах? Лучшее решение предлагает типография Sky Print — ведущий представитель на рынке полиграфических услуг Челябинска. Расскажите о продукции вашей компании, предстоящем мероприятии или планируемой акции с помощью наших красочных листовок и буклетов!",
                 count: 'От 1000 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '8000 ₽',
+                    estimatedCostTitle: 'ориентировочная стоимость',
+                    estimatedCostPrice: 'от 5590 ₽',
                     customFields: {
                         'Тираж': ['1000 шт', '3000 шт', '5000 шт'],
                         'Формат бумаги': ['А3', 'А4', 'А5', 'А6', 'Эвро'],
@@ -222,10 +222,10 @@ export const useProductStore = defineStore('product', {
                 img: imagesStore.images.calendars,
                 category: 'Футболки, текстиль',
                 description: "Календарь-один из популярных видов сувенирной полиграфической продукции. Как правило такой сувенир размещают на самом видном месте в офисе, тем самым украшая его. Календарь несет в себе различную информацию о компании, являясь одним из наиболее действенных инструментов рекламы. Типография «Skyprint» разработает дизайн и изготовит для Вас любой из видов календарей: настольные, настенные, перекидные, квартальные, карманные, календари-домики.",
-                count: 'От 1 шт',
+                count: 'От ? шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '600 ₽',
+                    estimatedCostPrice: '?? ₽',
                     customFields: {
                         'Вид календаря': ['Квартальные календари'],
                         'Вид календаря': ['Квартальный календарь А4. Без рекламного поля, без ламинирования', 'Квартальный календарь А4. Без рекламного поля, с ламинированием',
@@ -254,14 +254,14 @@ export const useProductStore = defineStore('product', {
             },
             {
                 id: 12,
-                name: 'Полноцветная лаверная печать',
+                name: 'Полноцветная лазерная печать',
                 img: imagesStore.images.laserPrinting,
                 category: 'Футболки, текстиль',
                 description: `В стоимость входит бумага Снегурочка 80 г/м. Цена может меняться в зависимости от типа бумаги.`,
                 count: 'От 1 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '40 ₽',
+                    estimatedCostTitle: 'за штуку',
+                    estimatedCostPrice: 'от 23 ₽',
                     customFields: {
                         'Тираж': ['1-10 шт', '11-100 шт', '< 100 шт'],
                         'Формат бумаги': ['А3', 'А4'],
@@ -281,8 +281,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 1 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '200 ₽',
+                    estimatedCostTitle: 'за штуку',
+                    estimatedCostPrice: 'от 4 ₽',
                     customFields: {
                         'Формат бумаги': ['А4', 'А3', 'А2', 'А1', 'А0'],
                         'Формат сканирования': ['ЧБ', 'Цветное', 'Цв. 600 dpi'],
@@ -301,8 +301,8 @@ export const useProductStore = defineStore('product', {
                 description: "Минимальная стоимость заказа - 300 руб! \nСтоимость на готовой цветной виниловой пленки может отличвться от прайса (уточнять у менеджера!) \nТермоплёнка - 1400 руб. кв.м.",
                 count: 'От 10 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '900 ₽',
+                    estimatedCostTitle: 'за штуку',
+                    estimatedCostPrice: 'от 300 ₽',
                     customFields: {
                         'Качестов печати': ['360 dpi', '540 dpi', '720 dpi', '1440 dpi'],
                         'Вид наклейки': ['Самоклеящаяся плёнка', 'Самоклеящаяся плёнка + резка по контуру'],
@@ -321,8 +321,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 10 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '2000 ₽',
+                    estimatedCostTitle: 'за штуку',
+                    estimatedCostPrice: 'от 300 ₽',
                     customFields: {
                         'Формат (средняя высота символа)': ['> 1 cм', '1-5 см', '<5 см'],
                     },
@@ -342,8 +342,8 @@ export const useProductStore = defineStore('product', {
 Резка в зависимости от тиража и кол-ва резов 20-25% от стоимости заказа.`,
                 count: 'От 100 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '1000 ₽',
+                    estimatedCostTitle: 'за штуку',
+                    estimatedCostPrice: 'от 2,2 ₽',
                     customFields: {
                         'Бланки строгой отчетности': [],
                         'A4 1+0': ['100 шт', '200 шт', '300 шт', '500 шт', '1000 шт'],
@@ -371,8 +371,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 1 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '600 ₽',
+                    estimatedCostTitle: 'ориентировачная стоимость за штуку',
+                    estimatedCostPrice: 'от 150 ₽',
                     customFields: {
                         'Тираж': ['от 10 шт'],
                     },
@@ -390,8 +390,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 10 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '400 ₽',
+                    estimatedCostTitle: 'за штуку',
+                    estimatedCostPrice: 'от 60 ₽',
                     customFields: {
                         'Тираж': ['от 10 шт'],
                         'Материал': ['Бумага постерная', 'Фото бумага (матовая и глянцевая)'],
@@ -412,8 +412,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 10 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '500 ₽',
+                    estimatedCostTitle: 'Ориентировочная стоимость за штуку',
+                    estimatedCostPrice: 'от 600 ₽',
                     customFields: {
                         'Эко-сольвентная печать до 1,5м': [],
                         'Материал': ['Баннер, Корея 440 г/м2', 'Баннер, Литой 510 г/м2'],
@@ -437,8 +437,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 10 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '7000 ₽',
+                    estimatedCostTitle: 'ориентировачная стоимостьза штуку',
+                    estimatedCostPrice: 'от 7300 ₽',
                     customFields: {
                         'Тираж': ['от 10 шт'],
                     },
@@ -456,8 +456,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 10 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '600 ₽',
+                    estimatedCostTitle: 'Ориентировочная стоимость за штуку',
+                    estimatedCostPrice: 'от 6435 ₽',
                     customFields: {
                         'Тираж': ['от 10 шт'],
                         'Материал': ['Roll-up (печать на баннере, без констукции)', 'Roll-up (печать на плёнке)'],
@@ -477,8 +477,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 10 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '15 ₽',
+                    estimatedCostTitle: 'Ориентировочная стоимость за штуку',
+                    estimatedCostPrice: 'от 75 ₽',
                     customFields: {
                         'Тираж': ['50-99 шт', '100-299 шт', '300-499 шт', '500-999 шт', '1000-2999 шт', '3000-4999 шт', 'от 5000 шт'],
                         'Дополнительные услуги': ['Магнитная полоса+кодирование', 'Эмбосирование + типирование (за надпись)',
@@ -500,8 +500,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 10 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '2500 ₽',
+                    estimatedCostTitle: 'за штуку',
+                    estimatedCostPrice: 'от 316 ₽',
                     customFields: {
                         'Тираж': ['от 10 шт'],
                         'Вид материала': ['Пластик ПХ (2х2 м)', 'Пенакартон (1х1,40 м )', 'Кармашки (прозрачный пластик)',],
@@ -520,10 +520,10 @@ export const useProductStore = defineStore('product', {
                 img: imagesStore.images.packages,
                 category: 'Прочее',
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
-                count: 'От 50 шт',
+                count: 'От ? шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '35 ₽',
+                    estimatedCostPrice: '?? ₽',
                     customFields: {
                         'Тираж': ['50 шт', '100 шт', '150 шт', '200 шт', '300 шт', '400 шт', '500 шт', '1000 шт'],
                         'Что-то': ['1+0', '2+0', '1+1', '3+0', '2+1', '4+0', '3+1', '2+2']
@@ -542,8 +542,8 @@ export const useProductStore = defineStore('product', {
                 description: "В асортименте появля.тся новые цвета у поставщиков, уточнять у менеджера.",
                 count: 'От 1 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '450 ₽',
+                    estimatedCostTitle: 'Ориентировочная стоимость за штуку',
+                    estimatedCostPrice: 'от 350 ₽',
                     customFields: {
                         'Тираж': ['от 1 шт', 'от 10 шт', 'от 20 шт'],
                         'Наименовения': ['Кружка стандартная (белая внутри и снаружи)', 'Кружка цветная внутри', 'Кружка цветная внутри+ручка',
@@ -564,8 +564,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 100 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '80 ₽',
+                    estimatedCostTitle: 'Ориентировочная стоимость за штуку',
+                    estimatedCostPrice: 'от 65 ₽',
                     customFields: {
                         'Тираж': ['100 шт', '200 шт', '300 шт', '500 шт', '1000 шт', '3000 шт', '5000 шт', '10000 шт'],
                         'Виды': ['С логотипом. Круговая шелкография', 'С выдавленным и прокрашенным логотипом', 'Сегментированные с логотипом. Круговая шелкография',
@@ -585,8 +585,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 10 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '50 ₽',
+                    estimatedCostTitle: 'ориент. стоимость за штуку (37мм диаметр)',
+                    estimatedCostPrice: 'от 85 ₽',
                     customFields: {
                         'Тираж': ['от 10 шт', '10-99 шт', '100 шт', '200 шт', '300 шт', '600 шт', '800 шт', '1000 шт', '5000 шт'],
                         'Диамерт': ['37 мм', '58 мм'],
@@ -599,14 +599,14 @@ export const useProductStore = defineStore('product', {
             },
             {
                 id: 28,
-                name: 'Студийная печать фотографий',
+                name: 'Струйная печать фотографий',
                 img: imagesStore.images.studioPhotoPrinting,
                 category: 'Прочее',
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
-                count: 'От 1 шт',
+                count: 'От ? шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '70 ₽',
+                    estimatedCostPrice: '?? ₽',
                     customFields: {
                         'Тираж': ['1-11 шт', '<11'],
                         'Формат': ['10х15 (1-11 шт)', '10х15(<11 шт)', '13х18', '15х20', '20х30', '3х4'],
@@ -625,8 +625,8 @@ export const useProductStore = defineStore('product', {
                 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
                 count: 'От 100 шт',
                 details: {
-                    estimatedCostTitle: 'Ориентировочная стоимость',
-                    estimatedCostPrice: '40 ₽',
+                    estimatedCostTitle: 'Ориентировочная стоимость за штуку',
+                    estimatedCostPrice: 'от 40 ₽',
                     customFields: {
                         'Тираж': ['1-10 шт', '11-100 шт', '<100 шт'],
                         'Запись на носитель': ['CD-R', 'DVD-R', 'Мини-диск'],

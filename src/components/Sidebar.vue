@@ -60,7 +60,7 @@ export default {
                 { name: 'Копировальные услуги', img: ImagesStore.images.lamination },
                 { name: 'Сувениры', img: ImagesStore.images.t_shirt },
                 { name: 'Тиражирование', img: ImagesStore.images.replication },
-                { name: 'Прочее', img: ImagesStore.images.car },
+                { name: 'Прочее', img: ImagesStore.images.studioPhotoPrinting },
             ]
         }
     },
