@@ -4,7 +4,7 @@
             <h3>Наш прайс</h3>
             <div class="our-price_table">
                 <img src="../../../assets/img/pages/DesignServices/ourPrice.svg" alt="">
-                <button class="our-price_table_button">Смотреть прайс</button>
+                <!-- <button class="our-price_table_button">Смотреть прайс</button> -->
             </div>
         </div>
     </div>

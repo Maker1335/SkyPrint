@@ -10,19 +10,27 @@
                     <img :src="category.img" :alt="category.name">
                     <p>{{ category.name }}</p>
                 </a>
-                <ul v-if="hoveredCategory === category.name" class="goods-list" :style="{ top: topPosition + 'px' }">
+                <ul v-if="hoveredCategory === category.name && filteredProducts.length > 0" class="goods-list" :style="{ top: topPosition + 'px' }">
                     <router-link :to="{ name: 'Product', params: { id: product.id } }"
                         v-for="product in filteredProducts" :key="product.id">
                         <li class="goods-list_item">
                             <img class="goods-list_item_img" :src="product.img" alt="фото товара">
                             <p class="goods-list_item_title">
                                 {{ product.name }}
-                                <img class="goods-list_item_save" :src="product.save ? saveIconOn : saveIconOff"
+                                <img class="goods-list_item_save" :src="product.save ? saveIconOn : saveIconOff"  @click="toggleSave(product.id, $event)" 
                                     alt="фото закладки">
                             </p>
                             <p class="goods-list_item_count">{{ product.count }}</p>
                         </li>
                     </router-link>
+                </ul>
+                <ul v-show="hoveredCategory === category.name && filteredProducts.length >= 0" v-else class="goods-list" :style="{ top: topPosition + 'px' }">
+                    <li class="goods-list_item">
+                    <img class="goods-list_item_img" src="https://interkomitet.ru/wp-content/uploads/2022/12/Bez-imeni-1-400x320.jpg" alt="фото товара" :style="{ width: '150px', height: '100%' }"> 
+                    <p class="goods-list_item_title" :style="{ color: '#27625F', fontWeight: 'bold', fontSize: '32px' }">
+                        Нет товаров
+                    </p>
+                </li>
                 </ul>
             </li>
         </ul>
@@ -77,7 +85,7 @@ export default {
         },
         saveIconOff() {
             return saveIconOff;
-        }
+        },
     },
     methods: {
         setHoveredCategory(category) {
@@ -90,6 +98,11 @@ export default {
         },
         toggleMenu() {
             this.isQuestionnaireOpen = !this.isQuestionnaireOpen;
+        },
+        toggleSave(productId, event) {
+            event.stopPropagation(); // Останавливаем всплытие события
+            const productStore = useProductStore();
+            productStore.toggleSave(productId);
         }
     }
 }
@@ -310,7 +323,8 @@ export default {
     }
 }
 
-@media (max-width: 1367px) {
+//@media (max-width: 1367px) {
+    @media (max-width: 1537px) {
     .sidebar {
         width: 294px;
         height: 800px;

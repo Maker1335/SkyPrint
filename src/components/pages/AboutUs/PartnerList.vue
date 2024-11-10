@@ -46,6 +46,8 @@ export default {
 .partners {
     background-color: #F5F5F5;
     margin-bottom: 80px;
+    border-radius: 5px;
+
     .wrapper {
         padding: 100px;
         box-sizing: border-box;

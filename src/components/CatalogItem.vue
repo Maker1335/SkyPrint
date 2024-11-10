@@ -50,6 +50,7 @@ a {
     background-color: #ECECEC;
     width: 265px;
     height: 250px;
+    border-radius: 5px;
 
     a {
         display: grid;

@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import benStiller from '../../../assets/img/pages/MainPage/Reviews/БэнСтиллер.svg';
-import winstonChurchill from '../../../assets/img/pages/MainPage/Reviews/УинстонЧерчилль.svg';
-import elonMusk from '../../../assets/img/pages/MainPage/Reviews/ИлонМаск.svg';
+import user1 from '../../../assets/img/pages/MainPage/Reviews/user1.webp';
+import user2 from '../../../assets/img/pages/MainPage/Reviews/user2.webp';
+import user3 from '../../../assets/img/pages/MainPage/Reviews/user3.webp';
 
 export default {
     name: 'Reviews',
@@ -27,22 +27,22 @@ export default {
         return {
             reviews: [
                 {
-                    image: benStiller,
-                    name: 'Бен Стиллер',
+                    image: user1,
+                    name: 'Мария Иванова',
                     date: '30.03.2024',
-                    text: 'Очень крутая типография. Круче меня'
+                    text: 'Отличная типография! Заказал визитки, качество на высшем уровне, а доставка была быстрой. Персонал вежливый и отзывчивый. Рекомендую всем!'
                 },
                 {
-                    image: winstonChurchill,
-                    name: 'Уинстон Черчилль',
+                    image: user2,
+                    name: 'Иван Петров',
                     date: '30.03.2024',
-                    text: 'Fjewufhnvehfwehnfu weufwuebucn ncecen ycyeyc cbcweyweioqiojdvmjc jweujujew ehweh cjuecc ncsdcijcji cishf ijcij sn nlsnsle nnenll enncsl js. Rfsmss fksd.'
+                    text: 'Очень доволена работой SkyPrint! Печать буклетов выполнена быстро и качественно. Цены адекватные, а поддержка клиентов на высоте. Обязательно вернусь снова!'
                 },
                 {
-                    image: elonMusk,
-                    name: 'Илон Маск',
+                    image: user3,
+                    name: 'Катя Смирнова',
                     date: '30.05.2024',
-                    text: 'Мне нужен был такой дизайнер, когда создавался дизайн для теслы из двух полигонов'
+                    text: 'Заказывала печать календарей для компании. Результат превзошел ожидания! Яркие цвета и четкость изображения. Профессиональный подход и оперативность. Спасибо, SkyPrint!'
                 }
             ]
         };

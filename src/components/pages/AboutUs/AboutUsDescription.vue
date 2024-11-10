@@ -53,6 +53,7 @@ export default {
                 background-color: #F5F5F5;
                 padding: 30px;
                 box-sizing: border-box;
+                border-radius: 5px;
                 &_title {
                     &_count {
                         font-size: 88px;

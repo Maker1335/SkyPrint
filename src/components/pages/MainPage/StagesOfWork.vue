@@ -9,7 +9,7 @@
                         <p class="item_title">{{ item.title }}</p>
                         <p class="item_content" v-if="item.show">{{ item.content }}</p>
                         <img class="item_img" v-if="item.show" :src="item.img" alt="">
-                        <a class="item_link" v-if="item.show">{{ item.link }}</a>
+                        <router-link class="item_link" v-if="item.show" :to="item.linkTo" >{{ item.link }}</router-link>
                     </li>
                 </ul>
             </div>
@@ -32,38 +32,35 @@ export default {
                 {
                     id: 1,
                     title: '1/ Отправка макета',
-                    content: 'Таким повседневная задания отношении направлений и что занимаемых активизации. По новая направлений выполнять образом участниками идейные нашей постоянный и интересный условий дальнейших играет важную выполнят. ',
+                    content: 'Первым шагом в нашем процессе является отправка вашего макета. Вы можете загрузить файл через наш сайт или отправить его по электронной почте. Мы принимаем  форматы, такие как: SVG, СDR, PDF, JPG и TIFF. Если у вас есть особые требования, не стесняйтесь указать их в комментариях. Наша команда внимательно рассмотрит ваш макет и проверит его на соответствие всем техническим требованиям. Это поможет избежать недоразумений и ускорить дальнейшие этапы работы.',
                     img: sendingTheLayout,
                     link: 'Подробнее',
+                    linkTo: '/designServices',
                     show: true
                 },
                 {
                     id: 2,
                     title: '2/ Расчет стоимости',
-                    content: 'Таким повседневная задания отношении направлений и что занимаемых активизации. По новая направлений выполнять образом участниками идейные нашей постоянный и интересный условий дальнейших играет важную выполнят.',
+                    content: 'После получения вашего макета мы проведем расчёт стоимости заказа. На этом этапе мы учитываем все детали: формат, тираж, тип бумаги и дополнительные услуги, такие как ламинирование или биговка. Мы предоставим вам прозрачную смету, чтобы вы могли видеть, за что именно платите. Если у вас есть ограничения по бюджету или вы хотите внести изменения, наша команда всегда готова предложить альтернативные решения, чтобы удовлетворить ваши потребности.',
                     img: calculatingTheCost,
-                    link: 'Подробнее',
                 },
                 {
                     id: 3,
                     title: '3/ Внесение предоплаты',
-                    content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque non rem a iure, amet aut voluptatem magni molestiae, corporis vel laboriosam perferendis ipsam possimus qui, voluptatum nam! Quidem, debitis sit!',
+                    content: 'Для начала производства нам необходимо получить предоплату. Это стандартная практика в типографиях, которая обеспечивает безопасность обеих сторон. Мы предложим вам несколько удобных способов оплаты, включая банковский перевод и электронные платежи. После подтверждения получения предоплаты 50% мы сразу же начнем подготовку к печати вашего заказа. Вам будет отправлено уведомление о том, что ваш заказ принят в работу, и мы готовы двигаться дальше.',
                     img: makingAnAdvancePayment,
-                    link: 'Подробнее',
                 },
                 {
                     id: 4,
                     title: '4/ Печать заказа',
-                    content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque non rem a iure, amet aut voluptatem magni molestiae, corporis vel laboriosam perferendis ipsam possimus qui, voluptatum nam! Quidem, debitis sit!',
+                    content: 'На этом этапе начинается самое интересное — печать вашего заказа! Мы используем современное оборудование и высококачественные материалы, чтобы обеспечить отличные результаты. Наша команда тщательно следит за процессом, чтобы гарантировать, что каждый элемент соответствует вашим ожиданиям. Если вы выбрали дополнительные услуги, такие как резка или ламинирование, они будут выполнены на этом этапе. Мы стремимся завершить печать в кратчайшие сроки, чтобы вы могли получить свой заказ вовремя.',
                     img: printingTheOrder,
-                    link: 'Подробнее',
                 },
                 {
                     id: 5,
                     title: '5/ Получение заказа',
-                    content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque non rem a iure, amet aut voluptatem magni molestiae, corporis vel laboriosam perferendis ipsam possimus qui, voluptatum nam! Quidem, debitis sit!',
+                    content: 'После завершения всех этапов печати ваш заказ будет готов к получению! Мы уведомим вас о готовности и предложим удобные варианты доставки — вы можете забрать его самостоятельно из нашего офиса или воспользоваться услугами курьерской службы. При получении мы рекомендуем проверить качество заказа на месте, чтобы убедиться, что все соответствует вашим ожиданиям. Если у вас возникнут вопросы или пожелания, наша команда всегда готова помочь и ответить на ваши запросы.',
                     img: receivingTheOrder,
-                    link: 'Подробнее',
                 },
             ],
             lastOpenedItem: 1,
@@ -102,7 +99,7 @@ export default {
         .item {
             display: grid;
             grid-template-columns: 1fr 353px;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-rows: calc(78px + 10px) 1fr 43px;
             grid-template-areas:
                 "title img"
                 "content img"
@@ -137,9 +134,9 @@ export default {
             &_link {
                 color: #27625F;
                 margin-left: 58px;
-                margin-top: 67px;
                 font-size: 16px;
                 grid-area: link;
+                text-decoration: none;
             }
 
             &::after {
@@ -188,7 +185,7 @@ export default {
             .item {
                 display: grid;
                 grid-template-columns: 1fr 200px;
-                grid-template-rows: auto auto auto;
+                grid-template-rows: 70px 1fr 50px;
                 grid-template-areas:
                     "title img"
                     "content img"
@@ -205,11 +202,12 @@ export default {
 
                 &_content {
                     margin-left: 48px;
+                    width: 410px;
                 }
 
                 &_img {
                     width: 200px;
-                    height: 240px;
+                    height: 100%;
                     object-fit: cover;
                 }
 
@@ -221,7 +219,7 @@ export default {
             }
 
             .show {
-                height: 240px;
+                height: 100%;
             }
         }
     }

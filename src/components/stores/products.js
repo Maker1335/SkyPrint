@@ -11,7 +11,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Ручки',
                 img: imagesStore.images.pens,
                 category: 'Сувениры',
-                description: 'Способы нанесения и стоимость ручек уточнять у менеджера, каталог ручек предоставляется клиенту на выбор. Рассчет индивидуальный и зависит от вашего макета.',
+                description: 'Наши ручки — это не просто письменные инструменты, а стильные аксессуары, которые подчеркнут ваш имидж. Мы предлагаем широкий выбор моделей, от классических до современных, с возможностью нанесения логотипа или индивидуального дизайна. Заказывая ручки у нас, вы получаете высокое качество и быструю доставку, что делает их идеальными для корпоративных подарков и рекламных акций.',
                 count: 'От 50 шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость за штуку',
@@ -38,7 +38,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Холсты',
                 img: imagesStore.images.canvases,
                 category: 'Тиражирование',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Создайте уникальное произведение искусства на наших холстах! Мы используем только качественные материалы, что гарантирует долговечность и насыщенность цвета ваших работ. Заказывая холсты в нашей типографии, вы получаете возможность печати как стандартных размеров, так и индивидуальных форматов. Профессиональная печать и быстрая обработка заказов — наши главные преимущества.",
                 count: 'От 1 шт',
                 details: {
                     estimatedCostTitle: 'ориентировочная стоимость за штуку',
@@ -60,8 +60,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Ламинирование',
                 img: imagesStore.images.lamination,
                 category: 'Копировальные услуги',
-                description: `Ламинирование больших форматов возможно при помощи глянцевой, матовой плёнки. Первая идеально передаёт цветовую гамму и яркость, вторая не даёт бликов и подходит для документов даже с самым мелким шрифтом. Сам расходный материал является многослойным, идеально защищает поверхности под собой от любых внешних воздействий.
-                \nРаботаем даже с очень большими размерами! Легко ламинируем как обычный лист А4, так и до А0 формата.`,
+                description: `Ламинирование — это надежный способ защитить ваши документы и изображения от повреждений и загрязнений. Мы предлагаем услуги ламинирования различной толщины и формата, что позволяет сохранить ваши материалы в идеальном состоянии на долгое время. Выбирая нашу типографию, вы гарантированно получите качественное исполнение и оперативное выполнение заказа.`,
                 count: 'От 10 шт',
                 details: {
                     estimatedCostTitle: 'ориентировочная стоимость за штуку',
@@ -81,7 +80,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Магнитный винил',
                 img: imagesStore.images.magneticVinyl,
                 category: 'Копировальные услуги',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Наш магнитный винил идеально подходит для создания ярких рекламных материалов или вариант подарка на любой праздник в виде магнитов на холодильник. Он легко наносится и снимается, не оставляя следов. Мы предлагаем индивидуальные размеры и печать по вашему дизайну, что делает наш продукт универсальным для любых нужд.",
                 count: 'От 1 шт',
                 details: {
                     estimatedCostTitle: 'ориентировочная стоимость за штуку',
@@ -101,7 +100,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Шоппер',
                 img: imagesStore.images.shopper,
                 category: 'Футболки, текстиль',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Экологичные шопперы — это не только удобно, но и стильно! Наши многоразовые сумки изготавливаются из прочных материалов и могут быть персонализированы по вашему желанию. Выбирая шопперы у нас, вы поддерживаете экологические инициативы и получаете качественный продукт, который прослужит долго.",
                 count: 'От 10 шт',
                 details: {
                     estimatedCostTitle: 'ориентировочная стоимость за штуку',
@@ -120,7 +119,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Подушка',
                 img: imagesStore.images.pillow,
                 category: 'Футболки, текстиль',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Добавьте уют в ваш интерьер с нашими подушками! Мы предлагаем печать на текстиле с возможностью создания уникальных дизайнов. Это отличный подарок для близких или стильный элемент декора.",
                 count: 'От 10 шт',
                 details: {
                     estimatedCostTitle: 'ориентировочная стоимость за штуку',
@@ -139,7 +138,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Футболка',
                 img: imagesStore.images.t_shirt,
                 category: 'Футболки, текстиль',
-                description: "При тираже от 10 штук цена меняется. (рассчитывается с менеджером индивидуально)",
+                description: "Создайте свою уникальную футболку с помощью нашей типографии! Мы предлагаем печать на футболках с использованием термотрансферной или сублимационной печати. Это идеальный вариант для команд, мероприятий или просто для выражения вашего стиля. Быстрая обработка заказа и высокое качество гарантированы!",
                 count: 'От 10 шт',
                 details: {
                     estimatedCostTitle: 'ориентировочная стоимость за штуку (с нанесением)',
@@ -158,7 +157,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Визитки',
                 img: imagesStore.images.busrinessCards,
                 category: 'Футболки, текстиль',
-                description: "Срочно понадобились визитки? Хотите, чтобы визитная карточка работала на ваш статус и продвигала бизнес? Тогда доверьте эффективную презентацию профессионалам!",
+                description: "Ваши визитки — это ваше лицо! Мы предлагаем широкий выбор форматов и материалов для визиток, включая ламинирование или шелкографию. Создайте запоминающийся дизайн, который подчеркнет вашу индивидуальность. Заказывая визитки у нас, вы получаете качественный продукт, который поможет вам выделиться среди конкурентов.",
                 count: 'От 48 шт',
                 details: {
                     estimatedCostTitle: 'ориентировочная стоимость за 1 штуку',
@@ -181,7 +180,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Листовки',
                 img: imagesStore.images.leaflets,
                 category: 'Футболки, текстиль',
-                description: "Где в Челябинске можно оперативно, качественно и недорого напечатать листовки и буклеты? Как эффективно донести до потребителя информацию о ваших товарах и услугах? Лучшее решение предлагает типография Sky Print — ведущий представитель на рынке полиграфических услуг Челябинска. Расскажите о продукции вашей компании, предстоящем мероприятии или планируемой акции с помощью наших красочных листовок и буклетов!",
+                description: "Эффективная реклама начинается с качественных материалов! Наши листовки и буклеты помогут донести вашу информацию до клиента в ярком и доступном формате. Мы предлагаем различные форматы и виды бумаги, а также возможность печати на экологически чистых материалах. Быстрая печать и доставка — наши главные преимущества.",
                 count: 'От 1000 шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость',
@@ -201,7 +200,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Буклеты',
                 img: imagesStore.images.booklets,
                 category: 'Футболки, текстиль',
-                description: "Где в Челябинске можно оперативно, качественно и недорого напечатать листовки и буклеты? Как эффективно донести до потребителя информацию о ваших товарах и услугах? Лучшее решение предлагает типография Sky Print — ведущий представитель на рынке полиграфических услуг Челябинска. Расскажите о продукции вашей компании, предстоящем мероприятии или планируемой акции с помощью наших красочных листовок и буклетов!",
+                description: "Эффективная реклама начинается с качественных материалов! Наши листовки и буклеты помогут донести вашу информацию до клиента в ярком и доступном формате. Мы предлагаем различные форматы и виды бумаги, а также возможность печати на экологически чистых материалах. Быстрая печать и доставка — наши главные преимущества.",
                 count: 'От 1000 шт',
                 details: {
                     estimatedCostTitle: 'ориентировочная стоимость',
@@ -221,7 +220,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Календари',
                 img: imagesStore.images.calendars,
                 category: 'Футболки, текстиль',
-                description: "Календарь-один из популярных видов сувенирной полиграфической продукции. Как правило такой сувенир размещают на самом видном месте в офисе, тем самым украшая его. Календарь несет в себе различную информацию о компании, являясь одним из наиболее действенных инструментов рекламы. Типография «Skyprint» разработает дизайн и изготовит для Вас любой из видов календарей: настольные, настенные, перекидные, квартальные, карманные, календари-домики.",
+                description: "Создайте персонализированный календарь, который будет радовать вас весь год! Мы предлагаем множество форматов и дизайнов, а также возможность добавления ваших фотографий и логотипов. Заказывая календари у нас, вы получаете уникальный продукт, который станет отличным подарком или рекламным материалом.",
                 count: 'От ? шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость',
@@ -257,7 +256,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Полноцветная лазерная печать',
                 img: imagesStore.images.laserPrinting,
                 category: 'Футболки, текстиль',
-                description: `В стоимость входит бумага Снегурочка 80 г/м. Цена может меняться в зависимости от типа бумаги.`,
+                description: `Наша полноцветная лазерная печать обеспечивает высокое качество изображения и яркие цвета. Идеально подходит для любых рекламных материалов, от буклетов до постеров. Мы гарантируем быструю обработку заказов и доступные цены.`,
                 count: 'От 1 шт',
                 details: {
                     estimatedCostTitle: 'за штуку',
@@ -278,7 +277,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Сканирование',
                 img: imagesStore.images.scanning,
                 category: 'Футболки, текстиль',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Сканирование документов — это удобно и быстро! Мы предлагаем услуги сканирования различных форматов с высоким качеством изображения. Обращаясь к нам, вы можете быть уверены в безопасности ваших материалов и оперативности выполнения заказа.",
                 count: 'От 1 шт',
                 details: {
                     estimatedCostTitle: 'за штуку',
@@ -298,7 +297,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Наклейки',
                 img: imagesStore.images.stickers,
                 category: 'Футболки, текстиль',
-                description: "Минимальная стоимость заказа - 300 руб! \nСтоимость на готовой цветной виниловой пленки может отличвться от прайса (уточнять у менеджера!) \nТермоплёнка - 1400 руб. кв.м.",
+                description: "Яркие наклейки — это отличный способ привлечь внимание к вашему бренду! Мы предлагаем печать наклеек любых форматов с индивидуальным дизайном. Высокое качество материалов и быстрое выполнение заказа делают нас вашим надежным партнером.",
                 count: 'От 10 шт',
                 details: {
                     estimatedCostTitle: 'за штуку',
@@ -318,7 +317,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Плоттерная резка',
                 img: imagesStore.images.plotterCutting,
                 category: 'Футболки, текстиль',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Плоттерная резка — это идеальное решение для создания уникальных рекламных материалов. Мы предлагаем резку на виниловой самоклеящейся пленке по вашим индивидуальным размерам и формам. Обращаясь к нам, вы получаете высокое качество исполнения и оперативность.",
                 count: 'От 10 шт',
                 details: {
                     estimatedCostTitle: 'за штуку',
@@ -337,9 +336,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Тиражирование',
                 img: imagesStore.images.replication,
                 category: 'Футболки, текстиль',
-                description: `При двустороней печачти и при печати на формате А3 стоимость удваивается. 
-При изготовлении копий с повышенным фоновым заполнением наценка до 50%.  
-Резка в зависимости от тиража и кол-ва резов 20-25% от стоимости заказа.`,
+                description: `Нужны большие тиражи? Мы готовы помочь! Наша типография предлагает услуги тиражирования с гарантией качества. Быстрая обработка заказов и доступные цены делают нас идеальным выбором для вашего бизнеса.`,
                 count: 'От 100 шт',
                 details: {
                     estimatedCostTitle: 'за штуку',
@@ -368,7 +365,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Блокноты',
                 img: imagesStore.images.notebooks,
                 category: 'Футболки, текстиль',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Создайте стильный блокнот на пружине с вашим дизайном! Мы предлагаем различные форматы и виды бумаги. Это отличный подарок для сотрудников или клиентов. Заказывая блокноты у нас, вы получаете высокое качество печати и быструю доставку.",
                 count: 'От 1 шт',
                 details: {
                     estimatedCostTitle: 'ориентировачная стоимость за штуку',
@@ -387,7 +384,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Постеры',
                 img: imagesStore.images.t_shirt,
                 category: 'Футболки, текстиль',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Наши постеры помогут вам выразить свои идеи ярко и запоминающе! Мы используем качественные материалы для печати, что обеспечивает насыщенные цвета и долговечность. Заказывая постеры у нас, вы получаете профессиональное исполнение вашего проекта.",
                 count: 'От 10 шт',
                 details: {
                     estimatedCostTitle: 'за штуку',
@@ -409,7 +406,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Баннеры',
                 img: imagesStore.images.t_shirt,
                 category: 'Прочее',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Ищете способ привлечь внимание? Наши баннеры и штендеры идеально подходят для рекламы на мероприятиях или в магазинах. Мы предлагаем различные размеры и материалы, а также возможность индивидуального дизайна. Высокое качество печати гарантировано!",
                 count: 'От 10 шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость за штуку',
@@ -434,7 +431,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Штендер',
                 img: imagesStore.images.t_shirt,
                 category: 'Прочее',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Ищете способ привлечь внимание? Наши баннеры и штендеры идеально подходят для рекламы на мероприятиях или в магазинах. Мы предлагаем различные размеры и материалы, а также возможность индивидуального дизайна. Высокое качество печати гарантировано!",
                 count: 'От 10 шт',
                 details: {
                     estimatedCostTitle: 'ориентировачная стоимостьза штуку',
@@ -453,7 +450,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Roll-up',
                 img: imagesStore.images.RollUp,
                 category: 'Прочее',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Roll-up — это удобное решение для презентаций и выставок! Легкий и компактный, он легко транспортируется и устанавливается. Заказывая roll-up у нас, вы получаете качественную печать и возможность создания индивидуального дизайна.",
                 count: 'От 10 шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость за штуку',
@@ -474,7 +471,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Пластиковые карты',
                 img: imagesStore.images.plasticCards,
                 category: 'Прочее',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Создайте уникальные пластиковые карты для вашего бизнеса! Мы предлагаем различные форматы и варианты отделки, включая разные фактуры и эмбоссирование. Высокое качество материалов гарантирует долговечность ваших карт.",
                 count: 'От 10 шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость за штуку',
@@ -497,7 +494,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Изготовление планшетов, табличек, стендов',
                 img: imagesStore.images.t_shirt,
                 category: 'Прочее',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Мы предлагаем услуги по изготовлению планшетов, табличек из ПВХ пластика. Это идеальное решение для оформления офисов или выставок. Высокое качество исполнения и индивидуальный подход к каждому заказу — наши главные преимущества.",
                 count: 'От 10 шт',
                 details: {
                     estimatedCostTitle: 'за штуку',
@@ -519,7 +516,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Пакеты ПВД',
                 img: imagesStore.images.packages,
                 category: 'Прочее',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Экологичные пакеты ПВД — это удобный способ упаковки товаров! Мы предлагаем различные размеры и возможность нанесения логотипа. Заказывая пакеты у нас, вы поддерживаете экологические инициативы и получаете качественный продукт.",
                 count: 'От ? шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость',
@@ -539,7 +536,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Кружки',
                 img: imagesStore.images.mugs,
                 category: 'Прочее',
-                description: "В асортименте появля.тся новые цвета у поставщиков, уточнять у менеджера.",
+                description: "Персонализированные кружки — это отличный подарок или рекламный материал! Мы предлагаем печать на кружках с вашим дизайном или логотипом. Высокое качество печати гарантировано!",
                 count: 'От 1 шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость за штуку',
@@ -561,7 +558,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Силиконовые браслеты',
                 img: imagesStore.images.siliconeBracelets,
                 category: 'Прочее',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Силиконовые браслеты — это модный аксессуар для мероприятий или акций! Мы предлагаем разнообразные цвета и возможность нанесения текста или логотипа. Заказывая браслеты у нас, вы получаете качественный продукт по доступной цене.",
                 count: 'От 100 шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость за штуку',
@@ -582,7 +579,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Закатные экспресс-значки',
                 img: imagesStore.images.badges,
                 category: 'Прочее',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Создайте уникальные значки для мероприятий или акций! Наши закатные значки легко носить и они привлекают внимание. Быстрое изготовление и возможность индивидуального дизайна делают нас вашим надежным партнером.",
                 count: 'От 10 шт',
                 details: {
                     estimatedCostTitle: 'ориент. стоимость за штуку (37мм диаметр)',
@@ -602,7 +599,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Струйная печать фотографий',
                 img: imagesStore.images.studioPhotoPrinting,
                 category: 'Прочее',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Получите высококачественные фотографии с нашей студийной печатью! Мы используем современные технологии для достижения насыщенных цветов и детализации. Быстрая обработка заказов гарантирована!",
                 count: 'От ? шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость',
@@ -622,7 +619,7 @@ export const useProductStore = defineStore('product', {
                 name: 'Диски',
                 img: imagesStore.images.disks,
                 category: 'Прочее',
-                description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A perferendis dolor veritatis, voluptas magnam itaque voluptatem ullam eveniet earum inventore at ratione quis dolorem minima quisquam temporibus quae asperiores quasi.",
+                description: "Ищете надежное решение для хранения данных? Наши диски обеспечивают высокое качество записи и долговечность.",
                 count: 'От 100 шт',
                 details: {
                     estimatedCostTitle: 'Ориентировочная стоимость за штуку',

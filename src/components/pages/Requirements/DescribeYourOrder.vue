@@ -61,6 +61,7 @@ export default {
             position: relative;
             padding: 28px;
             box-sizing: border-box;
+            border-radius: 5px;
             &_title {
                 font-size: 16px;
                 font-weight: bold;

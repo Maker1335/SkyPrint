@@ -79,6 +79,14 @@ export default {
   grid-area: footer;
 }
 
+@media (max-width: 1537px) {
+  #app {
+    width: 1349px;
+  width: calc(100% + 369px);
+
+  }
+}
+
 @media (max-width: 1367px) {
   #app {
     width: 1349px;

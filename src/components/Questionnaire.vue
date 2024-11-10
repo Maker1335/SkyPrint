@@ -71,6 +71,7 @@ export default {
                 font-size: 16px;
                 color: #80AAA8;
                 padding-left: 10px;
+                padding-right: 10px;
                 background: #F4F4F4;
                 border: 0px;
                 box-sizing: border-box;
@@ -95,6 +96,7 @@ export default {
                 font-weight: bold;
                 color: #27625F;
                 transition: all 0.5s;
+                border: 1px solid #27625F;
 
                 &:hover {
                     background-image: url(../assets/img/background.png);

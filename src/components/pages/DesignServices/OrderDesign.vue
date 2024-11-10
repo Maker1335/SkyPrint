@@ -32,7 +32,7 @@ export default {
 .order-design {
     margin-bottom: 70px;
     background-image: url("../../../assets/img/background.png");
-
+    border-radius: 5px;
     .wrapper {
         display: flex;
         justify-content: space-between;

@@ -31,6 +31,7 @@ export default {
     padding: 35px 25px;
     box-sizing: border-box;
     background-color: #F5F5F5;
+    border-radius: 5px;
     &_title {
         font-size: 26px;
         font-weight: bold;

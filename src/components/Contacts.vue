@@ -51,7 +51,7 @@
 <script>
 import phoneIcon from '../assets/img/pages/MainPage/Contacts/phone.svg'
 import emailIcon from '../assets/img/pages/MainPage/Contacts/email.svg'
-import whatsappIcon from '../assets/img/pages/MainPage/Contacts/whatsapp.jpg'
+import whatsappIcon from '../assets/img/pages/MainPage/Contacts/WhatsApp.svg'
 import telegramIcon from '../assets/img/pages/MainPage/Contacts/telegram.svg'
 import vkIcon from '../assets/img/pages/MainPage/Contacts/vk.svg'
 
@@ -194,6 +194,7 @@ export default {
                 width: 340px;
                 background: #F6F6F6;
                 justify-content: center;
+                border-radius: 8px;
 
                 &_addre {
                     font-size: 20px;
@@ -222,6 +223,7 @@ export default {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                border-radius: 8px;
 
                 img {
                     width: 33px;
@@ -234,6 +236,7 @@ export default {
             margin-top: 10px;
             width: 100%;
             height: 549px;
+            border-radius: 8px;
         }
     }
 }
