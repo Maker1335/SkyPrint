@@ -261,6 +261,7 @@ export default {
                 }
 
                 &_content {
+                    width: auto;
                     margin-left: 32px;
                     font-size: 14px;
                     grid-area: content;

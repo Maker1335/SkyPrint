@@ -1,11 +1,8 @@
 <template>
     <div :class="['header', { 'menu-open': isMenuOpen }]">
         <div class="wrapper">
-            <ul>
-                <!-- <div class="search-container"><img src="../../src/assets/img/header/search.svg" alt="search"
-                        class="search-icon">
-                    <input type="text" class="search-input" placeholder="поиск">
-                </div> -->
+            <div class="linkList">
+                <ul class="linkList_left">
                 <li><router-link to="/">Главная</router-link></li>
                 <li><router-link to="/catalog">Каталог</router-link></li>
                 <li><router-link to="/aboutUs">О нас</router-link></li>
@@ -13,6 +10,8 @@
                 <li><router-link to="/requirements">Требования к макету</router-link></li>
                 <li><router-link to="/delivery">Доставка</router-link></li>
                 <li><router-link to="/contacts">Контакты</router-link></li>
+            </ul>
+            <ul class="linkList_right">
                 <li class="save">
                     <a href="#">
                         <p><img class="save_img" src="../../src/assets/img/header/save.svg" alt="save">
@@ -26,7 +25,9 @@
                             <p class="save_item_count">{{ product.count }}</p>
                         </li>
                         <li v-if="savedProducts.length == 0" class="save_item">
-                            <p style="color: #27625F;  width: auto; position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%); font-weight: bold; font-size: 24px;">Нет товаров</p>
+                            <p
+                                style="color: #27625F;  width: auto; position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%); font-weight: bold; font-size: 24px;">
+                                Нет товаров</p>
                         </li>
                     </ul>
                 </li>
@@ -44,6 +45,8 @@
                     </ul>
                 </li>
             </ul>
+            </div>
+            
             <BurgerMenu @toggle-menu="handleMenuToggle" />
         </div>
     </div>
@@ -113,6 +116,17 @@ export default {
 
     .wrapper {
         height: 85px;
+    }
+    .linkList{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        &_left {
+            width: 70%;
+        }
+        &_right {
+            width: 15%;
+        }
     }
 
     ul {

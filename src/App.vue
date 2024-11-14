@@ -48,8 +48,9 @@ export default {
 <style lang="scss" scoped>
 #app {
   min-height: 100vh;
-  width: 1920px;
-  width: 100%;
+  //width: 1920px;
+  //width: 100%;
+  width: max-content;
   margin: 0 auto;
   display: grid;
   grid-template-rows: 1fr auto;
@@ -77,14 +78,6 @@ export default {
 
 .footer {
   grid-area: footer;
-}
-
-@media (max-width: 1537px) {
-  #app {
-    width: 1349px;
-  width: calc(100% + 369px);
-
-  }
 }
 
 @media (max-width: 1367px) {

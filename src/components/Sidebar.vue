@@ -323,8 +323,7 @@ export default {
     }
 }
 
-//@media (max-width: 1367px) {
-    @media (max-width: 1537px) {
+@media (max-width: 1367px) {
     .sidebar {
         width: 294px;
         height: 800px;

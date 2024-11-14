@@ -54,6 +54,19 @@ import standerPrices from '../../assets/img/goods/prices/standerPrices.svg'
 import replication from '../../assets/img/goods/img/replication.webp'
 import replicationPrices from '../../assets/img/goods/prices/replicationPrices.svg'
 
+
+import b_w_print from '../../assets/img/goods/img/b_w_print.webp'
+import plates from '../../assets/img/goods/img/plates.webp'
+import thermo_mug from '../../assets/img/goods/img/thermo_mug.webp'
+import thermos from '../../assets/img/goods/img/thermos.webp'
+import magnets from '../../assets/img/goods/img/magnets.webp'
+import glasses from '../../assets/img/goods/img/glasses.webp'
+import keychain from '../../assets/img/goods/img/keychain.webp'
+import mouse_pad from '../../assets/img/goods/img/mouse_pad.webp'
+import puzzles from '../../assets/img/goods/img/puzzles.webp'
+import thermos_cup from '../../assets/img/goods/img/thermos_cup.webp'
+
+
 import makingPrices from '../../assets/img/goods/prices/makingPrices.svg'
 import car from '../../assets/img/goods/img/car.webp'
 
@@ -114,7 +127,17 @@ export const useImagesStore = defineStore('images', {
             replication,
             replicationPrices,
             makingPrices,
-            car
+            car,
+            b_w_print,
+            plates,
+            thermo_mug,
+            thermos,
+            magnets,
+            glasses,
+            keychain,
+            mouse_pad,
+            puzzles,
+            thermos_cup
         },
     })
 })
