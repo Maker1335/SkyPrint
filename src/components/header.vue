@@ -3,50 +3,50 @@
         <div class="wrapper">
             <div class="linkList">
                 <ul class="linkList_left">
-                <li><router-link to="/">Главная</router-link></li>
-                <li><router-link to="/catalog">Каталог</router-link></li>
-                <li><router-link to="/aboutUs">О нас</router-link></li>
-                <li><router-link to="/payment">Оплата</router-link></li>
-                <li><router-link to="/requirements">Требования к макету</router-link></li>
-                <li><router-link to="/delivery">Доставка</router-link></li>
-                <li><router-link to="/contacts">Контакты</router-link></li>
-            </ul>
-            <ul class="linkList_right">
-                <li class="save">
-                    <a href="#">
-                        <p><img class="save_img" src="../../src/assets/img/header/save.svg" alt="save">
-                            {{ savedProducts.length }}</p>
-                    </a>
-                    <ul class="save_list">
-                        <li v-if="savedProducts.length >= 1" v-for="product in savedProducts" :key="product.id"
-                            class="save_item">
-                            <img class="save_item_img" :src="product.img" alt="">
-                            <p class="save_item_title">{{ product.name }} <img :src="product.save" alt=""></p>
-                            <p class="save_item_count">{{ product.count }}</p>
-                        </li>
-                        <li v-if="savedProducts.length == 0" class="save_item">
-                            <p
-                                style="color: #27625F;  width: auto; position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%); font-weight: bold; font-size: 24px;">
-                                Нет товаров</p>
-                        </li>
-                    </ul>
-                </li>
-                <li class="email"><a
-                        href="https://mail.google.com/mail/?view=cm&fs=1&to=example@example.com&su=Hello&body=Message%20body"><img
-                            src="../../src/assets/img/header/email.svg" alt="email"></a> </li>
-                <li class="phone"><a href="#"><img src="../../src/assets/img/header/phone.svg" alt="phone"></a>
-                    <ul class="phone_list">
-                        <li><button @click="copyText('7(351)248-72-87')"> <img
-                                    src="../../src/assets/img/header/phone1.svg" alt="phone"> </button></li>
-                        <li><a href="https://t.me/skyprint174_bot"><img src="../../src/assets/img/header/telegram.svg"
-                                    alt="telegram"></a></li>
-                        <li><a href="https://vk.com/skyprint74"><img src="../../src/assets/img/header/vk.svg"
-                                    alt="vk"></a></li>
-                    </ul>
-                </li>
-            </ul>
+                    <li><router-link to="/">Главная</router-link></li>
+                    <li><router-link to="/catalog">Каталог</router-link></li>
+                    <li><router-link to="/aboutUs">О нас</router-link></li>
+                    <li><router-link to="/payment">Оплата</router-link></li>
+                    <li><router-link to="/requirements">Требования к макету</router-link></li>
+                    <li><router-link to="/delivery">Доставка</router-link></li>
+                    <li><router-link to="/contacts">Контакты</router-link></li>
+                </ul>
+                <ul class="linkList_right">
+                    <li class="save">
+                        <a href="#">
+                            <p><img class="save_img" src="../../src/assets/img/header/save.svg" alt="save">
+                                {{ savedProducts.length }}</p>
+                        </a>
+                        <ul class="save_list">
+                            <li v-if="savedProducts.length >= 1" v-for="product in savedProducts" :key="product.id"
+                                class="save_item">
+                                <img class="save_item_img" :src="product.img" alt="">
+                                <p class="save_item_title">{{ product.name }} <img :src="product.save" alt=""></p>
+                                <p class="save_item_count">{{ product.count }}</p>
+                            </li>
+                            <li v-if="savedProducts.length == 0" class="save_item">
+                                <p
+                                    style="color: #27625F;  width: auto; position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%); font-weight: bold; font-size: 24px;">
+                                    Нет товаров</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="email"><a
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=example@example.com&su=Hello&body=Message%20body"><img
+                                src="../../src/assets/img/header/email.svg" alt="email"></a> </li>
+                    <li class="phone"><a href="#"><img src="../../src/assets/img/header/phone.svg" alt="phone"></a>
+                        <ul class="phone_list">
+                            <li><button @click="copyText('7(351)248-72-87')"> <img
+                                        src="../../src/assets/img/header/phone1.svg" alt="phone"> </button></li>
+                            <li><a href="https://t.me/skyprint174_bot"><img
+                                        src="../../src/assets/img/header/telegram.svg" alt="telegram"></a></li>
+                            <li><a href="https://vk.com/skyprint74"><img src="../../src/assets/img/header/vk.svg"
+                                        alt="vk"></a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            
+
             <BurgerMenu @toggle-menu="handleMenuToggle" />
         </div>
     </div>
@@ -117,13 +117,16 @@ export default {
     .wrapper {
         height: 85px;
     }
-    .linkList{
+
+    .linkList {
         height: 100%;
         display: flex;
         justify-content: space-between;
+
         &_left {
             width: 70%;
         }
+
         &_right {
             width: 15%;
         }
@@ -330,6 +333,9 @@ export default {
 @media (max-width: 700px) {
     .header {
         width: 100%;
+        .linkList {
+            height: 0px;
+        }
 
         &.menu-open {
             background-color: #EFEFEF;

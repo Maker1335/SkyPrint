@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 938.93 256.13">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Mulish-Bold, Mulish;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #27625f;
+        font-size: 16px;
+      }
+
+      .cls-3 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-4, .cls-5 {
+        stroke: #a0b6b5;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-6 {
+        letter-spacing: .01em;
+      }
+
+      .cls-2 {
+        font-family: Mulish-SemiBold, Mulish;
+        font-weight: 600;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="_Слой_1-2" data-name="Слой 1">
+    <g>
+      <g>
+        <rect class="cls-4" x=".5" y=".5" width="937.93" height="229.7" rx="10" ry="10"/>
+        <line class="cls-5" x1="938.43" y1="46.44" x2=".5" y2="46.44"/>
+        <line class="cls-5" x1="938.43" y1="92.38" x2=".5" y2="92.38"/>
+        <line class="cls-5" x1="938.43" y1="138.32" x2=".5" y2="138.32"/>
+        <line class="cls-5" x1="938.43" y1="184.26" x2=".5" y2="184.26"/>
+        <line class="cls-5" x1="423.52" y1="230.2" x2="423.52" y2="46.44"/>
+        <line class="cls-5" x1="680.97" y1="230.2" x2="680.97" y2="46.44"/>
+      </g>
+      <g>
+        <text class="cls-1" transform="translate(189.72 119.85)"><tspan class="cls-3" x="0" y="0">Т</tspan><tspan x="8.66" y="0">екст</tspan></text>
+        <text class="cls-1" transform="translate(179.42 74.76)"><tspan x="0" y="0">Формат</tspan></text>
+        <text class="cls-1" transform="translate(19.12 28.33)"><tspan x="0" y="0">Черн</tspan><tspan class="cls-6" x="40.42" y="0">о</tspan><tspan x="50.35" y="0">-белая печать на лазерном прин</tspan><tspan class="cls-7" x="315.69" y="0">т</tspan><tspan x="323.36" y="0">ере</tspan></text>
+        <text class="cls-1" transform="translate(172.09 163.94)"><tspan x="0" y="0">Картинка</tspan></text>
+        <text class="cls-2" transform="translate(187.5 210.02)"><tspan x="0" y="0">DOCU</tspan></text>
+        <text class="cls-2" transform="translate(539.45 119.85)"><tspan x="0" y="0">5 </tspan><tspan class="cls-8" x="13.87" y="0">р</tspan><tspan x="23.55" y="0">.</tspan></text>
+        <text class="cls-1" transform="translate(542.32 74.76)"><tspan x="0" y="0">А4</tspan></text>
+        <text class="cls-2" transform="translate(539.45 163.94)"><tspan x="0" y="0">8 </tspan><tspan class="cls-8" x="13.87" y="0">р</tspan><tspan x="23.55" y="0">.</tspan></text>
+        <text class="cls-2" transform="translate(534.65 210.02)"><tspan x="0" y="0">25 </tspan><tspan class="cls-8" x="23.47" y="0">р</tspan><tspan x="33.15" y="0">.</tspan></text>
+        <text class="cls-2" transform="translate(19.12 251.76)"><tspan x="0" y="0">Бумага снегурочка 80 г</tspan><tspan class="cls-9" x="187.26" y="0">р</tspan><tspan x="196.94" y="0">.</tspan></text>
+        <text class="cls-2" transform="translate(789.78 119.85)"><tspan x="0" y="0">10 </tspan><tspan class="cls-8" x="23.47" y="0">р</tspan><tspan x="33.15" y="0">.</tspan></text>
+        <text class="cls-1" transform="translate(797.45 74.76)"><tspan x="0" y="0">А3</tspan></text>
+        <text class="cls-2" transform="translate(789.78 163.94)"><tspan x="0" y="0">16 </tspan><tspan class="cls-8" x="23.47" y="0">р</tspan><tspan x="33.15" y="0">.</tspan></text>
+        <text class="cls-2" transform="translate(789.78 210.02)"><tspan x="0" y="0">50 </tspan><tspan class="cls-8" x="23.47" y="0">р</tspan><tspan x="33.15" y="0">.</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

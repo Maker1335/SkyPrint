@@ -636,8 +636,8 @@ export const useProductStore = defineStore('product', {
             },
             {
                 id: 30,
-                name: 'Черно-белая печать ',
-                img: imagesStore.images.disks,
+                name: 'Черно-белая печать',
+                img: imagesStore.images.b_w_print,
                 category: 'Сувениры',
                 description: "Наша черно-белая печать на лазерном принтере — идеальный выбор для создания четких и профессиональных документов. Выбирая нашу типографию, вы получаете надежность и индивидуальный подход, а также возможность печати больших объемов по доступным ценам.",
                 count: 'От 100 шт',
@@ -650,7 +650,7 @@ export const useProductStore = defineStore('product', {
                     },
                 },
                 prices: [
-                    imagesStore.images.disksPrices,
+                    imagesStore.images.b_w_printPrices,
                 ],
                 save: false
             },{
@@ -675,7 +675,7 @@ export const useProductStore = defineStore('product', {
             },{
                 id: 32,
                 name: 'Печать чертежей',
-                img: imagesStore.images.b_w_print,
+                img: imagesStore.images.disks,
                 category: 'Сувениры',
                 description: "Мы предлагаем услуги печати чертежей с высокой точностью и четкостью. Наша типография использует современное оборудование, что позволяет гарантировать качество даже для самых сложных проектов. Быстрая обработка заказов и индивидуальный подход к каждому клиенту делают нас надежным партнером для архитекторов и инженеров. Заказывая печать у нас, вы можете быть уверены в отличном результате!",
                 count: 'От 100 шт',

@@ -56,6 +56,7 @@ import replicationPrices from '../../assets/img/goods/prices/replicationPrices.s
 
 
 import b_w_print from '../../assets/img/goods/img/b_w_print.webp'
+import b_w_printPrices from '../../assets/img/goods/prices/b_w_printPrices.svg'
 import plates from '../../assets/img/goods/img/plates.webp'
 import thermo_mug from '../../assets/img/goods/img/thermo_mug.webp'
 import thermos from '../../assets/img/goods/img/thermos.webp'
@@ -129,6 +130,7 @@ export const useImagesStore = defineStore('images', {
             makingPrices,
             car,
             b_w_print,
+            b_w_printPrices,
             plates,
             thermo_mug,
             thermos,
