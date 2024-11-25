@@ -140,6 +140,7 @@ $goodsBG: "../assets/img/background.png";
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
     }
 
     .all-categories {

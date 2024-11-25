@@ -62,8 +62,8 @@ export default {
         }
         &_img {
             z-index: 1;
-            width: 81px;
-            height: 81px;
+            width: 61px;
+            height: 61px;
             img {
                 width: 100%;
                 height: 100%;
@@ -80,6 +80,7 @@ export default {
         background-image: url("../../../assets/img/background.png");
         background-size: cover;
         opacity: 0;
+        border-radius: 5px;
         transition: opacity 0.5s ease;
     }
     &:hover {

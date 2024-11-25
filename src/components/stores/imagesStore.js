@@ -4,7 +4,7 @@ import pens from '../../assets/img/goods/img/pens.svg'
 import pensPrices from '../../assets/img/goods/prices/pensPrices.svg'
 import canvases from '../../assets/img/goods/img/canvases.webp'
 import canvasesPrices from '../../assets/img/goods/prices/canvasesPrices.svg'
-import lamination from '../../assets/img/goods/img/lamination.svg'
+import lamination from '../../assets/img/goods/img/lamination.webp'
 import laminationPrices from '../../assets/img/goods/prices/laminationPrices.svg'
 import magneticVinyl from '../../assets/img/goods/img/magneticVinyl.svg'
 import magneticVinylPrice from '../../assets/img/goods/prices/magneticVinylPrices.svg'
@@ -44,16 +44,18 @@ import leaflets from '../../assets/img/goods/img/leaflets.svg'
 import leafletsPrices from '../../assets/img/goods/prices/leafletsPrices.svg'
 import scanning from '../../assets/img/goods/img/scanning.svg'
 import scanningPrices from '../../assets/img/goods/prices/scanningPrices.svg'
+import poster from '../../assets/img/goods/img/poster.webp'
 import postersPrices from '../../assets/img/goods/prices/postersPrices.svg'
+import banner from '../../assets/img/goods/img/banner.webp'
 import bannersPrices from '../../assets/img/goods/prices/bannersPrices.svg'
 import RollUp from '../../assets/img/goods/img/RollUp.webp'
 import Roll_upPrices from '../../assets/img/goods/prices/Roll_upPrices.svg'
 import studioPhotoPrinting from '../../assets/img/goods/img/studioPhotoPrinting.webp'
 import studioPhotoPrintingPrices from '../../assets/img/goods/prices/studioPhotoPrintingPrices.svg'
+import stander from '../../assets/img/goods/img/stander.webp'
 import standerPrices from '../../assets/img/goods/prices/standerPrices.svg'
 import replication from '../../assets/img/goods/img/replication.webp'
 import replicationPrices from '../../assets/img/goods/prices/replicationPrices.svg'
-
 
 import b_w_print from '../../assets/img/goods/img/b_w_print.webp'
 import b_w_printPrices from '../../assets/img/goods/prices/b_w_printPrices.svg'
@@ -66,7 +68,16 @@ import keychain from '../../assets/img/goods/img/keychain.webp'
 import mouse_pad from '../../assets/img/goods/img/mouse_pad.webp'
 import puzzles from '../../assets/img/goods/img/puzzles.webp'
 import thermos_cup from '../../assets/img/goods/img/thermos_cup.webp'
+import baseballCaps from '../../assets/img/goods/img/baseballCaps.webp'
 
+import flipCalendars from '../../assets/img/goods/img/flipCalendars.webp'
+import flipCalendarsPrices from '../../assets/img/goods/prices/flipCalendarsPrices.svg'
+import quarterlyCalendars from '../../assets/img/goods/img/quarterlyCalendars.webp'
+import quarterlyCalendarsPrices from '../../assets/img/goods/prices/quarterlyCalendarsPrices.svg'
+import pocketCalendars from '../../assets/img/goods/img/pocketCalendars.webp'
+import pocketCalendarsPrices from '../../assets/img/goods/prices/pocketCalendarsPrices.svg'
+import housesCalendars from '../../assets/img/goods/img/housesCalendars.webp'
+import housesCalendarsPrices from '../../assets/img/goods/prices/housesCalendarsPrices.svg'
 
 import makingPrices from '../../assets/img/goods/prices/makingPrices.svg'
 import car from '../../assets/img/goods/img/car.webp'
@@ -118,12 +129,15 @@ export const useImagesStore = defineStore('images', {
             leafletsPrices,
             scanning,
             scanningPrices,
+            poster,
             postersPrices,
+            banner,
             bannersPrices,
             RollUp,
             Roll_upPrices,
             studioPhotoPrinting,
             studioPhotoPrintingPrices,
+            stander,
             standerPrices,
             replication,
             replicationPrices,
@@ -139,7 +153,16 @@ export const useImagesStore = defineStore('images', {
             keychain,
             mouse_pad,
             puzzles,
-            thermos_cup
+            thermos_cup,
+            baseballCaps,
+            flipCalendars,
+            flipCalendarsPrices,
+            quarterlyCalendars,
+            quarterlyCalendarsPrices,
+            pocketCalendars,
+            pocketCalendarsPrices,
+            housesCalendars,
+            housesCalendarsPrices
         },
     })
 })

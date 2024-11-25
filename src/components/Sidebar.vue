@@ -90,7 +90,7 @@ export default {
     methods: {
         setHoveredCategory(category) {
             this.hoveredCategory = category;
-            this.topPosition = event.target.getBoundingClientRect().top / 1.7;
+            this.topPosition = event.target.getBoundingClientRect().top-166;
             this.leftPosition = event.target.getBoundingClientRect().left;
         },
         clearHoveredCategory() {
@@ -132,7 +132,7 @@ export default {
     .service-list {
         list-style-type: none;
         width: 100%;
-        position: relative;
+        //position: relative;
 
         li {
             margin-bottom: 10px;
@@ -215,6 +215,7 @@ export default {
             a {
                 text-decoration: none;
                 height: 103px;
+                padding: 0;
 
                 &::after {
                     content: none;
@@ -263,8 +264,8 @@ export default {
 
         &:hover .goods-list {
             left: 100%;
-            transition: all 1s ease-out;
-            max-width: 1500px;
+            //transition: all 1s ease-out;
+            //max-width: 1500px;
             opacity: 1;
             visibility: visible;
             overflow: hidden;
@@ -302,6 +303,7 @@ export default {
 
         &:hover::before {
             opacity: 1;
+        border-radius: 5px;
         }
 
         p {
