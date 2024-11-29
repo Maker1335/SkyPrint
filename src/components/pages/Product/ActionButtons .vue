@@ -59,31 +59,22 @@ export default {
                 opacity: 0;
                 background-size: cover;
                 transition: opacity 0.5s;
-                z-index: -1; /* Устанавливаем z-index ниже, чем у кнопки */
+                z-index: -1;
             }
     
             &:hover::before {
                 opacity: 1;
+                border-radius: 8px; 
             }
         }
     }
 
     &_submit-application {
         background-color: #CEFFFD;
-
-        //&:hover {
-        //    background-color: #EAEAEA;
-        //    transition: background-color 0.5s;
-        //}
     }
 
     &_designer-services {
         background-color: #EAEAEA;
-
-        //&:hover {
-        //    background-color: #CEFFFD;
-        //    transition: background-color 0.5s;
-        //}
     }
 }
 

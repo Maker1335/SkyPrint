@@ -55,6 +55,7 @@ $goodsBG: "../../../assets/img/background.png";
   background-size: cover;
   height: 941px;
   position: relative;
+  border-radius: 0 0 0 10px;
 
   .wrapper {
     .content {

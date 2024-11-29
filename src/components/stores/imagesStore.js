@@ -81,6 +81,7 @@ import housesCalendarsPrices from '../../assets/img/goods/prices/housesCalendars
 
 import makingPrices from '../../assets/img/goods/prices/makingPrices.svg'
 import car from '../../assets/img/goods/img/car.webp'
+import printingOfDrawings from '../../assets/img/goods/img/printingOfDrawings.webp'
 
 export const useImagesStore = defineStore('images', {
     state: () => ({
@@ -162,7 +163,8 @@ export const useImagesStore = defineStore('images', {
             pocketCalendars,
             pocketCalendarsPrices,
             housesCalendars,
-            housesCalendarsPrices
+            housesCalendarsPrices,
+            printingOfDrawings
         },
     })
 })

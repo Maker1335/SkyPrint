@@ -50,7 +50,7 @@
 
 <script>
 import phoneIcon from '../assets/img/pages/MainPage/Contacts/phone.svg'
-import emailIcon from '../assets/img/pages/MainPage/Contacts/email.svg'
+import emailIcon from '../assets/img/header/email.svg'
 import whatsappIcon from '../assets/img/pages/MainPage/Contacts/WhatsApp.svg'
 import telegramIcon from '../assets/img/pages/MainPage/Contacts/telegram.svg'
 import vkIcon from '../assets/img/pages/MainPage/Contacts/vk.svg'
@@ -154,7 +154,7 @@ export default {
 
             &_email {
                 display: flex;
-                align-items: center;
+                align-items: flex-end;
                 margin-left: 20px;
                 font-size: 20px;
 

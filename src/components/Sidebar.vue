@@ -10,27 +10,32 @@
                     <img :src="category.img" :alt="category.name">
                     <p>{{ category.name }}</p>
                 </a>
-                <ul v-if="hoveredCategory === category.name && filteredProducts.length > 0" class="goods-list" :style="{ top: topPosition + 'px' }">
+                <ul v-if="hoveredCategory === category.name && filteredProducts.length > 0" class="goods-list"
+                    :style="{ top: topPosition + 'px' }">
                     <router-link :to="{ name: 'Product', params: { id: product.id } }"
                         v-for="product in filteredProducts" :key="product.id">
                         <li class="goods-list_item">
                             <img class="goods-list_item_img" :src="product.img" alt="фото товара">
                             <p class="goods-list_item_title">
                                 {{ product.name }}
-                                <img class="goods-list_item_save" :src="product.save ? saveIconOn : saveIconOff"  @click="toggleSave(product.id, $event)" 
-                                    alt="фото закладки">
+                                <img class="goods-list_item_save" :src="product.save ? saveIconOn : saveIconOff"
+                                    @click="toggleSave(product.id, $event)" alt="фото закладки">
                             </p>
                             <p class="goods-list_item_count">{{ product.count }}</p>
                         </li>
                     </router-link>
                 </ul>
-                <ul v-show="hoveredCategory === category.name && filteredProducts.length >= 0" v-else class="goods-list" :style="{ top: topPosition + 'px' }">
+                <ul v-show="hoveredCategory === category.name && filteredProducts.length >= 0" v-else class="goods-list"
+                    :style="{ top: topPosition + 'px' }">
                     <li class="goods-list_item">
-                    <img class="goods-list_item_img" src="https://interkomitet.ru/wp-content/uploads/2022/12/Bez-imeni-1-400x320.jpg" alt="фото товара" :style="{ width: '150px', height: '100%' }"> 
-                    <p class="goods-list_item_title" :style="{ color: '#27625F', fontWeight: 'bold', fontSize: '32px' }">
-                        Нет товаров
-                    </p>
-                </li>
+                        <img class="goods-list_item_img"
+                            src="https://interkomitet.ru/wp-content/uploads/2022/12/Bez-imeni-1-400x320.jpg"
+                            alt="фото товара" :style="{ width: '150px', height: '100%' }">
+                        <p class="goods-list_item_title"
+                            :style="{ color: '#27625F', fontWeight: 'bold', fontSize: '32px' }">
+                            Нет товаров
+                        </p>
+                    </li>
                 </ul>
             </li>
         </ul>
@@ -90,7 +95,7 @@ export default {
     methods: {
         setHoveredCategory(category) {
             this.hoveredCategory = category;
-            this.topPosition = event.target.getBoundingClientRect().top-166;
+            this.topPosition = event.target.getBoundingClientRect().top - 166;
             this.leftPosition = event.target.getBoundingClientRect().left;
         },
         clearHoveredCategory() {
@@ -303,13 +308,14 @@ export default {
 
         &:hover::before {
             opacity: 1;
-        border-radius: 5px;
+            border-radius: 5px;
         }
 
         p {
             margin-left: 18px;
             z-index: 1;
-        }
+        font-weight: bold;
+    }
 
         &::after {
             content: '';

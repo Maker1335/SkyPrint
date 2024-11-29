@@ -9,6 +9,7 @@
                     <li><router-link to="/payment">Оплата</router-link></li>
                     <li><router-link to="/requirements">Требования к макету</router-link></li>
                     <li><router-link to="/delivery">Доставка</router-link></li>
+                    <li><router-link to="/DesignServices">Услуги дизайнера</router-link></li>
                     <li><router-link to="/contacts">Контакты</router-link></li>
                 </ul>
                 <ul class="linkList_right">
@@ -113,6 +114,7 @@ export default {
 .header {
     width: 100%;
     background: #EFEFEF;
+    border-radius: 0 0 0 10px;
 
     .wrapper {
         height: 85px;
@@ -124,7 +126,7 @@ export default {
         justify-content: space-between;
 
         &_left {
-            width: 70%;
+            width: 65%;
         }
 
         &_right {

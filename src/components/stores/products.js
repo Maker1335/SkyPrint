@@ -221,10 +221,10 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.flipCalendars,
                     category: 'Полиграфия',
                     description: "Создайте персонализированный календарь, который будет радовать вас весь год! Мы предлагаем множество форматов и дизайнов, а также возможность добавления ваших фотографий и логотипов. Заказывая календари у нас, вы получаете уникальный продукт, который станет отличным подарком или рекламным материалом.",
-                    count: 'От ? шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость',
-                        estimatedCostPrice: '?? ₽',
+                        estimatedCostPrice: 'от 687 ₽',
                         customFields: {
                             'Вид календаря': ['Перекидные календари'],
                             'Вид календаря': ['Календарь перекидной, формат А4', 'Календарь перекидной, формат А3'],
@@ -242,10 +242,10 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.housesCalendars,
                     category: 'Полиграфия',
                     description: "Создайте персонализированный календарь, который будет радовать вас весь год! Мы предлагаем множество форматов и дизайнов, а также возможность добавления ваших фотографий и логотипов. Заказывая календари у нас, вы получаете уникальный продукт, который станет отличным подарком или рекламным материалом.",
-                    count: 'От ? шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость',
-                        estimatedCostPrice: '?? ₽',
+                        estimatedCostPrice: 'от 212 ₽ за штуку',
                         customFields: {
                             'Вид календаря': ['Календари-домики'],
                             'Вид календаря': ['Календарь настольный "Домик", 3 сгиба', 'Календарь настольный "Домик", перекидной, сетка: 6 листов, 4+4',
@@ -265,10 +265,10 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.quarterlyCalendars,
                     category: 'Полиграфия',
                     description: "Создайте персонализированный календарь, который будет радовать вас весь год! Мы предлагаем множество форматов и дизайнов, а также возможность добавления ваших фотографий и логотипов. Заказывая календари у нас, вы получаете уникальный продукт, который станет отличным подарком или рекламным материалом.",
-                    count: 'От ? шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость',
-                        estimatedCostPrice: '?? ₽',
+                        estimatedCostPrice: 'от 315 ₽',
                         customFields: {
                             'Вид календаря': ['Квартальные календари'],
                             'Вид календаря': ['Квартальный календарь А4. Без рекламного поля, без ламинирования', 'Квартальный календарь А4. Без рекламного поля, с ламинированием',
@@ -289,10 +289,10 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.pocketCalendars,
                     category: 'Полиграфия',
                     description: "Создайте персонализированный календарь, который будет радовать вас весь год! Мы предлагаем множество форматов и дизайнов, а также возможность добавления ваших фотографий и логотипов. Заказывая календари у нас, вы получаете уникальный продукт, который станет отличным подарком или рекламным материалом.",
-                    count: 'От ? шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость',
-                        estimatedCostPrice: '?? ₽',
+                        estimatedCostPrice: '13,60 ₽',
                         customFields: {
                             'Вид календаря': ['Карманные календари'],
                             'Тираж': ['1-150 шт', '125-150 шт'],
@@ -308,7 +308,7 @@ export const useProductStore = defineStore('product', {
                     id: 12,
                     name: 'Полноцветная лазерная печать',
                     img: imagesStore.images.laserPrinting,
-                    category: 'Футболки, текстиль',
+                    category: 'Широкоформатная печать',
                     description: `Наша полноцветная лазерная печать обеспечивает высокое качество изображения и яркие цвета. Идеально подходит для любых рекламных материалов, от буклетов до постеров. Мы гарантируем быструю обработку заказов и доступные цены.`,
                     count: 'От 1 шт',
                     details: {
@@ -351,7 +351,7 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.stickers,
                     category: 'Широкоформатная печать',
                     description: "Яркие наклейки — это отличный способ привлечь внимание к вашему бренду! Мы предлагаем печать наклеек любых форматов с индивидуальным дизайном. Высокое качество материалов и быстрое выполнение заказа делают нас вашим надежным партнером.",
-                    count: 'От 10 шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'за штуку',
                         estimatedCostPrice: 'от 300 ₽',
@@ -371,7 +371,7 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.plotterCutting,
                     category: 'Футболки, текстиль',
                     description: "Плоттерная резка — это идеальное решение для создания уникальных рекламных материалов. Мы предлагаем резку на виниловой самоклеящейся пленке по вашим индивидуальным размерам и формам. Обращаясь к нам, вы получаете высокое качество исполнения и оперативность.",
-                    count: 'От 10 шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'за штуку',
                         estimatedCostPrice: 'от 300 ₽',
@@ -418,7 +418,7 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.notebooks,
                     category: 'Футболки, текстиль',
                     description: "Создайте стильный блокнот на пружине с вашим дизайном! Мы предлагаем различные форматы и виды бумаги. Это отличный подарок для сотрудников или клиентов. Заказывая блокноты у нас, вы получаете высокое качество печати и быструю доставку.",
-                    count: 'От 1 шт',
+                    count: 'От 10 шт',
                     details: {
                         estimatedCostTitle: 'ориентировачная стоимость за штуку',
                         estimatedCostPrice: 'от 150 ₽',
@@ -459,7 +459,7 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.banner,
                     category: 'Широкоформатная печать',
                     description: "Ищете способ привлечь внимание? Наши баннеры и штендеры идеально подходят для рекламы на мероприятиях или в магазинах. Мы предлагаем различные размеры и материалы, а также возможность индивидуального дизайна. Высокое качество печати гарантировано!",
-                    count: 'От 10 шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
                         estimatedCostPrice: 'от 600 ₽',
@@ -524,7 +524,7 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.plasticCards,
                     category: 'Прочее',
                     description: "Создайте уникальные пластиковые карты для вашего бизнеса! Мы предлагаем различные форматы и варианты отделки, включая разные фактуры и эмбоссирование. Высокое качество материалов гарантирует долговечность ваших карт.",
-                    count: 'От 10 шт',
+                    count: 'От 50 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
                         estimatedCostPrice: 'от 75 ₽',
@@ -569,7 +569,7 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.packages,
                     category: 'Сувениры',
                     description: "Экологичные пакеты ПВД — это удобный способ упаковки товаров! Мы предлагаем различные размеры и возможность нанесения логотипа. Заказывая пакеты у нас, вы поддерживаете экологические инициативы и получаете качественный продукт.",
-                    count: 'От ? шт',
+                    count: 'От 50 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость',
                         estimatedCostPrice: '?? ₽',
@@ -652,10 +652,10 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.studioPhotoPrinting,
                     category: 'Прочее',
                     description: "Получите высококачественные фотографии с нашей студийной печатью! Мы используем современные технологии для достижения насыщенных цветов и детализации. Быстрая обработка заказов гарантирована!",
-                    count: 'От ? шт',
+                    count: 'От 1 шт',
                     details: {
-                        estimatedCostTitle: 'Ориентировочная стоимость',
-                        estimatedCostPrice: '?? ₽',
+                        estimatedCostTitle: 'Стоимость за штуку',
+                        estimatedCostPrice: 'от 10 ₽',
                         customFields: {
                             'Тираж': ['1-11 шт', '<11'],
                             'Формат': ['10х15 (1-11 шт)', '10х15(<11 шт)', '13х18', '15х20', '20х30', '3х4'],
@@ -672,7 +672,7 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.disks,
                     category: 'Сувениры',
                     description: "Ищете надежное решение для хранения данных? Наши диски обеспечивают высокое качество записи и долговечность.",
-                    count: 'От 100 шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
                         estimatedCostPrice: 'от 40 ₽',
@@ -692,10 +692,10 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.b_w_print,
                     category: 'Копировальные услуги',
                     description: "Наша черно-белая печать на лазерном принтере — идеальный выбор для создания четких и профессиональных документов. Выбирая нашу типографию, вы получаете надежность и индивидуальный подход, а также возможность печати больших объемов по доступным ценам.",
-                    count: 'От 100 шт',
+                    count: 'От 1 шт',
                     details: {
-                        estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                        estimatedCostPrice: 'от 40 ₽',
+                        estimatedCostTitle: 'Стоимость за штуку',
+                        estimatedCostPrice: 'от 5 ₽',
                         customFields: {
                             'Тираж': ['от 1 шт'],
                         },
@@ -711,35 +711,33 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.thermos_cup,
                     category: 'Прочее',
                     description: "Стильные автотермокружки от нашей типографии помогут вам наслаждаться горячими или холодными напитками в любое время. Мы предлагаем возможность персонализации с вашим логотипом, что делает их идеальными для корпоративных подарков. Качество материалов и герметичная крышка обеспечивают долговечность и удобство. Заказывая у нас, вы получаете не только функциональный продукт, но и отличный способ продвигать ваш бренд!",
-                    count: 'От 100 шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                        estimatedCostPrice: 'от 40 ₽',
+                        estimatedCostPrice: 'от 400 ₽',
                         customFields: {
                             'Тираж': ['от 1 шт'],
                         },
                     },
                     prices: [
-                        imagesStore.images.disksPrices,
                     ],
                     save: false
                 }, 
                 {
                     id: 32,
                     name: 'Печать чертежей',
-                    img: imagesStore.images.disks,
+                    img: imagesStore.images.printingOfDrawings,
                     category: 'Широкоформатная печать',
                     description: "Мы предлагаем услуги печати чертежей с высокой точностью и четкостью. Наша типография использует современное оборудование, что позволяет гарантировать качество даже для самых сложных проектов. Быстрая обработка заказов и индивидуальный подход к каждому клиенту делают нас надежным партнером для архитекторов и инженеров. Заказывая печать у нас, вы можете быть уверены в отличном результате!",
-                    count: 'От 100 шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                        estimatedCostPrice: 'от 40 ₽',
+                        estimatedCostPrice: 'от ?? ₽',
                         customFields: {
                             'Тираж': ['от 1 шт'],
                         },
                     },
                     prices: [
-                        imagesStore.images.disksPrices,
                     ],
                     save: false
                 }, 
@@ -749,35 +747,33 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.plates,
                     category: 'Прочее',
                     description: "Индивидуальные тарелки с вашим дизайном — это уникальный способ сделать любое мероприятие незабываемым!  Мы гарантируем высокое качество и яркие цвета, которые привлекут внимание ваших гостей. Заказывая у нас, вы получаете не только уникальный продукт, но и заботу о каждом заказе!",
-                    count: 'От 100 шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                        estimatedCostPrice: 'от 40 ₽',
+                        estimatedCostPrice: 'от 650 ₽',
                         customFields: {
                             'Тираж': ['от 1 шт'],
                         },
                     },
                     prices: [
-                        imagesStore.images.disksPrices,
                     ],
                     save: false
                 }, 
                 {
                     id: 34,
                     name: 'Бейсболки',
-                    img: imagesStore.images.disks,
+                    img: imagesStore.images.baseballCaps,
                     category: 'Сувениры',
                     description: "Стильные бейсболки с возможностью персонализации — это отличный способ выделить ваш бренд! Мы предлагаем качественные материалы и разнообразные дизайны, которые подойдут для любых мероприятий. Наши бейсболки идеально подходят для промоакций или повседневной носки. Заказывая у нас, вы получаете стильный аксессуар, который привлечет внимание к вашему бизнесу!",
                     count: 'От 100 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                        estimatedCostPrice: 'от 40 ₽',
+                        estimatedCostPrice: 'от 600 ₽',
                         customFields: {
                             'Тираж': ['от 1 шт'],
                         },
                     },
                     prices: [
-                        imagesStore.images.disksPrices,
                     ],
                     save: false
                 }, 
@@ -787,16 +783,15 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.thermos,
                     category: 'Прочее',
                     description: "Наши термосы из нержавеющей стали — идеальный выбор для тех, кто ценит качество и стиль. Они сохраняют температуру ваших напитков долго и подходят для активного образа жизни. Возможна персонализация с вашим логотипом, что делает термосы отличным подарком для клиентов. Заказывая у нас, вы получаете надежный продукт и внимание к деталям, что выгодно выделяет вас среди конкурентов!",
-                    count: 'От 100 шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                        estimatedCostPrice: 'от 40 ₽',
+                        estimatedCostPrice: 'от 1200 ₽',
                         customFields: {
                             'Тираж': ['от 1 шт'],
                         },
                     },
                     prices: [
-                        imagesStore.images.disksPrices,
                     ],
                     save: false
                 }, 
@@ -806,16 +801,15 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.magnets,
                     category: 'Сувениры',
                     description: "Создайте уникальные магниты с вашим дизайном в нашей типографии! Они идеально подходят для рекламных акций или в качестве подарков. Мы используем качественные материалы для яркости изображений и долговечности продукта. Заказывая у нас, вы получаете привлекательный товар, который поможет выделить ваш бренд и запомниться вашим клиентам.",
-                    count: 'От 100 шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                        estimatedCostPrice: 'от 40 ₽',
+                        estimatedCostPrice: 'от 175 ₽',
                         customFields: {
                             'Тираж': ['от 1 шт'],
                         },
                     },
                     prices: [
-                        imagesStore.images.disksPrices,
                     ],
                     save: false
                 }, 
@@ -825,16 +819,15 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.glasses,
                     category: 'Прочее',
                     description: "Наши фляги — это идеальный аксессуар для активных людей! Изготовленные из качественных материалов, они надежны и стильны. Возможна персонализация с логотипом вашей компании, что делает их отличным подарком для клиентов или сотрудников. Заказывая у нас, вы получаете функциональный продукт и возможность подчеркнуть индивидуальность вашего бренда.",
-                    count: 'От 100 шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                        estimatedCostPrice: 'от 40 ₽',
+                        estimatedCostPrice: 'от 600 ₽',
                         customFields: {
                             'Тираж': ['от 1 шт'],
                         },
                     },
                     prices: [
-                        imagesStore.images.disksPrices,
                     ],
                     save: false
                 }, 
@@ -844,16 +837,15 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.thermo_mug,
                     category: 'Прочее',
                     description: "Термостаканы от нашей типографии — это идеальное решение для тех, кто любит пить кофе или чай на ходу! Они сохраняют температуру напитков долго благодаря качественным материалам и герметичной крышке. Возможна персонализация с вашим логотипом, что делает их отличным промо-товаром. Заказывая у нас, вы получаете стильный аксессуар, который будет всегда под рукой!",
-                    count: 'От 100 шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                        estimatedCostPrice: 'от 40 ₽',
+                        estimatedCostPrice: 'от 400 ₽',
                         customFields: {
                             'Тираж': ['от 1 шт'],
                         },
                     },
                     prices: [
-                        imagesStore.images.disksPrices,
                     ],
                     save: false
                 }, 
@@ -863,16 +855,15 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.keychain,
                     category: 'Сувениры',
                     description: "Наши брелки — это отличный способ продвигать ваш бренд! Мы предлагаем персонализацию с логотипом вашей компании, что делает их идеальными для раздачи на мероприятиях или в качестве подарков клиентам. Высокое качество материалов гарантирует долговечность и привлекательный внешний вид. Заказывая у нас, вы получаете практичный и стильный аксессуар для вашего бизнеса!",
-                    count: 'От 100 шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                        estimatedCostPrice: 'от 40 ₽',
+                        estimatedCostPrice: 'от ?? ₽',
                         customFields: {
                             'Тираж': ['от 1 шт'],
                         },
                     },
                     prices: [
-                        imagesStore.images.disksPrices,
                     ],
                     save: false
                 }, 
@@ -882,16 +873,15 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.mouse_pad,
                     category: 'Сувениры',
                     description: "Коврики для мыши от нашей типографии — это не только стильный аксессуар, но и функциональный элемент вашего рабочего пространства. Мы предлагаем возможность персонализации с вашим логотипом или уникальным дизайном, что поможет выделить ваш бренд. Наши коврики изготовлены из качественных материалов, обеспечивая комфорт и долговечность. Заказывая у нас, вы получаете не только высокое качество, но и индивидуальный подход к каждому клиенту. Создайте уютное и продуктивное пространство с нашими ковриками для мыши!",
-                    count: 'От 100 шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                        estimatedCostPrice: 'от 40 ₽',
+                        estimatedCostPrice: 'от 450 ₽',
                         customFields: {
                             'Тираж': ['от 1 шт'],
                         },
                     },
                     prices: [
-                        imagesStore.images.disksPrices,
                     ],
                     save: false
                 }, 
@@ -901,16 +891,15 @@ export const useProductStore = defineStore('product', {
                     img: imagesStore.images.puzzles,
                     category: 'Сувениры',
                     description: "Пазлы от нашей типографии — это отличный способ развлечься и развить логическое мышление! Мы предлагаем возможность создания уникальных пазлов с вашим дизайном, что делает их идеальными для подарков или корпоративных мероприятий. Используя качественные материалы, мы гарантируем долговечность и яркость изображений. Заказывая у нас, вы получаете не только увлекательный продукт, но и возможность продвигать свой бренд креативным способом. Подарите радость и оригинальность с нашими пазлами!",
-                    count: 'От 100 шт',
+                    count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                        estimatedCostPrice: 'от 40 ₽',
+                        estimatedCostPrice: 'от 350 ₽',
                         customFields: {
                             'Тираж': ['от 1 шт'],
                         },
                     },
                     prices: [
-                        imagesStore.images.disksPrices,
                     ],
                     save: false
                 },

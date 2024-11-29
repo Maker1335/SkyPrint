@@ -3,7 +3,7 @@
     <div class="design-services">
         <OrderDesign />
         <OurOffers/>
-        <OurPrice/>
+        <!-- <OurPrice/> -->
         <WorkingWithDesigner/>
         <Portfolio/>
     </div>
@@ -13,7 +13,7 @@
 import Header from '../header.vue'
 import OrderDesign from '../pages/DesignServices/OrderDesign.vue';
 import OurOffers from '../pages/DesignServices/OurOffers.vue';
-import OurPrice from '../pages/DesignServices/OurPrice.vue';
+//import OurPrice from '../pages/DesignServices/OurPrice.vue';
 import WorkingWithDesigner from '../pages/DesignServices/WorkingWithDesigner.vue';
 import Portfolio from '../Portfolio.vue';
 
@@ -23,7 +23,7 @@ export default {
         Header,
         OrderDesign,
         OurOffers,
-        OurPrice,
+        //OurPrice,
         WorkingWithDesigner,
         Portfolio,
     }
