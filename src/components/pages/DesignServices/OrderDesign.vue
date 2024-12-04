@@ -11,8 +11,14 @@
                         осуществить ваши планы!</p>
                 </div>
                 <div class="info_buttons">
-                    <button class="order-button">Заказать</button>
-                    <button class="question-button">Задать вопрос</button>
+                    <a class="order-button" @click="toggleMenu">
+                        <p>Заказать</p>
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=example@example.com&su=Hello&body=Message%20body"
+                        target="_blank" class="question-button">
+                        Задать вопрос
+                    </a>
+                    <Questionnaire :isOpen="isQuestionnaireOpen" :toggleMenu="toggleMenu" />
                 </div>
             </div>
             <div class="order-design_img">
@@ -23,8 +29,22 @@
 </template>
 
 <script>
+import Questionnaire from '../../Questionnaire.vue'
 export default {
-    name: 'OrderDesign'
+    name: 'OrderDesign',
+    components: {
+        Questionnaire
+    },
+    data() {
+        return {
+            isQuestionnaireOpen: false
+        }
+    },
+    methods: {
+        toggleMenu() {
+            this.isQuestionnaireOpen = !this.isQuestionnaireOpen;
+        },
+    }
 }
 </script>
 
@@ -33,6 +53,7 @@ export default {
     margin-bottom: 70px;
     background-image: url("../../../assets/img/background.png");
     border-radius: 5px;
+
     .wrapper {
         display: flex;
         justify-content: space-between;
@@ -55,7 +76,7 @@ export default {
                 font-size: 50px;
                 font-weight: bold;
                 color: #289793;
-                width:  750px;
+                width: 750px;
                 line-height: 55px;
             }
 
@@ -85,6 +106,8 @@ export default {
                 background: none;
                 border-radius: 8px;
                 border: 1px solid #27625F;
+                color: #27625F;
+                text-decoration: none;
 
                 &::after {
                     content: "";
@@ -100,6 +123,9 @@ export default {
                     background: #FFFFFF;
                     transition: all 0.5s;
                 }
+            }
+            ::v-deep(.questionnaire) {
+                left: 50%;
             }
         }
     }

@@ -45,6 +45,7 @@ export default {
     left: 300%;
     transform: translate(-50%, -50%);
     z-index: 10;
+    width: auto;
 
     &_title {
         font-weight: bold;
@@ -53,11 +54,6 @@ export default {
     }
 
     &_form {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-        grid-gap: 10px;
-
         .form {
             display: grid;
             grid-template-columns: repeat(1, 1fr);

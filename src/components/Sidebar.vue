@@ -10,8 +10,7 @@
                     <img :src="category.img" :alt="category.name">
                     <p>{{ category.name }}</p>
                 </a>
-                <ul v-if="hoveredCategory === category.name && filteredProducts.length > 0" class="goods-list"
-                    :style="{ top: topPosition + 'px' }">
+                <ul v-if="hoveredCategory === category.name && filteredProducts.length > 0" class="goods-list">
                     <router-link :to="{ name: 'Product', params: { id: product.id } }"
                         v-for="product in filteredProducts" :key="product.id">
                         <li class="goods-list_item">
@@ -25,8 +24,7 @@
                         </li>
                     </router-link>
                 </ul>
-                <ul v-show="hoveredCategory === category.name && filteredProducts.length >= 0" v-else class="goods-list"
-                    :style="{ top: topPosition + 'px' }">
+                <ul v-show="hoveredCategory === category.name && filteredProducts.length >= 0" v-else class="goods-list">
                     <li class="goods-list_item">
                         <img class="goods-list_item_img"
                             src="https://interkomitet.ru/wp-content/uploads/2022/12/Bez-imeni-1-400x320.jpg"
@@ -95,8 +93,6 @@ export default {
     methods: {
         setHoveredCategory(category) {
             this.hoveredCategory = category;
-            this.topPosition = event.target.getBoundingClientRect().top - 166;
-            this.leftPosition = event.target.getBoundingClientRect().left;
         },
         clearHoveredCategory() {
             this.hoveredCategory = null;
@@ -137,7 +133,6 @@ export default {
     .service-list {
         list-style-type: none;
         width: 100%;
-        //position: relative;
 
         li {
             margin-bottom: 10px;
@@ -198,15 +193,12 @@ export default {
 
         .goods-list {
             position: absolute;
-            top: 0;
+            top: 88px;
             background-color: white;
-            gap: 8px;
+            gap: 10px;
             padding: 10px;
-            max-height: 400px;
-            height: 345px;
-            //display: grid;
-            //grid-template-columns: repeat(4, 1fr); 
-            //grid-auto-rows: 103px; 
+            max-height: 700px;
+            height: 638px;
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -214,12 +206,13 @@ export default {
             visibility: hidden;
             width: max-content;
             border-radius: 8px;
+            box-sizing: border-box;
 
             box-shadow: 16px 3px 19px rgba(0, 0, 0, 0.08), 3px 2px 8px rgba(0, 0, 0, 0.2);
 
             a {
                 text-decoration: none;
-                height: 103px;
+                height: 94px;
                 padding: 0;
 
                 &::after {
@@ -344,6 +337,7 @@ export default {
         }
 
         .service-list {
+            
             li {
                 a {
                     height: 64px;
@@ -353,6 +347,11 @@ export default {
                     }
                 }
             }
+            .goods-list {
+            top: 70px;
+            height: 518px;
+            }
+
         }
 
         .contact-link,

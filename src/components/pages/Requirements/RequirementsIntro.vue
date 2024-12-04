@@ -30,8 +30,7 @@ export default {
             files: [
                 { id: 1, imgSrc: balloon, alt: "фото", appName: "CorelDRAW", fileType: "cdr, eps" },
                 { id: 2, imgSrc: acrobat, alt: "фото", appName: "Acrobat", fileType: "pdf" },
-                { id: 3, imgSrc: Ps, alt: "фото", appName: "Photoshop", fileType: "psd, tiff, jpg, bmp" },
-                { id: 4, imgSrc: AI, alt: "фото", appName: "Illustrator", fileType: "ai, pdf" }
+                { id: 3, imgSrc: Ps, alt: "фото", appName: "Photoshop", fileType: "psd, tiff, jpg" },
             ]
         }; 
     }

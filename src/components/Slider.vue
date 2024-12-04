@@ -7,14 +7,16 @@
           :autoplay="{ delay: 5000, disableOnInteraction: false }" :loop="true" :modules="modules" class="mySwiper"
           :breakpoints="breakpoints" update-on-window-resize>
           <swiper-slide class="product" v-for="(slide, index) in slides" :key="index">
-            <img :src="slide.image" :alt="slide.alt" />
-            <p>{{ slide.text }}</p>
+            <router-link :to="slide.link" class="product">
+              <img :src="slide.image" :alt="slide.alt" />
+              <p>{{ slide.text }}</p>
+            </router-link>
           </swiper-slide>
         </swiper>
-        <div class="all-categories">
+        <router-link to="/catalog" class="all-categories">
           <p class="all-categories_text">Все категории </p>
           <p class="all-categories_arrow">&gt;</p>
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
@@ -39,12 +41,12 @@ export default {
       modules: [Autoplay],
       slidesPerView: 5,
       slides: [
-        { image: ImagesStore.images.RollUp, alt: 'фото товара', text: 'Roll-up' },
-        { image: ImagesStore.images.notebooks, alt: 'фото товара', text: 'Блокноты' },
-        { image: ImagesStore.images.canvases, alt: 'фото товара', text: 'Холсты' },
-        { image: ImagesStore.images.busrinessCards, alt: 'фото товара', text: 'Визитки' },
-        { image: ImagesStore.images.lamination, alt: 'фото товара', text: 'Ламинирование' },
-        { image: ImagesStore.images.pens, alt: 'фото товара', text: 'Ручки' },
+        { image: ImagesStore.images.RollUp, alt: 'фото товара', text: 'Roll-up', link: '/product/21' },
+        { image: ImagesStore.images.notebooks, alt: 'фото товара', text: 'Блокноты', link: '/product/17' },
+        { image: ImagesStore.images.canvases, alt: 'фото товара', text: 'Холсты', link: '/product/2' },
+        { image: ImagesStore.images.busrinessCards, alt: 'фото товара', text: 'Визитки', link: '/product/8' },
+        { image: ImagesStore.images.lamination, alt: 'фото товара', text: 'Ламинирование', link: '/product/3' },
+        { image: ImagesStore.images.pens, alt: 'фото товара', text: 'Ручки', link: '/product/1' },
       ],
       breakpoints: {
         0: {
@@ -192,9 +194,11 @@ $goodsBG: "../assets/img/background.png";
 
       &:hover {
         background-color: transparent;
+        border: none;
 
         &::before {
           opacity: 1;
+          border-radius: 8px;
         }
       }
 
@@ -243,7 +247,7 @@ $goodsBG: "../assets/img/background.png";
 }
 
 //@media (max-width: 361px) {
-  @media (max-width: 700px) {
+@media (max-width: 700px) {
   .slider {
     h2 {
       font-size: 14px;

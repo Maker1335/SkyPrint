@@ -126,7 +126,7 @@ export default {
         justify-content: space-between;
 
         &_left {
-            width: 65%;
+            width: 75%;
         }
 
         &_right {
@@ -177,6 +177,8 @@ export default {
                 opacity: 1;
                 pointer-events: auto;
                 z-index: 2;
+            box-shadow: 16px 3px 19px rgba(0, 0, 0, 0.08), 3px 2px 8px rgba(0, 0, 0, 0.2);
+
             }
 
             &_list {

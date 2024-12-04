@@ -79,6 +79,7 @@ import pocketCalendarsPrices from '../../assets/img/goods/prices/pocketCalendars
 import housesCalendars from '../../assets/img/goods/img/housesCalendars.webp'
 import housesCalendarsPrices from '../../assets/img/goods/prices/housesCalendarsPrices.svg'
 
+import making from '../../assets/img/goods/img/making.webp'
 import makingPrices from '../../assets/img/goods/prices/makingPrices.svg'
 import car from '../../assets/img/goods/img/car.webp'
 import printingOfDrawings from '../../assets/img/goods/img/printingOfDrawings.webp'
@@ -142,6 +143,7 @@ export const useImagesStore = defineStore('images', {
             standerPrices,
             replication,
             replicationPrices,
+            making,
             makingPrices,
             car,
             b_w_print,

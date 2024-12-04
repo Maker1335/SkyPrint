@@ -81,11 +81,6 @@ export default {
 }
 
 @media (max-width: 1367px) {
-  #app {
-    width: 1349px;
-    width: 100%;
-  }
-
   .content {
     grid-template-columns: 311px 16px 1019px;
   }

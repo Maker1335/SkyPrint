@@ -27,7 +27,9 @@
                         <p class="address_title">Ул. Витебская 3а. 46530</p>
                     </div>
                     <div class="email">
-                        <img :src="emailIcon" alt="Email">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=example@example.com&su=Hello&body=Message%20body" target="_blank">
+                            <img :src="emailIcon" alt="email">
+                        </a>
                     </div>
                     <div class="whatsapp">
                         <img :src="whatsappIcon" alt="WhatsApp">
@@ -36,7 +38,9 @@
                         <img :src="telegramIcon" alt="Telegram">
                     </div>
                     <div class="vk">
-                        <img :src="vkIcon" alt="VK">
+                        <a href="https://vk.com/skyprint74" target="_blank">
+                            <img :src="vkIcon" alt="VK">
+                        </a>
                     </div>
                 </div>
                 <iframe
@@ -68,7 +72,7 @@ export default {
                 },
                 {
                     title: 'Дизайнер',
-                    email: 'zakaz@skyprint74.ru',
+                    email: 'design@skyprint74.ru',
                     hours: ['Пн-Пт: 09:00 — 18:00']
                 },
                 {
@@ -173,7 +177,7 @@ export default {
             &:last-child {
                 background: #F6F6F6;
                 color: #494949;
-                }
+            }
 
         }
     }

@@ -4,7 +4,7 @@
         <AboutUsTitle />
         <AboutUsDescription />
         <PartnerList/>
-        <History />
+        <!-- <History /> -->
         <Portfolio/>
     </div>
 </template>
@@ -14,7 +14,7 @@ import Header from "../header.vue";
 import AboutUsTitle from "../pages/AboutUs/AboutUsTitle.vue";
 import AboutUsDescription from "../pages/AboutUs/AboutUsDescription.vue";
 import PartnerList from "../pages/AboutUs/PartnerList.vue";
-import History from "../pages/AboutUs/History.vue";
+// import History from "../pages/AboutUs/History.vue";
 import Portfolio from "../Portfolio.vue";
 
 export default {
@@ -24,7 +24,7 @@ export default {
         AboutUsTitle,
         AboutUsDescription,
         PartnerList,
-        History,
+        // History,
         Portfolio
     }
 }
