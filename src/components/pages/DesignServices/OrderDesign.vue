@@ -121,7 +121,7 @@ export default {
                 &:hover {
                     border: 0px solid #27625F;
                     background: #FFFFFF;
-                    transition: all 0.5s;
+                    transition: background 0.5s;
                 }
             }
             ::v-deep(.questionnaire) {

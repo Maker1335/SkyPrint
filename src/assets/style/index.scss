@@ -4,6 +4,7 @@
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    user-select: none; 
 }
 
 ul,
@@ -24,6 +25,10 @@ h6 {
     font-weight: 700;
 }
 
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
 
 .wrapper{
     width: 1440px;
@@ -33,13 +38,11 @@ h6 {
 @media (max-width: 1367px) {
     .wrapper{
         max-width: 988px;
-        //margin: 0 auto;
     }
 }
 @media (max-width: 700px) {
     .wrapper{
         max-width: calc(100% - 30px);
-        //max-width: 336px;
         margin: 0 auto;
     }
 }

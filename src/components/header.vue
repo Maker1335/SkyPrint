@@ -325,10 +325,10 @@ export default {
                 max-width: 227px;
             }
 
-            .email,
-            .phone {
-                display: none;
-            }
+            //.email,
+            //.phone {
+            //    display: none;
+            //}
         }
     }
 }

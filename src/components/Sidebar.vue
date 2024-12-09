@@ -295,13 +295,13 @@ export default {
             height: 100%;
             background-image: url("../assets/img/background.png");
             opacity: 0;
+            border-radius: 5px;
             background-size: cover;
             transition: opacity 0.5s;
         }
 
         &:hover::before {
             opacity: 1;
-            border-radius: 5px;
         }
 
         p {

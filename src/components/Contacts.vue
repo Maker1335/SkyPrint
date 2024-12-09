@@ -77,7 +77,7 @@ export default {
                 },
                 {
                     title: 'Копировальный центр',
-                    phone: '+7 (351) 248-72-87',
+                    //phone: '+7 (351) 248-72-87',
                     email: 'operator@skyprint74.ru',
                     hours: [
                         'Пн-Пт: 9:00 — 19:00',

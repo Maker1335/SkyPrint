@@ -41,11 +41,13 @@ export default {
 .about-us {
     &_description {
         margin-bottom: 100px;
+
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-row: auto 1fr;
             gap: 15px;
+
             .card {
                 display: flex;
                 flex-direction: column;
@@ -54,27 +56,50 @@ export default {
                 padding: 30px;
                 box-sizing: border-box;
                 border-radius: 5px;
+
                 &_title {
                     &_count {
                         font-size: 88px;
                         font-weight: bold;
                     }
+
                     &_text {
                         font-size: 20px;
                         font-weight: bold;
                         color: #303030;
                     }
                 }
+
                 &_img {
                     height: 100%;
                     width: 100%;
                 }
+
                 &:last-child {
                     margin-top: 90px;
                     grid-column: span 3;
                     background: none;
                     padding: 0;
+
+                    a {
+                        display: block;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-image: url("../../../assets/img/pages/AboutUs/play.webp");
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            width: 101px;
+                            height: 114px;
+                        }
+                    }
                 }
+
                 &_description {
                     font-size: 16px;
                     font-weight: 600;
@@ -83,30 +108,38 @@ export default {
         }
     }
 }
+
 @media (max-width: 1367px) {
     .about-us {
         &_description {
             margin-bottom: 20px;
+
             .cards {
                 gap: 15px;
+
                 .card {
                     gap: 20px;
                     padding: 20px;
+
                     &_title {
                         &_count {
                             font-size: 48px;
                         }
+
                         &_text {
                             font-size: 16px;
                         }
                     }
+
                     &_img {
                         height: 100%;
                         width: 100%;
                     }
+
                     &:last-child {
                         margin-top: 20px;
                     }
+
                     &_description {
                         font-size: 16px;
                     }
@@ -115,32 +148,40 @@ export default {
         }
     }
 }
+
 @media (max-width: 700px) {
     .about-us {
         &_description {
             margin-bottom: 30px;
+
             .cards {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
+
                 .card {
-                    padding: 20px 40px ;
+                    padding: 20px 40px;
+
                     &_title {
                         &_count {
                             font-size: 48px;
                         }
+
                         &_text {
                             font-size: 16px;
                         }
                     }
+
                     &_img {
                         height: 100%;
                         width: 100%;
                     }
+
                     &:last-child {
                         margin-top: 0px;
                         padding: 0;
                     }
+
                     &_description {
                         font-size: 14px;
                     }

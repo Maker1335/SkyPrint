@@ -81,6 +81,7 @@ export default {
                 height: 100%;
                 background-image: url('../../../assets/img/background.png');
                 background-size: cover;
+                border-radius: 8px;
                 opacity: 0;
                 transition: opacity 0.5s ease;
             }
@@ -95,38 +96,40 @@ export default {
         }
     }
 }
+
 @media (max-width: 1367px) {
     .our-offers {
         margin-bottom: 70px;
-    
+
         h3 {
             font-size: 20px;
             margin-bottom: 20px;
         }
-    
+
         &_cards {
             gap: 15px;
             justify-content: flex-start;
-    
+
             .card {
                 width: 315px;
             }
         }
     }
 }
+
 @media (max-width: 700px) {
     .our-offers {
         margin-bottom: 30px;
-    
+
         h3 {
             font-size: 20px;
         }
-    
+
         &_cards {
             display: flex;
             flex-direction: column;
             gap: 10px;
-    
+
             .card {
                 width: 100%;
             }
