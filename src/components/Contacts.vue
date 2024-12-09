@@ -9,6 +9,10 @@
                         <img :src="phoneIcon" alt="Phone">
                         <p>{{ contact.phone }}</p>
                     </div>
+                    <div v-if="contact.phone" class="card_whatsapp">
+                        <img :src="whatsappIcon" alt="WhatsApp">
+                        <p>{{ contact.WhatsApp }}</p>
+                    </div>
                     <div class="card_email">
                         <img :src="emailIcon" alt="Email">
                         <p>{{ contact.email }}</p>
@@ -35,7 +39,9 @@
                         <img :src="whatsappIcon" alt="WhatsApp">
                     </div>
                     <div class="telegram">
-                        <img :src="telegramIcon" alt="Telegram">
+                        <a href="https://t.me/skyprint74">
+                            <img :src="telegramIcon" alt="Telegram">
+                        </a>
                     </div>
                     <div class="vk">
                         <a href="https://vk.com/skyprint74" target="_blank">
@@ -54,7 +60,7 @@
 
 <script>
 import phoneIcon from '../assets/img/pages/MainPage/Contacts/phone.svg'
-import emailIcon from '../assets/img/header/email.svg'
+import emailIcon from '../assets/img/pages/MainPage/Contacts/email.svg'
 import whatsappIcon from '../assets/img/pages/MainPage/Contacts/WhatsApp.svg'
 import telegramIcon from '../assets/img/pages/MainPage/Contacts/telegram.svg'
 import vkIcon from '../assets/img/pages/MainPage/Contacts/vk.svg'
@@ -67,6 +73,7 @@ export default {
                 {
                     title: 'Менеджер',
                     phone: '+7 (351) 248-72-87, 245-45-75',
+                    WhatsApp: '+7 (951) 871-71-92',
                     email: 'zakaz@skyprint74.ru',
                     hours: ['Пн-Пт: 09:00 — 18:00']
                 },
@@ -152,6 +159,19 @@ export default {
                 img {
                     width: 17px;
                     height: 17px;
+                    margin-right: 10px;
+                }
+            }
+
+            &_whatsapp {
+                display: flex;
+                align-items: center;
+                margin-left: 20px;
+                font-size: 20px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
                     margin-right: 10px;
                 }
             }

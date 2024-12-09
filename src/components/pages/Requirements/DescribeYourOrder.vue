@@ -89,6 +89,7 @@ export default {
                 background-size: cover;
                 opacity: 0;
                 transition: opacity 0.5s ease;
+                border-radius: 5px;
             }
             &:hover {
                 &::before {

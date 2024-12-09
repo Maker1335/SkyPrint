@@ -117,12 +117,14 @@ $goodsBG: "../assets/img/background.png";
                 color: #27625F;
                 transition: all 0.5s;
                 border: 1px solid #27625F;
+                cursor: pointer;
 
                 &:hover {
                     background-image: url($goodsBG);
                     background-size: cover;
                     color: #FFFFFF;
-                }
+                border: none;
+            }
             }
         }
 

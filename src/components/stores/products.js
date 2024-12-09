@@ -731,8 +731,8 @@ export const useProductStore = defineStore('product', {
                     description: "Мы предлагаем услуги печати чертежей с высокой точностью и четкостью. Наша типография использует современное оборудование, что позволяет гарантировать качество даже для самых сложных проектов. Быстрая обработка заказов и индивидуальный подход к каждому клиенту делают нас надежным партнером для архитекторов и инженеров. Заказывая печать у нас, вы можете быть уверены в отличном результате!",
                     count: 'От 1 шт',
                     details: {
-                        estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                        estimatedCostPrice: 'от ?? ₽',
+                        estimatedCostTitle: 'Стоимость за штуку',
+                        estimatedCostPrice: 'от 25 ₽',
                         customFields: {
                             'Тираж': ['от 1 шт'],
                         },
@@ -858,7 +858,7 @@ export const useProductStore = defineStore('product', {
                     count: 'От 1 шт',
                     details: {
                         estimatedCostTitle: 'Ориентировочная стоимость за штуку',
-                        estimatedCostPrice: 'от ?? ₽',
+                        estimatedCostPrice: 'от 70 ₽',
                         customFields: {
                             'Тираж': ['от 1 шт'],
                         },

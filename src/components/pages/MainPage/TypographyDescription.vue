@@ -172,7 +172,7 @@ $backgroundImage: "../../../assets/img/background.png";
                 border-bottom: 7px solid transparent;
                 margin-left: 10px;
                 z-index: 1;
-            }
+        }
 
             &::before {
                 content: '';
@@ -183,6 +183,7 @@ $backgroundImage: "../../../assets/img/background.png";
                 height: 100%;
                 background-image: url($backgroundImage);
                 background-size: cover;
+                border-radius: 8px;
                 opacity: 0;
                 transition: opacity 0.5s ease;
             }

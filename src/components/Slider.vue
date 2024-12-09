@@ -15,7 +15,7 @@
         </swiper>
         <router-link to="/catalog" class="all-categories">
           <p class="all-categories_text">Все категории </p>
-          <p class="all-categories_arrow">&gt;</p>
+          <p class="all-categories_arrow"></p>
         </router-link>
       </div>
     </div>
@@ -164,6 +164,7 @@ $goodsBG: "../assets/img/background.png";
       &_text {
         width: 85px;
         position: absolute;
+        font-weight: bold;
         left: 25px;
       }
 
@@ -173,6 +174,19 @@ $goodsBG: "../assets/img/background.png";
         padding: 3px;
         position: absolute;
         right: 40px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 27px;
+          border: solid #27625f;
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 3px;
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+          transition: border 0.5s ease;
+        }
       }
 
       p {
