@@ -181,6 +181,7 @@ export default {
         flex-direction: column;
         gap: 20px;
         box-sizing: border-box;
+        cursor: pointer;
 
         p {
             margin-left: 20px;

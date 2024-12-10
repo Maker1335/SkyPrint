@@ -4,7 +4,6 @@
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    user-select: none; 
 }
 
 ul,
@@ -25,9 +24,11 @@ h6 {
     font-weight: 700;
 }
 
-a {
+a,
+button {
     cursor: pointer;
     text-decoration: none;
+    user-select: none; 
 }
 
 .wrapper{

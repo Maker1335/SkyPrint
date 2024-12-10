@@ -32,7 +32,8 @@
                 <p class="text">Приём заказов</p>
                 <div class="manager">
                     <p class="title">Менеджер</p>
-                    <p class="text"><img src="../assets/img/footer/phone.svg" alt="phone">+7 (351) 248-72-87, 245-45-75</p>
+                    <p class="text"><img src="../assets/img/footer/phone.svg" alt="phone">+7 (351) 248-72-87, 245-45-75
+                    </p>
                     <p class="text"><img src="../assets/img/footer/whatsapp.svg" alt="whatsapp">+7 (951) 871-71-92</p>
                     <p class="text"><img src="../assets/img/footer/email.svg" alt="email">zakaz@skyprint74.ru</p>
                 </div>
@@ -86,6 +87,7 @@ export default {
             a {
                 text-decoration: none;
                 color: white;
+                user-select: text;
             }
         }
     }

@@ -101,6 +101,7 @@ $goodsBG: "../assets/img/background.png";
                 font-size: 16px;
                 color: #27625F;
                 width: 402px;
+                user-select: none;
 
                 a {
                     color: #27625F;
@@ -136,6 +137,8 @@ $goodsBG: "../assets/img/background.png";
             background-color: none;
             transition: background-color 0.5s;
             border: 1px solid #27625F;
+            user-select: none;
+            cursor: pointer;
 
             p {
                 padding: 20px;

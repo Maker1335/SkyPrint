@@ -28,7 +28,7 @@
                 <div class="map_info">
                     <div class="address">
                         <p class="address_addre">Наш адрес</p>
-                        <p class="address_title">Ул. Витебская 3а. 46530</p>
+                        <p class="address_title">Ул. Витебская 3а</p>
                     </div>
                     <div class="email">
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=example@example.com&su=Hello&body=Message%20body" target="_blank">
