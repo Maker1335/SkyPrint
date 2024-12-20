@@ -8,8 +8,9 @@
                         <img :src="item.img" alt="">
                     </div>
                     <router-link to="/portfolio">
-                        <div class="portfolio_list_item">
-                            <p class="portfolio_list_item_text">Все работы</p>
+                        <div class="portfolio_list_all-works">
+                            <p class="portfolio_list_all-works_text">Все работы</p>
+                            <p class="portfolio_list_all-works_arrow"></p>
                         </div>
                     </router-link>
                 </div>
@@ -19,12 +20,13 @@
 </template>
 
 <script>
-import Work1 from '../assets/img/work/work1.svg'
-import Work2 from '../assets/img/work/work2.svg'
-import Work3 from '../assets/img/work/work3.svg'
-import Work4 from '../assets/img/work/work4.svg'
-import Work5 from '../assets/img/work/work5.svg'
-import Work6 from '../assets/img/work/work6.svg'
+import Work1 from '../assets/img/work/work1.webp'
+import Work2 from '../assets/img/work/work2.webp'
+import Work3 from '../assets/img/work/work3.webp'
+import Work4 from '../assets/img/work/work4.webp'
+import Work5 from '../assets/img/work/work5.webp'
+import Work6 from '../assets/img/work/work6.webp'
+import Work7 from '../assets/img/work/work7.webp'
 
 export default {
     name: 'Portfolio',
@@ -57,7 +59,7 @@ export default {
                 },
                 {
                     id: 7,
-                    img: Work1,
+                    img: Work7,
                 },
             ]
         }
@@ -91,6 +93,26 @@ export default {
             cursor: pointer;
             display: flex;
             align-items: flex-end;
+            border-radius: 8px;
+
+            img {
+                width: 100%;
+                border-radius: 8px;
+                height: 100%;
+            }
+        }
+
+        &_all-works {
+            display: flex;
+            align-items: flex-end;
+            width: 351px;
+            height: 244px;
+            background-color: #F5F5F5;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+            color: #27625F;
+            position: relative;
 
             &_text {
                 font-size: 20px;
@@ -99,9 +121,25 @@ export default {
                 padding: 20px;
             }
 
-            img {
-                width: 100%;
-                height: 100%;
+            &_arrow {
+                width: 8px;
+                height: 16px;
+                padding: 3px;
+                position: absolute;
+                right: 190px;
+                bottom: 15px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    border: solid #000000;
+                    border-width: 0 3px 3px 0;
+                    display: inline-block;
+                    padding: 3px;
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                    transition: border 0.5s ease;
+                }
             }
         }
     }
@@ -124,27 +162,29 @@ export default {
         }
     }
 }
+
 @media (max-width: 700px) {
     .portfolio {
         h3 {
             font-size: 16px;
             margin-bottom: 20px;
         }
-    
+
         &_list {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-    
+
             a {
                 text-decoration: none;
                 width: 100%;
             }
-    
+
             &_item {
                 width: 100%;
                 height: 233px;
-                img{
+
+                img {
                     object-fit: cover;
                 }
             }

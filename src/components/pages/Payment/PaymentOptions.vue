@@ -25,7 +25,7 @@ export default {
         return {
             cards: [
                 {
-                    title: "Наличными в нашем офисе при получении заказа",
+                    title: "Наличными в нашем офисе",
                     imgSrc: money,
                     alt: "фото варианта"
                 },
@@ -41,11 +41,6 @@ export default {
                     imgSrc: email,
                     alt: "фото варианта"
                 },
-                {
-                    title: "На месте при доставке курьером",
-                    imgSrc: car,
-                    alt: "фото варианта"
-                }
             ]
         }
     }

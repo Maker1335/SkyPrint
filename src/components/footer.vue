@@ -39,7 +39,7 @@
                 </div>
                 <div class="designer">
                     <p class="title">Дизайнер</p>
-                    <p class="text"><img src="../assets/img/footer/email.svg" alt="email">zakaz@skyprint74.ru</p>
+                    <p class="text"><img src="../assets/img/footer/email.svg" alt="email">design@skyprint74.ru</p>
                     <p class="text">Пн-Пт: 09:00 — 18:00</p>
                 </div>
                 <ul class="social_links">

@@ -73,7 +73,7 @@ export default {
                 {
                     title: 'Менеджер',
                     phone: '+7 (351) 248-72-87, 245-45-75',
-                    WhatsApp: '+7 (951) 871-71-92',
+                    WhatsApp: '+7 (951) 817-71-92',
                     email: 'zakaz@skyprint74.ru',
                     hours: ['Пн-Пт: 09:00 — 18:00']
                 },

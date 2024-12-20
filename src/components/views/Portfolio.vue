@@ -15,12 +15,22 @@
 <script>
 import Header from '../header.vue';
 
-import Work1 from '../../assets/img/work/work1.svg'
-import Work2 from '../../assets/img/work/work2.svg'
-import Work3 from '../../assets/img/work/work3.svg'
-import Work4 from '../../assets/img/work/work4.svg'
-import Work5 from '../../assets/img/work/work5.svg'
-import Work6 from '../../assets/img/work/work6.svg'
+import Work1 from '../../assets/img/work/work1.webp'
+import Work2 from '../../assets/img/work/work2.webp'
+import Work3 from '../../assets/img/work/work3.webp'
+import Work4 from '../../assets/img/work/work4.webp'
+import Work5 from '../../assets/img/work/work5.webp'
+import Work6 from '../../assets/img/work/work6.webp'
+import Work7 from '../../assets/img/work/work7.webp'
+import Work8 from '../../assets/img/work/work8.webp'
+import Work9 from '../../assets/img/work/work9.webp'
+import Work10 from '../../assets/img/work/work10.webp'
+import Work11 from '../../assets/img/work/work11.webp'
+import Work12 from '../../assets/img/work/work12.webp'
+import Work13 from '../../assets/img/work/work13.webp'
+import Work14 from '../../assets/img/work/work14.webp'
+import Work15 from '../../assets/img/work/work15.webp'
+import Work16 from '../../assets/img/work/work16.webp'
 
 export default {
     name: 'Portfolio',
@@ -57,27 +67,43 @@ export default {
                 },
                 {
                     id: 7,
-                    img: Work6,
+                    img: Work7,
                 },
                 {
                     id: 8,
-                    img: Work5,
+                    img: Work8,
                 },
                 {
                     id: 9,
-                    img: Work4,
+                    img: Work9,
                 },
                 {
                     id: 10,
-                    img: Work3,
+                    img: Work10,
                 },
                 {
                     id: 11,
-                    img: Work2,
+                    img: Work11,
                 },
                 {
                     id: 12,
-                    img: Work1,
+                    img: Work12,
+                },
+                {
+                    id: 13,
+                    img: Work13,
+                },
+                {
+                    id: 14,
+                    img: Work14,
+                },
+                {
+                    id: 15,
+                    img: Work15,
+                },
+                {
+                    id: 16,
+                    img: Work16,
                 },
             ]
         }
@@ -107,6 +133,7 @@ export default {
             img {
                 width: 351px;
                 height: 244px;
+                border-radius: 8px;
             }
         }
     }
