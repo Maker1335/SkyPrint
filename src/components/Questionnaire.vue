@@ -3,14 +3,18 @@
     <div v-if="isOpen" class="questionnaire">
         <h2 class="questionnaire_title">Скоро перезвоним</h2>
         <div class="questionnaire_form">
-            <div class="form">
-                <input type="text" placeholder="Имя" class="form_input">
-                <input type="phone" placeholder="Телефон" class="form_input">
-                <input type="email" placeholder="Почта" class="form_input">
-                <label class="form_checkbox"><input type="checkbox"> Нажимая кнопку "Отправить", я соглашаюсь с
-                    условиями <a href="#">пользовательского соглашения</a> </label>
-                <button class="form_button">Отправить</button>
-            </div>
+            <form @submit.prevent="handleSubmit" class="form">
+                <input type="text" placeholder="Имя" v-model="formData.name" class="form_input" required />
+                <input type="tel" placeholder="Телефон" v-model="formData.phone" class="form_input" required />
+                <input type="email" placeholder="Почта" v-model="formData.email" class="form_input" required />
+                <label class="form_checkbox">
+                    <input type="checkbox" v-model="formData.agreement" required />
+                    Нажимая кнопку "Отправить", я соглашаюсь с условиями
+                    <a href="#">пользовательского соглашения</a>
+                </label>
+                <button type="submit" class="form_button">Отправить</button>
+            </form>
+            <p v-if="successMessage" class="success_message">{{ successMessage }}</p>
         </div>
     </div>
 </template>
@@ -21,13 +25,55 @@ export default {
     props: {
         isOpen: {
             type: Boolean,
-            required: true
+            required: true,
         },
         toggleMenu: {
             type: Function,
-            required: true
-        }
-    }
+            required: true,
+        },
+    },
+    data() {
+        return {
+            formData: {
+                name: '',
+                phone: '',
+                email: '',
+                agreement: false,
+            },
+            successMessage: '',
+        };
+    },
+    methods: {
+        async handleSubmit() {
+            try {
+                const response = await fetch('https://your-server-url/api/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(this.formData),
+                });
+
+                if (response.ok) {
+                    this.successMessage = 'Ваш запрос успешно отправлен!';
+                    this.resetForm();
+                } else {
+                    throw new Error('Ошибка при отправке данных');
+                }
+            } catch (error) {
+                console.error('Ошибка:', error.message);
+                alert('Не удалось отправить данные. Попробуйте снова позже.');
+            }
+        },
+        resetForm() {
+            this.formData = {
+                name: '',
+                phone: '',
+                email: '',
+                agreement: false,
+            };
+        },
+    },
 };
 </script>
 

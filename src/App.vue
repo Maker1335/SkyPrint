@@ -46,6 +46,7 @@ export default {
 </style>
 
 <style lang="scss" scoped>
+
 #app {
   min-height: 100vh;
   //width: 1920px;
@@ -57,7 +58,7 @@ export default {
   grid-template-areas:
     "content"
     "footer";
-    justify-content: center;
+  justify-content: center;
 }
 
 .content {
@@ -85,6 +86,7 @@ export default {
     grid-template-columns: 311px 16px 1019px;
   }
 }
+
 @media (max-width: 700px) {
   #app {
     width: 100%;
@@ -100,11 +102,11 @@ export default {
     //grid-template-columns: 1fr;
     //grid-template-areas:
     //  "content";
-  
+
     .page {
       //grid-area: content;
     }
-  
+
     .sidebar {
       display: none;
     }
