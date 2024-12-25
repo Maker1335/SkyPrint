@@ -1,9 +1,11 @@
-const express = require('express');
-const path = require('path');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-require('dotenv').config();
+import express from 'express';
+import path from 'path';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 
@@ -11,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Раздача статических файлов из папки dist
-app.use(express.static(path.resolve(__dirname, 'dist')));
+app.use(express.static(path.resolve('dist')));
 
 // API-эндпоинты
 app.post('/api/send-email', (req, res) => {
@@ -48,7 +50,7 @@ app.post('/api/send-email', (req, res) => {
 
 // Перенаправление всех запросов на index.html (для SPA)
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+  res.sendFile(path.resolve('dist', 'index.html'));
 });
 
 const PORT = process.env.PORT;
