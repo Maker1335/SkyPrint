@@ -53,20 +53,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve('dist', 'index.html'));
 });
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Сервер запущен на порту ${PORT}`);
   console.log(`${PORT}`);
-});
-
-const PORT1 = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Сервер запущен на порту ${PORT1}`);
-  console.log(`${PORT1}`);
-});
-
-const PORT2 = 3000;
-app.listen(PORT, () => {
-  console.log(`Сервер запущен на порту ${PORT2}`);
-  console.log(`${PORT2}`);
 });
