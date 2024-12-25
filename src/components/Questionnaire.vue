@@ -3,7 +3,7 @@
     <div v-if="isOpen" class="questionnaire">
         <h2 class="questionnaire_title">Скоро перезвоним</h2>
         <div class="questionnaire_form">
-            <form @submit.prevent="handleSubmit" class="form">
+            <form @submit.prevent="handleSubmit" class="form" >
                 <input type="text" placeholder="Имя" v-model="formData.name" class="form_input" required />
                 <input type="tel" placeholder="Телефон" v-model="formData.phone" class="form_input" required />
                 <input type="email" placeholder="Почта" v-model="formData.email" class="form_input" required />
@@ -46,7 +46,7 @@ export default {
     methods: {
         async handleSubmit() {
             try {
-                const response = await fetch('https://your-server-url/api/send-email', {
+                const response = await fetch('/api/send-email', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

@@ -10,7 +10,7 @@ import Payment from '../views/Payment.vue';
 import Delivery from '../views/Delivery.vue';
 import DesignServices from '../views/DesignServices.vue';
 
-const base = '/SkyPrint1/dist';
+const base = '/';
 
 const routes = [
     {
