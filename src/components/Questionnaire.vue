@@ -1,27 +1,35 @@
 <template>
-    <div v-if="isOpen" class="overlay" @click="toggleMenu"></div>
-    <div v-if="isOpen" class="questionnaire">
-        <h2 class="questionnaire_title">Скоро перезвоним</h2>
-        <div class="questionnaire_form">
-            <form @submit.prevent="handleSubmit" class="form" >
-                <input type="text" placeholder="Имя" v-model="formData.name" class="form_input" required />
-                <input type="tel" placeholder="Телефон" v-model="formData.phone" class="form_input" required />
-                <input type="email" placeholder="Почта" v-model="formData.email" class="form_input" required />
-                <label class="form_checkbox">
-                    <input type="checkbox" v-model="formData.agreement" required />
-                    Нажимая кнопку "Отправить", я соглашаюсь с условиями
-                    <a href="#">пользовательского соглашения</a>
-                </label>
-                <button type="submit" class="form_button">Отправить</button>
-            </form>
-            <p v-if="successMessage" class="success_message">{{ successMessage }}</p>
+    <div>
+        <div v-if="isOpen" class="overlay" @click="toggleMenu"></div>
+        <div v-if="isOpen" class="questionnaire">
+            <h2 class="questionnaire_title">Скоро перезвоним</h2>
+            <div class="questionnaire_form">
+                <form @submit.prevent="handleSubmit" class="form">
+                    <input type="text" placeholder="Имя" v-model="formData.name" class="form_input" required />
+                    <input type="tel" placeholder="Телефон" v-model="formData.phone" class="form_input"
+                        :class="{ 'input-error': phoneError }" @input="validatePhone" required />
+                        <span v-if="phoneError" class="error_message">Введите корректный номер телефона</span>
+                    <input type="email" placeholder="Почта" v-model="formData.email" class="form_input" required />
+                    <label class="form_checkbox">
+                        <input type="checkbox" v-model="formData.agreement" required />
+                        Нажимая кнопку "Отправить", я соглашаюсь с условиями
+                        <a href="#">пользовательского соглашения</a>
+                    </label>
+                    <button type="submit" class="form_button" >
+                        Отправить
+                    </button>
+                </form>
+                <p v-if="successMessage" class="success_message">{{ successMessage }}</p>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
+
 export default {
-    name: 'Questionnaire',
+    name: "Questionnaire",
     props: {
         isOpen: {
             type: Boolean,
@@ -35,49 +43,81 @@ export default {
     data() {
         return {
             formData: {
-                name: '',
-                phone: '',
-                email: '',
+                name: "",
+                phone: "",
+                email: "",
                 agreement: false,
             },
-            successMessage: '',
+            phoneError: false,
+            successMessage: "",
         };
     },
     methods: {
+        validatePhone() {
+            // Регулярное выражение для проверки телефона (пример для РФ: +7 123 456-78-90)
+            const phoneRegex = /^\+?[1-9]\d{1,14}$/;
+            this.phoneError = !phoneRegex.test(this.formData.phone);
+            console.log(this.phoneError);
+        },
         async handleSubmit() {
-            try {
-                const response = await fetch('/api/send-email', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(this.formData),
-                });
+            if (this.phoneError) {
+                alert("Пожалуйста, исправьте ошибки в номере телефона.");
+                return;
+            }
+            if (!this.formData.agreement) {
+                alert("Вы должны согласиться с пользовательским соглашением!");
+                return;
+            }
+            
 
-                if (response.ok) {
-                    this.successMessage = 'Ваш запрос успешно отправлен!';
-                    this.resetForm();
-                } else {
-                    throw new Error('Ошибка при отправке данных');
-                }
+            try {
+                const { name, phone, email } = this.formData;
+
+                // Используем EmailJS API для отправки письма
+                const serviceID = process.env.SERVICE_ID; // Замените на ваш Service ID
+                const templateID = process.env.TEMPLATE_ID; // Замените на ваш Template ID
+                const publicKey = process.env.PUBLIC_KEY; // Замените на ваш Public Key
+
+                const templateParams = {
+                    user_name: name,
+                    user_phone: phone,
+                    user_email: email,
+                };
+
+                await emailjs.send(serviceID, templateID, templateParams, publicKey);
+
+                alert("Ваш запрос успешно отправлен!");
+                this.resetForm();
             } catch (error) {
-                console.error('Ошибка:', error.message);
-                alert('Не удалось отправить данные. Попробуйте снова позже.');
+                console.error("Ошибка отправки письма:", error);
+                alert("Не удалось отправить письмо. Попробуйте позже.");
             }
         },
         resetForm() {
             this.formData = {
-                name: '',
-                phone: '',
-                email: '',
+                name: "",
+                phone: "",
+                email: "",
                 agreement: false,
             };
+            this.phoneError = false;
         },
     },
 };
 </script>
 
 <style lang="scss" scoped>
+.error_message {
+    color: red;
+    font-size: 18px;
+    position: absolute;
+    width: max-content;
+    user-select: none;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .questionnaire {
     display: flex;
     flex-direction: column;

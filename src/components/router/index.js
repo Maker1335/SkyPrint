@@ -10,8 +10,6 @@ import Payment from '../views/Payment.vue';
 import Delivery from '../views/Delivery.vue';
 import DesignServices from '../views/DesignServices.vue';
 
-const base = '/';
-
 const routes = [
     {
         path: `/`,
@@ -66,13 +64,25 @@ const routes = [
     },
     {
         path: '/:pathMatch(.*)*',
-        redirect: `${base}/`
-    }
+        redirect: '/',
+    },
 ];
+
+// const router = createRouter({
+//     history: createWebHashHistory(),
+//     routes,
+// });
 
 const router = createRouter({
     history: createWebHashHistory(),
     routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition;
+        } else {
+            return { top: 0 };
+        }
+    },
 });
 
 export default router;
