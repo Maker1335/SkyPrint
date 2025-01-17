@@ -2,12 +2,12 @@
     <div class="pulse" @click="toggleAnimation">
         <img src="../assets/img/Telephone/159832.png" alt="" class="telephone" />
         <div class="extra-items">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=example@example.com&su=Hello&body=Message%20body"
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zakaz@skyprint74.ru&su=Заказ с сайта SKYPRINT&body=Здравствуйте,%20я%20..."
                 target="_blank">
                 <img src="../assets/img/Telephone/email.svg" alt="" class="item">
             </a>
             <a href="https://vk.com/skyprint74"><img src="../assets/img/Telephone/vk.svg" alt="" class="item"></a>
-            <img src="../assets/img/Telephone/WhatsApp.svg" alt="" class="item">
+            <a href="https://wa.me/79518177192"><img src="../assets/img/Telephone/WhatsApp.svg" alt="" class="item"></a>
             <a href="https://t.me/skyprint74">
                 <img src="../assets/img/Telephone/tg.svg" alt="" class="item">
             </a>
@@ -20,14 +20,14 @@ export default {
     name: 'Telephone',
     data() {
         return {
-            isOpen: false, // Состояние, показывающее, нужно ли отображать дополнительные элементы
-            animationPaused: false, // Состояние для паузы анимации
+            isOpen: false,
+            animationPaused: false,
         };
     },
     methods: {
         toggleAnimation() {
-            this.isOpen = !this.isOpen; // Переключаем видимость дополнительных элементов
-            this.animationPaused = !this.animationPaused; // Останавливаем или запускаем анимацию
+            this.isOpen = !this.isOpen;
+            this.animationPaused = !this.animationPaused;
         },
     },
 };
@@ -39,11 +39,12 @@ export default {
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    position: sticky;
+    position: fixed;
     bottom: 10%;
     left: 90%;
-    z-index: 1;
+    z-index: 1000;
     cursor: pointer;
+
 
     .telephone {
         position: absolute;

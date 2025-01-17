@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import MainPage from '../views/MaimPage.vue';
 import Catalog from '../views/Catalog.vue';
 import Product from '../views/Product.vue';
@@ -68,13 +68,8 @@ const routes = [
     },
 ];
 
-// const router = createRouter({
-//     history: createWebHashHistory(),
-//     routes,
-// });
-
 const router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory(),
     routes,
     scrollBehavior(to, from, savedPosition) {
         if (savedPosition) {

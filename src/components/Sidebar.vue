@@ -24,7 +24,8 @@
                         </li>
                     </router-link>
                 </ul>
-                <ul v-show="hoveredCategory === category.name && filteredProducts.length >= 0" v-else class="goods-list">
+                <ul v-show="hoveredCategory === category.name && filteredProducts.length >= 0" v-else
+                    class="goods-list">
                     <li class="goods-list_item">
                         <img class="goods-list_item_img"
                             src="https://interkomitet.ru/wp-content/uploads/2022/12/Bez-imeni-1-400x320.jpg"
@@ -44,6 +45,10 @@
         <router-link to="/designServices" class="designer-link">
             <p>Услуги дизайнера</p>
         </router-link>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zakaz@skyprint74.ru&su=Заказ с сайта SKYPRINT&body=Здравствуйте,%20я%20..."
+                target="_blank" class="order-link">
+            <p>Сделать заказ</p>
+        </a>
     </div>
 </template>
 
@@ -114,7 +119,7 @@ export default {
     position: sticky;
     top: 38px;
     width: 331px;
-    height: 850px;
+    height: 900px;
     background-color: #FFFFFF;
     color: white;
     display: flex;
@@ -148,6 +153,7 @@ export default {
                 position: relative;
                 transition: background-color 0.5s;
                 padding-left: 15px;
+                height: 70px;
 
                 &:hover {
                     background: none;
@@ -198,7 +204,7 @@ export default {
             gap: 10px;
             padding: 10px;
             max-height: 700px;
-            height: 638px;
+            height: 580px;
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -212,7 +218,7 @@ export default {
 
             a {
                 text-decoration: none;
-                height: 94px;
+                height: 70px;
                 padding: 0;
 
                 &::after {
@@ -225,15 +231,15 @@ export default {
                 background-color: #F4F4F4;
                 grid-template-areas: "img title"
                     "img count";
-                width: 272px;
+                width: 300px;
                 margin: 0px;
                 align-items: center;
                 height: 100%;
 
                 &_img {
                     grid-area: img;
-                    width: 87px;
-                    height: 87px;
+                    width: auto;
+                    height: 80px;
                     grid-row: span 2;
                 }
 
@@ -241,14 +247,14 @@ export default {
                     grid-area: title;
                     font-size: 16px;
                     color: black;
-                    width: 166px;
+                    width: 220px;
                     display: flex;
                     justify-content: space-between;
                 }
 
                 &_count {
                     grid-area: count;
-                    font-size: 16px;
+                    font-size: 12px;
                     color: #27625F;
                     font-weight: 600;
                 }
@@ -271,7 +277,8 @@ export default {
     }
 
     .contact-link,
-    .designer-link {
+    .designer-link,
+    .order-link {
         display: flex;
         color: #27625F;
         text-decoration: none;
@@ -307,8 +314,8 @@ export default {
         p {
             margin-left: 18px;
             z-index: 1;
-        font-weight: bold;
-    }
+            font-weight: bold;
+        }
 
         &::after {
             content: '';
@@ -337,7 +344,7 @@ export default {
         }
 
         .service-list {
-            
+
             li {
                 a {
                     height: 64px;
@@ -347,15 +354,17 @@ export default {
                     }
                 }
             }
+
             .goods-list {
-            top: 70px;
-            height: 518px;
+                top: 70px;
+                height: 518px;
             }
 
         }
 
         .contact-link,
-        .designer-link {
+        .designer-link,
+        .order-link {
             width: 294px;
             height: 64px;
         }

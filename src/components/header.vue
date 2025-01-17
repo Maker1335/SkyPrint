@@ -14,9 +14,9 @@
                 </ul>
                 <ul class="linkList_right">
                     <li class="save">
-                        <a href="#">
-                            <p><img class="save_img" src="../../src/assets/img/header/save.svg" alt="save">
-                                {{ savedProducts.length }}</p>
+                        <a>
+                            <p><img class="save_img" src="../../src/assets/img/header/save.svg" alt="save">{{
+                                savedProducts.length }}</p>
                         </a>
                         <ul class="save_list">
                             <li v-if="savedProducts.length >= 1" v-for="product in savedProducts" :key="product.id"
@@ -33,11 +33,11 @@
                         </ul>
                     </li>
                     <li class="email"><a
-                            href="https://mail.google.com/mail/?view=cm&fs=1&to=example@example.com&su=Hello&body=Message%20body"><img
-                                src="../../src/assets/img/header/email.svg" alt="email"></a> </li>
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=zakaz@skyprint74.ru&su=Заказ с сайта SKYPRINT&body=Здравствуйте,%20я%20..."
+                            target="_blank"><img src="../../src/assets/img/header/email.svg" alt="email"></a> </li>
                     <li class="phone"><a href="#"><img src="../../src/assets/img/header/phone.svg" alt="phone"></a>
                         <ul class="phone_list">
-                            <li><button @click="copyText('7(351)248-72-87')"> <img
+                            <li title="Скопировать телефон менеджера"><button @click="copyText('7(351)248-72-87')"> <img
                                         src="../../src/assets/img/header/phone1.svg" alt="phone"> </button></li>
                             <li><a href="https://t.me/skyprint174_bot"><img
                                         src="../../src/assets/img/header/telegram.svg" alt="telegram"></a></li>
@@ -81,7 +81,7 @@ export default {
     methods: {
         copyText(text) {
             navigator.clipboard.writeText(text).then(() => {
-                this.showToast('Текст скопирован!');
+                this.showToast('Телефон скопирован!');
             }).catch(() => {
                 this.showToast('Ошибка копирования');
             });
@@ -177,7 +177,7 @@ export default {
                 opacity: 1;
                 pointer-events: auto;
                 z-index: 2;
-            box-shadow: 16px 3px 19px rgba(0, 0, 0, 0.08), 3px 2px 8px rgba(0, 0, 0, 0.2);
+                box-shadow: 16px 3px 19px rgba(0, 0, 0, 0.08), 3px 2px 8px rgba(0, 0, 0, 0.2);
 
             }
 
@@ -205,7 +205,7 @@ export default {
                 grid-template-areas: "img title"
                     "img count";
                 width: 272px;
-                height: 103px;
+                min-height: 87px;
 
                 &_img {
                     grid-area: img;
@@ -337,6 +337,7 @@ export default {
 @media (max-width: 700px) {
     .header {
         width: 100%;
+
         .linkList {
             height: 0px;
         }

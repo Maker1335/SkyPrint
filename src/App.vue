@@ -7,19 +7,14 @@
       <Sidebar class="sidebar" />
     </div>
     <Footer class="footer" />
-   <Telephone/>
+    <Telephone />
   </div>
 
 </template>
 
 <script>
 import Sidebar from './components/Sidebar.vue';
-import MainPage from './components/views/MaimPage.vue';
 import Footer from './components/footer.vue';
-import Catalog from './components/views/Catalog.vue';
-import Product from './components/views/Product.vue';
-import Contacts from './components/views/Contacts.vue';
-import Header from './components/header.vue';
 import Telephone from './components/telephone.vue';
 
 
@@ -27,22 +22,9 @@ export default {
   name: 'App',
   components: {
     Sidebar,
-    MainPage,
     Footer,
-    Catalog,
-    Product,
-    Contacts,
-    Header,
     Telephone
   },
-  created() {
-    window.onload = function () {
-      var screenWidth = window.innerWidth;
-      var screenHeight = window.innerHeight;
-      console.log('Ширина рабочей области: ' + screenWidth + 'px');
-      console.log('Высота рабочей области: ' + screenHeight + 'px');
-    }
-  }
 };
 </script>
 
@@ -51,11 +33,8 @@ export default {
 </style>
 
 <style lang="scss" scoped>
-
 #app {
   min-height: 100vh;
-  //width: 1920px;
-  //width: 100%;
   width: max-content;
   margin: 0 auto;
   display: grid;
@@ -103,10 +82,6 @@ export default {
     display: flex;
     flex-direction: column;
     width: 100%;
-
-    .page {
-      //grid-area: content;
-    }
 
     .sidebar {
       display: none;

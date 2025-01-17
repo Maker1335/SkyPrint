@@ -31,7 +31,8 @@
                         <p class="address_title">Ул. Витебская 3а</p>
                     </div>
                     <div class="email">
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=example@example.com&su=Hello&body=Message%20body" target="_blank">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zakaz@skyprint74.ru&su=Заказ с сайта SKYPRINT&body=Здравствуйте,%20я%20..."
+                target="_blank">
                             <img :src="emailIcon" alt="email">
                         </a>
                     </div>
