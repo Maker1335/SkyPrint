@@ -37,11 +37,11 @@ export default {
 .pulse {
     background: #4fbaea;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     position: fixed;
-    bottom: 10%;
-    left: 90%;
+    bottom: 5%;
+    left: 94%;
     z-index: 1000;
     cursor: pointer;
 
@@ -49,22 +49,14 @@ export default {
     .telephone {
         position: absolute;
         filter: invert(1);
-        left: 22px;
+        left: 19px;
         top: 18px;
-        width: 58px;
+        width: 35px;
         animation: sequence 3s ease-in-out infinite;
         animation-play-state: normal;
         transition: 0.3s;
     }
 
-    .telephone2 {
-        position: absolute;
-        filter: invert(1);
-        left: 22px;
-        top: 18px;
-        width: 58px;
-        transition: 0.3s;
-    }
 
     &::before,
     &::after {
@@ -90,7 +82,7 @@ export default {
     .extra-items {
         position: absolute;
         bottom: 110%;
-        left: 22%;
+        left: 17%;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -98,7 +90,7 @@ export default {
         transition: opacity 1s, transform 1s;
 
         .item {
-            width: 60px;
+            width: 50px;
             height: auto;
 
             img {

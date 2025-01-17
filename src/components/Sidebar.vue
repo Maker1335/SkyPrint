@@ -247,7 +247,7 @@ export default {
                     grid-area: title;
                     font-size: 16px;
                     color: black;
-                    width: 220px;
+                    width: 200px;
                     display: flex;
                     justify-content: space-between;
                 }
@@ -286,7 +286,7 @@ export default {
         border-radius: 5px;
         text-align: center;
         width: 331px;
-        height: 75px;
+        height: 60px;
         margin-top: 10px;
         position: relative;
         font-weight: bold;
