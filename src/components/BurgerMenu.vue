@@ -25,7 +25,7 @@
 <script>
 export default {
     name: 'BurgerMenu',
-    emits: ['toggle-menu'],  // Declare the emitted event
+    emits: ['toggle-menu'],  
     data() {
         return {
             isOpen: false

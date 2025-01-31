@@ -41,7 +41,7 @@ export default {
     height: 70px;
     position: fixed;
     bottom: 5%;
-    left: 94%;
+    left: calc(100% - 120px);
     z-index: 1000;
     cursor: pointer;
 
