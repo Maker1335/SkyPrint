@@ -13,7 +13,7 @@
             </router-link>
           </swiper-slide>
         </swiper>
-        <router-link to="/catalog" class="all-categories">
+        <router-link to="/katalog-produktsii" class="all-categories">
           <p class="all-categories_text">Все категории </p>
           <p class="all-categories_arrow"></p>
         </router-link>
@@ -41,12 +41,12 @@ export default {
       modules: [Autoplay],
       slidesPerView: 5,
       slides: [
-        { image: ImagesStore.images.RollUp, alt: 'фото товара', text: 'Roll-up', link: '/product/21' },
-        { image: ImagesStore.images.notebooks, alt: 'фото товара', text: 'Блокноты', link: '/product/17' },
-        { image: ImagesStore.images.canvases, alt: 'фото товара', text: 'Холсты', link: '/product/2' },
-        { image: ImagesStore.images.busrinessCards, alt: 'фото товара', text: 'Визитки', link: '/product/8' },
-        { image: ImagesStore.images.lamination, alt: 'фото товара', text: 'Ламинирование', link: '/product/3' },
-        { image: ImagesStore.images.pens, alt: 'фото товара', text: 'Ручки', link: '/product/1' },
+        { image: ImagesStore.images.RollUp, alt: 'фото товара', text: 'Roll-up', link: '/product/Roll-up' },
+        { image: ImagesStore.images.notebooks, alt: 'фото товара', text: 'Блокноты', link: '/product/Блокноты' },
+        { image: ImagesStore.images.canvases, alt: 'фото товара', text: 'Холсты', link: '/product/Холсты' },
+        { image: ImagesStore.images.busrinessCards, alt: 'фото товара', text: 'Визитки', link: '/product/Визитки' },
+        { image: ImagesStore.images.lamination, alt: 'фото товара', text: 'Ламинирование', link: '/product/Ламинирование' },
+        { image: ImagesStore.images.pens, alt: 'фото товара', text: 'Ручки', link: '/product/Ручки' },
       ],
       breakpoints: {
         0: {

@@ -11,14 +11,14 @@
                     <p>{{ category.name }}</p>
                 </a>
                 <ul v-if="hoveredCategory === category.name && filteredProducts.length > 0" class="goods-list">
-                    <router-link :to="{ name: 'Product', params: { id: product.id } }"
+                    <router-link :to="{ name: 'Product', params: { name: product.link } }"
                         v-for="product in filteredProducts" :key="product.id">
                         <li class="goods-list_item">
                             <img class="goods-list_item_img" :src="product.img" alt="фото товара">
                             <p class="goods-list_item_title">
                                 {{ product.name }}
                                 <img class="goods-list_item_save" :src="product.save ? saveIconOn : saveIconOff"
-                                    @click="toggleSave(product.id, $event)" alt="фото закладки">
+                                    @click="toggleSave(product.name, $event)" alt="фото закладки">
                             </p>
                             <p class="goods-list_item_count">{{ product.count }}</p>
                         </li>
@@ -42,7 +42,7 @@
             <p>Связаться с менеджером</p>
         </a>
         <Questionnaire :isOpen="isQuestionnaireOpen" :toggleMenu="toggleMenu" />
-        <router-link to="/designServices" class="designer-link">
+        <router-link to="/katalog-produktsii/dizayn/dizayn" class="designer-link">
             <p>Услуги дизайнера</p>
         </router-link>
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zakaz@skyprint74.ru&su=Заказ с сайта SKYPRINT&body=Здравствуйте,%20я%20..."
@@ -106,7 +106,7 @@ export default {
             this.isQuestionnaireOpen = !this.isQuestionnaireOpen;
         },
         toggleSave(productId, event) {
-            event.stopPropagation(); // Останавливаем всплытие события
+            event.stopPropagation();
             const productStore = useProductStore();
             productStore.toggleSave(productId);
         }

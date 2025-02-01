@@ -41,22 +41,22 @@ export default {
     setup() {
         const route = useRoute();
         const store = useProductStore();
-        const productId = ref(Number(route.params.id));  
+        const productName = ref(route.params.name);
         const product = ref(null);
 
-        const fetchProduct = (id) => {
-            product.value = store.products.find(p => p.id === id);
+        const fetchProduct = (name) => {
+            product.value = store.products.find(p => p.name.toLowerCase() === name.toLowerCase());
         };
 
         onMounted(() => {
-            fetchProduct(productId.value);
+            fetchProduct(productName.value);
         });
 
         watch(
-            () => route.params.id,
-            (newId) => {
-                productId.value = Number(newId);
-                fetchProduct(productId.value);
+            () => route.params.name,
+            (newName) => {
+                productName.value = newName;
+                fetchProduct(productName.value);
             }
         );
 

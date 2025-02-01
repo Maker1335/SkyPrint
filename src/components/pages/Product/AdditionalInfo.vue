@@ -72,14 +72,6 @@ export default {
             type: Array, 
             required: true
         },
-        rowspan:{
-            type: Number,
-            required: true
-        },
-        colspan:{
-            type: Number,
-            required: true
-        }
     },
     methods: {
         togglePrices() {

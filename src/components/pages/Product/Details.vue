@@ -14,7 +14,7 @@
                 </td>
             </tr>
         </table>
-        <AdditionalInfo :prices="prices" :rowspan="productDetails.rowspan" :colspan="productDetails.colspan" />
+        <AdditionalInfo :prices="prices" />
         <ActionButtons />
     </div>
 </template>

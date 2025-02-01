@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, createWebHashHistory} from 'vue-router';
 import MainPage from '../views/MaimPage.vue';
 import Catalog from '../views/Catalog.vue';
 import Product from '../views/Product.vue';
@@ -17,48 +17,48 @@ const routes = [
         component: MainPage,
     },
     {
-        path: `/Catalog`,
+        path: `/katalog-produktsii`,
         name: 'catalog',
         component: Catalog,
     },
     {
-        path: '/product/:id',
+        path: '/product/:name',
         name: 'Product',
         component: Product,
         props: true
     },
     {
-        path: `/Contacts`,
+        path: `/kontakty`,
         name: 'contacts',
         component: Contacts,
     },
     {
-        path: `/Portfolio`,
+        path: `/portfolio`,
         name: 'portfolio',
         component: Portfolio,
     },
     {
-        path: `/Requirements`,
+        path: `/trebovaniya-k-maketam`,
         name: 'requirements',
         component: Requirements,
     },
     {
-        path: `/AboutUs`,
+        path: `/o-kompanii`,
         name: 'aboutUs',
         component: AboutUs,
     },
     {
-        path: `/Payment`,
+        path: `/oplata`,
         name: 'payment',
         component: Payment,
     },
     {
-        path: `/Delivery`,
+        path: `/dostavka`,
         name: 'delivery',
         component: Delivery,
     },
     {
-        path: `/DesignServices`,
+        path: `/katalog-produktsii/dizayn/dizayn`,
         name: 'designServices',
         component: DesignServices,
     },

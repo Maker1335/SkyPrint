@@ -1,7 +1,7 @@
 <template>
     <div class="action-buttons">
         <router-link to=""><button class="action-buttons_submit-application">Оставить заявку</button></router-link>
-        <router-link to="/designServices"><button class="action-buttons_designer-services">Услуги
+        <router-link to="/katalog-produktsii/dizayn/dizayn"><button class="action-buttons_designer-services">Услуги
                 дизайнера</button></router-link>
     </div>
 </template>

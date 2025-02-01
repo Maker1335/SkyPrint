@@ -2,13 +2,13 @@
     <div class="footer">
         <div class="wrapper">
             <ul class="footer_links">
-                <li><router-link to="/contacts">Контакты</router-link></li>
-                <li><router-link to="/catalog">Каталог</router-link></li>
+                <li><router-link to="/kontakty/">Контакты</router-link></li>
+                <li><router-link to="/katalog-produktsii">Каталог</router-link></li>
                 <li><router-link to="/portfolio">Портфолио</router-link></li>
-                <li><router-link to="/aboutUs">О нас</router-link></li>
-                <li><router-link to="/requirements">Требования к макет</router-link></li>
-                <li><router-link to="/delivery">Доставка</router-link></li>
-                <li><router-link to="/payment">Оплата</router-link></li>
+                <li><router-link to="/o-kompanii/">О нас</router-link></li>
+                <li><router-link to="/trebovaniya-k-maketam/">Требования к макет</router-link></li>
+                <li><router-link to="/dostavka/">Доставка</router-link></li>
+                <li><router-link to="/oplata/">Оплата</router-link></li>
             </ul>
             <ul class="footer_catalog">
                 <li>Широкоформатная печать</li>

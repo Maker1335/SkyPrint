@@ -3,10 +3,10 @@
         <CatalogItem 
             v-for="good in goods"
             :key="good.id"
-            :id="good.id"
             :save="good.save"
             :img="good.img"
             :name="good.name"
+            :link="good.link"
             :count="good.count"
             @toggle-save="toggleSave" />
     </div>
@@ -26,8 +26,8 @@ export default {
         const store = useProductStore();
         const goods = computed(() => store.products);
 
-        const toggleSave = (productId) => {
-            store.toggleSave(productId);
+        const toggleSave = (productName) => {
+            store.toggleSave(productName);
         };
 
         return {

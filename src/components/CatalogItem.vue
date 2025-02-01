@@ -1,7 +1,7 @@
 <template>
     <div class="catalog_item">
         <img :src="save ? saveIconOn : saveIconOff" alt="закладка" class="catalog_item_save" @click="handleClick" />
-        <router-link :to="{ name: 'Product', params: { id } }">
+        <router-link :to="{ name: 'Product', params: { name } }">
             <img :src="img" alt="фото товара" class="catalog_item_img" />
             <p class="catalog_item_name">{{ name }}</p>
             <p class="catalog_item_count">{{ count }}</p>
@@ -16,16 +16,16 @@ import saveOff from '../assets/img/header/saveOff.svg';
 export default {
     name: 'CatalogItem',
     props: {
-        id: Number,
         save: Boolean,
         img: String,
         name: String,
         count: String,
+        link: String
     },
     methods: {
         handleClick(event) {
-            event.stopPropagation(); // Останавливаем распространение события
-            this.$emit('toggle-save', this.id);
+            event.stopPropagation();
+            this.$emit('toggle-save', this.name);
         },
     },
     computed: {

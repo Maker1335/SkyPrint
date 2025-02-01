@@ -9,7 +9,7 @@
                         <p class="item_title">{{ item.title }}</p>
                         <p class="item_content" v-if="item.show">{{ item.content }}</p>
                         <img class="item_img" v-if="item.show" :src="item.img" alt="">
-                        <router-link class="item_link" v-if="item.show" :to="item.linkTo" >{{ item.link }}</router-link>
+                        <!-- <router-link class="item_link" v-if="item.show" :to="item.linkTo" >{{ item.link }}</router-link> -->
                     </li>
                 </ul>
             </div>
@@ -34,8 +34,6 @@ export default {
                     title: '1/ Отправка макета',
                     content: 'Первым шагом в нашем процессе является отправка вашего макета. Вы можете загрузить файл через наш сайт или отправить его по электронной почте. Мы принимаем  форматы, такие как: SVG, СDR, PDF, JPG и TIFF. Если у вас есть особые требования, не стесняйтесь указать их в комментариях. Наша команда внимательно рассмотрит ваш макет и проверит его на соответствие всем техническим требованиям. Это поможет избежать недоразумений и ускорить дальнейшие этапы работы.',
                     img: sendingTheLayout,
-                    link: 'Подробнее',
-                    linkTo: '/designServices',
                     show: true
                 },
                 {
