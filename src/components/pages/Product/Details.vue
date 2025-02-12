@@ -127,10 +127,10 @@ export default {
             position: absolute;
             top: 0;
             right: 10px;
+            width: calc(50% - 20px);
 
             &_price {
                 font-size: 30px;
-
             }
 
             &_title {

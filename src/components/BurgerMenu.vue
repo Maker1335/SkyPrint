@@ -11,12 +11,12 @@
             <div v-if="isOpen" class="menu-items">
                 <ul>
                     <li><router-link to="/">Главная</router-link></li>
-                    <li><router-link to="/catalog">Каталог</router-link></li>
-                    <li><router-link to="/aboutUs">О нас</router-link></li>
-                    <li><router-link to="/payment">Оплата</router-link></li>
-                    <li><router-link to="/requirements">Требования к макету</router-link></li>
-                    <li><router-link to="/delivery">Доставка</router-link></li>
-                    <li><router-link to="/contacts">Контакты</router-link></li>
+                    <li><router-link to="/katalog-produktsii">Каталог</router-link></li>
+                    <li><router-link to="/o-kompanii">О нас</router-link></li>
+                    <li><router-link to="/oplata">Оплата</router-link></li>
+                    <li><router-link to="/trebovaniya-k-maketam">Требования к макету</router-link></li>
+                    <li><router-link to="/dostavka">Доставка</router-link></li>
+                    <li><router-link to="/kontakty">Контакты</router-link></li>
                 </ul>
             </div>
         </div>

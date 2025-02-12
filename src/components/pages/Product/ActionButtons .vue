@@ -1,14 +1,29 @@
 <template>
     <div class="action-buttons">
-        <router-link to=""><button class="action-buttons_submit-application">Оставить заявку</button></router-link>
+        <Questionnaire :isOpen="isQuestionnaireOpen" :toggleMenu="toggleMenu" />
+        <router-link to=""><button class="action-buttons_submit-application" @click="toggleMenu">Оставить заявку</button></router-link>
         <router-link to="/katalog-produktsii/dizayn/dizayn"><button class="action-buttons_designer-services">Услуги
                 дизайнера</button></router-link>
     </div>
 </template>
 
 <script>
+import Questionnaire from '../../Questionnaire.vue'
 export default {
-    name: 'ActionButtons '
+    name: 'ActionButtons ',
+    components: {
+        Questionnaire
+    },
+    data() {
+        return {
+            isQuestionnaireOpen: false
+        }
+    },
+    methods: {
+        toggleMenu() {
+            this.isQuestionnaireOpen = !this.isQuestionnaireOpen;
+        },
+    }
 }
 </script>
 
@@ -67,6 +82,9 @@ export default {
                 border-radius: 8px; 
             }
         }
+    }
+    ::v-deep(.questionnaire) {
+        left: 50%;
     }
 
     &_submit-application {

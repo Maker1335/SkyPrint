@@ -324,11 +324,6 @@ export default {
             .search-container {
                 max-width: 227px;
             }
-
-            //.email,
-            //.phone {
-            //    display: none;
-            //}
         }
     }
 }

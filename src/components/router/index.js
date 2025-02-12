@@ -9,7 +9,6 @@ import AboutUs from '../views/AboutUs.vue';
 import Payment from '../views/Payment.vue';
 import Delivery from '../views/Delivery.vue';
 import DesignServices from '../views/DesignServices.vue';
-
 const routes = [
     {
         path: `/`,

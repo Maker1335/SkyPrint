@@ -14,8 +14,8 @@
                     <a class="order-button" @click="toggleMenu">
                         <p>Заказать</p>
                     </a>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=example@example.com&su=Hello&body=Message%20body"
-                        target="_blank" class="question-button">
+                    <a  href="https://mail.google.com/mail/?view=cm&fs=1&to=zakaz@skyprint74.ru&su=Заказ с сайта SKYPRINT&body=Здравствуйте,%20я%20..."
+                    target="_blank" class="question-button">
                         Задать вопрос
                     </a>
                     <Questionnaire :isOpen="isQuestionnaireOpen" :toggleMenu="toggleMenu" />
@@ -158,6 +158,12 @@ export default {
 
                 &_text {
                     font-size: 35px;
+                    width: 100%;
+                }
+
+                &_subtitle {
+                    width: 100%;
+
                 }
             }
 
@@ -194,7 +200,6 @@ export default {
         }
 
         .info {
-
             &_title {
                 display: flex;
                 flex-direction: column;

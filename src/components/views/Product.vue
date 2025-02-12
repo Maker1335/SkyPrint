@@ -123,6 +123,8 @@ export default {
 
         &_title {
             margin-bottom: 30px;
+            width: 50%;
+            word-wrap: break-word;
         }
     }
 }

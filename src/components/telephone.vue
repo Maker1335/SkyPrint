@@ -45,7 +45,6 @@ export default {
     z-index: 1000;
     cursor: pointer;
 
-
     .telephone {
         position: absolute;
         filter: invert(1);
@@ -56,7 +55,6 @@ export default {
         animation-play-state: normal;
         transition: 0.3s;
     }
-
 
     &::before,
     &::after {
@@ -73,12 +71,10 @@ export default {
         animation: animate 3s ease-in-out infinite;
     }
 
-    /* Остановка анимации при клике */
     .pulse img {
         animation-play-state: var(--animationState);
     }
 
-    /* Появление дополнительных элементов */
     .extra-items {
         position: absolute;
         bottom: 110%;
@@ -87,8 +83,8 @@ export default {
         flex-direction: column;
         gap: 10px;
         opacity: 0;
-        transition: opacity 1s, transform 1s;
-
+        transition: opacity 0.3s, transform 0.3s;
+        pointer-events: none; 
         .item {
             width: 50px;
             height: auto;
@@ -102,10 +98,10 @@ export default {
 
     &:hover .extra-items {
         opacity: 1;
+        pointer-events: auto; 
     }
-
-
 }
+
 
 @keyframes sequence {
     0% {

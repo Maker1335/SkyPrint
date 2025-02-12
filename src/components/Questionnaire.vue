@@ -7,15 +7,15 @@
                 <form @submit.prevent="handleSubmit" class="form">
                     <input type="text" placeholder="Имя" v-model="formData.name" class="form_input" required />
                     <input type="tel" placeholder="Телефон" v-model="formData.phone" class="form_input"
-                        :class="{ 'input-error': phoneError }" @input="validatePhone" required />
-                        <span v-if="phoneError" class="error_message">Введите корректный номер телефона</span>
+                        :class="{ 'input-error': phoneError }" @input="validatePhone" required maxlength="12" />
+                    <span v-if="phoneError" class="error_message">Введите корректный номер телефона</span>
                     <input type="email" placeholder="Почта" v-model="formData.email" class="form_input" required />
                     <label class="form_checkbox">
                         <input type="checkbox" v-model="formData.agreement" required />
                         Нажимая кнопку "Отправить", я соглашаюсь с условиями
                         <a href="#">пользовательского соглашения</a>
                     </label>
-                    <button type="submit" class="form_button" >
+                    <button type="submit" class="form_button">
                         Отправить
                     </button>
                 </form>
@@ -68,15 +68,14 @@ export default {
                 alert("Вы должны согласиться с пользовательским соглашением!");
                 return;
             }
-            
+
 
             try {
                 const { name, phone, email } = this.formData;
 
-                // Используем EmailJS API для отправки письма
-                const serviceID = process.env.SERVICE_ID; // Замените на ваш Service ID
-                const templateID = process.env.TEMPLATE_ID; // Замените на ваш Template ID
-                const publicKey = process.env.PUBLIC_KEY; // Замените на ваш Public Key
+                const serviceID = process.env.SERVICE_ID;
+                const templateID = process.env.TEMPLATE_ID;
+                const publicKey = process.env.PUBLIC_KEY;
 
                 const templateParams = {
                     user_name: name,
@@ -198,5 +197,32 @@ export default {
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
     z-index: 8;
+}
+
+@media (max-width: 700px) {
+    .error_message {
+        width: auto;
+    }
+
+    .questionnaire {
+        &_form {
+            .form {
+                &_input {
+                    width: auto;
+                    height: 65px;
+                }
+
+                &_checkbox {
+                    font-size: 16px;
+                    width: 320px;
+                }
+
+                &_button {
+                    width: auto;
+                    height: 62px;
+                }
+            }
+        }
+    }
 }
 </style>
