@@ -5,12 +5,12 @@
                 <ul class="linkList_left">
                     <li><router-link to="/">Главная</router-link></li>
                     <li><router-link to="/katalog-produktsii">Каталог</router-link></li>
-                    <li><router-link to="/o-kompanii/">О нас</router-link></li>
-                    <li><router-link to="/oplata/">Оплата</router-link></li>
-                    <li><router-link to="/trebovaniya-k-maketam/">Требования к макету</router-link></li>
-                    <li><router-link to="/dostavka/">Доставка</router-link></li>
+                    <li><router-link to="/o-kompanii">О нас</router-link></li>
+                    <li><router-link to="/oplata">Оплата</router-link></li>
+                    <li><router-link to="/trebovaniya-k-maketam">Требования к макету</router-link></li>
+                    <li><router-link to="/dostavka">Доставка</router-link></li>
                     <li><router-link to="/katalog-produktsii/dizayn/dizayn">Услуги дизайнера</router-link></li>
-                    <li><router-link to="/kontakty/">Контакты</router-link></li>
+                    <li><router-link to="/kontakty">Контакты</router-link></li>
                 </ul>
                 <ul class="linkList_right">
                     <li class="save">
