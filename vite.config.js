@@ -8,8 +8,7 @@ dotenv.config();
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), ViteImageOptimizer({})],
-  // base: '/', 
-  base: process.env.NODE_ENV === 'production' ? '/SkyPrint/dist/' : '/', // Укажите имя репозитория
+  base: '/SkyPrint/dist/',
   define: {
     'process.env': process.env, 
   },
